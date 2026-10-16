@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro'; import List from '../../components/List.astro';
+import { allNews } from '../../lib'; import { DESTINATIONS } from '../../site.config.mjs';
+export function getStaticPaths(){ return DESTINATIONS.map(d=>({params:{slug:d.slug},props:{d}})); }
+const { d } = Astro.props;
+const items = (await allNews()).filter(e=>e.data.destinations.includes(d.slug));
+---
+<Base title={`${d.name} travel news`} description={`Latest travel and trade news on ${d.name} for Indian travellers and agents.`}>
+<h1>{d.name}</h1>
+<div class="ph"><strong>Destination facts — coming soon.</strong>
+<ul><li><b>Visa for Indian passport holders:</b> Coming soon</li>
+<li><b>Currency:</b> Coming soon</li><li><b>Best time to visit:</b> Coming soon</li></ul></div>
+<h2>Latest on {d.name}</h2><List items={items} />
+</Base>

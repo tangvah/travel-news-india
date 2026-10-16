@@ -1,0 +1,22 @@
+---
+import { u } from "../../lib";
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro'; import { allNews, fmt } from '../../lib';
+import { SITE, CATEGORIES, DESTINATIONS } from '../../site.config.mjs';
+export async function getStaticPaths(){ return (await allNews()).map(e=>({params:{id:e.id},props:{e}})); }
+const { e } = Astro.props; const d = e.data; const { Content } = await render(e);
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const jsonld = { '@context':'https://schema.org','@type':'NewsArticle', headline:d.title, description:d.summary,
+  datePublished:d.date.toISOString(), author:{'@type':'Person',name:d.author}, mainEntityOfPage:url,
+  publisher:{'@type':'Organization',name:SITE.name}, ...(d.image?{image:[new URL(d.image,Astro.site).href]}:{}), keywords:d.tags.join(', ') };
+---
+<Base title={d.title} description={d.summary} type="article" image={d.image} jsonld={jsonld} noindex={d.draft}>
+<article>
+{d.draft && <p class="ph"><span class="draft">DRAFT</span> Preview only — not published, noindex.</p>}
+<p><a class="pill" href={u(`/category/${d.category}/`)}>{CATEGORIES.find(c=>c.slug===d.category)?.name}</a>
+{d.destinations.map(s=> <a class="pill" href={u(`/destinations/${s}/`)}>{DESTINATIONS.find(x=>x.slug===s)?.name}</a>)}</p>
+<h1>{d.title}</h1><p class="meta">{fmt(d.date)} · By {d.author}</p>
+{d.image && <img src={u(d.image)} alt="" style="max-width:100%;border-radius:8px" />}
+<Content />
+{d.tags.length>0 && <p class="meta">Tags: {d.tags.join(', ')}</p>}
+</article></Base>

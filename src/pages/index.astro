@@ -1,0 +1,6 @@
+---
+import Base from '../layouts/Base.astro'; import List from '../components/List.astro';
+import { allNews } from '../lib'; import { SITE } from '../site.config.mjs';
+const items = await allNews();
+---
+<Base><h1>Latest news</h1><p class="meta">{SITE.tagline}</p><List items={items} /></Base>

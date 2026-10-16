@@ -1,0 +1,5 @@
+---
+import Card from './Card.astro';
+const { items } = Astro.props;
+---
+{items.length ? <div class="grid">{items.map((e)=> <Card e={e} />)}</div> : <p class="meta">No articles yet.</p>}

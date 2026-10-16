@@ -1,0 +1,13 @@
+---
+import { u } from "../lib";
+import { fmt } from '../lib';
+import { CATEGORIES, DESTINATIONS } from '../site.config.mjs';
+const { e } = Astro.props; const d = e.data;
+const cat = CATEGORIES.find(c=>c.slug===d.category);
+---
+<div class="card">
+{d.draft && <span class="draft">DRAFT</span>}
+<a class="pill" href={u(`/category/${d.category}/`)}>{cat?.name}</a>
+{d.destinations.map((s)=> <a class="pill" href={u(`/destinations/${s}/`)}>{DESTINATIONS.find(x=>x.slug===s)?.name}</a>)}
+<h3><a href={u(`/news/${e.id}/`)}>{d.title}</a></h3>
+<div class="meta">{fmt(d.date)} · {d.author}</div><p>{d.summary}</p></div>
