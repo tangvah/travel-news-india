@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro';
+import { u } from '../../lib';
+import { routes, statusLabel, show, day, slugify, place } from '../../routes-data';
+const uniq = (a: string[]) => [...new Set(a)].sort();
+const countries = uniq(routes.map((r) => r.country));
+const airlines = uniq(routes.map((r) => r.airline));
+const statuses = uniq(routes.map((r) => r.status));
+const F = [['c', 'Destination country', countries], ['a', 'Airline', airlines], ['s', 'Status', statuses]] as const;
+const label = (k: string, v: string) => (k === 's' ? statusLabel(v) : v);
+// No-JS filters: radio groups + :has(). Each group hides rows that don't match; groups combine (AND).
+const css = F.flatMap(([k, , vals]) => vals.map((v) => `.rtk:has(input[name=f${k}][value="${slugify(v)}"]:checked) .ro:not([data-${k}="${slugify(v)}"]){display:none}`)).join('')
+;
+const lastChecked = routes.map((r) => r.last_checked).sort().at(-1);
+const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
+---
+<Base title="Flight routes tracker" description="New and announced flights from India for travel agents: start dates, frequency, aircraft and official sources, checked by the Travel News Desk.">
+<div class="wrap section rtk">
+  <h1>Flight routes tracker</h1>
+  <p class="standfirst">New and announced international routes from India, for travel agents. Every row is checked against an official airline source.</p>
+  <p class="meta">Maintained by the Travel News Desk. Sorted by start date, soonest first. Last checked {day(lastChecked)}. Always confirm schedules with the airline before ticketing.</p>
+  <p><a class="btn" href={u('/routes.csv')} download="india-routes-tracker.csv">Download CSV<span class="sr-only"> of all routes</span></a></p>
+  <form class="rt-filters" aria-label="Filter routes" onsubmit="return false">
+    {F.map(([k, name, vals]) => (
+      <fieldset class="seg"><legend>{name}</legend>
+        <label><input type="radio" name={`f${k}`} value="all" checked /><span>All</span></label>
+        {vals.map((v) => <label><input type="radio" name={`f${k}`} value={slugify(v)} /><span>{label(k, v)}</span></label>)}
+      </fieldset>))}
+  </form>
+
+  <div class="table-wrap rt-desk" role="region" aria-label="Routes table" tabindex="0"><table class="rt">
+    <caption class="sr-only">Announced and launched routes from India, soonest start date first</caption>
+    <thead><tr><th scope="col">Route</th><th scope="col">Airline</th><th scope="col">Starts</th><th scope="col">Frequency</th><th scope="col">Aircraft</th><th scope="col">Status</th><th scope="col">Booking open</th><th scope="col">Announced</th><th scope="col">Source</th><th scope="col">Story</th></tr></thead>
+    <tbody>{routes.map((r) => (
+      <tr class="ro" data-c={slugify(r.country)} data-a={slugify(r.airline)} data-s={slugify(r.status)}>
+        <th scope="row"><span class="rt-route">{r.flag && <Flag code={r.flag} size={18} />}{place(r.origin)} → {place(r.destination)}</span><small class="meta">{r.country}{r.quote && <> · {r.quote}</>}</small></th>
+        <td>{r.airline}</td>
+        <td><time datetime={r.start_date}>{day(r.start_date)}</time></td>
+        <td>{show(r.frequency)}</td>
+        <td>{show(r.aircraft)}</td>
+        <td><span class={`st rs-${slugify(r.status)}`}>{statusLabel(r.status)}</span></td>
+        <td>{r.booking}</td>
+        <td>{day(r.announcement_date)}</td>
+        <td>{r.sources.map((s, i) => <>{i > 0 && <br />}<a href={s.url} rel="noopener">{s.name}</a></>)}<small class="meta">Checked {day(r.last_checked)}</small></td>
+        <td>{art(r.related_article) ? <a href={art(r.related_article)!}>Read<span class="sr-only"> about {r.origin.city} to {r.destination.city}</span></a> : 'Not stated'}</td>
+      </tr>))}</tbody>
+  </table></div>
+
+  <ul class="rt-cards" role="list">{routes.map((r) => (
+    <li class="ro vt" data-c={slugify(r.country)} data-a={slugify(r.airline)} data-s={slugify(r.status)}>
+      <div class="vt-head">{r.flag && <Flag code={r.flag} size={26} />}<h2>{place(r.origin)} → {place(r.destination)}</h2><span class={`st rs-${slugify(r.status)}`}>{statusLabel(r.status)}</span></div>
+      <dl class="vt-facts">
+        <div><dt>Airline</dt><dd>{r.airline}</dd></div>
+        <div><dt>Starts</dt><dd><time datetime={r.start_date}>{day(r.start_date)}</time></dd></div>
+        <div><dt>Frequency</dt><dd>{show(r.frequency)}</dd></div>
+        <div><dt>Aircraft</dt><dd>{show(r.aircraft)}</dd></div>
+        <div><dt>Booking open</dt><dd>{r.booking}</dd></div>
+        <div><dt>Country</dt><dd>{r.country}</dd></div>
+        <div><dt>Announced</dt><dd>{day(r.announcement_date)}</dd></div>
+      </dl>
+      {r.quote && <p class="meta">{r.quote}</p>}
+      <p class="vt-src"><span class="meta">Source:</span> {r.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s.url} rel="noopener">{s.name}</a></>)}</p>
+      <p class="meta">Checked {day(r.last_checked)}{art(r.related_article) && <> · <a href={art(r.related_article)!}>Read the story<span class="sr-only"> about {r.origin.city} to {r.destination.city}</span></a></>}</p>
+    </li>))}</ul>
+  <p class="meta">Only rows verified against an official source are shown. Missing details read “Not stated”. Spotted a change? The Desk updates this tracker from airline releases.</p>
+</div>
+<style set:html={css}></style>
+</Base>

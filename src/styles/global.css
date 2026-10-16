@@ -287,3 +287,9 @@ html.js .theme-toggle{display:inline-flex}
 .nl-pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0}
 .nl-live input{color:#fff}.nl-live button{background:var(--accent);color:var(--accent-ink);cursor:pointer}
 .no-rise .card{animation:none}
+/* Routes tracker */
+.rt-filters{display:flex;flex-wrap:wrap;gap:0 32px}.rt-filters .seg{margin:12px 0}.rt-filters legend{font:700 .72rem/1 var(--font-sans);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;padding:0;width:100%}
+.rt-route{display:inline-flex;align-items:center;gap:8px;font-weight:700}.rt th[scope=row]{font-size:.95rem;text-transform:none;letter-spacing:0;color:var(--ink)}.rt small{display:block;font-weight:400;margin-top:4px}
+.rs-announced{background:var(--c-air-bg);color:var(--c-air)}.rs-on-sale{background:var(--ok-bg);color:var(--ok)}.rs-launched{background:var(--ok-bg);color:var(--ok)}.rs-suspended{background:var(--c-hotel-bg);color:var(--c-hotel)}
+.rt-cards{display:none;list-style:none;padding:0;margin:0;gap:16px}
+@media (max-width:760px){.rt-desk{display:none}.rt-cards{display:grid}}

@@ -27,7 +27,8 @@ export const CATEGORIES = [
   { slug: 'deals', name: 'Deals', color: 'c-deal' },
 ];
 export const TOOLS = [
-  { href: '/visa-tracker/', name: 'Visa & routes tracker' },
+  { href: '/visa-tracker/', name: 'Visa tracker' },
+  { href: '/routes/', name: 'Routes tracker' },
 ];
 // Preview mode: SHOW_DRAFTS=1 includes draft: true articles (badged + noindex).
 export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === '1';
