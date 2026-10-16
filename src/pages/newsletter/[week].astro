@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro'; import Card from '../../components/Card.astro'; import Newsletter from '../../components/Newsletter.astro';
+import { u } from '../../lib'; import { weeks } from '../../newsletter';
+export async function getStaticPaths() {
+  const all = await weeks();
+  return all.map((w, i) => ({ params: { week: w.key }, props: { w, newer: all[i - 1] ?? null, older: all[i + 1] ?? null } }));
+}
+const { w, newer, older } = Astro.props;
+---
+<Base title={`Weekly briefing: ${w.label}`} description={`${w.items.length} India outbound travel stories from ${w.range}.`}>
+<div class="wrap section">
+  <p class="meta"><a href={u('/newsletter/')}>Newsletter archive</a></p>
+  <h1>Weekly briefing: {w.label}</h1>
+  <p class="standfirst">{w.range}. {w.items.length} {w.items.length === 1 ? 'story' : 'stories'} from the Travel News Desk.</p>
+  <h2 class="sr-only">Stories this week</h2>
+  <div class="grid no-rise">{w.items.map((e) => <Card e={e} />)}</div>
+  <nav class="nl-pager" aria-label="Other issues">
+    {older && <a class="btn" href={u(`/newsletter/${older.key}/`)}>← {older.label}</a>}
+    {newer && <a class="btn" href={u(`/newsletter/${newer.key}/`)}>{newer.label} →</a>}
+  </nav>
+  <div class="section"><Newsletter /></div>
+</div>
+</Base>

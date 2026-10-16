@@ -282,3 +282,8 @@ html.js .theme-toggle{display:inline-flex}
 .toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);font:700 .9rem var(--font-sans);padding:10px 18px;border-radius:999px;z-index:70;transition:opacity .2s,transform .2s}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+/* Newsletter archive */
+.nl-arch{padding-left:1.4em;display:grid;gap:16px}.nl-arch>li>a{font-size:1.1rem}.nl-arch>li>.meta{display:block}.nl-arch ul{margin:6px 0 0;padding-left:1.1em}
+.nl-pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0}
+.nl-live input{color:#fff}.nl-live button{background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.no-rise .card{animation:none}

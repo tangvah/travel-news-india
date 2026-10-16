@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro'; import Newsletter from '../../components/Newsletter.astro';
+import { u } from '../../lib'; import { weeks } from '../../newsletter';
+const all = await weeks();
+---
+<Base title="Newsletter: weekly briefing archive" description="Weekly digests of India outbound travel news for agents and travellers: visas, routes and trade news.">
+<div class="wrap section">
+  <h1>Newsletter</h1>
+  <p class="standfirst">Every week's published stories in one digest. The Travel News Desk builds each issue automatically from the articles published that week.</p>
+  <p><a class="btn" href={u('/newsletter/rss.xml')}>Weekly digest RSS feed</a></p>
+  <div class="section"><Newsletter archive={false} /></div>
+  <h2 id="arch-h">Archive</h2>
+  {all.length ? <ol class="nl-arch" aria-labelledby="arch-h" reversed>{all.map((w) => (
+    <li><a href={u(`/newsletter/${w.key}/`)}><b>{w.label}</b></a><span class="meta">{w.range} · {w.items.length} {w.items.length === 1 ? 'story' : 'stories'}</span>
+      <ul class="meta">{w.items.map((e) => <li>{e.data.title}</li>)}</ul></li>))}</ol>
+  : <p class="meta">The first issue will appear here once stories are published.</p>}
+</div>
+</Base>

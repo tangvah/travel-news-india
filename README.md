@@ -103,3 +103,9 @@ An array of `{ route, dest, airline, starts (YYYY-MM-DD), frequency, article, so
 - Articles have share links for WhatsApp, X, Facebook, LinkedIn, Telegram and email, plus Copy link (with an aria-live "Copied" toast) and a native share button that appears only where the browser supports it. There are no third-party scripts. Brand icons come from `simple-icons` (CC0) and are inlined at build time.
 - Layout: a sticky vertical rail on desktop (1100px and wider), a fixed bottom bar on smaller screens (safe-area aware, with the page padded so it never hides content), and a share card at the end of the article.
 - `src/pages/og/[id].png.ts` builds a 1200×630 PNG for each article at build time, using satori and @resvg/resvg-js with local Fontsource fonts. It is used for `og:image` and `twitter:image` (`summary_large_image`) with absolute URLs that include the base. Other pages use `public/og-default.png`.
+
+## Newsletter (`/newsletter/`)
+- `/newsletter/` is the archive, and `/newsletter/<YYYY-Www>/` is a weekly digest generated at build time from the published articles in that ISO week (India time). See `src/newsletter.ts`.
+- `/newsletter/rss.xml` is a feed with one item per weekly digest. It also works as an RSS-to-email source.
+- Sign-up is **not live**. No email provider is connected, and the box shows "Coming soon" and collects no data.
+- To go live later, create a free account with a provider and fill in `NEWSLETTER` in `src/site.config.mjs`: either `action` (the provider form's POST URL) plus `emailField` and `hidden`, or `embedHtml` (the provider's embed snippet). `src/components/Newsletter.astro` then renders the real form instead of "Coming soon".

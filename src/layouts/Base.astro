@@ -101,7 +101,7 @@ document.addEventListener('click',function(e){
       <div><p class="brand" style="margin:0"><b style="font-size:1.3rem">India Outbound <span>Travel</span> News</b></p><p class="meta">{SITE.tagline}.</p></div>
       <div><h2>Sections</h2><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
       <div><h2>Destinations</h2><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}>{d.name}</a></li>)}</ul></div>
-      <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
+      <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/newsletter/")}>Newsletter</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
     </div>
     <p class="legal">© {new Date().getFullYear()} {SITE.name}. Fonts: Inter &amp; Source Serif 4 (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
   </div>
