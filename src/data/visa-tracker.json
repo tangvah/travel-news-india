@@ -58,27 +58,27 @@
     "passport_type": "ordinary",
     "purpose": "tourism",
     "rule_type": "conditional_pre_approved_entry_visa",
-    "max_stay": "14 days (extendable once by 14 days) or 60 days (single-entry, non-extendable), by category",
+    "max_stay": "14 days (extendable once by 14 days) or 60 days (single-entry, non-extendable), by category; otherwise a standard tourist visa stay as issued",
     "fee": {
       "amount": 100,
       "currency": "AED",
-      "applies_to": "14-day visa; 60-day visa AED 250; 14-day extension AED 250 (ICP). GDRFA Dubai lists a fee of 253 with no currency shown"
+      "applies_to": "ICP 14-day conditional entry visa; 60-day AED 250; 14-day extension AED 250. GDRFA Dubai lists fee 253 with no currency shown for its India service page"
     },
-    "effective_date": null,
+    "effective_date": "2026-06-25",
     "key_conditions": [
-      "Only for Indians holding a qualifying US/EU/UK (and, per ICP, Singapore, Japan, Korea, Australia, NZ, Canada) residence permit/green card or visa",
-      "Passport and qualifying visa/residence each valid at least 6 months",
-      "Apply online (ICP or GDRFA Dubai smart services); about 48 hours",
-      "Overstay fine AED 50 per day"
+      "Conditional ICP entry visa: Indian nationals who also hold a valid residence permit from the US, an EU member state, the UK, Singapore, Japan, Korea, Australia, New Zealand, or Canada (ICP English release of 25 June 2026)",
+      "Passport and qualifying residence each valid at least 6 months; overstay fine AED 50 per day",
+      "Apply online via ICP or GDRFA Dubai smart services (GDRFA page quotes about 48 hours)",
+      "Indians without a qualifying foreign residence: not visa-free. Apply for a standard tourist visa before travel through a UAE airline, licensed travel agent, or hotel (UAE embassies do not issue tourist visas)"
     ],
     "quote": "The fee for the 14-day visa is AED 100, while the fee for the 60-day visa is AED 250.",
     "sources": [
       "https://icp.gov.ae/en/media-center/icp-expands-eligibility-for-uae-entry-visa-for-nationals-of-certain-countries/",
-      "https://icp.gov.ae/media-center/identity-and-citizenship-announces-expansion-of-entry-and-stay-period-for-indian-nationals-residing-and-holding-tourist-visas-for-eu-countries-us-and-uk/",
-      "https://www.gdrfad.gov.ae/en/services/727c91b1-52eb-11ea-0320-0050569629e8"
+      "https://www.gdrfad.gov.ae/en/services/727c91b1-52eb-11ea-0320-0050569629e8",
+      "https://u.ae/en/information-and-services/visa-and-emirates-id/types-of-visas/tourist-visa"
     ],
-    "verified": false,
-    "notes": "Partly verified. The conditional scheme is confirmed on ICP and GDRFA pages. Gaps: (1) The rule for Indians WITHOUT a qualifying visa or residence (a standard tourist visa, normally sponsor or airline-arranged) was not confirmed on an official page. (2) The ICP English release names 'residence permit', while the earlier ICP Arabic release also includes US/UK/EU tourist visas. (3) GDRFA's fee of 253 differs from ICP's AED 100, and no currency is shown. The ICP announcement dates were not captured.",
+    "verified": true,
+    "notes": "Verified 16 Oct 2026 against ICP (English), GDRFA Dubai, and u.ae. ICP English requires a residence permit from the listed countries (India was already eligible; the 25 June 2026 update added more nationalities and residence countries). An older ICP Arabic release also mentioned US/UK/EU tourist visas; the live English page does not, so this entry follows the English residence-permit wording. GDRFA Dubai still lists US green card or UK/EU residence and shows fee 253 with no currency. Standard tourist-visa path for Indians without qualifying residence is confirmed on u.ae (airlines, agents, hotels).",
     "last_checked": "2026-10-16"
   },
   {
