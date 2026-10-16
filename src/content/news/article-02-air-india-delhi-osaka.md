@@ -7,8 +7,10 @@ category: airlines-routes
 destinations: [japan]
 tags: [air-india, new-route, japan, osaka]
 draft: false
-verified: false
+verified: true
 sources:
+  - name: "Ministry of Foreign Affairs of Japan: Exemption of Visa (Short-Term Stay)"
+    url: "https://www.mofa.go.jp/j_info/visit/visa/short/Novisa.html"
   - name: "JNTO: Visitor arrivals to Japan, December 2025 and full-year 2025 (preliminary), see the India row"
     url: "https://www.jnto.go.jp/en/news/20260121.pdf"
   - name: "Air India press release: Delhi–Osaka non-stop flights (15 Oct 2026)"
@@ -33,10 +35,11 @@ Air India already flies daily from Delhi and four times a week from Mumbai to To
 Japan National Tourism Organization (JNTO) figures show 315,100 visitor arrivals from India in January–December 2025, up 35.2% from 233,061 in 2024. JNTO marks the 2025 figures as preliminary estimates.
 
 ## Why it matters
-- **For travellers:** For the first time there will be a direct link between north India and the Kansai region (Osaka, Kyoto, Nara). Combined with the Tokyo flights, a full Golden Route trip no longer needs a domestic backtrack.
+- **For travellers:** Air India says it will be the only airline flying Delhi–Osaka non-stop. Combined with the Tokyo flights, a full Golden Route trip no longer needs a domestic backtrack.
 - **For tour operators:** Open-jaw Tokyo–Osaka packages become easier to put together for summer 2027 and spring 2027 cherry-blossom departures. Because the overnight Delhi departure arrives in the morning, the first day can be a sightseeing day.
-- Indian passport holders still need a Japanese visa. Check the current requirements with the Embassy of Japan before booking.
+- India is not on Japan's visa-exemption list. The Ministry of Foreign Affairs of Japan says Japan "has reciprocal visa exemption arrangements with 74 countries and regions", and India is not among them, so Indian passport holders should plan for a visa. Check current requirements with the Embassy of Japan in India before booking.
 
 ## Sources
+- [Ministry of Foreign Affairs of Japan: Exemption of Visa (Short-Term Stay)](https://www.mofa.go.jp/j_info/visit/visa/short/Novisa.html)
 - [JNTO: Visitor arrivals to Japan, December 2025 and full-year 2025 (preliminary), see the India row](https://www.jnto.go.jp/en/news/20260121.pdf)
 - [Air India press release: Delhi–Osaka non-stop flights (15 Oct 2026)](https://www.airindia.com/in/en/newsroom/press-release/air-india-opens-a-new-gateway-to-japan-with-non-stop-delhi-osaka-flights-starting-february-2027.html)

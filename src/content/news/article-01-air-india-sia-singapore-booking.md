@@ -11,8 +11,8 @@ verified: true
 sources:
   - name: "Singapore Airlines newsroom, joint release with Air India (7 Oct 2026)"
     url: "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
-  - name: "Air India newsroom listing (7 Oct 2026 release)"
-    url: "https://www.airindia.com/in/en/newsroom.html"
+  - name: "Air India newsroom: joint release with Singapore Airlines (7 Oct 2026)"
+    url: "https://www.airindia.com/in/en/newsroom/press-release/Air-India-and-Singapore-Airlines-expand-strategic-partnership-to-offer-customers-more-travel-options-between-India-and-Singapore.html"
 ---
 
 *Announced 7 October 2026; effective 15 October 2026.*
@@ -38,4 +38,4 @@ SIA Chief Commercial Officer Lee Lik Hsin described demand between the two count
 
 ## Sources
 - [Singapore Airlines newsroom, joint release with Air India (7 Oct 2026)](https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/)
-- [Air India newsroom listing (7 Oct 2026 release)](https://www.airindia.com/in/en/newsroom.html)
+- [Air India newsroom: joint release with Singapore Airlines (7 Oct 2026)](https://www.airindia.com/in/en/newsroom/press-release/Air-India-and-Singapore-Airlines-expand-strategic-partnership-to-offer-customers-more-travel-options-between-India-and-Singapore.html)
