@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro'; import Flag from '../components/Flag.astro';
 import visa from '../data/visa-tracker.json'; import { routes } from '../routes-data';
 import { u, dest } from '../lib';
+import { visaUpdated, routesUpdated, monthYear, dayLong } from '../trackers';
+import { SITE } from '../site.config.mjs';
 // id in visa-tracker.json -> flag code + destination page slug
 const MAP = { thailand: ['th', 'thailand'], singapore: ['sg', 'singapore'], uae: ['ae', 'dubai'], vietnam: ['vn', 'vietnam'], indonesia: ['id', 'bali'], malaysia: ['my', 'malaysia'], 'sri-lanka': ['lk', 'sri-lanka'], japan: ['jp', 'japan'] };
 const RULE = { visa_exempt: 'Visa exemption', visa_required: 'Visa required', e_visa: 'e-Visa', visa_on_arrival_or_e_voa: 'Visa on arrival / e-VoA', eta_free: 'ETA, free', visa_required_e_visa_available: 'Visa required (e-Visa available)', conditional_pre_approved_entry_visa: 'Conditional pre-approved entry visa' };
@@ -13,18 +15,31 @@ const fee = (f) => (f == null ? 'Not stated' : `${f.currency} ${Number(f.amount)
 const day = (s) => new Date(s + 'T00:00:00+05:30').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' });
 const host = (s) => new URL(s).hostname.replace(/^www\./, '');
 const labels = (list) => { const seen = {}; return list.map((s) => { const h = host(s); seen[h] = (seen[h] || 0) + 1; return seen[h] > 1 ? `${h} (${seen[h]})` : h; }); };
+const names = rows.map((r) => r.destination);
+const lead = names.slice(0, 3).map((n) => n.split(' / ').pop());
+const title = `Visa for Indians: ${lead.join(', ')} & more (updated ${monthYear(visaUpdated)})`;
+const description = `Visa rules for Indian passport holders in ${names.join(', ')}: max stay, fees and conditions, checked against official sources. Last updated ${dayLong(visaUpdated)}.`;
+const pageUrl = new URL(u('/visa-tracker/'), SITE.url).href;
+const jsonld = { '@context': 'https://schema.org', '@graph': [
+  { '@type': 'Dataset', name: 'Visa rules for Indian passport holders', description, url: pageUrl, dateModified: visaUpdated, inLanguage: 'en-IN',
+    creator: { '@type': 'Organization', name: SITE.name }, isAccessibleForFree: true, spatialCoverage: names, keywords: ['visa', 'India', 'Indian passport', ...names] },
+  { '@type': 'ItemList', name: 'Visa rules by destination', numberOfItems: rows.length,
+    itemListElement: rows.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: `${r.destination}: ${ruleLabel(r.rule_type)}`, url: `${pageUrl}#${r.id}` })) },
+] };
 const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:checked) .vt:not([data-group=${g}]){display:none}`).join('');
 ---
-<Base title="Visa & routes tracker" description="Entry rules for Indian ordinary passport holders and new India routes, checked against official sources by the Travel News Desk.">
+<Base title={title} description={description} jsonld={jsonld}>
 <div class="wrap section tracker">
   <h1>Visa &amp; routes tracker</h1>
   <p class="meta">Entry rules for Indian ordinary passport holders, each checked against official sources. Maintained by the Travel News Desk. Always confirm with the official source before travel.</p>
+  <p class="meta"><strong>Last updated <time datetime={visaUpdated}>{dayLong(visaUpdated)}</time></strong></p>
+  <nav aria-label="Jump to destination" class="chips" style="margin:0 0 16px">{rows.map((r) => <a class="chip dest" href={`#${r.id}`}>{r.destination}</a>)}</nav>
   <fieldset class="seg"><legend class="sr-only">Filter by entry rule</legend>
     {GROUPS.map(([v, l], i) => <label><input type="radio" name="vf" value={v} checked={i === 0} /><span>{l}</span></label>)}
   </fieldset>
   <ul class="vt-grid" role="list">
     {rows.map((r) => { const [flag, slug] = MAP[r.id] ?? ['', '']; return (
-      <li class="vt" data-group={GROUP(r.rule_type)}>
+      <li class="vt" id={r.id} data-group={GROUP(r.rule_type)}>
         <div class="vt-head">{flag && <Flag code={flag} size={30} />}<h2>{slug ? <a href={u(`/destinations/${slug}/`)}>{r.destination}</a> : r.destination}</h2><span class={`st st-${GROUP(r.rule_type)}`}>{ruleLabel(r.rule_type)}</span></div>
         <dl class="vt-facts">
           <div><dt>Max stay</dt><dd>{r.max_stay ?? 'Not stated'}</dd></div>
@@ -41,7 +56,7 @@ const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:c
   </ul>
 
   <h2 id="routes" style="margin-top:48px">New routes from India</h2>
-  <p class="meta">{routes.length} verified routes, including {routes.slice(0, 3).map((r) => `${r.origin.city} → ${r.destination.city}`).join(', ')}. Start dates, frequency, aircraft, filters and a CSV download are on the routes tracker.</p>
+  <p class="meta">Last updated <time datetime={routesUpdated}>{dayLong(routesUpdated)}</time>. {routes.length} verified routes, including {routes.slice(0, 3).map((r) => `${r.origin.city} → ${r.destination.city}`).join(', ')}. Start dates, frequency, aircraft, filters and a CSV download are on the routes tracker.</p>
   <p><a class="btn" href={u('/routes/')}>Open the flight routes tracker</a></p>
 </div>
 <style set:html={filterCss}></style>

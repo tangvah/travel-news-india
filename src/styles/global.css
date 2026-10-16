@@ -293,3 +293,27 @@ html.js .theme-toggle{display:inline-flex}
 .rs-announced{background:var(--c-air-bg);color:var(--c-air)}.rs-on-sale{background:var(--ok-bg);color:var(--ok)}.rs-launched{background:var(--ok-bg);color:var(--ok)}.rs-suspended{background:var(--c-hotel-bg);color:var(--c-hotel)}
 .rt-cards{display:none;list-style:none;padding:0;margin:0;gap:16px}
 @media (max-width:760px){.rt-desk{display:none}.rt-cards{display:grid}}
+
+/* Trackers: homepage block, article callout, row anchors */
+.trackers-home{padding-bottom:0}
+.th-grid{display:grid;gap:var(--s6)}
+@media (min-width:900px){.th-grid{grid-template-columns:3fr 2fr}}
+.th-block h3{margin:0;font:700 1.25rem/1.25 var(--font-serif)}
+.vl-form{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-bottom:var(--s4)}
+.vl-form[hidden]{display:none}
+.vl-form label{font-weight:600;font-size:.9rem}
+.vl-form select{min-height:44px;padding:0 var(--s3);border:1px solid var(--line);border-radius:var(--r1);background:var(--surface);color:var(--ink);font:500 1rem var(--font-sans);flex:1 1 10rem}
+.vl-chips,.nr-list,.box .tc-links{list-style:none;margin:0 0 var(--s3);padding:0;display:grid;gap:var(--s2)}
+.vl-chips{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:600px){.vl-chips{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.vl-chip,.nr-list a,.tc-links a{display:flex;align-items:center;gap:var(--s2);min-height:48px;padding:var(--s2) var(--s3);background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);color:var(--ink);text-decoration:none}
+.vl-chip:hover,.nr-list a:hover,.tc-links a:hover{border-color:var(--ink)}
+.vl-chip span,.nr-list span,.tc-links a{display:flex;flex-direction:column;line-height:1.3}
+.vl-chip b,.nr-list b{font-size:.92rem}
+.vl-chip small{font-size:.75rem;background:none;font-weight:600}
+.box .tc-links{grid-template-columns:1fr}
+@media (min-width:600px){.box .tc-links{grid-template-columns:1fr 1fr}}
+.tc-links a{align-items:flex-start;justify-content:center}
+.tc-links b{color:var(--accent)}
+.vt[id],.ro[id]{scroll-margin-top:var(--s5)}
+.vt:target,.ro:target{outline:3px solid var(--accent);outline-offset:2px}
