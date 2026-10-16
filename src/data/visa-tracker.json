@@ -1,0 +1,218 @@
+[
+  {
+    "id": "thailand",
+    "destination": "Thailand",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_exempt",
+    "max_stay": "30 days",
+    "fee": null,
+    "effective_date": "2026-09-15",
+    "key_conditions": [
+      "Ordinary passport; tourism and short-term business",
+      "Thailand Digital Arrival Card (TDAC) registration required, preferably 3 days before arrival (per India's MEA)",
+      "Longer stays need a visa via the Thai e-Visa portal"
+    ],
+    "quote": "the 30-day visa exemption scheme for Indian passport holders entering Thailand for tourism purposes officially takes effect on 15 September 2026.",
+    "sources": [
+      "https://newdelhi.thaiembassy.org/en/content/the-revision-of-thailand-s-visa-exemption-and-voa",
+      "https://newdelhi.thaiembassy.org/en/page/visa",
+      "https://image.mfa.go.th/mfa/0/zE6021nSnu/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B2%E0%B8%8A%E0%B8%99/%E0%B8%9C.30.pdf",
+      "https://tdac.immigration.go.th"
+    ],
+    "verified": true,
+    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "singapore",
+    "destination": "Singapore",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_required",
+    "max_stay": "Set by ICA officer at entry (not tied to visa validity)",
+    "fee": {
+      "amount": 30,
+      "currency": "SGD",
+      "applies_to": "Online application via ICA e-Service (local contact/strategic partner); agent charges for applications filed in India not stated here"
+    },
+    "effective_date": null,
+    "key_conditions": [
+      "Apply before travel via an authorised visa agent, a Singapore mission, or ICA e-Service through a local contact",
+      "Form 14A, recent photo, passport valid at least 6 months from entry",
+      "ICA processing normally 3 working days",
+      "96-hour Visa Free Transit Facility may apply to Indians in transit by air (conditions apply)"
+    ],
+    "quote": "Visa applications are required for Indian citizens / passport holders.",
+    "sources": [
+      "https://new-delhi.mfa.gov.sg/consular-services/visa-information/",
+      "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements/visa-detail-page/india"
+    ],
+    "verified": true,
+    "notes": "ICA states 'A S$30 non-refundable processing fee is payable online'. Fees when applying through an authorised agent in India were not checked.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "uae",
+    "destination": "UAE / Dubai",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "conditional_pre_approved_entry_visa",
+    "max_stay": "14 days (extendable once by 14 days) or 60 days (single-entry, non-extendable), by category",
+    "fee": {
+      "amount": 100,
+      "currency": "AED",
+      "applies_to": "14-day visa; 60-day visa AED 250; 14-day extension AED 250 (ICP). GDRFA Dubai lists a fee of 253 with no currency shown"
+    },
+    "effective_date": null,
+    "key_conditions": [
+      "Only for Indians holding a qualifying US/EU/UK (and, per ICP, Singapore, Japan, Korea, Australia, NZ, Canada) residence permit/green card or visa",
+      "Passport and qualifying visa/residence each valid at least 6 months",
+      "Apply online (ICP or GDRFA Dubai smart services); about 48 hours",
+      "Overstay fine AED 50 per day"
+    ],
+    "quote": "The fee for the 14-day visa is AED 100, while the fee for the 60-day visa is AED 250.",
+    "sources": [
+      "https://icp.gov.ae/en/media-center/icp-expands-eligibility-for-uae-entry-visa-for-nationals-of-certain-countries/",
+      "https://icp.gov.ae/media-center/identity-and-citizenship-announces-expansion-of-entry-and-stay-period-for-indian-nationals-residing-and-holding-tourist-visas-for-eu-countries-us-and-uk/",
+      "https://www.gdrfad.gov.ae/en/services/727c91b1-52eb-11ea-0320-0050569629e8"
+    ],
+    "verified": false,
+    "notes": "Partly verified. The conditional scheme is confirmed on ICP and GDRFA pages. Gaps: (1) The rule for Indians WITHOUT a qualifying visa or residence (a standard tourist visa, normally sponsor or airline-arranged) was not confirmed on an official page. (2) The ICP English release names 'residence permit', while the earlier ICP Arabic release also includes US/UK/EU tourist visas. (3) GDRFA's fee of 253 differs from ICP's AED 100, and no currency is shown. The ICP announcement dates were not captured.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "vietnam",
+    "destination": "Vietnam",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "e_visa",
+    "max_stay": "Up to 90 days (e-visa validity), single or multiple entry",
+    "fee": {
+      "amount": 25,
+      "currency": "USD",
+      "applies_to": "single entry; USD 50 multiple entry; non-refundable"
+    },
+    "effective_date": null,
+    "key_conditions": [
+      "Apply online on the official e-visa portal (evisa.gov.vn / thithucdientu.gov.vn)",
+      "Processing 3 working days",
+      "Enter and exit only via designated border gates (includes international airports listed by government)"
+    ],
+    "quote": "Vietnam E-visa is valid for maximum of 90 days, single or multiple entry.",
+    "sources": [
+      "https://immigration.gov.vn/trang-chu-ttdt",
+      "https://evisa.immigration.gov.vn/en_US/web/guest/khai-thi-thuc-dien-tu/cap-thi-thuc-dien-tu",
+      "https://en.baochinhphu.vn/understanding-viet-nams-e-visa-111250218154519057.htm"
+    ],
+    "verified": true,
+    "notes": "The government portal says e-visas are issued 'to citizens of all countries and territories', so India is covered. There is no India-specific page. evisa.gov.vn itself timed out today.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "indonesia",
+    "destination": "Indonesia / Bali",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_on_arrival_or_e_voa",
+    "max_stay": "30 days, extendable once (total up to 60 days)",
+    "fee": {
+      "amount": 500000,
+      "currency": "IDR",
+      "applies_to": "B1 visa on arrival / e-VoA (card surcharges may apply)"
+    },
+    "effective_date": null,
+    "key_conditions": [
+      "India is on the official eligible-country list",
+      "Single entry; tourism, family visits, business meetings, transit",
+      "Passport valid at least 6 months; outbound ticket",
+      "e-VoA can be applied online at evisa.imigrasi.go.id; e-VoA validity 90 days before entry"
+    ],
+    "quote": "Visitor Visa is a single-entry visa which is valid for 30 days stay in Indonesia with the purpose of Tourism, Government Visit, Business Meeting, Goods Purchasing, or Transit only.",
+    "sources": [
+      "https://evisa.imigrasi.go.id/front/info/evoa",
+      "https://imigrasi.go.id/wna/daftar-visa-indonesia/B1"
+    ],
+    "verified": true,
+    "notes": "The extension and passport-validity details come from the Indonesian-language B1 page ('maksimal 30 hari', 'maksimal 60 hari', 'Rp 500.000').",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "malaysia",
+    "destination": "Malaysia",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_exempt",
+    "max_stay": "30 days",
+    "fee": null,
+    "effective_date": "2023-12-01",
+    "key_conditions": [
+      "Valid until 31 December 2026",
+      "Business, tourism, social or transit",
+      "Passport valid at least 6 months; confirmed return ticket; confirmed hotel booking",
+      "Malaysia Digital Arrival Card (MDAC) online, 3 days before arrival"
+    ],
+    "quote": "The Malaysian government has announced the extension of visa waiver for Indian nationals travelling to Malaysia until 31 December 2026, for up to 30 days, for business, tourism, social or transit purposes.",
+    "sources": [
+      "https://www.kln.gov.my/web/ind_new-delhi/requirement_foreigner",
+      "https://malaysiavisa.imi.gov.my/terms-and-conditions/",
+      "https://www.imi.gov.my/index.php/en/main-services/visa/visa-requirement-by-country/",
+      "https://imigresen-online.imi.gov.my/mdac/main"
+    ],
+    "verified": true,
+    "notes": "The effective date of 1 Dec 2023 comes from the MYVISA terms page. The exemption expires 31 Dec 2026; watch for an extension.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "sri-lanka",
+    "destination": "Sri Lanka",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "eta_free",
+    "max_stay": "30 days, double entry",
+    "fee": {
+      "amount": 0,
+      "currency": "LKR",
+      "applies_to": "Tourist ETA free of charge for Indian nationals; extension beyond 30 days is paid"
+    },
+    "effective_date": "2026-05-25",
+    "key_conditions": [
+      "ETA must be obtained before arrival",
+      "Double entry within the 30-day validity",
+      "ETA fees paid before 25.05.2026 are non-refundable",
+      "Round-trip ticket and sufficient funds (ETA terms)"
+    ],
+    "quote": "With effect from 25.05.2026, nationals of the following 40 countries are eligible to obtain tourist visa (ETA) free-of-charge for a period of 30 days.",
+    "sources": [
+      "https://www.eta.gov.lk/slvisa/",
+      "https://www.immigration.gov.lk/pages_e.php?id=60"
+    ],
+    "verified": true,
+    "notes": "India is item 13 on the list of 40 countries. The 'LKR 0' currency is our own label; the page just says 'free-of-charge'.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "japan",
+    "destination": "Japan",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_required_e_visa_available",
+    "max_stay": "Up to 90 days (single-entry short-term tourism eVISA)",
+    "fee": null,
+    "effective_date": null,
+    "key_conditions": [
+      "India is not on Japan's 74-country visa-exemption list",
+      "eVISA for residents of India via accredited agency; ordinary passports only",
+      "Show the 'Visa issuance notice' on a mobile device at the airport (PDF or screenshot not accepted)",
+      "Possible in-person interview"
+    ],
+    "quote": "Hong Kong, India, Indonesia, Macau, Mongolia, the Republic of Korea, Singapore and United Arab Emirates All foreign nationals/people residing in [these places] ... except those who are exempt from short-term visa",
+    "sources": [
+      "https://www.mofa.go.jp/j_info/visit/visa/short/Novisa.html",
+      "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html"
+    ],
+    "verified": true,
+    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. The fee is not recorded: the Embassy of Japan in India page (in.emb-japan.go.jp) returned 403 to our tools. A search snippet showed 'Single or Multiple visa: 500 INR' for Indian nationals from 1 July 2026, which is unverified and not used here.",
+    "last_checked": "2026-10-16"
+  }
+]

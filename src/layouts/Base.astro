@@ -5,9 +5,11 @@ import '@fontsource-variable/source-serif-4/index.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import Flag from '../components/Flag.astro';
+import Logo from '../components/Logo.astro';
 import { SITE, DESTINATIONS, CATEGORIES, TOOLS } from '../site.config.mjs';
 import { allNews } from '../lib';
-const { title, description = SITE.tagline, type = 'website', image, jsonld, noindex = false } = Astro.props;
+const { title, description = SITE.tagline, type = 'website', image, ogImage, jsonld, noindex = false } = Astro.props;
+const og = ogImage ?? new URL(u(image || '/og-default.png'), Astro.site).href;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name}: ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const path = Astro.url.pathname;
@@ -19,18 +21,20 @@ const today = new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'nu
 <!doctype html>
 <html lang="en-IN">
 <head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <script is:inline>
-(function(){var d=document.documentElement;d.classList.add('js');
+(function(){var d=document.documentElement;d.classList.add('js');if(navigator.share)d.classList.add('can-share');
 function pick(){try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light')return s}catch(e){}return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
 d.dataset.theme=pick();
 if(window.__iotn)return;window.__iotn=1;
-document.addEventListener('astro:before-swap',function(e){var n=e.newDocument.documentElement;n.dataset.theme=pick();n.classList.add('js')});
+document.addEventListener('astro:before-swap',function(e){var n=e.newDocument.documentElement;n.dataset.theme=pick();n.classList.add('js');if(navigator.share)n.classList.add('can-share')});
 document.addEventListener('click',function(e){
  var t=e.target.closest&&e.target.closest('[data-theme-toggle]');
- if(t){var next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('theme',next)}catch(_){};t.setAttribute('aria-pressed',String(next==='dark'));return}
+ if(t){var next=document.documentElement.dataset.theme==='dark'?'light':'dark';var apply=function(){document.documentElement.dataset.theme=next};var r=t.getBoundingClientRect();var de=document.documentElement;de.style.setProperty('--vx',(r.left+r.width/2)+'px');de.style.setProperty('--vy',(r.top+r.height/2)+'px');if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){de.classList.add('theme-vt');document.startViewTransition(apply).finished.finally(function(){de.classList.remove('theme-vt')})}else apply();try{localStorage.setItem('theme',next)}catch(_){};t.setAttribute('aria-pressed',String(next==='dark'));return}
  var c=e.target.closest&&e.target.closest('[data-copy]');
- if(c&&navigator.clipboard){navigator.clipboard.writeText(c.dataset.copy).then(function(){c.textContent='Link copied'})}
+ if(c&&navigator.clipboard){navigator.clipboard.writeText(c.dataset.copy).then(function(){var o=document.getElementById('toast');if(o){o.textContent='Copied';o.classList.add('show');clearTimeout(window.__tt);window.__tt=setTimeout(function(){o.classList.remove('show');o.textContent=''},2200)}});return}
+ var w=e.target.closest&&e.target.closest('[data-webshare]');
+ if(w&&navigator.share){navigator.share({title:w.dataset.title,url:w.dataset.webshare}).catch(function(){})}
 });})();
 </script>
 <title>{fullTitle}</title>
@@ -39,13 +43,14 @@ document.addEventListener('click',function(e){
 <link rel="canonical" href={canonical} />
 <meta name="theme-color" content="#14171c" />
 <link rel="icon" href={u("/favicon.svg")} type="image/svg+xml" />
+<link rel="apple-touch-icon" href={u("/apple-touch-icon.png")} />
 <link rel="alternate" type="application/rss+xml" title={SITE.name} href={u("/rss.xml")} />
 <link rel="sitemap" href={u("/sitemap-index.xml")} />
 <meta property="og:site_name" content={SITE.name} /><meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} /><meta property="og:type" content={type} />
 <meta property="og:url" content={canonical} /><meta property="og:locale" content={SITE.locale} />
-{image && <meta property="og:image" content={new URL(u(image), Astro.site)} />}
-<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+<meta property="og:image" content={og} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content={og} />
 <meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={description} />
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 <ClientRouter />
@@ -64,7 +69,7 @@ document.addEventListener('click',function(e){
   <div class="masthead">
     <div class="wrap">
       <div class="mast-row">
-        <a class="brand" href={u("/")}><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></a>
+        <a class="brand brand-v2" href={u("/")}><Logo size={46} /><span class="bt"><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></span></a>
         <div class="mast-tools">
           <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
             <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>

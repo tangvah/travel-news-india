@@ -145,7 +145,7 @@ html.js .theme-toggle{display:inline-flex}
 .hero p{color:#f1f1f1;max-width:60ch;margin:0}
 .hero .eyebrow{color:#f1f1f1}
 
-/* ===== Placeholder / info boxes ===== */
+/* ===== Notice / info boxes ===== */
 .ph{background:var(--warn-bg);border:1px dashed var(--warn-line);border-radius:var(--r2);padding:var(--s4) var(--s5)}
 .facts{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:var(--s4) 0 0;padding:0;list-style:none}
 .facts li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r1);padding:var(--s3) var(--s4)}
@@ -186,3 +186,99 @@ html.js .theme-toggle{display:inline-flex}
 .legal{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line);color:var(--muted)}
 .legal a{color:var(--muted);text-decoration:underline}
 .page{max-width:var(--readw)}
+
+/* ===== Motion polish ===== */
+/* Container queries: cards adapt to their own width, not the viewport */
+.card{container-type:inline-size}
+@container (max-width:320px){.card h3{font-size:1.1rem}.card p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
+@container (min-width:420px){.card h3{font-size:1.45rem}}
+/* Scroll-driven reading progress (article) — hidden where unsupported */
+.progress{display:none}
+@supports (animation-timeline: scroll()){
+  .progress{display:block;position:fixed;inset:0 0 auto 0;height:4px;z-index:60;background:linear-gradient(90deg,var(--accent),var(--c-visa));transform-origin:0 50%;transform:scaleX(0);animation:progress linear both;animation-timeline:scroll(root)}
+  @keyframes progress{to{transform:scaleX(1)}}
+}
+/* Scroll-driven card reveal — only with motion allowed and support present; fallback = static */
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline: view()){
+    .card,.dest-card{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+    @keyframes rise{from{opacity:.001;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+  }
+  
+  ::view-transition-group(*){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+  /* Theme switch: circular reveal from the toggle */
+  .theme-vt::view-transition-old(root){animation:none}
+  .theme-vt::view-transition-new(root){animation:reveal .55s cubic-bezier(.2,.7,.2,1)}
+  @keyframes reveal{from{clip-path:circle(0 at var(--vx) var(--vy))}to{clip-path:circle(150vmax at var(--vx) var(--vy))}}
+}
+/* Polished dark mode: softer surfaces, glow on focus */
+[data-theme=dark] .card{background:linear-gradient(180deg,var(--surface),#14181d)}
+[data-theme=dark] :focus-visible{box-shadow:0 0 0 6px rgba(147,197,253,.25)}
+
+/* ===== Brand mark ===== */
+.brand-v2{flex-direction:row;align-items:center;gap:12px}
+.brand-v2 .bt{display:flex;flex-direction:column}
+.brand-v2 b span{background:linear-gradient(90deg,#c2410c,#0f766e);-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme=dark] .brand-v2 b span{background-image:linear-gradient(90deg,#ff9933,#2dd4bf)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .brand-v2 b span{background-image:linear-gradient(90deg,#ff9933,#2dd4bf)}}
+[data-theme=dark] .logo-mark{--logo-tile:#262c35}
+.masthead{border-bottom:0;box-shadow:inset 0 -3px 0 0 transparent;background-image:linear-gradient(90deg,#ff9933,#ffffff00 50%,#14b8a6);background-size:100% 3px;background-repeat:no-repeat;background-position:bottom;background-color:var(--surface)}
+.ticker .label{background:linear-gradient(90deg,#c2410c,#0f766e);color:#fff}
+
+/* ===== Visa & routes tracker ===== */
+.seg{border:0;padding:0;margin:24px 0;display:flex;flex-wrap:wrap;gap:8px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:inline-flex;min-height:40px;align-items:center;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-weight:600}
+.seg input:checked+span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.seg input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.vt-grid{list-style:none;padding:0;margin:0;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.vt{background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:20px;display:flex;flex-direction:column;gap:10px}
+.vt p{margin:0}
+.vt-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.vt-head h2{margin:0;font-size:1.25rem;flex:1}.vt-head h2 a{color:var(--ink);text-decoration:none}.vt-head h2 a:hover{text-decoration:underline}
+.st{font:700 .72rem/1.2 var(--font-sans);padding:5px 9px;border-radius:999px;letter-spacing:.02em}
+.st-free{background:var(--ok-bg);color:var(--ok)}.st-online{background:var(--c-air-bg);color:var(--c-air)}.st-visa{background:var(--c-hotel-bg);color:var(--c-hotel)}
+.vt-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin:0}
+.vt-facts dt{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.vt-facts dd{margin:0;font-weight:600}.vt-facts small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.vt-cond{margin:0;padding-left:1.1em;font-size:.92rem}
+.vt-quote{margin:0;padding-left:12px;border-left:3px solid var(--accent);font:italic 1rem/1.5 var(--font-serif)}
+.vt-src a{word-break:break-all}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r2);background:var(--surface)}
+.rt{border-collapse:collapse;width:100%;min-width:720px;font-size:.95rem}
+.rt th,.rt td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.rt th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.rt tr:last-child td{border-bottom:0}
+
+/* ===== Share UI ===== */
+.sh{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font:600 .9rem var(--font-sans);cursor:pointer}
+.sh:hover{border-color:var(--ink)}
+.sh-whatsapp{background:#0b6b3a;border-color:#0b6b3a;color:#fff}.sh-whatsapp:hover{background:#08562e;border-color:#08562e}
+.webshare{display:none}html.can-share .webshare{display:inline-flex}
+.copy-btn{display:none}html.js .copy-btn{display:inline-flex}
+.article-body{display:grid;grid-template-columns:minmax(0,1fr)}
+.share-rail{display:flex;gap:6px;justify-content:space-around;align-items:center}
+.share-label{font:800 .65rem/1 var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* Desktop: sticky vertical rail beside the text */
+@media (min-width:1100px){
+  .article-body{grid-template-columns:1fr minmax(0,var(--readw)) 1fr;column-gap:var(--s5)}
+  .article-body .prose{grid-column:2;margin-left:0;margin-right:0;padding:0}
+  .share-rail{grid-column:1;grid-row:1;justify-self:end;flex-direction:column;position:sticky;top:96px;align-self:start;margin-top:var(--s6);padding:12px 8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow)}
+  .share-rail .sh{border-color:transparent}
+}
+/* Mobile/tablet: compact fixed bottom bar, safe-area aware; body is padded so it never hides the end of the page */
+@media (max-width:1099px){
+  .share-rail{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(0,0,0,.08);padding:6px max(8px,env(safe-area-inset-left)) calc(6px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-right))}
+  .share-rail .share-label{display:none}
+  .share-rail .sh{border-color:transparent;padding:0;min-width:40px}
+  .share-rail .sh-whatsapp{border-radius:999px;padding:0 12px}
+  body:has(.share-rail){padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+}
+@media print{.share-rail,.share-card,.toast{display:none}}
+.share-card>div{border-top:4px solid var(--accent)}
+.share-card h2{font-size:1.25rem;margin:0 0 var(--s3)}
+.share-row{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.share-row .sh{padding:0 14px}
+.toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);font:700 .9rem var(--font-sans);padding:10px 18px;border-radius:999px;z-index:70;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}

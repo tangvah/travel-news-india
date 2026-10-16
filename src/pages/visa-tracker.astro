@@ -1,7 +1,52 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from '../layouts/Base.astro'; import Flag from '../components/Flag.astro';
+import visa from '../data/visa-tracker.json'; import routes from '../data/routes.json';
+import { u, dest } from '../lib';
+// id in visa-tracker.json -> flag code + destination page slug
+const MAP = { thailand: ['th', 'thailand'], singapore: ['sg', 'singapore'], uae: ['ae', 'dubai'], vietnam: ['vn', 'vietnam'], indonesia: ['id', 'bali'], malaysia: ['my', 'malaysia'], 'sri-lanka': ['lk', 'sri-lanka'], japan: ['jp', 'japan'] };
+const RULE = { visa_exempt: 'Visa exemption', visa_required: 'Visa required', e_visa: 'e-Visa', visa_on_arrival_or_e_voa: 'Visa on arrival / e-VoA', eta_free: 'ETA, free', visa_required_e_visa_available: 'Visa required (e-Visa available)', conditional_pre_approved_entry_visa: 'Conditional pre-approved entry visa' };
+const GROUP = (r) => r.startsWith('visa_exempt') ? 'free' : r.startsWith('visa_required') ? 'visa' : 'online';
+const GROUPS = [['all', 'All'], ['free', 'Visa-free'], ['online', 'e-Visa, ETA & on arrival'], ['visa', 'Visa required']];
+const rows = visa.filter((r) => r.verified === true && r.sources?.length && r.last_checked);
+const ruleLabel = (r) => RULE[r] ?? r.replace(/_/g, ' ');
+const fee = (f) => (f == null ? 'Not stated' : `${f.currency} ${Number(f.amount).toLocaleString('en-IN')}`);
+const day = (s) => new Date(s + 'T00:00:00+05:30').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' });
+const host = (s) => new URL(s).hostname.replace(/^www\./, '');
+const labels = (list) => { const seen = {}; return list.map((s) => { const h = host(s); seen[h] = (seen[h] || 0) + 1; return seen[h] > 1 ? `${h} (${seen[h]})` : h; }); };
+const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:checked) .vt:not([data-group=${g}]){display:none}`).join('');
 ---
-<Base title="Visa tracker (coming soon)" description="A planned tracker of visa and entry rules for Indian passport holders across our destinations, with links to official sources.">
-<div class="wrap section page"><span class="soon">Coming soon</span><h1 style="margin-top:12px">Visa tracker</h1>
-<p>A planned tracker of visa and entry rules for Indian passport holders across our destinations, with links to official sources.</p>
-<p class="ph">Coming soon.</p></div></Base>
+<Base title="Visa & routes tracker" description="Entry rules for Indian ordinary passport holders and new India routes, checked against official sources by the Travel News Desk.">
+<div class="wrap section tracker">
+  <h1>Visa &amp; routes tracker</h1>
+  <p class="meta">Entry rules for Indian ordinary passport holders, each checked against official sources. Maintained by the Travel News Desk. Always confirm with the official source before travel.</p>
+  <fieldset class="seg"><legend class="sr-only">Filter by entry rule</legend>
+    {GROUPS.map(([v, l], i) => <label><input type="radio" name="vf" value={v} checked={i === 0} /><span>{l}</span></label>)}
+  </fieldset>
+  <ul class="vt-grid" role="list">
+    {rows.map((r) => { const [flag, slug] = MAP[r.id] ?? ['', '']; return (
+      <li class="vt" data-group={GROUP(r.rule_type)}>
+        <div class="vt-head">{flag && <Flag code={flag} size={30} />}<h2>{slug ? <a href={u(`/destinations/${slug}/`)}>{r.destination}</a> : r.destination}</h2><span class={`st st-${GROUP(r.rule_type)}`}>{ruleLabel(r.rule_type)}</span></div>
+        <dl class="vt-facts">
+          <div><dt>Max stay</dt><dd>{r.max_stay ?? 'Not stated'}</dd></div>
+          <div><dt>Fee</dt><dd>{fee(r.fee)}{r.fee?.applies_to && <small>{r.fee.applies_to}</small>}</dd></div>
+          <div><dt>Effective</dt><dd>{r.effective_date ? day(r.effective_date) : 'Not stated'}</dd></div>
+          <div><dt>Purpose</dt><dd>{r.purpose}, {r.passport_type} passport</dd></div>
+        </dl>
+        {r.key_conditions?.length > 0 && <ul class="vt-cond">{r.key_conditions.map((k) => <li>{k}</li>)}</ul>}
+        {r.quote && <blockquote class="vt-quote">“{r.quote}”</blockquote>}
+        {r.notes && <p class="meta">{r.notes}</p>}
+        <p class="vt-src"><span class="meta">Sources:</span> {(() => { const L = labels(r.sources); return r.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s} rel="noopener">{L[i]}</a></>); })()}</p>
+        <p class="meta">Last checked <time datetime={r.last_checked}>{day(r.last_checked)}</time></p>
+      </li>); })}
+  </ul>
+
+  <h2 id="routes" style="margin-top:48px">New routes from India</h2>
+  <p class="meta">Routes reported in our published articles. Check the airline's release before booking.</p>
+  <div class="table-wrap" role="region" aria-label="New routes from India" tabindex="0"><table class="rt">
+    <thead><tr><th scope="col">Route</th><th scope="col">Airline</th><th scope="col">Starts</th><th scope="col">Frequency</th><th scope="col">Source</th><th scope="col">Story</th></tr></thead>
+    <tbody>{routes.map((r) => <tr><td><Flag code={dest(r.dest).flag} size={18} /> {r.route}</td><td>{r.airline}</td><td><time datetime={r.starts}>{day(r.starts)}</time></td><td>{r.frequency}</td><td><a href={r.source} rel="noopener">{host(r.source)}</a></td><td><a href={u(`/news/${r.article}/`)}>Read<span class="sr-only"> about {r.route}</span></a></td></tr>)}</tbody>
+  </table></div>
+  <p class="meta">Last checked {day(routes[0].last_checked)}.</p>
+</div>
+<style set:html={filterCss}></style>
+</Base>

@@ -4,6 +4,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro'; import List from '../../components/List.astro';
 import { allNews, fmt, readingTime, cat, dest, isVerified } from '../../lib';
 import { SITE } from '../../site.config.mjs';
+import Share from '../../components/Share.astro';
 export async function getStaticPaths() { const all = await allNews(); return all.map((e) => ({ params: { id: e.id }, props: { e, all } })); }
 const { e, all } = Astro.props; const d = e.data; const { Content } = await render(e);
 const c = cat(d.category);
@@ -11,19 +12,15 @@ const url = new URL(Astro.url.pathname, Astro.site).href;
 const verified = isVerified(d);
 const mins = readingTime(e.body);
 const related = all.filter((x) => x.id !== e.id && (x.data.category === d.category || x.data.destinations.some((s) => d.destinations.includes(s)))).slice(0, 3);
-const eu = encodeURIComponent(url), t = encodeURIComponent(d.title);
-const share = [
-  ['WhatsApp', `https://wa.me/?text=${t}%20${eu}`], ['X', `https://x.com/intent/post?text=${t}&url=${eu}`],
-  ['LinkedIn', `https://www.linkedin.com/sharing/share-offsite/?url=${eu}`], ['Facebook', `https://www.facebook.com/sharer/sharer.php?u=${eu}`],
-  ['Email', `mailto:?subject=${t}&body=${eu}`],
-];
+const ogImage = new URL(u(`/og/${e.id}.png`), Astro.site).href;
 const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.summary,
   datePublished: d.date.toISOString(), dateModified: d.date.toISOString(), author: { '@type': 'Person', name: d.author }, mainEntityOfPage: url,
   publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: new URL(u('/favicon.svg'), SITE.url).href } },
-  articleSection: c.name, keywords: d.tags.join(', '), ...(d.image ? { image: [new URL(u(d.image), Astro.site).href] } : {}),
+  articleSection: c.name, keywords: d.tags.join(', '), image: [d.image ? new URL(u(d.image), Astro.site).href : ogImage],
   ...(d.sources.length ? { citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.name, url: s.url })) } : {}) };
 ---
-<Base title={d.title} description={d.summary} type="article" image={d.image} jsonld={jsonld} noindex={d.draft && process.env.DRAFTS_INDEXABLE !== '1'}>
+<Base title={d.title} description={d.summary} type="article" image={d.image} ogImage={d.image ? undefined : ogImage} jsonld={jsonld} noindex={d.draft && process.env.DRAFTS_INDEXABLE !== '1'}>
+<div class="progress" aria-hidden="true"></div>
 <article>
   <header class="article-head"><div class="wrap">
     {d.draft && <p class="ph"><span class="badge-draft">DRAFT</span> Preview only. Not published, and hidden from search engines (noindex).</p>}
@@ -35,18 +32,18 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headl
     <div class="byline"><span>By <strong>{d.author}</strong></span><time datetime={d.date.toISOString()}>{fmt(d.date)}</time><span>{mins} min read</span></div>
   </div></header>
   {d.image && <img src={u(d.image)} alt="" />}
-  <div class="prose"><Content /></div>
+  <div class="article-body"><Share url={url} title={d.title} /><div class="prose"><Content /></div></div>
   {d.sources.length > 0 && (
   <aside class="box" aria-labelledby="src-h"><div>
     <h2 id="src-h" class="eyebrow" style="font-family:var(--font-sans)">Source box{verified ? ': official sources' : ''}</h2>
     <ul>{d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul>
   </div></aside>)}
-  <aside class="box" aria-labelledby="share-h"><div>
-    <h2 id="share-h" class="eyebrow" style="font-family:var(--font-sans)">Share this story</h2>
-    <div class="share">{share.map(([n, h]) => <a class="btn" href={h} rel="noopener" target="_blank">{n}<span class="sr-only"> (opens in new tab)</span></a>)}
-      <button class="btn copy-btn" type="button" data-copy={url}>Copy link</button></div>
+  <aside class="box share-card" aria-labelledby="share-h"><div>
+    <h2 id="share-h">Found this useful? Share it with your clients and colleagues</h2>
+    <Share url={url} title={d.title} variant="card" />
     {d.tags.length > 0 && <p class="meta" style="margin:16px 0 0">Tags: {d.tags.join(', ')}</p>}
   </div></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </article>
 {related.length > 0 && <section class="wrap section" aria-labelledby="rel-h"><div class="section-head"><h2 id="rel-h">Related</h2></div><List items={related} /></section>}
 </Base>

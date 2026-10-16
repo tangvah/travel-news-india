@@ -1,0 +1,5 @@
+[
+  {"route":"Delhi → Osaka (Kansai)","dest":"japan","airline":"Air India","starts":"2027-02-02","frequency":"4 weekly (Boeing 787-8)","article":"article-02-air-india-delhi-osaka","source":"https://www.airindia.com/in/en/newsroom/press-release/air-india-opens-a-new-gateway-to-japan-with-non-stop-delhi-osaka-flights-starting-february-2027.html","last_checked":"2026-10-16"},
+  {"route":"Guwahati → Bangkok","dest":"thailand","airline":"IndiGo","starts":"2026-10-27","frequency":"Inaugural rotation 27 Oct; twice weekly (Wed, Sat) from 31 Oct, subject to regulatory approval","article":"article-03-thailand-visa-northeast-routes","source":"https://www.goindigo.in/press-releases/indigo-announces-direct-connectivity-between-guwahati-and-bangkok.html","last_checked":"2026-10-16"},
+  {"route":"Gaya → Bangkok","dest":"thailand","airline":"IndiGo","starts":"2026-10-26","frequency":"Not stated","article":"article-03-thailand-visa-northeast-routes","source":"https://www.goindigo.in/press-releases/indigo-announces-direct-connectivity-between-guwahati-and-bangkok.html","last_checked":"2026-10-16"}
+]
