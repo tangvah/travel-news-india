@@ -1,10 +1,23 @@
+---
+import { NEWSLETTER } from '../site.config.mjs';
+import { u } from '../lib';
+const { archive = true } = Astro.props;
+const live = Boolean(NEWSLETTER.embedHtml || NEWSLETTER.action);
+---
 <section class="newsletter" aria-labelledby="nl-h">
-  <div><span class="soon">Coming soon</span><h2 id="nl-h" style="margin-top:12px">The India Outbound Briefing</h2>
-  <p>A weekday email for agents and travellers: visa changes, new routes and trade news in five minutes. Sign-up is not live yet.</p></div>
+  <div>{!live && <span class="soon">Coming soon</span>}<h2 id="nl-h" style="margin-top:12px">{NEWSLETTER.name}</h2>
+  <p>A weekly email for agents and travellers: visa changes, new routes and trade news in five minutes.{!live && ' Email sign-up is coming soon.'}{archive && <> Read past issues in the <a href={u('/newsletter/')} style="color:inherit">newsletter archive</a> or follow the <a href={u('/newsletter/rss.xml')} style="color:inherit">newsletter RSS feed</a>.</>}</p></div>
+  {NEWSLETTER.embedHtml ? <div class="nl-embed" set:html={NEWSLETTER.embedHtml} /> : live ? (
+  <form class="nl-form nl-live" action={NEWSLETTER.action} method="post" target="_blank">
+    <label class="sr-only" for="nl-email">Email address</label>
+    <input id="nl-email" type="email" name={NEWSLETTER.emailField} autocomplete="email" required placeholder="you@agency.in" />
+    {Object.entries(NEWSLETTER.hidden).map(([k, v]) => <input type="hidden" name={k} value={String(v)} />)}
+    <button type="submit">Subscribe</button>
+  </form>) : (
   <form class="nl-form" onsubmit="return false" aria-describedby="nl-note">
     <label class="sr-only" for="nl-email">Email address (sign-up coming soon)</label>
     <input id="nl-email" type="email" aria-disabled="true" disabled />
     <button type="button" disabled>Coming soon</button>
     <p id="nl-note" class="sr-only">Newsletter sign-up is not available yet. No data is collected.</p>
-  </form>
+  </form>)}
 </section>

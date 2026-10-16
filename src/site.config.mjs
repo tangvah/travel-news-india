@@ -32,3 +32,16 @@ export const TOOLS = [
 ];
 // Preview mode: SHOW_DRAFTS=1 includes draft: true articles (badged + noindex).
 export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === '1';
+
+// Newsletter sign-up. No email provider is connected, so the form shows "Coming soon" and collects nothing.
+// To go live later with a free provider, set `provider` and `action` (the form's POST URL from the provider's
+// embed code), e.g. Buttondown: action 'https://buttondown.com/api/emails/embed-subscribe/<username>', emailField 'email'.
+// MailerLite and Substack embeds can instead be pasted as `embedHtml` (rendered as-is in place of the form).
+export const NEWSLETTER = {
+  name: 'The India Outbound Briefing',
+  provider: null,      // 'buttondown' | 'mailerlite' | 'substack' | null
+  action: null,        // provider form POST URL
+  emailField: 'email', // name of the email input the provider expects
+  hidden: {},          // extra hidden fields the provider's embed includes, e.g. { embed: '1' }
+  embedHtml: null,     // alternative: the provider's full embed snippet
+};
