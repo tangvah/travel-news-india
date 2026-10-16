@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro'; import Flag from '../components/Flag.astro';
-import visa from '../data/visa-tracker.json'; import routes from '../data/routes.json';
+import visa from '../data/visa-tracker.json'; import { routes } from '../routes-data';
 import { u, dest } from '../lib';
 // id in visa-tracker.json -> flag code + destination page slug
 const MAP = { thailand: ['th', 'thailand'], singapore: ['sg', 'singapore'], uae: ['ae', 'dubai'], vietnam: ['vn', 'vietnam'], indonesia: ['id', 'bali'], malaysia: ['my', 'malaysia'], 'sri-lanka': ['lk', 'sri-lanka'], japan: ['jp', 'japan'] };
@@ -41,12 +41,8 @@ const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:c
   </ul>
 
   <h2 id="routes" style="margin-top:48px">New routes from India</h2>
-  <p class="meta">Routes reported in our published articles. Check the airline's release before booking.</p>
-  <div class="table-wrap" role="region" aria-label="New routes from India" tabindex="0"><table class="rt">
-    <thead><tr><th scope="col">Route</th><th scope="col">Airline</th><th scope="col">Starts</th><th scope="col">Frequency</th><th scope="col">Source</th><th scope="col">Story</th></tr></thead>
-    <tbody>{routes.map((r) => <tr><td><Flag code={dest(r.dest).flag} size={18} /> {r.route}</td><td>{r.airline}</td><td><time datetime={r.starts}>{day(r.starts)}</time></td><td>{r.frequency}</td><td><a href={r.source} rel="noopener">{host(r.source)}</a></td><td><a href={u(`/news/${r.article}/`)}>Read<span class="sr-only"> about {r.route}</span></a></td></tr>)}</tbody>
-  </table></div>
-  <p class="meta">Last checked {day(routes[0].last_checked)}.</p>
+  <p class="meta">{routes.length} verified routes, including {routes.slice(0, 3).map((r) => `${r.origin.city} → ${r.destination.city}`).join(', ')}. Start dates, frequency, aircraft, filters and a CSV download are on the routes tracker.</p>
+  <p><a class="btn" href={u('/routes/')}>Open the flight routes tracker</a></p>
 </div>
 <style set:html={filterCss}></style>
 </Base>

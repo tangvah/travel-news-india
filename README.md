@@ -71,8 +71,8 @@ Page navigation uses Astro View Transitions (`<ClientRouter />`). The mobile men
 ## Lighthouse
 `./lh.sh <label>` (needs the preview running on :4321) writes JSON and HTML reports to `lighthouse/<label>/`.
 
-## Visa & routes tracker (`/visa-tracker/`)
-Maintained by the Travel News Desk. `/routes-tracker/` redirects to `/visa-tracker/#routes`.
+## Visa tracker (`/visa-tracker/`) and flight routes tracker (`/routes/`)
+Both are maintained by the Travel News Desk. `/routes-tracker/` redirects to `/routes/`, and the visa tracker's routes section links there.
 
 ### `src/data/visa-tracker.json`
 This is a byte-for-byte copy of the Desk file `travel_news/data/visa_tracker.json`. Replace the file to update it, and never hand-edit values in the repo. It is an array of records:
@@ -96,8 +96,27 @@ This is a byte-for-byte copy of the Desk file `travel_news/data/visa_tracker.jso
 
 A record appears on the live page only if `verified === true`, `sources` is not empty and `last_checked` is set.
 
-### `src/data/routes.json`
-An array of `{ route, dest, airline, starts (YYYY-MM-DD), frequency, article, source, last_checked }`. Add a route only when a **published** article in `src/content/news/` reports it. `article` is that article's file name without `.md`, `source` is the airline's own release, and `frequency` must use the article's wording (or "Not stated").
+### `src/data/routes_tracker.json` (flight routes tracker, `/routes/`)
+This is a byte-for-byte copy of the Desk file `travel_news/data/routes_tracker.json`. To update it, copy the Desk file over it (`cp ../travel_news/data/routes_tracker.json src/data/`). Never hand-edit values in the repo. It is an array of records:
+
+| key | type | notes |
+|---|---|---|
+| `id` | string | unique, e.g. `indigo-gau-bkk` |
+| `origin` | `{ city, iata }` | shown as "City (IATA)" |
+| `destination` | `{ city, iata }` | the IATA code sets the country filter through `AIRPORT_COUNTRY` in `src/routes-data.ts`. **Add new airports there**; unknown ones show "Not stated" |
+| `airline` | string | also an airline filter |
+| `frequency` | string \| null | free text from the release |
+| `aircraft` | string \| null | null, `""` or `"not stated"` all show "Not stated" |
+| `start_date` | `YYYY-MM-DD` \| null | rows are sorted by this, soonest first |
+| `status` | string | `announced`, `on sale`, `launched` or `suspended` (other values are title-cased). A status filter. `on sale` sets "Booking open: Yes"; anything else shows "Not stated" |
+| `announcement_date` | `YYYY-MM-DD` \| null | |
+| `quote` | string \| null | short line from the release (shown under the route) |
+| `sources` | `{ name, url }[]` | official airline sources. **Required to display** |
+| `verified` | boolean | **only `true` records are published** (page and CSV); unverified rows stay in the file but are hidden |
+| `notes` | string \| null | Desk notes. Writing `Covered in article-02` links the row to the published article whose file name starts with `article-02-` |
+| `last_checked` | `YYYY-MM-DD` | shown per row; the newest date is shown as "Last checked" |
+
+The page has no-JS filters (destination country, airline, status), a table on wide screens, cards on mobile, and `/routes.csv`, which is generated at build time from the same verified rows.
 
 ## Sharing and social images
 - Articles have share links for WhatsApp, X, Facebook, LinkedIn, Telegram and email, plus Copy link (with an aria-live "Copied" toast) and a native share button that appears only where the browser supports it. There are no third-party scripts. Brand icons come from `simple-icons` (CC0) and are inlined at build time.

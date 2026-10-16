@@ -1,0 +1,459 @@
+[
+  {
+    "id": "air-india-del-kix",
+    "origin": {
+      "city": "Delhi",
+      "iata": "DEL"
+    },
+    "destination": {
+      "city": "Osaka (Kansai)",
+      "iata": "KIX"
+    },
+    "airline": "Air India",
+    "frequency": "4 weekly (AI360 DEL-KIX Tue/Thu/Sat/Sun; AI359 KIX-DEL Mon/Wed/Fri/Sun)",
+    "aircraft": "Boeing 787-8",
+    "start_date": "2027-02-02",
+    "status": "announced",
+    "announcement_date": "2026-10-15",
+    "quote": "Air India says it will be the only airline flying Delhi–Osaka non-stop.",
+    "sources": [
+      {
+        "name": "Air India press release",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/air-india-opens-a-new-gateway-to-japan-with-non-stop-delhi-osaka-flights-starting-february-2027.html"
+      }
+    ],
+    "verified": true,
+    "notes": "New route. Covered in article-02. Quote paraphrases the release; it is not verbatim.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "indigo-gau-bkk",
+    "origin": {
+      "city": "Guwahati",
+      "iata": "GAU"
+    },
+    "destination": {
+      "city": "Bangkok (Suvarnabhumi)",
+      "iata": "BKK"
+    },
+    "airline": "IndiGo",
+    "frequency": "2 weekly (Wed/Sat from 31 Oct); 6E1085/6E1086",
+    "aircraft": "not stated",
+    "start_date": "2026-10-27",
+    "status": "announced",
+    "announcement_date": "2026-09-07",
+    "quote": "Release describes direct Guwahati–Bangkok connectivity, subject to regulatory approval.",
+    "sources": [
+      {
+        "name": "IndiGo press release",
+        "url": "https://www.goindigo.in/press-releases/indigo-announces-direct-connectivity-between-guwahati-and-bangkok.html"
+      },
+      {
+        "name": "IndiGo press releases index",
+        "url": "https://www.goindigo.in/press-releases.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Inaugural flight 27 Oct 2026, then regular Wed/Sat schedule from 31 Oct. Subject to regulatory approval. Covered in article-03.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "indigo-gay-bkk",
+    "origin": {
+      "city": "Gaya",
+      "iata": "GAY"
+    },
+    "destination": {
+      "city": "Bangkok (Suvarnabhumi)",
+      "iata": "BKK"
+    },
+    "airline": "IndiGo",
+    "frequency": "2 weekly (\"non-stop, bi-weekly flights\")",
+    "aircraft": "not stated",
+    "start_date": "2026-10-26",
+    "status": "announced",
+    "announcement_date": "2026-08-24",
+    "quote": "\"non-stop, bi-weekly flights\"",
+    "sources": [
+      {
+        "name": "IndiGo press releases index",
+        "url": "https://www.goindigo.in/press-releases.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Confirmed via IndiGo's official press index entry; the individual release page was not opened. Covered in article-03. Announced about 53 days before last_checked.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "indigo-bom-han",
+    "origin": {
+      "city": "Mumbai",
+      "iata": "BOM"
+    },
+    "destination": {
+      "city": "Hanoi",
+      "iata": "HAN"
+    },
+    "airline": "IndiGo",
+    "frequency": "daily",
+    "aircraft": "not stated",
+    "start_date": "2026-10-25",
+    "status": "announced",
+    "announcement_date": "2026-09-02",
+    "quote": "Index entry lists daily Mumbai–Hanoi flights from 25 Oct 2026.",
+    "sources": [
+      {
+        "name": "IndiGo press releases index",
+        "url": "https://www.goindigo.in/press-releases.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Flight numbers 6E1637/1638 appear only in secondary reports (unverified). Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately).",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "indigo-bom-dar",
+    "origin": {
+      "city": "Mumbai",
+      "iata": "BOM"
+    },
+    "destination": {
+      "city": "Dar es Salaam",
+      "iata": "DAR"
+    },
+    "airline": "IndiGo",
+    "frequency": "daily",
+    "aircraft": "not stated",
+    "start_date": "2026-11-20",
+    "status": "on sale",
+    "announcement_date": "2026-09-10",
+    "quote": "\"bookings are open\"",
+    "sources": [
+      {
+        "name": "IndiGo press releases index",
+        "url": "https://www.goindigo.in/press-releases.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Other notable route (Tanzania).",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "air-india-bom-yyz",
+    "origin": {
+      "city": "Mumbai",
+      "iata": "BOM"
+    },
+    "destination": {
+      "city": "Toronto",
+      "iata": "YYZ"
+    },
+    "airline": "Air India",
+    "frequency": "3 weekly (AI193/AI192 Wed/Fri/Sun), seasonal",
+    "aircraft": "Boeing 777-300ER (upgraded cabins)",
+    "start_date": "2026-10-25",
+    "status": "on sale",
+    "announcement_date": "2026-08-01",
+    "quote": "Seasonal 3x weekly non-stop service from 25 October 2026 to 26 March 2027; flights bookable through travel agents.",
+    "sources": [
+      {
+        "name": "Air India press release",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-expands-service-to-Canada-for-winter-season-with-new-Mumbai-Toronto-flights-begins-operating-brand-new-B787-9-on-Delhi-Toronto-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Other notable route. Seasonal; ends 26 Mar 2027. Air India says it is the only carrier on the route this winter. Announced 76 days before last_checked.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "aix-vtz-bkk",
+    "origin": {
+      "city": "Visakhapatnam",
+      "iata": "VTZ"
+    },
+    "destination": {
+      "city": "Bangkok (Suvarnabhumi)",
+      "iata": "BKK"
+    },
+    "airline": "Air India Express",
+    "frequency": "2 weekly (IX904 Tue/Fri)",
+    "aircraft": "Boeing 737 MAX 8",
+    "start_date": "2026-10-27",
+    "status": "announced",
+    "announcement_date": "2026-09-09 (news report date)",
+    "quote": "UNVERIFIED – per The Hindu and AeroRoutes",
+    "sources": [
+      {
+        "name": "The Hindu (lead)",
+        "url": "https://www.thehindu.com/news/cities/Visakhapatnam/bhogapuram-airport-air-india-express-to-fly-visakhapatnam-bangkok-twice-a-week-from-october-27/article71445545.ece"
+      },
+      {
+        "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      }
+    ],
+    "verified": false,
+    "notes": "No official Air India Express release was found; its media centre page returned no content.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "aix-cok-bkk",
+    "origin": {
+      "city": "Kochi",
+      "iata": "COK"
+    },
+    "destination": {
+      "city": "Bangkok (Suvarnabhumi)",
+      "iata": "BKK"
+    },
+    "airline": "Air India Express",
+    "frequency": "4 weekly",
+    "aircraft": "Boeing 737-800 (per AeroRoutes)",
+    "start_date": "2026-10-25",
+    "status": "announced",
+    "announcement_date": "early Oct 2026 (winter schedule statement; exact date unverified)",
+    "quote": "UNVERIFIED – per AeroRoutes",
+    "sources": [
+      {
+        "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      },
+      {
+        "name": "TravelBiz Monitor – Air India Express unveils largest Winter network (lead)",
+        "url": "https://travelbizmonitor.com/top-stories/air-india-express-unveils-largest-winter-network/"
+      },
+      {
+        "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
+        "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      }
+    ],
+    "verified": false,
+    "notes": "News or schedule-data sources only.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "aix-idr-bkk",
+    "origin": {
+      "city": "Indore",
+      "iata": "IDR"
+    },
+    "destination": {
+      "city": "Bangkok (Suvarnabhumi)",
+      "iata": "BKK"
+    },
+    "airline": "Air India Express",
+    "frequency": "4 weekly",
+    "aircraft": "not stated",
+    "start_date": "unverified",
+    "status": "announced",
+    "announcement_date": "early Oct 2026 (unverified)",
+    "quote": "UNVERIFIED – trade reports of the winter schedule",
+    "sources": [
+      {
+        "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      },
+      {
+        "name": "TravelBiz Monitor – Air India Express unveils largest Winter network (lead)",
+        "url": "https://travelbizmonitor.com/top-stories/air-india-express-unveils-largest-winter-network/"
+      },
+      {
+        "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
+        "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      }
+    ],
+    "verified": false,
+    "notes": "Start date not confirmed.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "aix-hyd-hkt",
+    "origin": {
+      "city": "Hyderabad",
+      "iata": "HYD"
+    },
+    "destination": {
+      "city": "Phuket",
+      "iata": "HKT"
+    },
+    "airline": "Air India Express",
+    "frequency": "4 weekly",
+    "aircraft": "not stated",
+    "start_date": "unverified",
+    "status": "announced",
+    "announcement_date": "early Oct 2026 (unverified)",
+    "quote": "UNVERIFIED – trade reports mention new Phuket service",
+    "sources": [
+      {
+        "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      },
+      {
+        "name": "TravelBiz Monitor – Air India Express unveils largest Winter network (lead)",
+        "url": "https://travelbizmonitor.com/top-stories/air-india-express-unveils-largest-winter-network/"
+      },
+      {
+        "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
+        "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      }
+    ],
+    "verified": false,
+    "notes": "Start date not confirmed.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "aix-maa-sin",
+    "origin": {
+      "city": "Chennai",
+      "iata": "MAA"
+    },
+    "destination": {
+      "city": "Singapore",
+      "iata": "SIN"
+    },
+    "airline": "Air India Express",
+    "frequency": "14 weekly (resumption)",
+    "aircraft": "not stated",
+    "start_date": "unverified",
+    "status": "announced",
+    "announcement_date": "early Oct 2026 (unverified)",
+    "quote": "UNVERIFIED – trade reports mention new Singapore service",
+    "sources": [
+      {
+        "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      },
+      {
+        "name": "TravelBiz Monitor – Air India Express unveils largest Winter network (lead)",
+        "url": "https://travelbizmonitor.com/top-stories/air-india-express-unveils-largest-winter-network/"
+      },
+      {
+        "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
+        "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      }
+    ],
+    "verified": false,
+    "notes": "Reported as a resumption.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "aix-blr-ktm",
+    "origin": {
+      "city": "Bengaluru",
+      "iata": "BLR"
+    },
+    "destination": {
+      "city": "Kathmandu",
+      "iata": "KTM"
+    },
+    "airline": "Air India Express",
+    "frequency": "daily",
+    "aircraft": "not stated",
+    "start_date": "unverified",
+    "status": "announced",
+    "announcement_date": "early Oct 2026 (unverified)",
+    "quote": "UNVERIFIED – trade reports mention Kathmandu service",
+    "sources": [
+      {
+        "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      },
+      {
+        "name": "TravelBiz Monitor – Air India Express unveils largest Winter network (lead)",
+        "url": "https://travelbizmonitor.com/top-stories/air-india-express-unveils-largest-winter-network/"
+      },
+      {
+        "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
+        "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      }
+    ],
+    "verified": false,
+    "notes": "Other notable route (Nepal).",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "indigo-del-dps",
+    "origin": {
+      "city": "Delhi",
+      "iata": "DEL"
+    },
+    "destination": {
+      "city": "Denpasar (Bali)",
+      "iata": "DPS"
+    },
+    "airline": "IndiGo",
+    "frequency": "unverified",
+    "aircraft": "Airbus A321XLR (per AeroRoutes)",
+    "start_date": "2027-01-01 (unverified)",
+    "status": "announced",
+    "announcement_date": "unverified (schedule filings Jul–Aug 2026)",
+    "quote": "UNVERIFIED – schedule filings reported by AeroRoutes",
+    "sources": [
+      {
+        "name": "AeroRoutes 24JUL26 (lead)",
+        "url": "https://www.aeroroutes.com/eng/260724-6enw26dps"
+      },
+      {
+        "name": "AeroRoutes 09AUG26 (lead)",
+        "url": "https://www.aeroroutes.com/eng/260811-6enw26dps"
+      }
+    ],
+    "verified": false,
+    "notes": "Filings changed several times. A BOM–DPS A321XLR service from the same date was also reported. No IndiGo release found; recheck before publishing.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "thai-vietjet-hkt-bom",
+    "origin": {
+      "city": "Phuket",
+      "iata": "HKT"
+    },
+    "destination": {
+      "city": "Mumbai",
+      "iata": "BOM"
+    },
+    "airline": "Thai VietJet Air",
+    "frequency": "4 weekly (resumption)",
+    "aircraft": "Boeing 737 MAX 8",
+    "start_date": "2026-10-25",
+    "status": "announced",
+    "announcement_date": "unverified",
+    "quote": "UNVERIFIED – per AeroRoutes",
+    "sources": [
+      {
+        "name": "AeroRoutes (lead)",
+        "url": "https://www.aeroroutes.com/eng/260922-vznw26bom"
+      }
+    ],
+    "verified": false,
+    "notes": "Foreign carrier resuming service to India.",
+    "last_checked": "2026-10-16"
+  },
+  {
+    "id": "akasa-ccj-ruh",
+    "origin": {
+      "city": "Kozhikode",
+      "iata": "CCJ"
+    },
+    "destination": {
+      "city": "Riyadh",
+      "iata": "RUH"
+    },
+    "airline": "Akasa Air",
+    "frequency": "4 weekly",
+    "aircraft": "Boeing 737 MAX 8",
+    "start_date": "2026-10-25",
+    "status": "announced",
+    "announcement_date": "unverified",
+    "quote": "UNVERIFIED – WE NEWS says it is subject to regulatory approvals",
+    "sources": [
+      {
+        "name": "WE NEWS (lead)",
+        "url": "https://we-news.com/in/akasa-air-to-launch-direct-kozhikode-riyadh-flights-from-october-four-weekly-services"
+      }
+    ],
+    "verified": false,
+    "notes": "Akasa's press page did not show this release when fetched.",
+    "last_checked": "2026-10-16"
+  }
+]
