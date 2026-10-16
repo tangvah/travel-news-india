@@ -10,12 +10,12 @@ import { SITE } from '../../site.config.mjs';
 
 const f = (p: string) => fs.readFileSync(path.join(process.cwd(), 'node_modules/@fontsource', p));
 const fonts = [
-  { name: 'Serif', data: f('source-serif-4/files/source-serif-4-latin-700-normal.woff'), weight: 700 as const, style: 'normal' as const },
-  { name: 'Sans', data: f('inter/files/inter-latin-400-normal.woff'), weight: 400 as const, style: 'normal' as const },
-  { name: 'Sans', data: f('inter/files/inter-latin-600-normal.woff'), weight: 600 as const, style: 'normal' as const },
+  { name: 'Sora', data: f('sora/files/sora-latin-700-normal.woff'), weight: 700 as const, style: 'normal' as const },
+  { name: 'Sans', data: f('inter-tight/files/inter-tight-latin-400-normal.woff'), weight: 400 as const, style: 'normal' as const },
+  { name: 'Sans', data: f('inter-tight/files/inter-tight-latin-600-normal.woff'), weight: 600 as const, style: 'normal' as const },
 ];
 const h = (type: string, style: Record<string, any>, children?: any) => ({ type, props: { style, children } });
-const logo = `data:image/svg+xml;base64,${Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><linearGradient id="a" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff9933"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="#262c35"/><path d="M11 36 C 15 18, 30 10, 38 13" fill="none" stroke="url(#a)" stroke-width="4" stroke-linecap="round"/><circle cx="11" cy="36" r="4.5" fill="#ff9933"/><path d="M35 8.5 L41 13 L34.5 16.5 Z" fill="#14b8a6"/></svg>').toString('base64')}`;
+const logo = `data:image/svg+xml;base64,${Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#1b1b20"/><rect x="9" y="12" width="6" height="24" rx="1" fill="#ededf0"/><circle cx="30" cy="24" r="10" fill="none" stroke="#ededf0" stroke-width="6"/><circle cx="38.6" cy="15.4" r="3.6" fill="#9ea6ff" stroke="#1b1b20" stroke-width="1.6"/></svg>').toString('base64')}`;
 
 export async function getStaticPaths() {
   return (await allNews()).map((e) => ({ params: { id: e.id }, props: { e } }));
@@ -25,14 +25,14 @@ export const GET: APIRoute = async ({ props }) => {
   const c = cat(d.category);
   const places = d.destinations.map((s: string) => dest(s).name).join(' · ');
   const title = d.title.length > 110 ? d.title.slice(0, 107) + '…' : d.title;
-  const tree = h('div', { width: 1056, height: 490, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '64px 72px', backgroundColor: '#14171c', borderBottom: '12px solid #ff9933', color: '#f5f3ee', fontFamily: 'Sans', position: 'relative' }, [
-    h('div', { display: 'flex', alignItems: 'center', gap: 18, fontSize: 26, fontWeight: 600, color: '#ffb27a', letterSpacing: 2, textTransform: 'uppercase' }, [
+  const tree = h('div', { width: 1056, height: 490, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '64px 72px', backgroundColor: '#0d0d10', borderBottom: '12px solid #3b3fc4', color: '#f4f4f5', fontFamily: 'Sans', position: 'relative' }, [
+    h('div', { display: 'flex', alignItems: 'center', gap: 18, fontSize: 26, fontWeight: 600, color: '#9ea6ff', letterSpacing: 2, textTransform: 'uppercase' }, [
       { type: 'img', props: { src: logo, width: 64, height: 64 } },
       h('span', {}, `${c.name}${places ? '  ·  ' + places : ''}`),
     ]),
-    h('div', { display: 'flex', width: 1056, fontFamily: 'Serif', fontSize: title.length > 70 ? 60 : 72, fontWeight: 700, lineHeight: 1.1, letterSpacing: -1 }, title),
-    h('div', { display: 'flex', width: 1056, justifyContent: 'space-between', alignItems: 'center', fontSize: 28, color: '#c9ccd2' }, [
-      h('span', { fontFamily: 'Serif', fontWeight: 700, color: '#f5f3ee', fontSize: 32 }, SITE.name),
+    h('div', { display: 'flex', width: 1056, fontFamily: 'Sora', fontSize: title.length > 70 ? 60 : 72, fontWeight: 700, lineHeight: 1.1, letterSpacing: -1.5 }, title),
+    h('div', { display: 'flex', width: 1056, justifyContent: 'space-between', alignItems: 'center', fontSize: 28, color: '#a1a1aa' }, [
+      h('span', { fontFamily: 'Sora', fontWeight: 700, color: '#f4f4f5', fontSize: 30, letterSpacing: -0.5 }, SITE.name),
       h('span', {}, fmt(d.date)),
     ]),
   ]);

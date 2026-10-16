@@ -1,8 +1,10 @@
 ---
 import { u } from "../lib";
-import '@fontsource-variable/inter/index.css';
-import '@fontsource-variable/source-serif-4/index.css';
+import '@fontsource-variable/inter-tight/index.css';
+import '@fontsource-variable/sora/index.css';
 import '../styles/global.css';
+import soraLatin from '@fontsource-variable/sora/files/sora-latin-wght-normal.woff2?url';
+import interTightLatin from '@fontsource-variable/inter-tight/files/inter-tight-latin-wght-normal.woff2?url';
 import { ClientRouter } from 'astro:transitions';
 import Flag from '../components/Flag.astro';
 import Logo from '../components/Logo.astro';
@@ -41,9 +43,14 @@ document.addEventListener('click',function(e){
 <meta name="description" content={description} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 <link rel="canonical" href={canonical} />
-<meta name="theme-color" content="#14171c" />
+<link rel="preload" href={soraLatin} as="font" type="font/woff2" crossorigin />
+<link rel="preload" href={interTightLatin} as="font" type="font/woff2" crossorigin />
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href={u("/favicon-32.png")} sizes="32x32" type="image/png" />
 <link rel="icon" href={u("/favicon.svg")} type="image/svg+xml" />
 <link rel="apple-touch-icon" href={u("/apple-touch-icon.png")} />
+<link rel="manifest" href={u("/site.webmanifest")} />
 <link rel="alternate" type="application/rss+xml" title={SITE.name} href={u("/rss.xml")} />
 <link rel="sitemap" href={u("/sitemap-index.xml")} />
 <meta property="og:site_name" content={SITE.name} /><meta property="og:title" content={fullTitle} />
@@ -104,7 +111,7 @@ document.addEventListener('click',function(e){
       <div><h2>Destinations</h2><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}>{d.name}</a></li>)}</ul></div>
       <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/newsletter/")}>Newsletter</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
     </div>
-    <p class="legal">© {new Date().getFullYear()} {SITE.name}. Fonts: Inter &amp; Source Serif 4 (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
+    <p class="legal">© {new Date().getFullYear()} {SITE.name}. Fonts: Sora &amp; Inter Tight (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
   </div>
 </footer>
 </body></html>

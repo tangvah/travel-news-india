@@ -1,11 +1,5 @@
 ---
-// Brand mark: a saffron-to-teal arc (outbound flight path) leaving a dot (India) inside a rounded tile.
+// IO Monogram: "I" bar + "O" orbit ring, indigo satellite dot (outbound journey). Light + dark variants; CSS shows one.
 const { size = 44 } = Astro.props;
 ---
-<svg class="logo-mark" width={size} height={size} viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-  <defs><linearGradient id="lg-arc" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff9933"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs>
-  <rect width="48" height="48" rx="12" fill="var(--logo-tile,#14171c)"/>
-  <path d="M11 36 C 15 18, 30 10, 38 13" fill="none" stroke="url(#lg-arc)" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="11" cy="36" r="4.5" fill="#ff9933"/>
-  <path d="M35 8.5 L41 13 L34.5 16.5 Z" fill="#14b8a6"/>
-</svg>
+<svg class="logo-mark lm-l" width={size} height={size} viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect width="48" height="48" rx="10" fill="#0d0d10"/><rect x="9" y="12" width="6" height="24" rx="1" fill="#ffffff"/><circle cx="30" cy="24" r="10" fill="none" stroke="#ffffff" stroke-width="6"/><circle cx="38.6" cy="15.4" r="3.6" fill="#8b9cff" stroke="#0d0d10" stroke-width="1.6"/></svg><svg class="logo-mark lm-d" width={size} height={size} viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect width="48" height="48" rx="10" fill="#1b1b20"/><rect x="9" y="12" width="6" height="24" rx="1" fill="#ededf0"/><circle cx="30" cy="24" r="10" fill="none" stroke="#ededf0" stroke-width="6"/><circle cx="38.6" cy="15.4" r="3.6" fill="#9ea6ff" stroke="#1b1b20" stroke-width="1.6"/></svg>
