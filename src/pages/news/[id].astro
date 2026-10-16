@@ -4,6 +4,7 @@ import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro'; import List from '../../components/List.astro';
 import { allNews, fmt, readingTime, cat, dest, isVerified } from '../../lib';
 import { SITE } from '../../site.config.mjs';
+import TrackerCallout from '../../components/TrackerCallout.astro';
 import Share from '../../components/Share.astro';
 export async function getStaticPaths() { const all = await allNews(); return all.map((e) => ({ params: { id: e.id }, props: { e, all } })); }
 const { e, all } = Astro.props; const d = e.data; const { Content } = await render(e);
@@ -38,6 +39,7 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headl
     <h2 id="src-h" class="eyebrow" style="font-family:var(--font-sans)">Source box{verified ? ': official sources' : ''}</h2>
     <ul>{d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul>
   </div></aside>)}
+  <TrackerCallout />
   <aside class="box share-card" aria-labelledby="share-h"><div>
     <h2 id="share-h">Found this useful? Share it with your clients and colleagues</h2>
     <Share url={url} title={d.title} variant="card" />

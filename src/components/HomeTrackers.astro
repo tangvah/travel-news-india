@@ -1,0 +1,38 @@
+---
+import { u } from '../lib';
+import Flag from './Flag.astro';
+import { visaRows, VISA_MAP, visaRuleLabel, visaGroup, visaUpdated, routesUpdated, latestRoutes, dayLong } from '../trackers';
+import { day, place } from '../routes-data';
+const latest = latestRoutes(4);
+---
+<section class="section trackers-home" aria-labelledby="trk-home-h">
+  <h2 id="trk-home-h" class="sr-only">Trackers</h2>
+  <div class="th-grid">
+    <div class="th-block" aria-labelledby="vl-h">
+      <div class="section-head"><h3 id="vl-h">Visa lookup for Indians</h3><a href={u('/visa-tracker/')}>Full visa tracker</a></div>
+      <form class="vl-form" action={u('/visa-tracker/')} method="get" data-visa-lookup hidden>
+        <label for="vl-sel">Destination</label>
+        <select id="vl-sel" name="d">{visaRows.map((r) => <option value={r.id}>{r.destination}</option>)}</select>
+        <button class="btn btn-accent" type="submit">Check rules</button>
+      </form>
+      <ul class="vl-chips" role="list">
+        {visaRows.map((r) => { const [flag] = VISA_MAP[r.id] ?? ['']; return (
+          <li><a class="vl-chip" href={u(`/visa-tracker/#${r.id}`)}>{flag && <Flag code={flag} size={20} />}<span><b>{r.destination}</b><small class={`st-${visaGroup(r.rule_type)}`}>{visaRuleLabel(r.rule_type)}</small></span></a></li>); })}
+      </ul>
+      <p class="meta">Last updated <time datetime={visaUpdated}>{dayLong(visaUpdated)}</time></p>
+    </div>
+    <div class="th-block" aria-labelledby="nr-h">
+      <div class="section-head"><h3 id="nr-h">Latest new routes</h3><a href={u('/routes/')}>All routes</a></div>
+      <ul class="nr-list" role="list">
+        {latest.map((r) => (
+          <li><a href={u(`/routes/#${r.id}`)}>{r.flag && <Flag code={r.flag} size={20} />}<span><b>{place(r.origin)} → {place(r.destination)}</b><small class="meta">{r.airline} · starts {day(r.start_date)}</small></span></a></li>))}
+      </ul>
+      <p class="meta">Last updated <time datetime={routesUpdated}>{dayLong(routesUpdated)}</time></p>
+    </div>
+  </div>
+</section>
+<script is:inline>
+(function(){function init(){var f=document.querySelector('[data-visa-lookup]');if(!f||f.dataset.ready)return;f.dataset.ready='1';f.hidden=false;
+f.addEventListener('submit',function(e){e.preventDefault();location.href=f.getAttribute('action')+'#'+f.querySelector('select').value});}
+init();document.addEventListener('astro:page-load',init);})();
+</script>

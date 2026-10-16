@@ -76,17 +76,18 @@ document.addEventListener('click',function(e){
           <details class="menu">
             <summary class="btn" aria-label="Menu"><span aria-hidden="true">☰</span> Menu</summary>
             <nav class="menu-panel" aria-label="Mobile menu">
+              <div><strong class="eyebrow">Trackers</strong><ul>{TOOLS.map((t) => <li><a href={u(t.href)} aria-current={cur(u(t.href))}>{t.name}</a></li>)}</ul></div>
               <div><strong class="eyebrow">Sections</strong><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
               <div><strong class="eyebrow">Destinations</strong><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}><Flag code={d.flag} size={22} />{d.name}</a></li>)}</ul></div>
-              <div><strong class="eyebrow">Tools &amp; site</strong><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li></ul></div>
+              <div><strong class="eyebrow">Site</strong><ul><li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li></ul></div>
             </nav>
           </details>
         </div>
       </div>
       <nav class="nav-primary" aria-label="Sections">
         <a href={u("/")} aria-current={cur(u('/'))}>Latest</a>
-        {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
         {TOOLS.map((t) => <a class="tool" href={u(t.href)} aria-current={cur(u(t.href))}>{t.name}</a>)}
+        {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
       </nav>
       <nav class="nav-dest" aria-label="Destinations">
         {DESTINATIONS.map((d) => <a href={u(`/destinations/${d.slug}/`)} aria-current={cur(u(`/destinations/${d.slug}/`))}><Flag code={d.flag} size={21} />{d.name}</a>)}
