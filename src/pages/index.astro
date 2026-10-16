@@ -17,7 +17,7 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'WebSite', name: SIT
   <HomeTrackers />
   {feat ? (
   <div class="lead">
-    <article class="feature" style={`--hero:${fdest ? fdest.hero : 'linear-gradient(135deg,#14171c,#b4380f)'}`}>
+    <article class="feature" style={`--hero:${fdest ? fdest.hero : 'linear-gradient(135deg,#0d0d10,#3b3fc4)'}`}>
       <div>
         <div class="chips">{feat.data.draft && <span class="badge-draft">DRAFT</span>}<a class={`chip ${fc.color}`} href={u(`/category/${fc.slug}/`)}>{fc.name}</a>
           {feat.data.destinations.map((s) => <a class="chip dest" href={u(`/destinations/${s}/`)}><Flag code={dest(s).flag} size={16} />{dest(s).name}</a>)}</div>
