@@ -7,7 +7,7 @@ category: airlines-routes
 destinations: [japan]
 tags: [air-india, new-route, japan, osaka]
 draft: false
-verified: true
+verified: false
 sources:
   - name: "JNTO: Visitor arrivals to Japan, December 2025 and full-year 2025 (preliminary), see the India row"
     url: "https://www.jnto.go.jp/en/news/20260121.pdf"

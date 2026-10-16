@@ -7,7 +7,7 @@ category: visas-policy
 destinations: [thailand]
 tags: [visa, policy, indigo, new-route]
 draft: false
-verified: true
+verified: false
 sources:
   - name: "Royal Thai Embassy, New Delhi: announcement of the revised scheme (15 Sep 2026)"
     url: "https://newdelhi.thaiembassy.org/en/content/the-revision-of-thailand-s-visa-exemption-and-voa"
