@@ -1,0 +1,16 @@
+---
+// Simplified inline SVG flags (decorative; the country name is always shown as text).
+const { code, size = 28 } = Astro.props;
+const h = Math.round(size * 2 / 3);
+---
+<svg class="flag" width={size} height={h} viewBox="0 0 30 20" aria-hidden="true" focusable="false">
+{code==='th' && <><rect width="30" height="20" fill="#a51931"/><rect y="3.33" width="30" height="13.33" fill="#f4f5f8"/><rect y="6.67" width="30" height="6.67" fill="#2d2a4a"/></>}
+{code==='sg' && <><rect width="30" height="10" fill="#ef3340"/><rect y="10" width="30" height="10" fill="#fff"/><circle cx="6" cy="5" r="3.2" fill="#fff"/><circle cx="7.2" cy="5" r="3" fill="#ef3340"/><g fill="#fff"><circle cx="9" cy="3" r=".6"/><circle cx="10.6" cy="4.2" r=".6"/><circle cx="10" cy="6.2" r=".6"/><circle cx="8" cy="6.2" r=".6"/><circle cx="7.4" cy="4.2" r=".6"/></g></>}
+{code==='ae' && <><rect width="30" height="6.67" fill="#00732f"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect y="13.33" width="30" height="6.67" fill="#000"/><rect width="8" height="20" fill="#ff0000"/></>}
+{code==='vn' && <><rect width="30" height="20" fill="#da251d"/><polygon fill="#ffcd00" points="15,4 16.8,9.5 22.6,9.5 17.9,12.9 19.7,18.4 15,15 10.3,18.4 12.1,12.9 7.4,9.5 13.2,9.5"/></>}
+{code==='id' && <><rect width="30" height="10" fill="#ce1126"/><rect y="10" width="30" height="10" fill="#fff"/></>}
+{code==='my' && <><rect width="30" height="20" fill="#fff"/>{[0,2,4,6,8,10,12].map(i=> <rect y={i*1.43} width="30" height="1.43" fill="#cc0001"/>)}<rect width="15" height="11.4" fill="#010066"/><circle cx="6" cy="5.7" r="3.6" fill="#fc0"/><circle cx="7.1" cy="5.7" r="3" fill="#010066"/><polygon fill="#fc0" points="11,3.3 11.6,5 13.4,5 12,6.1 12.5,7.8 11,6.8 9.5,7.8 10,6.1 8.6,5 10.4,5"/></>}
+{code==='lk' && <><rect width="30" height="20" fill="#ffb700"/><rect x="1" y="1" width="3.5" height="18" fill="#005f56"/><rect x="4.5" y="1" width="3.5" height="18" fill="#ff5b00"/><rect x="9" y="1" width="20" height="18" fill="#8d153a"/></>}
+{code==='jp' && <><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></>}
+<rect width="30" height="20" fill="none" stroke="rgba(0,0,0,.15)"/>
+</svg>

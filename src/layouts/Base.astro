@@ -1,18 +1,44 @@
 ---
 import { u } from "../lib";
-import { SITE, DESTINATIONS, CATEGORIES } from '../site.config.mjs';
+import '@fontsource-variable/inter/index.css';
+import '@fontsource-variable/source-serif-4/index.css';
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import Flag from '../components/Flag.astro';
+import { SITE, DESTINATIONS, CATEGORIES, TOOLS } from '../site.config.mjs';
+import { allNews } from '../lib';
 const { title, description = SITE.tagline, type = 'website', image, jsonld, noindex = false } = Astro.props;
-const fullTitle = title ? `${title} | ${SITE.name}` : SITE.name;
+const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name}: ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const norm = (p: string) => p.replace(/\/?$/, '/');
+const cur = (href: string) => (norm(path) === norm(href) ? 'page' : undefined);
+const latest = (await allNews()).slice(0, 8);
+const today = new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
 ---
 <!doctype html>
 <html lang="en-IN">
 <head>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<script is:inline>
+(function(){var d=document.documentElement;d.classList.add('js');
+function pick(){try{var s=localStorage.getItem('theme');if(s==='dark'||s==='light')return s}catch(e){}return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+d.dataset.theme=pick();
+if(window.__iotn)return;window.__iotn=1;
+document.addEventListener('astro:before-swap',function(e){var n=e.newDocument.documentElement;n.dataset.theme=pick();n.classList.add('js')});
+document.addEventListener('click',function(e){
+ var t=e.target.closest&&e.target.closest('[data-theme-toggle]');
+ if(t){var next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('theme',next)}catch(_){};t.setAttribute('aria-pressed',String(next==='dark'));return}
+ var c=e.target.closest&&e.target.closest('[data-copy]');
+ if(c&&navigator.clipboard){navigator.clipboard.writeText(c.dataset.copy).then(function(){c.textContent='Link copied'})}
+});})();
+</script>
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 <link rel="canonical" href={canonical} />
+<meta name="theme-color" content="#14171c" />
+<link rel="icon" href={u("/favicon.svg")} type="image/svg+xml" />
 <link rel="alternate" type="application/rss+xml" title={SITE.name} href={u("/rss.xml")} />
 <link rel="sitemap" href={u("/sitemap-index.xml")} />
 <meta property="og:site_name" content={SITE.name} /><meta property="og:title" content={fullTitle} />
@@ -20,30 +46,59 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 <meta property="og:url" content={canonical} /><meta property="og:locale" content={SITE.locale} />
 {image && <meta property="og:image" content={new URL(u(image), Astro.site)} />}
 <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={description} />
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
-<style is:global>
-:root{--ink:#1b1f24;--muted:#5b6470;--accent:#c2410c;--bg:#fff;--line:#e5e7eb}
-*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
-a{color:var(--accent)}.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-header{border-bottom:3px solid var(--accent)}.brand{display:block;font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none;padding:12px 0 4px}
-nav{display:flex;gap:12px;overflow-x:auto;padding:6px 0 10px;font-size:.9rem;white-space:nowrap}nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--accent)}
-.grid{display:grid;gap:16px;grid-template-columns:1fr}@media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
-.card{border:1px solid var(--line);border-radius:8px;padding:14px}.card h3{margin:.2em 0;font-size:1.1rem}.card h3 a{color:var(--ink);text-decoration:none}
-.meta{color:var(--muted);font-size:.85rem}.pill{display:inline-block;background:#fff7ed;color:var(--accent);border-radius:99px;padding:0 8px;font-size:.75rem;margin-right:4px;text-decoration:none}
-.draft{display:inline-block;background:#dc2626;color:#fff;font-weight:700;font-size:.75rem;padding:0 8px;border-radius:4px;margin-right:4px}.ph{background:#fefce8;border:1px dashed #ca8a04;padding:12px;border-radius:8px}
-.menu{display:none;padding-bottom:10px}.menu summary{cursor:pointer;font-weight:600;padding:6px 10px;border:1px solid var(--line);border-radius:6px;display:inline-block;list-style:none}.menu summary::-webkit-details-marker{display:none}
-.menu nav{flex-direction:column;gap:2px;white-space:normal}.menu nav a{padding:6px 0;color:var(--ink)}.menu strong{margin-top:8px;font-size:.75rem;text-transform:uppercase;color:var(--muted)}
-@media(max-width:719px){nav.desk{display:none}.menu{display:block}}
-article{max-width:720px}footer{margin-top:48px;border-top:1px solid var(--line);padding:16px 0;color:var(--muted);font-size:.85rem}
-</style>
+<ClientRouter />
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href={u("/")}>{SITE.name}</a>
-<nav class="desk" aria-label="Main">{DESTINATIONS.map(d=> <a href={u(`/destinations/${d.slug}/`)}>{d.name}</a>)}<span>|</span>{CATEGORIES.map(c=> <a href={u(`/category/${c.slug}/`)}>{c.name}</a>)}</nav>
-<details class="menu"><summary aria-label="Menu">☰ Menu</summary>
-<nav aria-label="Mobile"><strong>Destinations</strong>{DESTINATIONS.map(d=> <a href={u(`/destinations/${d.slug}/`)}>{d.name}</a>)}
-<strong>Categories</strong>{CATEGORIES.map(c=> <a href={u(`/category/${c.slug}/`)}>{c.name}</a>)}
-<strong>Site</strong><a href={u("/about/")}>About</a><a href={u("/contact/")}>Contact</a></nav></details></div></header>
-<main class="wrap"><slot /></main>
-<footer><div class="wrap">© {new Date().getFullYear()} {SITE.name} · <a href={u("/about/")}>About</a> · <a href={u("/contact/")}>Contact</a> · <a href={u("/rss.xml")}>RSS</a></div></footer>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  {latest.length > 0 && (
+  <div class="ticker" role="region" aria-label="Latest headlines">
+    <div class="wrap"><span class="label">LATEST</span>
+      <div class="track"><ul>
+        {latest.map((e) => <li><a href={u(`/news/${e.id}/`)}>{e.data.title}</a></li>)}
+        {latest.map((e) => <li aria-hidden="true"><a href={u(`/news/${e.id}/`)} tabindex="-1">{e.data.title}</a></li>)}
+      </ul></div></div>
+  </div>)}
+  <div class="masthead">
+    <div class="wrap">
+      <div class="mast-row">
+        <a class="brand" href={u("/")}><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></a>
+        <div class="mast-tools">
+          <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>
+          <details class="menu">
+            <summary class="btn" aria-label="Menu"><span aria-hidden="true">☰</span> Menu</summary>
+            <nav class="menu-panel" aria-label="Mobile menu">
+              <div><strong class="eyebrow">Sections</strong><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
+              <div><strong class="eyebrow">Destinations</strong><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}><Flag code={d.flag} size={22} />{d.name}</a></li>)}</ul></div>
+              <div><strong class="eyebrow">Tools &amp; site</strong><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li></ul></div>
+            </nav>
+          </details>
+        </div>
+      </div>
+      <nav class="nav-primary" aria-label="Sections">
+        <a href={u("/")} aria-current={cur(u('/'))}>Latest</a>
+        {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
+        {TOOLS.map((t) => <a class="tool" href={u(t.href)} aria-current={cur(u(t.href))}>{t.name}</a>)}
+      </nav>
+      <nav class="nav-dest" aria-label="Destinations">
+        {DESTINATIONS.map((d) => <a href={u(`/destinations/${d.slug}/`)} aria-current={cur(u(`/destinations/${d.slug}/`))}><Flag code={d.flag} size={21} />{d.name}</a>)}
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1"><slot /></main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><p class="brand" style="margin:0"><b style="font-size:1.3rem">India Outbound <span>Travel</span> News</b></p><p class="meta">{SITE.tagline}.</p></div>
+      <div><h2>Sections</h2><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
+      <div><h2>Destinations</h2><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}>{d.name}</a></li>)}</ul></div>
+      <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
+    </div>
+    <p class="legal">© {new Date().getFullYear()} {SITE.name}. Fonts: Inter &amp; Source Serif 4 (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
+  </div>
+</footer>
 </body></html>

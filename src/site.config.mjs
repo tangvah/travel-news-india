@@ -1,23 +1,34 @@
-// Rename the site here — single source of truth.
+// Single source of truth for naming, taxonomy and colours.
 export const SITE = {
   name: 'India Outbound Travel News',
+  short: 'IOTN',
   tagline: 'Travel trade news for Indian travellers and the Indian travel trade',
   url: 'https://tangvah.github.io',
   base: '/travel-news-india',
   locale: 'en_IN',
 };
+// hero: CSS gradient (no photos, no licensing). flag: key for src/components/Flag.astro
 export const DESTINATIONS = [
-  { slug: 'thailand', name: 'Thailand' }, { slug: 'singapore', name: 'Singapore' },
-  { slug: 'dubai', name: 'Dubai' }, { slug: 'vietnam', name: 'Vietnam' },
-  { slug: 'bali', name: 'Bali' }, { slug: 'malaysia', name: 'Malaysia' },
-  { slug: 'sri-lanka', name: 'Sri Lanka' },
-  { slug: 'japan', name: 'Japan' },
+  { slug: 'thailand', name: 'Thailand', flag: 'th', hero: 'linear-gradient(135deg,#0f3b6e 0%,#1f6fb2 55%,#e8a33d 100%)' },
+  { slug: 'singapore', name: 'Singapore', flag: 'sg', hero: 'linear-gradient(135deg,#5b0f1a 0%,#b3202e 55%,#f08a5d 100%)' },
+  { slug: 'dubai', name: 'Dubai', flag: 'ae', hero: 'linear-gradient(135deg,#3b2a12 0%,#a8742f 55%,#f1c27d 100%)' },
+  { slug: 'vietnam', name: 'Vietnam', flag: 'vn', hero: 'linear-gradient(135deg,#0d3b2e 0%,#2e7d4f 55%,#d9b44a 100%)' },
+  { slug: 'bali', name: 'Bali', flag: 'id', hero: 'linear-gradient(135deg,#0b4d4a 0%,#1d8a7a 55%,#f3b562 100%)' },
+  { slug: 'malaysia', name: 'Malaysia', flag: 'my', hero: 'linear-gradient(135deg,#0c2a5b 0%,#24508f 50%,#c8302f 100%)' },
+  { slug: 'sri-lanka', name: 'Sri Lanka', flag: 'lk', hero: 'linear-gradient(135deg,#4a1210 0%,#8d2b1e 50%,#e2a33a 100%)' },
+  { slug: 'japan', name: 'Japan', flag: 'jp', hero: 'linear-gradient(135deg,#2a1a3a 0%,#8a2d4f 55%,#f3a3b5 100%)' },
 ];
+// colour = text/accent colour token name defined in Base.astro (AA on its tint in both themes)
 export const CATEGORIES = [
-  { slug: 'visas-policy', name: 'Visas & Policy' }, { slug: 'airlines-routes', name: 'Airlines & Routes' },
-  { slug: 'hotels', name: 'Hotels' }, { slug: 'trade-industry', name: 'Trade & Industry' },
-  { slug: 'deals', name: 'Deals' },
+  { slug: 'visas-policy', name: 'Visas & Policy', color: 'c-visa' },
+  { slug: 'airlines-routes', name: 'Airlines & Routes', color: 'c-air' },
+  { slug: 'hotels', name: 'Hotels', color: 'c-hotel' },
+  { slug: 'trade-industry', name: 'Trade & Industry', color: 'c-trade' },
+  { slug: 'deals', name: 'Deals', color: 'c-deal' },
 ];
-
+export const TOOLS = [
+  { href: '/visa-tracker/', name: 'Visa tracker' },
+  { href: '/routes-tracker/', name: 'Routes tracker' },
+];
 // Preview mode: SHOW_DRAFTS=1 includes draft: true articles (badged + noindex).
 export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === '1';

@@ -1,6 +1,10 @@
 ---
 import Base from '../layouts/Base.astro'; import { SITE } from '../site.config.mjs';
 ---
-<Base title="About" description={`About ${SITE.name}`}><h1>About</h1>
+<Base title="About" description={`About ${SITE.name}`}>
+<div class="wrap section page"><h1>About</h1>
 <p>{SITE.name} covers outbound travel news for Indian travellers and the Indian travel trade: visas and policy, airlines and routes, hotels, industry news and deals.</p>
-<p class="ph">Editorial team, mission and corrections policy coming soon.</p></Base>
+<p class="ph">Coming soon.</p>
+<h2 id="credits">Credits</h2>
+<ul><li>Typefaces: Inter and Source Serif 4, SIL Open Font License, self-hosted via Fontsource.</li>
+<li>Destination artwork: CSS gradients and simplified SVG flags made for this site. No photographs are used.</li></ul></div></Base>

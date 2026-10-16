@@ -30,6 +30,8 @@ Markdown files in **`/workspace/travel_news/`** (configured in `src/content.conf
 | tags | no | list of strings |
 | image | no | path/URL, used for og:image and JSON-LD |
 | draft | no | true hides the article |
+| sources | no | list of `{name, url}` (url must be a full URL). Rendered as a Source box on the article and as JSON-LD `citation` |
+| verified | no | `true` shows the green "Verified: official source" badge, **only if** `sources` has at least one entry. Set it only after every fact has been checked against those official sources. |
 
 ## Template
 ```md
@@ -42,6 +44,10 @@ category: visas-policy
 destinations: [thailand]
 tags: [visa]
 draft: false
+verified: false
+sources:
+  - name: "Official source title (date)"
+    url: "https://official.example.gov/page"
 ---
 Body in Markdown.
 ```
@@ -55,3 +61,12 @@ Articles with `draft: true` are hidden in the normal build (`npm run build`).
 
 ## SEO
 Per-page title + meta description, canonical, Open Graph/Twitter tags, JSON-LD `NewsArticle` on articles, `/sitemap-index.xml`, `/rss.xml`, `/robots.txt`.
+
+## Design system
+Tokens (colour, type, spacing, radius) are CSS custom properties at the top of `src/styles/global.css`, with light and dark sets.
+Category colours: `color` key in `CATEGORIES` (`src/site.config.mjs`). Destination hero gradients and flag codes: `DESTINATIONS`.
+Dark mode follows `prefers-color-scheme`. The header toggle stores the choice in `localStorage` (`theme`), set before first paint so there is no flash.
+Page navigation uses Astro View Transitions (`<ClientRouter />`). The mobile menu is a no-JS `<details>` element.
+
+## Lighthouse
+`./lh.sh <label>` (needs the preview running on :4321) writes JSON and HTML reports to `lighthouse/<label>/`.

@@ -5,3 +5,5 @@ dist/
 .DS_Store
 screenshots/
 lighthouse/
+.backup_frontmatter/
+lh.sh

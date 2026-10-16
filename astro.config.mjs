@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { SITE } from './src/site.config.mjs';
-export default defineConfig({ site: SITE.url, base: SITE.base, trailingSlash: 'ignore', output: 'static', integrations: [sitemap()] });
+import remarkStripSources from './remark-strip-sources.mjs';
+export default defineConfig({ site: SITE.url, base: SITE.base, output: 'static', markdown: { remarkPlugins: [remarkStripSources] }, integrations: [sitemap()] });

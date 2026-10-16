@@ -1,5 +1,5 @@
 ---
 import Card from './Card.astro';
-const { items } = Astro.props;
+const { items, empty = 'No articles yet. The Travel News Desk is working on it.' } = Astro.props;
 ---
-{items.length ? <div class="grid">{items.map((e)=> <Card e={e} />)}</div> : <p class="meta">No articles yet.</p>}
+{items.length ? <div class="grid">{items.map((e) => <Card e={e} />)}</div> : <p class="ph">{empty}</p>}

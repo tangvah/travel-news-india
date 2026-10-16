@@ -1,14 +1,23 @@
 ---
-import Base from '../../layouts/Base.astro'; import List from '../../components/List.astro';
+import Base from '../../layouts/Base.astro'; import List from '../../components/List.astro'; import Flag from '../../components/Flag.astro';
 import { allNews } from '../../lib'; import { DESTINATIONS } from '../../site.config.mjs';
-export function getStaticPaths(){ return DESTINATIONS.map(d=>({params:{slug:d.slug},props:{d}})); }
+export function getStaticPaths() { return DESTINATIONS.map((d) => ({ params: { slug: d.slug }, props: { d } })); }
 const { d } = Astro.props;
-const items = (await allNews()).filter(e=>e.data.destinations.includes(d.slug));
+const items = (await allNews()).filter((e) => e.data.destinations.includes(d.slug));
 ---
-<Base title={`${d.name} travel news`} description={`Latest travel and trade news on ${d.name} for Indian travellers and agents.`}>
-<h1>{d.name}</h1>
-<div class="ph"><strong>Destination facts — coming soon.</strong>
-<ul><li><b>Visa for Indian passport holders:</b> Coming soon</li>
-<li><b>Currency:</b> Coming soon</li><li><b>Best time to visit:</b> Coming soon</li></ul></div>
-<h2>Latest on {d.name}</h2><List items={items} />
+<Base title={`${d.name} travel news`} description={`Latest travel and trade news on ${d.name} for Indian travellers and travel agents.`}>
+<section class="hero" style={`--hero:${d.hero}`}><div class="wrap">
+  <p class="eyebrow">Destination</p>
+  <h1><Flag code={d.flag} size={48} />{d.name}</h1>
+  <p>Visa, flight and trade news on {d.name} for Indian travellers and the Indian travel trade.</p>
+</div></section>
+<div class="wrap">
+  <section class="section ph" aria-labelledby="facts-h">
+    <h2 id="facts-h" style="font-size:1.2rem">Quick facts <span class="soon">Placeholder</span></h2>
+    <p class="meta" style="margin:0">Not yet verified. The Travel News Desk will fill these in from official sources.</p>
+    <ul class="facts"><li><b>Visa for Indian passports</b>Coming soon</li><li><b>Currency</b>Coming soon</li><li><b>Best time to visit</b>Coming soon</li></ul>
+  </section>
+  <section class="section" aria-labelledby="l-h"><div class="section-head"><h2 id="l-h">Latest on {d.name}</h2></div>
+    <List items={items} empty={`No ${d.name} stories yet.`} /></section>
+</div>
 </Base>

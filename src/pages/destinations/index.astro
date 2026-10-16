@@ -1,0 +1,9 @@
+---
+import { u } from "../../lib";
+import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro';
+import { DESTINATIONS } from '../../site.config.mjs';
+---
+<Base title="Destinations" description="Travel news by destination for Indian travellers and the travel trade.">
+<div class="wrap section"><h1>Destinations</h1>
+<div class="dest-grid">{DESTINATIONS.map((d) => <a class="dest-card" href={u(`/destinations/${d.slug}/`)} style={`--hero:${d.hero}`}><Flag code={d.flag} size={34} /><b>{d.name}</b></a>)}</div></div>
+</Base>

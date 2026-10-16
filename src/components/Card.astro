@@ -1,13 +1,16 @@
 ---
 import { u } from "../lib";
-import { fmt } from '../lib';
-import { CATEGORIES, DESTINATIONS } from '../site.config.mjs';
-const { e } = Astro.props; const d = e.data;
-const cat = CATEGORIES.find(c=>c.slug===d.category);
+import { fmt, readingTime, cat, dest, isVerified } from '../lib';
+import Flag from './Flag.astro';
+const { e } = Astro.props; const d = e.data; const c = cat(d.category);
 ---
-<div class="card">
-{d.draft && <span class="draft">DRAFT</span>}
-<a class="pill" href={u(`/category/${d.category}/`)}>{cat?.name}</a>
-{d.destinations.map((s)=> <a class="pill" href={u(`/destinations/${s}/`)}>{DESTINATIONS.find(x=>x.slug===s)?.name}</a>)}
-<h3><a href={u(`/news/${e.id}/`)}>{d.title}</a></h3>
-<div class="meta">{fmt(d.date)} · {d.author}</div><p>{d.summary}</p></div>
+<article class={`card bar-${c.color}`}>
+  <div class="chips">
+    {d.draft && <span class="badge-draft">DRAFT</span>}
+    <a class={`chip ${c.color}`} href={u(`/category/${c.slug}/`)}>{c.name}</a>
+    {d.destinations.map((s) => { const x = dest(s); return <a class="chip dest" href={u(`/destinations/${s}/`)}><Flag code={x.flag} size={16} />{x.name}</a>; })}
+  </div>
+  <h3><a href={u(`/news/${e.id}/`)}>{d.title}</a></h3>
+  <p>{d.summary}</p>
+  <div class="meta"><time datetime={d.date.toISOString()}>{fmt(d.date)}</time> · {readingTime(e.body)} min read{isVerified(d) && <> · <span class="badge-ok">✓ Verified</span></>}</div>
+</article>

@@ -1,22 +1,52 @@
 ---
 import { u } from "../../lib";
 import { render } from 'astro:content';
-import Base from '../../layouts/Base.astro'; import { allNews, fmt } from '../../lib';
-import { SITE, CATEGORIES, DESTINATIONS } from '../../site.config.mjs';
-export async function getStaticPaths(){ return (await allNews()).map(e=>({params:{id:e.id},props:{e}})); }
-const { e } = Astro.props; const d = e.data; const { Content } = await render(e);
+import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro'; import List from '../../components/List.astro';
+import { allNews, fmt, readingTime, cat, dest, isVerified } from '../../lib';
+import { SITE } from '../../site.config.mjs';
+export async function getStaticPaths() { const all = await allNews(); return all.map((e) => ({ params: { id: e.id }, props: { e, all } })); }
+const { e, all } = Astro.props; const d = e.data; const { Content } = await render(e);
+const c = cat(d.category);
 const url = new URL(Astro.url.pathname, Astro.site).href;
-const jsonld = { '@context':'https://schema.org','@type':'NewsArticle', headline:d.title, description:d.summary,
-  datePublished:d.date.toISOString(), author:{'@type':'Person',name:d.author}, mainEntityOfPage:url,
-  publisher:{'@type':'Organization',name:SITE.name}, ...(d.image?{image:[new URL(d.image,Astro.site).href]}:{}), keywords:d.tags.join(', ') };
+const verified = isVerified(d);
+const mins = readingTime(e.body);
+const related = all.filter((x) => x.id !== e.id && (x.data.category === d.category || x.data.destinations.some((s) => d.destinations.includes(s)))).slice(0, 3);
+const eu = encodeURIComponent(url), t = encodeURIComponent(d.title);
+const share = [
+  ['WhatsApp', `https://wa.me/?text=${t}%20${eu}`], ['X', `https://x.com/intent/post?text=${t}&url=${eu}`],
+  ['LinkedIn', `https://www.linkedin.com/sharing/share-offsite/?url=${eu}`], ['Facebook', `https://www.facebook.com/sharer/sharer.php?u=${eu}`],
+  ['Email', `mailto:?subject=${t}&body=${eu}`],
+];
+const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.summary,
+  datePublished: d.date.toISOString(), dateModified: d.date.toISOString(), author: { '@type': 'Person', name: d.author }, mainEntityOfPage: url,
+  publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: new URL(u('/favicon.svg'), SITE.url).href } },
+  articleSection: c.name, keywords: d.tags.join(', '), ...(d.image ? { image: [new URL(u(d.image), Astro.site).href] } : {}),
+  ...(d.sources.length ? { citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.name, url: s.url })) } : {}) };
 ---
-<Base title={d.title} description={d.summary} type="article" image={d.image} jsonld={jsonld} noindex={d.draft}>
+<Base title={d.title} description={d.summary} type="article" image={d.image} jsonld={jsonld} noindex={d.draft && process.env.DRAFTS_INDEXABLE !== '1'}>
 <article>
-{d.draft && <p class="ph"><span class="draft">DRAFT</span> Preview only — not published, noindex.</p>}
-<p><a class="pill" href={u(`/category/${d.category}/`)}>{CATEGORIES.find(c=>c.slug===d.category)?.name}</a>
-{d.destinations.map(s=> <a class="pill" href={u(`/destinations/${s}/`)}>{DESTINATIONS.find(x=>x.slug===s)?.name}</a>)}</p>
-<h1>{d.title}</h1><p class="meta">{fmt(d.date)} · By {d.author}</p>
-{d.image && <img src={u(d.image)} alt="" style="max-width:100%;border-radius:8px" />}
-<Content />
-{d.tags.length>0 && <p class="meta">Tags: {d.tags.join(', ')}</p>}
-</article></Base>
+  <header class="article-head"><div class="wrap">
+    {d.draft && <p class="ph"><span class="badge-draft">DRAFT</span> Preview only. Not published, and hidden from search engines (noindex).</p>}
+    <div class="chips"><a class={`chip ${c.color}`} href={u(`/category/${c.slug}/`)}>{c.name}</a>
+      {d.destinations.map((s) => <a class="chip dest" href={u(`/destinations/${s}/`)}><Flag code={dest(s).flag} size={16} />{dest(s).name}</a>)}
+      {verified && <span class="badge-ok" title="Facts in this story are checked against the official sources listed below">✓ Verified: official source</span>}</div>
+    <h1 transition:name={`t-${e.id}`}>{d.title}</h1>
+    <p class="standfirst">{d.summary}</p>
+    <div class="byline"><span>By <strong>{d.author}</strong></span><time datetime={d.date.toISOString()}>{fmt(d.date)}</time><span>{mins} min read</span></div>
+  </div></header>
+  {d.image && <img src={u(d.image)} alt="" />}
+  <div class="prose"><Content /></div>
+  {d.sources.length > 0 && (
+  <aside class="box" aria-labelledby="src-h"><div>
+    <h2 id="src-h" class="eyebrow" style="font-family:var(--font-sans)">Source box{verified ? ': official sources' : ''}</h2>
+    <ul>{d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul>
+  </div></aside>)}
+  <aside class="box" aria-labelledby="share-h"><div>
+    <h2 id="share-h" class="eyebrow" style="font-family:var(--font-sans)">Share this story</h2>
+    <div class="share">{share.map(([n, h]) => <a class="btn" href={h} rel="noopener" target="_blank">{n}<span class="sr-only"> (opens in new tab)</span></a>)}
+      <button class="btn copy-btn" type="button" data-copy={url}>Copy link</button></div>
+    {d.tags.length > 0 && <p class="meta" style="margin:16px 0 0">Tags: {d.tags.join(', ')}</p>}
+  </div></aside>
+</article>
+{related.length > 0 && <section class="wrap section" aria-labelledby="rel-h"><div class="section-head"><h2 id="rel-h">Related</h2></div><List items={related} /></section>}
+</Base>

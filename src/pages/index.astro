@@ -1,6 +1,54 @@
 ---
+import { u } from "../lib";
 import Base from '../layouts/Base.astro'; import List from '../components/List.astro';
-import { allNews } from '../lib'; import { SITE } from '../site.config.mjs';
+import Newsletter from '../components/Newsletter.astro'; import Flag from '../components/Flag.astro';
+import { allNews, fmt, readingTime, cat, dest, isVerified } from '../lib';
+import { SITE, DESTINATIONS, CATEGORIES } from '../site.config.mjs';
 const items = await allNews();
+const [feat, ...rest] = items;
+const fc = feat && cat(feat.data.category);
+const fdest = feat && feat.data.destinations[0] ? dest(feat.data.destinations[0]) : null;
+const jsonld = { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: SITE.url };
 ---
-<Base><h1>Latest news</h1><p class="meta">{SITE.tagline}</p><List items={items} /></Base>
+<Base jsonld={jsonld}>
+<div class="wrap">
+  <h1 class="sr-only">{SITE.name}: latest news</h1>
+  {feat ? (
+  <div class="lead">
+    <article class="feature" style={`--hero:${fdest ? fdest.hero : 'linear-gradient(135deg,#14171c,#b4380f)'}`}>
+      <div>
+        <div class="chips">{feat.data.draft && <span class="badge-draft">DRAFT</span>}<a class={`chip ${fc.color}`} href={u(`/category/${fc.slug}/`)}>{fc.name}</a>
+          {feat.data.destinations.map((s) => <a class="chip dest" href={u(`/destinations/${s}/`)}><Flag code={dest(s).flag} size={16} />{dest(s).name}</a>)}</div>
+        <h2><a href={u(`/news/${feat.id}/`)}>{feat.data.title}</a></h2>
+        <p>{feat.data.summary}</p>
+        <div class="meta"><time datetime={feat.data.date.toISOString()}>{fmt(feat.data.date)}</time> · {feat.data.author} · {readingTime(feat.body)} min read{isVerified(feat.data) && ' · ✓ Verified: official source'}</div>
+      </div>
+    </article>
+    <aside class="side-list" aria-labelledby="top-h">
+      <h2 id="top-h" class="eyebrow" style="font-family:var(--font-sans)">Most recent</h2>
+      {rest.length ? <ol>{rest.slice(0, 5).map((e) => <li><div><a href={u(`/news/${e.id}/`)}>{e.data.title}</a><div class="meta">{cat(e.data.category).name} · {fmt(e.data.date)}</div></div></li>)}</ol> : <p class="meta">More stories soon.</p>}
+    </aside>
+  </div>) : <p class="ph" style="margin-top:32px">No published articles yet.</p>}
+
+  <section class="section" aria-labelledby="latest-h">
+    <div class="section-head"><h2 id="latest-h">Latest news</h2><a href={u("/rss.xml")}>RSS</a></div>
+    <List items={items} />
+  </section>
+
+  <section class="section" aria-labelledby="dest-h">
+    <div class="section-head"><h2 id="dest-h">Destinations</h2><a href={u("/destinations/")}>All destinations</a></div>
+    <div class="dest-grid">
+      {DESTINATIONS.map((d) => { const n = items.filter((e) => e.data.destinations.includes(d.slug)).length; return (
+        <a class="dest-card" href={u(`/destinations/${d.slug}/`)} style={`--hero:${d.hero}`}><Flag code={d.flag} size={34} /><span><b>{d.name}</b><br /><small>{n} {n === 1 ? 'story' : 'stories'}</small></span></a>); })}
+    </div>
+  </section>
+
+  {CATEGORIES.map((c) => { const list = items.filter((e) => e.data.category === c.slug).slice(0, 3); return list.length > 0 && (
+  <section class="section" aria-labelledby={`h-${c.slug}`}>
+    <div class="section-head"><h2 id={`h-${c.slug}`}>{c.name}</h2><a href={u(`/category/${c.slug}/`)}>More {c.name}</a></div>
+    <List items={list} />
+  </section>); })}
+
+  <div class="section"><Newsletter /></div>
+</div>
+</Base>

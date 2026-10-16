@@ -1,8 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro'; import List from '../../components/List.astro';
 import { allNews } from '../../lib'; import { CATEGORIES } from '../../site.config.mjs';
-export function getStaticPaths(){ return CATEGORIES.map(c=>({params:{slug:c.slug},props:{c}})); }
+export function getStaticPaths() { return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { c } })); }
 const { c } = Astro.props;
-const items = (await allNews()).filter(e=>e.data.category===c.slug);
+const items = (await allNews()).filter((e) => e.data.category === c.slug);
 ---
-<Base title={c.name} description={`${c.name} news for the Indian outbound travel market.`}><h1>{c.name}</h1><List items={items} /></Base>
+<Base title={c.name} description={`${c.name} news for the Indian outbound travel market.`}>
+<div class="wrap section">
+  <p><span class={`chip ${c.color}`}>Section</span></p><h1>{c.name}</h1>
+  <List items={items} empty={`No ${c.name} stories yet.`} />
+</div></Base>
