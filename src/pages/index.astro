@@ -8,7 +8,7 @@ const items = await allNews();
 const [feat, ...rest] = items;
 const fc = feat && cat(feat.data.category);
 const fdest = feat && feat.data.destinations[0] ? dest(feat.data.destinations[0]) : null;
-const jsonld = { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: SITE.url };
+const jsonld = { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: new URL(u('/'), SITE.url).href };
 ---
 <Base jsonld={jsonld}>
 <div class="wrap">

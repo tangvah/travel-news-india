@@ -9,7 +9,7 @@ import Share from '../../components/Share.astro';
 export async function getStaticPaths() { const all = await allNews(); return all.map((e) => ({ params: { id: e.id }, props: { e, all } })); }
 const { e, all } = Astro.props; const d = e.data; const { Content } = await render(e);
 const c = cat(d.category);
-const url = new URL(Astro.url.pathname, Astro.site).href;
+const url = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).href;
 const verified = isVerified(d);
 const mins = readingTime(e.body);
 const related = all.filter((x) => x.id !== e.id && (x.data.category === d.category || x.data.destinations.some((s) => d.destinations.includes(s)))).slice(0, 3);
