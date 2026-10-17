@@ -3,10 +3,13 @@ import visa from './data/visa-tracker.json';
 import { routes } from './routes-data';
 
 // id in visa-tracker.json -> flag code + destination page slug
-export const VISA_MAP: Record<string, [string, string]> = { thailand: ['th', 'thailand'], singapore: ['sg', 'singapore'], uae: ['ae', 'dubai'], vietnam: ['vn', 'vietnam'], indonesia: ['id', 'bali'], malaysia: ['my', 'malaysia'], 'sri-lanka': ['lk', 'sri-lanka'], japan: ['jp', 'japan'] };
-export const VISA_RULE: Record<string, string> = { visa_exempt: 'Visa exemption', visa_required: 'Visa required', e_visa: 'e-Visa', visa_on_arrival_or_e_voa: 'Visa on arrival / e-VoA', eta_free: 'ETA, free', visa_required_e_visa_available: 'Visa required (e-Visa available)', conditional_pre_approved_entry_visa: 'Conditional pre-approved entry visa' };
+export const VISA_MAP: Record<string, [string, string]> = { thailand: ['th', 'thailand'], singapore: ['sg', 'singapore'], uae: ['ae', 'dubai'], vietnam: ['vn', 'vietnam'], indonesia: ['id', 'bali'], malaysia: ['my', 'malaysia'], 'sri-lanka': ['lk', 'sri-lanka'], japan: ['jp', 'japan'], maldives: ['mv', ''], bhutan: ['bt', ''], nepal: ['np', ''] };
+export const VISA_RULE: Record<string, string> = { visa_exempt: 'Visa exemption', visa_required: 'Visa required', e_visa: 'e-Visa', visa_on_arrival_or_e_voa: 'Visa on arrival / e-VoA', eta_free: 'ETA, free', visa_required_e_visa_available: 'Visa required (e-Visa available)', conditional_pre_approved_entry_visa: 'Conditional pre-approved entry visa', visa_on_arrival: 'Visa on arrival', entry_permit: 'Entry permit (no visa)', visa_free: 'Visa-free' };
 export const visaRuleLabel = (r: string) => VISA_RULE[r] ?? r.replace(/_/g, ' ');
-export const visaGroup = (r: string) => (r.startsWith('visa_exempt') ? 'free' : r.startsWith('visa_required') ? 'visa' : 'online');
+export const visaGroup = (r: string) => (r.startsWith('visa_exempt') || r === 'visa_free' ? 'free' : r.startsWith('visa_required') ? 'visa' : 'online');
+
+/** Fee display; null/missing fee renders as 'Not stated'. */
+export const visaFee = (f: any) => (f == null || f.amount == null ? 'Not stated' : `${f.currency ?? ''} ${Number(f.amount).toLocaleString('en-IN')}`.trim());
 
 export const visaRows = (visa as any[]).filter((r) => r.verified === true && r.sources?.length && r.last_checked);
 export { routes };
