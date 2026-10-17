@@ -9,7 +9,7 @@ const tabs = [
   { href: u('/routes/'), name: 'Flights', long: 'Flight routes', upd: routesUpdated, icon: 'plane' },
 ];
 ---
-<nav class:list={['ttabs', `ttabs-${variant}`]} aria-label={variant === 'header' ? 'Trackers' : 'Switch tracker'}>
+<nav class:list={['ttabs', `ttabs-${variant}`]} aria-label={variant === 'switch' ? 'Switch tracker' : 'Trackers'}>
   {tabs.map((t) => {
     const on = norm(path) === norm(t.href);
     return (

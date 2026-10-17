@@ -1,5 +1,6 @@
 ---
 import TrackerTabs from '../components/TrackerTabs.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Base from '../layouts/Base.astro'; import Flag from '../components/Flag.astro';
 import { routes } from '../routes-data';
 import { u, dest } from '../lib';
@@ -20,10 +21,14 @@ const jsonld = { '@context': 'https://schema.org', '@graph': [
   { '@type': 'ItemList', name: 'Visa rules by destination', numberOfItems: rows.length,
     itemListElement: rows.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: `${r.destination}: ${ruleLabel(r.rule_type)}`, url: `${pageUrl}#${r.id}` })) },
 ] };
-const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:checked) .vt:not([data-group=${g}]){display:none}`).join('');
+const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:checked) :is(.vt,.vr):not([data-group=${g}]){display:none}`).join('');
+// Sort keys for the desktop table: days as a number where the rule states one, else blank (sorts last).
+const stayDays = (s) => { const m = s && String(s).match(/^(?:up to\s+)?(\d+)\s*days?/i); return m ? m[1] : ''; };
+const feeKey = (f) => (f == null || f.amount == null ? '' : `${f.currency ?? ''} ${String(f.amount).padStart(10, '0')}`);
 ---
 <Base title={title} description={description} jsonld={jsonld}>
 <div class="wrap section tracker">
+  <Breadcrumbs items={[{ name: 'Visa tracker', href: u('/visa-tracker/') }]} />
   <TrackerTabs path={Astro.url.pathname} variant="switch" />
   <h1>Visa tracker</h1>
   <p class="meta">Entry rules for Indian ordinary passport holders, each checked against official sources. Maintained by the Travel News Desk. Always confirm with the official source before travel.</p>
@@ -32,6 +37,21 @@ const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:c
   <fieldset class="seg"><legend class="sr-only">Filter by entry rule</legend>
     {GROUPS.map(([v, l], i) => <label><input type="radio" name="vf" value={v} checked={i === 0} /><span>{l}</span></label>)}
   </fieldset>
+  <div class="table-wrap vt-desk" role="region" aria-labelledby="vt-cap" tabindex="0"><table class="rt vtt" data-sortable>
+    <caption id="vt-cap" class="sr-only">Visa rules for Indian ordinary passport holders by destination. Column headers sort the table.</caption>
+    <thead><tr><th scope="col">Destination</th><th scope="col">Entry rule</th><th scope="col">Max stay</th><th scope="col">Fee</th><th scope="col">Effective</th><th scope="col">Last checked</th><th scope="col" data-nosort>Details</th></tr></thead>
+    <tbody>{rows.map((r) => { const [flag, slug] = MAP[r.id] ?? ['', '']; const g = GROUP(r.rule_type); return (
+      <tr class="vr" data-group={g}>
+        <th scope="row" data-sort={r.destination.toLowerCase()}><span class="rt-route">{flag && <Flag code={flag} size={18} />}{slug ? <a href={u(`/destinations/${slug}/`)}>{r.destination}</a> : r.destination}</span></th>
+        <td data-sort={`${g === 'free' ? 0 : g === 'online' ? 1 : 2} ${ruleLabel(r.rule_type)}`}><span class={`st st-${g}`}>{ruleLabel(r.rule_type)}</span></td>
+        <td data-sort={stayDays(r.max_stay)} class="vtt-stay">{r.max_stay ?? 'Not stated'}</td>
+        <td data-sort={feeKey(r.fee)}>{fee(r.fee)}</td>
+        <td data-sort={r.effective_date ?? ''}>{r.effective_date ? <time datetime={r.effective_date}>{day(r.effective_date)}</time> : 'Not stated'}</td>
+        <td data-sort={r.last_checked}><time datetime={r.last_checked}>{day(r.last_checked)}</time></td>
+        <td><a href={`#${r.id}`}>Details<span class="sr-only"> for {r.destination}</span></a></td>
+      </tr>); })}</tbody>
+  </table><p class="sr-only sort-status" role="status" aria-live="polite"></p></div>
+  <h2 class="vt-details-h">Conditions and official sources</h2>
   <ul class="vt-grid" role="list">
     {rows.map((r) => { const [flag, slug] = MAP[r.id] ?? ['', '']; return (
       <li class="vt" id={r.id} data-group={GROUP(r.rule_type)}>

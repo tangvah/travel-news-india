@@ -18,11 +18,12 @@ const links = [
 const ico = (d, mode) => mode === 'fill'
   ? `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="${d}"/></svg>`
   : `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="${d}"/></svg>`;
-const card = variant === 'card';
+const card = variant !== 'rail'; // card + icons render as a row; icons hides labels visually
+const lbl = variant === 'card' ? '' : 'sr-only';
 ---
-<div class={card ? 'share-row' : 'share-rail'} role="group" aria-label="Share this story">
+<div class={card ? `share-row share-${variant}` : 'share-rail'} role="group" aria-label="Share this story">
   {!card && <span class="share-label" aria-hidden="true">Share</span>}
-  {links.map(([n, h, d, m]) => <a class={`sh sh-${n.toLowerCase()}`} href={h} rel="noopener" target="_blank"><Fragment set:html={ico(d, m)} /><span class={card ? '' : 'sr-only'}>{n}</span><span class="sr-only"> (opens in new tab)</span></a>)}
-  <button class="sh copy-btn" type="button" data-copy={url}><Fragment set:html={ico(LINK, 'stroke')} /><span class={card ? '' : 'sr-only'}>Copy link</span></button>
-  <button class="sh webshare" type="button" data-webshare={url} data-title={title}><Fragment set:html={ico(SHARE, 'stroke')} /><span class={card ? '' : 'sr-only'}>More options</span></button>
+  {links.map(([n, h, d, m]) => <a class={`sh sh-${n.toLowerCase()}`} href={h} rel="noopener" target="_blank"><Fragment set:html={ico(d, m)} /><span class={lbl}>{n}</span><span class="sr-only"> (opens in new tab)</span></a>)}
+  <button class="sh copy-btn" type="button" data-copy={url}><Fragment set:html={ico(LINK, 'stroke')} /><span class={lbl}>Copy link</span></button>
+  <button class="sh webshare" type="button" data-webshare={url} data-title={title}><Fragment set:html={ico(SHARE, 'stroke')} /><span class={lbl}>More options</span></button>
 </div>
