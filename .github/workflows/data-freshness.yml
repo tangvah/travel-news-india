@@ -1,0 +1,80 @@
+# Weekly check that verified tracker rows were re-checked recently (scripts/check-freshness.mjs).
+# Deterministic, reads local JSON only. Can change: only the single open issue labelled `stale-data`.
+name: Data freshness
+on:
+  schedule:
+    - cron: '30 3 * * 1' # 03:30 UTC Monday = 09:00 IST Monday
+  workflow_dispatch:
+  pull_request:
+    # Report-only dry run when the checker changes (never touches issues).
+    paths:
+      - scripts/check-freshness.mjs
+      - .github/workflows/data-freshness.yml
+permissions: {}
+concurrency:
+  group: data-freshness-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      stale_count: ${{ steps.fresh.outputs.stale_count }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - id: fresh
+        run: |
+          node scripts/check-freshness.mjs --days 30 --out freshness.md
+          cat freshness.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: freshness-report
+          path: freshness.md
+          retention-days: 14
+
+  report:
+    needs: check
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      LABEL: stale-data
+      STALE: ${{ needs.check.outputs.stale_count }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: freshness-report
+      - name: Open, update or close the stale-data issue
+        run: |
+          set -euo pipefail
+          gh label create "$LABEL" --color fbca04 --description "Tracker rows due for re-verification" 2>/dev/null || true
+          num=$(gh issue list --label "$LABEL" --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ "${STALE:-0}" -gt 0 ]; then
+            {
+              echo "**$STALE** verified tracker rows are due for re-checking ([run]($RUN_URL), $(TZ=Asia/Kolkata date '+%d %b %Y %H:%M IST'))."
+              echo "This issue is updated weekly and closed automatically when none are stale."
+              echo
+              head -c 60000 freshness.md
+            } > body.md
+            if [ -n "$num" ]; then
+              gh issue edit "$num" --title "Stale tracker data: $STALE verified rows not checked in 30+ days" --body-file body.md
+              echo "Updated #$num"
+            else
+              gh issue create --title "Stale tracker data: $STALE verified rows not checked in 30+ days" --label "$LABEL" --body-file body.md
+            fi
+          elif [ -n "$num" ]; then
+            gh issue close "$num" --comment "No stale verified rows any more ([run]($RUN_URL)). Closing automatically."
+            echo "Closed #$num"
+          else
+            echo "Nothing stale and no open issue."
+          fi

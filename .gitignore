@@ -7,3 +7,6 @@ screenshots/
 lighthouse/
 .backup_frontmatter/
 lh.sh
+_linkcheck/
+.lycheecache
+lychee/
