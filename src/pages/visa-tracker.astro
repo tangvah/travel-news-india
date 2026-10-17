@@ -1,24 +1,17 @@
 ---
 import Base from '../layouts/Base.astro'; import Flag from '../components/Flag.astro';
-import visa from '../data/visa-tracker.json'; import { routes } from '../routes-data';
+import { routes } from '../routes-data';
 import { u, dest } from '../lib';
-import { visaUpdated, routesUpdated, monthYear, dayLong } from '../trackers';
+import { visaUpdated, routesUpdated, monthYear, dayLong, VISA_MAP as MAP, visaRuleLabel as ruleLabel, visaGroup as GROUP, visaRows as rows, visaFee as fee } from '../trackers';
 import { SITE } from '../site.config.mjs';
-// id in visa-tracker.json -> flag code + destination page slug
-const MAP = { thailand: ['th', 'thailand'], singapore: ['sg', 'singapore'], uae: ['ae', 'dubai'], vietnam: ['vn', 'vietnam'], indonesia: ['id', 'bali'], malaysia: ['my', 'malaysia'], 'sri-lanka': ['lk', 'sri-lanka'], japan: ['jp', 'japan'] };
-const RULE = { visa_exempt: 'Visa exemption', visa_required: 'Visa required', e_visa: 'e-Visa', visa_on_arrival_or_e_voa: 'Visa on arrival / e-VoA', eta_free: 'ETA, free', visa_required_e_visa_available: 'Visa required (e-Visa available)', conditional_pre_approved_entry_visa: 'Conditional pre-approved entry visa' };
-const GROUP = (r) => r.startsWith('visa_exempt') ? 'free' : r.startsWith('visa_required') ? 'visa' : 'online';
 const GROUPS = [['all', 'All'], ['free', 'Visa-free'], ['online', 'e-Visa, ETA & on arrival'], ['visa', 'Visa required']];
-const rows = visa.filter((r) => r.verified === true && r.sources?.length && r.last_checked);
-const ruleLabel = (r) => RULE[r] ?? r.replace(/_/g, ' ');
-const fee = (f) => (f == null ? 'Not stated' : `${f.currency} ${Number(f.amount).toLocaleString('en-IN')}`);
 const day = (s) => new Date(s + 'T00:00:00+05:30').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' });
 const host = (s) => new URL(s).hostname.replace(/^www\./, '');
 const labels = (list) => { const seen = {}; return list.map((s) => { const h = host(s); seen[h] = (seen[h] || 0) + 1; return seen[h] > 1 ? `${h} (${seen[h]})` : h; }); };
 const names = rows.map((r) => r.destination);
 const lead = names.slice(0, 3).map((n) => n.split(' / ').pop());
 const title = `Visa for Indians: ${lead.join(', ')} & more (updated ${monthYear(visaUpdated)})`;
-const description = `Visa rules for Indian passport holders in ${names.join(', ')}: max stay, fees and conditions, checked against official sources. Last updated ${dayLong(visaUpdated)}.`;
+const description = `Visa rules for Indian passport holders in ${rows.length} destinations (${names.join(', ')}): max stay, fees and conditions, checked against official sources. Last updated ${dayLong(visaUpdated)}.`;
 const pageUrl = new URL(u('/visa-tracker/'), SITE.url).href;
 const jsonld = { '@context': 'https://schema.org', '@graph': [
   { '@type': 'Dataset', name: 'Visa rules for Indian passport holders', description, url: pageUrl, dateModified: visaUpdated, inLanguage: 'en-IN',
@@ -49,7 +42,7 @@ const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:c
         </dl>
         {r.key_conditions?.length > 0 && <ul class="vt-cond">{r.key_conditions.map((k) => <li>{k}</li>)}</ul>}
         {r.quote && <blockquote class="vt-quote">“{r.quote}”</blockquote>}
-        {r.notes && <p class="meta">{r.notes}</p>}
+        {r.notes && <p class="meta vt-notes"><strong>Notes:</strong> {r.notes}</p>}
         <p class="vt-src"><span class="meta">Sources:</span> {(() => { const L = labels(r.sources); return r.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s} rel="noopener">{L[i]}</a></>); })()}</p>
         <p class="meta">Last checked <time datetime={r.last_checked}>{day(r.last_checked)}</time></p>
       </li>); })}

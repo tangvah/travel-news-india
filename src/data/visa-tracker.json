@@ -220,5 +220,86 @@
     "verified": true,
     "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. Fee verified 17 Oct 2026 on the Consulate-General of Japan in Mumbai visa page (loaded via WebFetch; curl gets 403): Indian nationals pay Rs 500 for single or multiple entry for applications 1 Jul 2026 – 31 Mar 2027, unchanged from Apr–Jun 2026, while Japan's fees for other nationals rose sharply from 1 Jul 2026 (reported in Indian media, e.g. Outlook Traveller). The Embassy in New Delhi page (in.emb-japan.go.jp) still returns 403, so the New Delhi jurisdiction fee is assumed but not separately confirmed. Whether the same Rs 500 applies to the eVISA route was not stated on the page.",
     "last_checked": "2026-10-17"
+  },
+  {
+    "id": "maldives",
+    "destination": "Maldives",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_on_arrival",
+    "max_stay": "Not stated on the Maldives Immigration page; India's MEA lists 90 days",
+    "fee": null,
+    "effective_date": null,
+    "key_conditions": [
+      "No pre-approval; tourist visa granted on arrival subject to immigration clearance",
+      "Passport with MRZ and at least 1 month's validity (extended-validity passports refused)",
+      "Confirmed return tickets, prepaid confirmed booking at a registered facility, and sufficient funds (or approved sponsorship)",
+      "IMUGA 'Traveller Declaration' within 96 hours before arrival, one per traveller including children; submission free of charge",
+      "Yellow fever certificate if arriving from or via a risk country"
+    ],
+    "quote": "Tourist visa is granted on arrival to the Maldives. Foreigners traveling to Maldives as tourists do not require pre-approval for the visa.",
+    "sources": [
+      "https://immigration.gov.mv/visa/tourist-visa",
+      "https://imuga.immigration.gov.mv",
+      "https://www.mea.gov.in/VFFIN.htm"
+    ],
+    "verified": true,
+    "notes": "Rule and conditions confirmed on Maldives Immigration (page 'updated: 10/09/2026'). The page does not state a maximum stay or a visa fee; only the IMUGA declaration is stated as 'free of charge'. Stay of 90 days is from India's MEA table ('Maldives | 90 Days'), not confirmed by Maldives Immigration; a Maldives mission FAQ reportedly says 'up to 30-day visa for free' but returned a Cloudflare block/403 and could not be read. imuga.immigration.gov.mv loaded (HTTP 200) but its content is JavaScript-rendered. Fee left null: not stated.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "bhutan",
+    "destination": "Bhutan",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "entry_permit",
+    "max_stay": "Not stated for the Indian permit (the 90-day maximum on bhutan.travel applies to visas); India's MEA lists 'No limit'",
+    "fee": {
+      "amount": 1200,
+      "currency": "INR",
+      "applies_to": "Sustainable Development Fee per person per night (Nu. 1,200 or INR equivalent); children 6-11 Nu./INR 600; under 6 free; 24-hour SDF waiver in border towns (Samtse, Phuentsholing, Gelephu, Samdrupjongkhar) from 2 June 2026 to Aug 2027"
+    },
+    "effective_date": null,
+    "key_conditions": [
+      "Indians need a permit (not a visa); apply online before travel, via tour operator/hotel, or at the point of entry (passport-size photo needed on arrival)",
+      "Indian passport or Indian voter ID card; under-18s may use passport or birth certificate and must be with a legal guardian",
+      "No fees payable in advance; SDF payable when applying for the permit",
+      "Guide mandatory at all times (and beyond border towns for land entries)"
+    ],
+    "quote": "The SDF for Indian nationals (showing a valid Indian passport or Voter ID card) is Nu. 1,200 (or the equivalent amount in Indian rupees) per person, per night.",
+    "sources": [
+      "https://bhutan.travel/faqs",
+      "https://bhutan.travel/visa",
+      "https://www.immi.gov.bt",
+      "https://www.mea.gov.in/VFFIN.htm"
+    ],
+    "verified": true,
+    "notes": "Permit and SDF confirmed on bhutan.travel, the Department of Tourism's official site ('Visitors from India require a permit.'). immi.gov.bt (Department of Immigration) loaded but is a JavaScript portal with no readable text, so not independently confirmed there. tourism.gov.bt/sdf did not respond. Permit length not stated on any page read.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "nepal",
+    "destination": "Nepal",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_free",
+    "max_stay": "No limit (India's MEA)",
+    "fee": null,
+    "effective_date": null,
+    "key_conditions": [
+      "No visa needed by land or air",
+      "By air only two documents are valid: a valid Indian passport, or an original Indian Voter ID card with photograph issued by the Election Commission of India",
+      "Downloaded/online-printed Voter ID, Aadhaar, PAN card, driving licence and Indian Embassy registration are not accepted"
+    ],
+    "quote": "Only the following two documents are valid for Indian Nationals travelling by air between India and Nepal:- VALID INDIAN PASSPORT OR Original Indian Voter ID card with Photograph (issued by Election Commission of India)",
+    "sources": [
+      "https://indembkathmandu.gov.in/valid-travel-documents",
+      "https://www.mea.gov.in/VFFIN.htm",
+      "https://www.immigration.gov.np/en/page/information-for-indian-nationals-11",
+      "https://www.nepalembassy.in"
+    ],
+    "verified": true,
+    "notes": "Visa-free status and 'No limit' from India's MEA visa-free table ('Nepal | No limit'); ID documents from the Embassy of India, Kathmandu. Nepal's Department of Immigration pages (information-for-indian-nationals-11, arrival-departure-information-1, tia arrival-information) returned the site's 404 page via fetch and timed out via curl, so Nepal-side wording was not read today. The Embassy of Nepal, New Delhi homepage loaded but has no visa/ID text for Indians.",
+    "last_checked": "2026-10-17"
   }
 ]
