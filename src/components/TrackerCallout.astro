@@ -1,12 +1,4 @@
 ---
 import { u } from '../lib';
-import { visaRows, routes, trackersUpdated, dayLong } from '../trackers';
 ---
-<aside class="box tracker-callout" aria-labelledby="trk-h"><div>
-  <h2 id="trk-h" class="eyebrow" style="font-family:var(--font-sans)">Planning a trip? Check the trackers</h2>
-  <ul class="tc-links" role="list">
-    <li><a href={u('/visa-tracker/')}><b>Visa tracker</b><span class="meta">Entry rules for Indian passports, {visaRows.length} destinations</span></a></li>
-    <li><a href={u('/routes/')}><b>Flight routes tracker</b><span class="meta">{routes.length} new international routes from India</span></a></li>
-  </ul>
-  <p class="meta" style="margin:8px 0 0">Last updated <time datetime={trackersUpdated}>{dayLong(trackersUpdated)}</time></p>
-</div></aside>
+<p class="meta tracker-link">Planning a trip? See the <a href={u('/visa-tracker/')}>visa tracker</a> and <a href={u('/routes/')}>new flight routes</a>.</p>

@@ -1,4 +1,5 @@
 ---
+import TrackerTabs from '../../components/TrackerTabs.astro';
 import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro';
 import { u } from '../../lib';
 import { routesUpdated, monthYear, dayLong } from '../../trackers';
@@ -27,6 +28,7 @@ const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
 ---
 <Base title={title} description={description} jsonld={jsonld}>
 <div class="wrap section rtk">
+  <TrackerTabs path={Astro.url.pathname} variant="switch" />
   <h1>Flight routes tracker</h1>
   <p class="standfirst">New and announced international routes from India, for travel agents. Every row is checked against an official airline source.</p>
   <p class="meta">Maintained by the Travel News Desk. Sorted by start date, soonest first. <strong>Last updated <time datetime={routesUpdated}>{dayLong(routesUpdated)}</time></strong>. Always confirm schedules with the airline before ticketing.</p>

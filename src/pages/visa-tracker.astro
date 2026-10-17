@@ -1,4 +1,5 @@
 ---
+import TrackerTabs from '../components/TrackerTabs.astro';
 import Base from '../layouts/Base.astro'; import Flag from '../components/Flag.astro';
 import { routes } from '../routes-data';
 import { u, dest } from '../lib';
@@ -23,7 +24,8 @@ const filterCss = GROUPS.slice(1).map(([g]) => `.tracker:has(input[value=${g}]:c
 ---
 <Base title={title} description={description} jsonld={jsonld}>
 <div class="wrap section tracker">
-  <h1>Visa &amp; routes tracker</h1>
+  <TrackerTabs path={Astro.url.pathname} variant="switch" />
+  <h1>Visa tracker</h1>
   <p class="meta">Entry rules for Indian ordinary passport holders, each checked against official sources. Maintained by the Travel News Desk. Always confirm with the official source before travel.</p>
   <p class="meta"><strong>Last updated <time datetime={visaUpdated}>{dayLong(visaUpdated)}</time></strong></p>
   <nav aria-label="Jump to destination" class="chips" style="margin:0 0 16px">{rows.map((r) => <a class="chip dest" href={`#${r.id}`}>{r.destination}</a>)}</nav>

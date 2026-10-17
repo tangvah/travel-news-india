@@ -1,7 +1,6 @@
 ---
 import { u } from "../lib";
 import Base from '../layouts/Base.astro'; import List from '../components/List.astro';
-import HomeTrackers from '../components/HomeTrackers.astro';
 import Newsletter from '../components/Newsletter.astro'; import Flag from '../components/Flag.astro';
 import { allNews, fmt, readingTime, cat, dest, isVerified } from '../lib';
 import { SITE, DESTINATIONS, CATEGORIES } from '../site.config.mjs';
@@ -14,7 +13,6 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'WebSite', name: SIT
 <Base jsonld={jsonld}>
 <div class="wrap">
   <h1 class="sr-only">{SITE.name}: latest news</h1>
-  <HomeTrackers />
   {feat ? (
   <div class="lead">
     <article class="feature" style={`--hero:${fdest ? fdest.hero : 'linear-gradient(135deg,#0d0d10,#3b3fc4)'}`}>
