@@ -1,0 +1,9 @@
+---
+import { SOURCES } from '../seasons';
+const { sources = [] } = Astro.props; // source ids from best_seasons.json
+const list = [...new Set(sources)].filter((s) => s !== 'climate_data' && SOURCES[s]);
+---
+<div class="wcredit meta">
+  <p><a href="https://open-meteo.com/" rel="noopener">Weather data by Open-Meteo.com</a>, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>. Climate averages are 2016–2025 ERA5 / ERA5-Land reanalysis (Copernicus Climate Change Service, ECMWF), processed by India Outbound Travel News. These are not official WMO normals; where a met service publishes station figures, the charts use them instead, as labelled.</p>
+  {list.length > 0 && <p>Season sources: {list.map((s, i) => <>{i > 0 && ' · '}<a href={SOURCES[s].url} rel="noopener">{SOURCES[s].title}</a></>)}</p>}
+</div>

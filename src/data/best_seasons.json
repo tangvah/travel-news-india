@@ -1,0 +1,830 @@
+{
+ "meta": {
+  "title": "Best travel seasons for Indian travellers, by country and region",
+  "generated": "2026-10-17",
+  "rating_scale": {
+   "best": "Most reliable weather per the cited met service or tourism board",
+   "okay": "Visitable, with trade-offs (heat, showers, cold, crowds)",
+   "avoid": "Monsoon, storm, extreme heat or disruption months. Not a ban; low season, and often cheaper"
+  },
+  "method": "Seasons come from national met services and tourism boards (sources). Our 2016-2025 ERA5 averages (climate_normals.json) were used to split best from okay where sources give broad windows. Ratings that rely on that split are editorial judgement; review them before publishing.",
+  "months_index": "months[0]=Jan ... months[11]=Dec"
+ },
+ "sources": {
+  "tmd_seasons": {
+   "title": "The Seasons of Thailand (source: Thai Meteorological Department), Thailand.go.th",
+   "url": "https://www.thailand.go.th/guide-book-detail/009_142"
+  },
+  "tmd_monsoon": {
+   "title": "Monsoon winds and the climate of Thailand (source: Thai Meteorological Department), Thailand.go.th",
+   "url": "https://www.thailand.go.th/public/index.php/guide-book-detail/099_143"
+  },
+  "mss": {
+   "title": "Climate of Singapore, Meteorological Service Singapore (1991-2020 Changi)",
+   "url": "https://www.weather.gov.sg/climate-climate-of-singapore/"
+  },
+  "mom_2027": {
+   "title": "Public Holidays for 2027, Ministry of Manpower Singapore (18 Jun 2026)",
+   "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0618-public-holidays-for-2027"
+  },
+  "dmo_climate": {
+   "title": "Geographic Location & Climate, Government of Dubai Media Office",
+   "url": "https://www.mediaoffice.ae/en/general-information/geographic-location-climate"
+  },
+  "dsf": {
+   "title": "Dubai Shopping Festival, Visit Dubai (dates 4 Dec 2026-17 Jan 2027 as reported by Arabian Business)",
+   "url": "https://www.visitdubai.com/en/festivals-and-events/dsf",
+   "alt": "https://www.arabianbusiness.com/business/retail/dubai-shopping-festival-2026-27-dates"
+  },
+  "ramadan_2027": {
+   "title": "Likely Ramadan/Eid dates 2027 (UAE astronomers; subject to moon sighting), Khaleej Times",
+   "url": "https://www.khaleejtimes.com/uae/ramadan-eid-al-fitr-eid-al-adha-2027-likely-dates"
+  },
+  "vn_travel": {
+   "title": "Weather and climate in Vietnam, Vietnam Tourism (vietnam.travel, VNAT)",
+   "url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam"
+  },
+  "met_my_climate": {
+   "title": "Malaysia's Climate, MetMalaysia",
+   "url": "https://www.met.gov.my/en/pendidikan/iklim-malaysia/"
+  },
+  "met_my_monsoon": {
+   "title": "Weather Phenomena (monsoons), MetMalaysia",
+   "url": "https://www.met.gov.my/en/pendidikan/fenomena-cuaca/"
+  },
+  "bali_prov": {
+   "title": "Iklim Tropis Laut di Bali (Bali Provincial Government, TaRu Bali)",
+   "url": "https://tarubali.baliprov.go.id/iklim-tropis-laut-di-bali-antara-kemarau-penghujan-dan-perubahan-musim/"
+  },
+  "nyepi_2027": {
+   "title": "BMKG Almanak 2027 / Kalender Bali: Nyepi (Saka 1949) on 8 March 2027",
+   "url": "https://www.m.kalenderbali.org/?bl=3&tg=8&th=2027",
+   "alt": "https://content.bmkg.go.id/wp-content/uploads/almanak_2027_compressed.pdf"
+  },
+  "lk_met": {
+   "title": "Climate of Sri Lanka, Department of Meteorology Sri Lanka",
+   "url": "https://meteo.gov.lk/index.php?option=com_content&view=article&id=94&Itemid=310&lang=en"
+  },
+  "lk_tourism": {
+   "title": "Practical info - When to go, Tourism Sri Lanka (tourismsrilanka.org)",
+   "url": "https://www.tourismsrilanka.org/essentials/practical-info/"
+  },
+  "mv_met": {
+   "title": "Climate of Maldives, Maldives Meteorological Service",
+   "url": "https://www.meteorology.gov.mv/climate/"
+  },
+  "mv_met_aw": {
+   "title": "Weather awareness, Maldives Meteorological Service",
+   "url": "https://www.meteorology.gov.mv/awareness"
+  },
+  "bt_dot": {
+   "title": "FAQs (weather, best time, SDF), Bhutan Department of Tourism (bhutan.travel)",
+   "url": "https://bhutan.travel/faqs"
+  },
+  "bt_fest": {
+   "title": "Tentative Festival Dates 2026 (traveltobhutan.bt PDF)",
+   "url": "http://traveltobhutan.bt/wp-content/uploads/2026/05/Tentative_Festival_Dates_2026.pdf"
+  },
+  "ntb": {
+   "title": "Climate in Nepal, Nepal Tourism Board",
+   "url": "https://ntb.gov.np/en/plan-your-trip/about-nepal/climate"
+  },
+  "jnto_sakura": {
+   "title": "Cherry Blossom Forecast 2026, JNTO",
+   "url": "https://www.japan.travel/en/see-and-do/cherry-blossom-forecast/"
+  },
+  "jnto_june": {
+   "title": "Japan in June (rainy season), JNTO",
+   "url": "https://www.japan.travel/en/guide/june/"
+  },
+  "jnto_typhoon": {
+   "title": "Weathering Typhoons in Japan, JNTO",
+   "url": "https://www.japan.travel/en/blog/weathering-typhoons-in-japan/"
+  },
+  "jnto_holidays": {
+   "title": "Business hours and holidays (Golden Week, Obon, New Year), JNTO",
+   "url": "https://www.japan.travel/en/plan/business-hours-and-holidays/"
+  },
+  "jnto_autumn": {
+   "title": "Autumn Leaves Forecast 2026, JNTO",
+   "url": "https://www.japan.travel/en/see-and-do/autumn-leaves-forecast/"
+  },
+  "kto": {
+   "title": "Climate & Seasons, VisitKorea (Korea Tourism Organization), updated 18 Sep 2026",
+   "url": "https://english.visitkorea.or.kr/svc/contents/infoBscView.do?vcontsId=140636"
+  },
+  "kasi_2027": {
+   "title": "2027 calendar data (Seollal, Chuseok), Korea Astronomy and Space Science Institute",
+   "url": "https://astro.kasi.re.kr/kor/life/post/calendarData?search_year=2027"
+  },
+  "goi_2026": {
+   "title": "List of gazetted and restricted holidays 2026 (Diwali 8 Nov 2026), Government of India (s3waas PDF)",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3kv02e791c8ff4befcb27a5a45975b06f/uploads/2026/01/2026012281.pdf"
+  },
+  "delhi_doe": {
+   "title": "Delhi Directorate of Education annual school calendar 2026-27 (summer vacation 11 May-30 Jun 2026), circular DE.23(03)/Sch.Br./2026/146",
+   "url": "https://www.edudel.nic.in/upload/upload_2025_26/NureryPrimaryBranch_SuggestiveActivitiesForTheStudentsOfPrimaryClassesDuringSummerVacation_dt_11052026_191.pdf"
+  },
+  "mc_diwali": {
+   "title": "Diwali rush sends airfares soaring (13 Oct 2025), Moneycontrol",
+   "url": "https://www.moneycontrol.com/travel/diwali-rush-sends-airfares-soaring-as-ticket-for-key-routes-touch-rs-40000-on-heavy-demand-article-13612273.html"
+  },
+  "climate_data": {
+   "title": "Our own 2016-2025 averages from Open-Meteo/ERA5 (data/climate_normals.json)",
+   "url": "https://open-meteo.com/en/docs/historical-weather-api"
+  }
+ },
+ "india_peak_periods": [
+  {
+   "name": "Diwali week",
+   "dates": "8 Nov 2026 (Diwali, GoI list); 2027 falls in late Oct (Singapore lists Deepavali 28 Oct 2027) - confirm India's 2027 list when published",
+   "effect": "Short-haul international fares spike; Dubai and Singapore routes 'commanding premium fares' and outbound sales to Dubai, Bali, Bangkok, Singapore, Vietnam up 30-40% vs Diwali 2024 (Moneycontrol, Oct 2025, quoting OTAs)",
+   "sources": [
+    "goi_2026",
+    "mom_2027",
+    "mc_diwali"
+   ]
+  },
+  {
+   "name": "Indian summer school holidays",
+   "dates": "Mid-May to end-June (e.g. Delhi govt schools 11 May-30 Jun 2026); varies by state/board",
+   "effect": "Family travel peak from India. Clashes with SW monsoon in Sri Lanka west coast, Maldives, Andaman coast of Thailand, Nepal, Bhutan; and with heat in UAE. Good fit for Bali, east-coast Sri Lanka, Singapore, Vietnam's central coast.",
+   "sources": [
+    "delhi_doe"
+   ]
+  },
+  {
+   "name": "Christmas-New Year",
+   "dates": "~20 Dec-5 Jan",
+   "effect": "[Inference] Global peak; overlaps Dubai Shopping Festival and Japan's New Year closures.",
+   "sources": []
+  }
+ ],
+ "countries": [
+  {
+   "id": "thailand",
+   "country": "Thailand",
+   "regions": [
+    {
+     "name": "Bangkok & Central",
+     "cities": [
+      "Bangkok"
+     ],
+     "months": [
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "avoid",
+      "okay",
+      "best",
+      "best"
+     ],
+     "best": "Nov-Feb",
+     "shoulder": "Mar-Aug, Oct",
+     "avoid": "Sep (wettest month in our 2016-2025 data, 254 mm)",
+     "reason": "TMD: cool season mid-Oct to mid-Feb under the dry NE monsoon; hot season mid-Feb to mid-May (Apr avg high 35 C in our data); rainy season mid-May to mid-Oct."
+    },
+    {
+     "name": "Andaman coast (Phuket, Krabi)",
+     "cities": [
+      "Phuket"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid",
+      "avoid",
+      "avoid",
+      "avoid",
+      "avoid",
+      "okay",
+      "best"
+     ],
+     "best": "Dec-Mar",
+     "shoulder": "Apr, Nov",
+     "avoid": "May-Oct (SW monsoon; 248-340 mm/month in our data)",
+     "reason": "TMD: SW monsoon (mid-May to mid-Oct) is rainier on coasts and mountain ranges; Phuket driest Jan-Mar in our data."
+    },
+    {
+     "name": "North (Chiang Mai)",
+     "cities": [
+      "Chiang Mai"
+     ],
+     "months": [
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "avoid",
+      "avoid",
+      "okay",
+      "best",
+      "best"
+     ],
+     "best": "Nov-Feb",
+     "shoulder": "Mar-Jul, Oct",
+     "avoid": "Aug-Sep (wettest, 232-244 mm)",
+     "reason": "TMD: north and northeast turn 'quite cool' in the NE monsoon; Apr is hottest (avg high 36 C in our data)."
+    }
+   ],
+   "notes": "Gulf islands (Koh Samui) differ: TMD says the south, especially the east side, stays rainy into December. Songkran (13-15 Apr) is Thai New Year [check TAT for events].",
+   "peaks": [
+    "Diwali and Christmas-New Year fall in Thailand's best season, so expect peak pricing (see india_peak_periods)."
+   ],
+   "sources": [
+    "tmd_seasons",
+    "tmd_monsoon",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "singapore",
+   "country": "Singapore",
+   "regions": [
+    {
+     "name": "Singapore",
+     "cities": [
+      "Singapore"
+     ],
+     "months": [
+      "okay",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay"
+     ],
+     "best": "Feb-Mar, Jun-Sep (lowest monthly rain at Changi)",
+     "shoulder": "Jan, Apr-May, Oct-Dec",
+     "avoid": "None (year-round city); Nov-Jan is wettest",
+     "reason": "MSS: no distinct dry season; wettest Nov-Jan (NE monsoon wet phase, 252-332 mm), driest Feb (105 mm); Apr-May afternoons often >32 C; Jun-Sep can bring slight-to-moderate haze."
+    }
+   ],
+   "notes": "Rated on MSS 1991-2020 station normals, not ERA5.",
+   "peaks": [
+    "Chinese New Year 6-7 Feb 2027 (MOM); Hari Raya Puasa 10 Mar 2027; Deepavali 28 Oct 2027 (Little India)."
+   ],
+   "sources": [
+    "mss",
+    "mom_2027"
+   ]
+  },
+  {
+   "id": "uae",
+   "country": "UAE / Dubai",
+   "regions": [
+    {
+     "name": "Dubai & Abu Dhabi",
+     "cities": [
+      "Dubai",
+      "Abu Dhabi"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid",
+      "avoid",
+      "avoid",
+      "avoid",
+      "okay",
+      "best",
+      "best"
+     ],
+     "best": "Nov-Mar",
+     "shoulder": "Apr, Oct",
+     "avoid": "May-Sep (avg highs 38-42 C in our data)",
+     "reason": "Dubai Media Office: summer avg high ~41.8 C, lows ~29.7 C; winter avg high 23 C, low 14 C; most rain Jan-Mar but annual total only ~87 mm."
+    }
+   ],
+   "notes": "[Inference] Summer heat often means lower hotel rates and indoor attractions; check prices in the budget tool before recommending.",
+   "peaks": [
+    "Dubai Shopping Festival 4 Dec 2026-17 Jan 2027.",
+    "Ramadan expected to start ~8 Feb 2027 (astronomical estimate; confirmed by moon sighting)."
+   ],
+   "sources": [
+    "dmo_climate",
+    "dsf",
+    "ramadan_2027",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "vietnam",
+   "country": "Vietnam",
+   "regions": [
+    {
+     "name": "North (Hanoi, Ha Long Bay)",
+     "cities": [
+      "Hanoi"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid",
+      "okay",
+      "best",
+      "best",
+      "best"
+     ],
+     "best": "Apr-May, Oct-Dec",
+     "shoulder": "Jan-Mar (cool, misty; lows ~14 C), Jun, Sep",
+     "avoid": "Jul-Aug (hot, humid, rainy; Aug 359 mm in our data)",
+     "reason": "Vietnam Tourism: best Hanoi Apr-Jun or Sep-Dec; Ha Long Apr-Jun or Sep-Nov; storms can cancel cruises."
+    },
+    {
+     "name": "Central (Da Nang, Hoi An, Hue)",
+     "cities": [
+      "Da Nang"
+     ],
+     "months": [
+      "okay",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "avoid",
+      "avoid",
+      "avoid",
+      "avoid"
+     ],
+     "best": "Feb-Aug (May-Aug hot, beach weather)",
+     "shoulder": "Jan",
+     "avoid": "Sep-Dec (storms, floods; Oct 547 mm in our data)",
+     "reason": "Vietnam Tourism: Hoi An rainy Sep-Jan, tropical storms from Sep, small floods Sep-Nov."
+    },
+    {
+     "name": "South (Ho Chi Minh City, Mekong)",
+     "cities": [
+      "Ho Chi Minh City"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "best"
+     ],
+     "best": "Dec-Apr",
+     "shoulder": "May-Nov (afternoon downpours)",
+     "avoid": "None",
+     "reason": "Vietnam Tourism: Dec-Apr clear and sunny; May-Nov wet season with a dependable afternoon downpour of a few hours."
+    },
+    {
+     "name": "Phu Quoc",
+     "cities": [
+      "Phu Quoc"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "avoid",
+      "avoid",
+      "avoid",
+      "okay",
+      "best",
+      "best"
+     ],
+     "best": "Nov-Apr",
+     "shoulder": "May-Jun, Oct",
+     "avoid": "Jul-Sep",
+     "reason": "Vietnam Tourism: avoid Jul-Sep (storms, ferry risk), Dec-Jan 'sublime'. Our data also show heavy rain in May-Jun and Oct (310-344 mm), so we rate those months okay, not best."
+    }
+   ],
+   "notes": "No single month suits the whole country; Vietnam Tourism says Mar-May is the best countrywide.",
+   "peaks": [
+    "Tet (lunar new year) in early Feb 2027: [Inference] domestic travel peak, some closures."
+   ],
+   "sources": [
+    "vn_travel",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "malaysia",
+   "country": "Malaysia",
+   "regions": [
+    {
+     "name": "Kuala Lumpur & west coast",
+     "cities": [
+      "Kuala Lumpur"
+     ],
+     "months": [
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay"
+     ],
+     "best": "Jan-Feb, Jun-Jul",
+     "shoulder": "Mar-May, Aug-Dec",
+     "avoid": "None (Nov is wettest, 400 mm in our data)",
+     "reason": "MetMalaysia: most of the peninsula has rain peaks in Oct-Nov and Apr-May, with minima in Jun-Jul and Feb."
+    },
+    {
+     "name": "Langkawi & Penang (northwest)",
+     "cities": [
+      "Langkawi"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "avoid",
+      "avoid",
+      "avoid",
+      "okay"
+     ],
+     "best": "Jan-Mar",
+     "shoulder": "Apr-Aug, Dec",
+     "avoid": "Sep-Nov (244-327 mm in our data)",
+     "reason": "MetMalaysia: northwest primary rainfall minimum Jan-Feb, secondary minimum Jun-Jul, primary maximum Oct-Nov."
+    },
+    {
+     "name": "East-coast islands (Perhentian, Redang, Tioman)",
+     "cities": [],
+     "months": [
+      "avoid",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid"
+     ],
+     "best": "Apr-Sep",
+     "shoulder": "Feb-Mar, Oct",
+     "avoid": "Nov-Jan",
+     "reason": "MetMalaysia: NE monsoon (Nov-Mar) brings heavy rain, floods and rough seas to the east coast; Nov-Jan wettest, Jun-Jul driest."
+    }
+   ],
+   "notes": "No climate series fetched for the east-coast islands; ratings come from MetMalaysia text only.",
+   "peaks": [
+    "Chinese New Year early Feb 2027; Hari Raya Aidilfitri ~10 Mar 2027 (Singapore date; Malaysia's own gazette may differ by a day)."
+   ],
+   "sources": [
+    "met_my_climate",
+    "met_my_monsoon",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "indonesia",
+   "country": "Indonesia / Bali",
+   "regions": [
+    {
+     "name": "Bali",
+     "cities": [
+      "Bali (Denpasar)"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay"
+     ],
+     "best": "May-Sep",
+     "shoulder": "Apr, Oct; Nov-Mar wet (Jan-Feb wettest, ~370 mm in our data)",
+     "avoid": "None",
+     "reason": "Bali Provincial Govt: dry season generally Apr-Oct, rainy season Oct-Apr, with Oct and Apr as transition months."
+    }
+   ],
+   "notes": "Nyepi (Day of Silence) 8 Mar 2027: Bali's airport is expected to close for 24 hours, as in past years; check before booking.",
+   "peaks": [
+    "Indian May-June school holidays fall in Bali's dry season."
+   ],
+   "sources": [
+    "bali_prov",
+    "nyepi_2027",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "sri_lanka",
+   "country": "Sri Lanka",
+   "regions": [
+    {
+     "name": "West & south coast, hill country (Colombo, Galle, Kandy)",
+     "cities": [
+      "Colombo",
+      "Kandy"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "avoid",
+      "avoid",
+      "best"
+     ],
+     "best": "Dec-Mar",
+     "shoulder": "Apr, Jun-Sep",
+     "avoid": "May, Oct-Nov (Colombo 359-400 mm in our data)",
+     "reason": "Tourism Sri Lanka: west, south and hill country best Dec-Mar. Met Dept: SW monsoon May-Sep wets the southwest; Oct-Nov inter-monsoon brings squalls and cyclones island-wide."
+    },
+    {
+     "name": "East coast (Trincomalee, Arugam Bay)",
+     "cities": [
+      "Trincomalee"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid"
+     ],
+     "best": "Apr-Sep (Tourism SL: May-Sep)",
+     "shoulder": "Jan-Mar, Oct",
+     "avoid": "Nov-Dec (NE monsoon; Nov 404 mm in our data)",
+     "reason": "Met Dept: the NE monsoon (Dec-Feb) rains on the north and east; Tourism SL says the east coast is at its finest May-Sep."
+    }
+   ],
+   "notes": "The opposite coasts give Sri Lanka a good option in every month.",
+   "peaks": [
+    "Indian May-June holidays suit the east coast and the Cultural Triangle, not the west-coast beaches."
+   ],
+   "sources": [
+    "lk_tourism",
+    "lk_met",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "maldives",
+   "country": "Maldives",
+   "regions": [
+    {
+     "name": "Male & central atolls",
+     "cities": [
+      "Male"
+     ],
+     "months": [
+      "best",
+      "best",
+      "best",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay",
+      "okay"
+     ],
+     "best": "Jan-Mar (dry NE monsoon, 10-11 h sunshine)",
+     "shoulder": "Apr, Dec (transition); mid-May-Nov wet season",
+     "avoid": "None outright; May and Nov wettest in our data (~250 mm)",
+     "reason": "Maldives Met Service: dry NE monsoon Jan-Mar, wet SW monsoon mid-May-Nov, Dec and Apr transitional; thunderstorms most frequent in Apr; strong winds can disrupt ferries."
+    }
+   ],
+   "notes": "Southern atolls also get heavy showers in the NE monsoon (MMS).",
+   "peaks": [],
+   "sources": [
+    "mv_met",
+    "mv_met_aw",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "bhutan",
+   "country": "Bhutan",
+   "regions": [
+    {
+     "name": "Paro, Thimphu, Punakha",
+     "cities": [
+      "Paro",
+      "Thimphu"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid",
+      "okay",
+      "best",
+      "best",
+      "okay"
+     ],
+     "best": "Mar-May, Oct-Nov",
+     "shoulder": "Dec-Feb (clear, frosty), Jun, Sep",
+     "avoid": "Jul-Aug (monsoon)",
+     "reason": "Bhutan DoT: monsoon late Jun/Jul to late Sep; Jun-Sep monsoons can disrupt transport (floods, landslides); autumn sunny, festive; winter crisp and clear."
+    }
+   ],
+   "notes": "Indians pay SDF of Nu 1,200 per person per night (bhutan.travel). Our ERA5 rainfall for Paro and Thimphu is implausibly high (see caveats); show temperatures only.",
+   "peaks": [
+    "Paro Tshechu (spring; 29 Mar-2 Apr 2026, tentative); Thimphu Tshechu (21-23 Sep 2026, tentative). 2027 dates: check the DoT calendar."
+   ],
+   "sources": [
+    "bt_dot",
+    "bt_fest",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "nepal",
+   "country": "Nepal",
+   "regions": [
+    {
+     "name": "Kathmandu, Pokhara",
+     "cities": [
+      "Kathmandu",
+      "Pokhara"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "avoid",
+      "avoid",
+      "okay",
+      "best",
+      "best",
+      "okay"
+     ],
+     "best": "Mar-Apr, Oct-Nov",
+     "shoulder": "Dec-Feb (cold nights, clear views), May, Sep",
+     "avoid": "Jun-Aug (monsoon; 80% of rain falls Jun-Sep)",
+     "reason": "Nepal Tourism Board: best in spring (rhododendrons) and autumn; clearest skies after the monsoon in Oct-Nov."
+    }
+   ],
+   "notes": "Our ERA5 rainfall for Nepal runs about 1.6x higher than NTB figures (Pokhara 5,490 vs 3,345 mm/yr). Use NTB/DHM figures for rain.",
+   "peaks": [
+    "Dashain and Tihar (Oct-Nov; Tihar coincides with Diwali) [check annual dates]."
+   ],
+   "sources": [
+    "ntb",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "japan",
+   "country": "Japan",
+   "regions": [
+    {
+     "name": "Tokyo, Osaka/Kyoto",
+     "cities": [
+      "Tokyo",
+      "Osaka"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "best",
+      "avoid",
+      "okay",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "okay"
+     ],
+     "best": "Late Mar-May (cherry blossom late Mar-early Apr), Oct-Nov (autumn leaves late Nov)",
+     "shoulder": "Dec-Feb (cold, highs ~9-12 C), Jul-Sep (hot, typhoons)",
+     "avoid": "Jun (tsuyu rainy season); also Golden Week (late Apr-early May) for crowds",
+     "reason": "JNTO: tsuyu runs through June (Hokkaido largely spared); most typhoons form Jul-Oct; Golden Week, Obon (mid-Aug) and New Year are domestic peaks with crowds and full transport."
+    }
+   ],
+   "notes": "Tokyo first bloom averages 24 Mar and Osaka 27 Mar (JNTO / Japan Weather Association).",
+   "peaks": [
+    "Golden Week, Obon, New Year (JNTO)."
+   ],
+   "sources": [
+    "jnto_sakura",
+    "jnto_june",
+    "jnto_typhoon",
+    "jnto_holidays",
+    "jnto_autumn",
+    "climate_data"
+   ]
+  },
+  {
+   "id": "south_korea",
+   "country": "South Korea",
+   "regions": [
+    {
+     "name": "Seoul, Busan, Jeju",
+     "cities": [
+      "Seoul",
+      "Busan",
+      "Jeju"
+     ],
+     "months": [
+      "okay",
+      "okay",
+      "okay",
+      "best",
+      "best",
+      "okay",
+      "avoid",
+      "okay",
+      "best",
+      "best",
+      "okay",
+      "okay"
+     ],
+     "best": "Apr-May, Sep-Oct",
+     "shoulder": "Mar, Nov (cold for most Indians; Seoul Nov 12/2 C), Jun, Aug, Dec-Feb (ski/snow; Seoul Jan -6 C lows)",
+     "avoid": "Jul (jangma rainy season; Seoul's wettest month, 282 mm in our data)",
+     "reason": "KTO: spring and fall are best for walking; rainy season late Jun-late Jul; Jun-Oct is typhoon season; winter averages 0-1 C."
+    }
+   ],
+   "notes": "",
+   "peaks": [
+    "Seollal 6-9 Feb 2027 and Chuseok 14-16 Sep 2027 (KASI): domestic travel peaks."
+   ],
+   "sources": [
+    "kto",
+    "kasi_2027",
+    "climate_data"
+   ]
+  }
+ ]
+}

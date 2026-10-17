@@ -1,0 +1,49 @@
+---
+// "When to go" section for a destination page. Answer first, then strip, peaks, charts, notes and sources.
+import { u } from '../lib';
+import { seasonCountry, answer, INDIA_PEAKS, visaForSeason, visaLabel, VISA_GUIDES, routesTo, SOURCES } from '../seasons';
+import SeasonStrip from './SeasonStrip.astro';
+import ClimateChart from './ClimateChart.astro';
+import WeatherCredit from './WeatherCredit.astro';
+import { day } from '../routes-data';
+const { seasonId, name } = Astro.props;
+const c = seasonCountry(seasonId);
+const a = c && answer(c, name);
+const cities = c ? [...new Set(c.regions.flatMap((r) => r.cities))] : [];
+const visa = c && visaForSeason(c.id);
+const guide = c && VISA_GUIDES[c.id];
+const nRoutes = c ? routesTo(c).length : 0;
+const tidy = (s: string) => s.replace(/\[Inference\]\s*/g, '(Editorial estimate) ');
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+---
+{c && (
+<section class="section wtg" id="when-to-go" aria-labelledby="wtg-h">
+  <div class="section-head"><h2 id="wtg-h">When to go to {name}</h2><a href={u('/where-to-go/')}>Where to go by month</a></div>
+  <p class="wtg-answer"><strong>{a.best}</strong>{" "}{a.avoid}</p>
+  <SeasonStrip country={c} id={`ss-${c.id}`} caption={`${name}: best, okay and avoid months by region`} />
+  <div class="wtg-cols">
+    <div>
+      <h3>Region by region</h3>
+      <ul class="wtg-regions">{c.regions.map((r) => <li><b>{r.name}</b><span>Best: {r.best}. {r.shoulder && <>Okay: {r.shoulder}. </>}{r.avoid && <>Avoid: {r.avoid}.</>}</span><span class="meta">{r.reason}</span></li>)}</ul>
+      {c.notes && <p class="meta wtg-note">{c.notes}</p>}
+    </div>
+    <div>
+      <h3>Peak periods</h3>
+      <ul class="wtg-peaks">
+        {INDIA_PEAKS.map((p) => <li><span class={`pk pk-${p.key}`}>{p.short}</span> <b>{p.label}</b>{p.data?.effect && <span class="meta">{tidy(p.data.effect)}</span>}</li>)}
+        {c.peaks.map((p) => <li><span class="pk pk-local">{name}</span> <span>{p}</span></li>)}
+      </ul>
+      <h3>Before you book</h3>
+      <ul class="wtg-links">
+        {visa && <li><a href={u(`/visa-tracker/#${visa.id}`)}>Indian passport: {visaLabel(visa)}</a><span class="meta">Rules for Indian passport holders, checked {day(visa.last_checked)}</span></li>}
+        {guide && <li><a href={u(guide.href)}>{guide.title}</a><span class="meta">Our visa guide</span></li>}
+        <li><a href={u('/routes/')}>Flight routes tracker</a><span class="meta">{nRoutes > 0 ? `${nRoutes} verified new or changed route${nRoutes === 1 ? '' : 's'} from India` : 'New international routes from India'}</span></li>
+      </ul>
+    </div>
+  </div>
+  {cities.length > 0 && <>
+    <h3 class="wtg-ch">Monthly temperatures and rain</h3>
+    <div class="cc-grid-wrap">{cities.map((ct) => <ClimateChart city={ct} id={`cc-${slug(ct)}`} />)}</div>
+  </>}
+  <WeatherCredit sources={c.sources} />
+</section>)}

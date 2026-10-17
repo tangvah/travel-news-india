@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import WeatherCredit from '../../components/WeatherCredit.astro';
+import Flag from '../../components/Flag.astro';
+import { u } from '../../lib';
+import { SITE } from '../../site.config.mjs';
+import { MONTHS, monthSlug, nextYear, regionsIn, regionClimate, destForSeason, visaForSeason, visaLabel, VISA_GUIDES, routesTo, peaksIn, joinList, shortRegion, COUNTRIES, SEASONS } from '../../seasons';
+import { VISA_MAP } from '../../trackers';
+export function getStaticPaths() { return MONTHS.map((m, i) => ({ params: { month: monthSlug(i) }, props: { i } })); }
+const { i } = Astro.props;
+const M = MONTHS[i], year = nextYear(i);
+const best = regionsIn(i, 'best'), okay = regionsIn(i, 'okay'), avoid = regionsIn(i, 'avoid');
+const bestNames = best.map((x) => x.c.country);
+const title = `Best Countries to Visit in ${M} from India (${year})`;
+const description = `Best countries to visit in ${M} from India: ${joinList(bestNames.slice(0, 6))}${bestNames.length > 6 ? ' and more' : ''}. Weather by region, India peak dates, visa rules and new flights, from met-service sources.`.slice(0, 300);
+const peaks = peaksIn(i);
+const flagOf = (c) => { const vid = c.id.replace(/_/g, '-'); return VISA_MAP[vid]?.[0] ?? ''; };
+const num = (n) => Math.round(n);
+const tidy = (s) => s.replace(/\[Inference\]\s*/g, '(Editorial estimate) ');
+const prev = (i + 11) % 12, next = (i + 1) % 12;
+const pageUrl = new URL(u(`/where-to-go/${monthSlug(i)}/`), SITE.url).href;
+const jsonld = { '@context': 'https://schema.org', '@type': 'Article', headline: title, description, url: pageUrl, inLanguage: 'en-IN', dateModified: SEASONS.meta.generated, author: { '@type': 'Organization', name: 'Travel News Desk' }, publisher: { '@type': 'Organization', name: SITE.name } };
+const fig = (r) => { const k = regionClimate(r, i); return k ? `${k.city}: ${num(k.high)}°/${num(k.low)}°C${k.rain != null ? `, ${num(k.rain)} mm rain` : ', rain not shown (model data unreliable here)'}` : 'No climate figures in our data'; };
+---
+<Base title={title} description={description} jsonld={jsonld}>
+<div class="wrap section wtm">
+  <Breadcrumbs items={[{ name: 'Where to go', href: u('/where-to-go/') }, { name: M, href: u(`/where-to-go/${monthSlug(i)}/`) }]} />
+  <h1>{title}</h1>
+  <p class="wtg-answer"><strong>Best for {M}: {best.length ? joinList(best.map((x) => x.regions.length === x.c.regions.length ? x.c.country : `${x.c.country} (${joinList(x.regions.map((r) => shortRegion(r.name)))})`)) : 'no destination is rated best this month'}.</strong>{avoid.length > 0 && <>{" "}Skip if you can: {joinList(avoid.map((x) => x.regions.length === x.c.regions.length ? x.c.country : `${x.c.country} (${joinList(x.regions.map((r) => shortRegion(r.name)))})`))}.</>}</p>
+  <p class="meta">Ratings come from national met services and tourism boards; the split between best and okay is <strong>editorial guidance</strong>. Figures are monthly averages (high/low °C, rain), not a forecast. Updated {new Date(SEASONS.meta.generated + 'T00:00:00+05:30').toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' })}.</p>
+  <nav class="wtm-pager" aria-label="Other months"><a href={u(`/where-to-go/${monthSlug(prev)}/`)}>← {MONTHS[prev]}</a><a href={u('/where-to-go/')}>All months</a><a href={u(`/where-to-go/${monthSlug(next)}/`)}>{MONTHS[next]} →</a></nav>
+
+  {peaks.length > 0 && (
+  <aside class="wtm-peak" aria-labelledby="pk-h">
+    <h2 id="pk-h">India calendar in {M}</h2>
+    <ul>{peaks.map((p) => <li><span class={`pk pk-${p.key}`}>{p.short}</span> <b>{p.label}</b>{p.data?.dates && <span class="meta"> {p.data.dates}.</span>}{p.data?.effect && <span class="meta"> {tidy(p.data.effect)}</span>}</li>)}</ul>
+    <p class="meta">Expect peak fares and hotel rates around these dates. Book early.</p>
+  </aside>)}
+
+  <section aria-labelledby="best-h" class="wtm-sec">
+    <h2 id="best-h">Best weather in {M}</h2>
+    {best.length ? <ol class="wtm-list">{best.map(({ c, regions }) => { const d = destForSeason(c.id); const v = visaForSeason(c.id); const g = VISA_GUIDES[c.id]; const nr = routesTo(c).length; return (
+      <li class="wtm-card">
+        <h3>{flagOf(c) && <Flag code={flagOf(c)} size={24} />}{d ? <a href={u(`/destinations/${d}/#when-to-go`)}>{c.country}</a> : c.country}</h3>
+        <ul class="wtm-regions">{regions.map((r) => <li><b>{r.name}</b> <span class="meta">{fig(r)}</span><span>{r.reason}</span></li>)}</ul>
+        <p class="wtm-links meta">
+          {v && <a href={u(`/visa-tracker/#${v.id}`)}>Indian passport: {visaLabel(v)}</a>}
+          {g && <> · <a href={u(g.href)}>{g.title}</a></>}
+          {nr > 0 && <> · <a href={u('/routes/')}>{nr} new or changed route{nr === 1 ? '' : 's'} from India</a></>}
+          {d && <> · <a href={u(`/destinations/${d}/#when-to-go`)}>When to go to {c.country}</a></>}
+        </p>
+        {c.peaks.length > 0 && <p class="meta wtm-cpk">{c.peaks.join(' ')}</p>}
+      </li>); })}</ol> : <p class="ph">No destination in our list is rated best in {M}. See the okay list below.</p>}
+  </section>
+
+  {okay.length > 0 && (
+  <section aria-labelledby="ok-h" class="wtm-sec">
+    <h2 id="ok-h">Okay, with trade-offs</h2>
+    <ul class="wtm-compact">{okay.map(({ c, regions }) => { const d = destForSeason(c.id); return regions.map((r) => (
+      <li><b>{d ? <a href={u(`/destinations/${d}/#when-to-go`)}>{c.country}</a> : c.country}: {r.name}</b> <span class="meta">{fig(r)}. Best: {r.best}.</span></li>)); })}</ul>
+  </section>)}
+
+  {avoid.length > 0 && (
+  <section aria-labelledby="av-h" class="wtm-sec">
+    <h2 id="av-h">Avoid if you can in {M}</h2>
+    <ul class="wtm-compact">{avoid.map(({ c, regions }) => { const d = destForSeason(c.id); return regions.map((r) => (
+      <li><b>{d ? <a href={u(`/destinations/${d}/#when-to-go`)}>{c.country}</a> : c.country}: {r.name}</b> <span class="meta">{r.avoid}. Best instead: {r.best}.</span></li>)); })}</ul>
+  </section>)}
+
+  <WeatherCredit sources={[...new Set(COUNTRIES.flatMap((c) => c.sources)), ...peaks.flatMap((p) => p.data?.sources ?? [])]} />
+</div>
+</Base>

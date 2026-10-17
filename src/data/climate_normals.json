@@ -1,0 +1,4347 @@
+{
+ "meta": {
+  "title": "Monthly climate averages for main destination cities (India Outbound Travel News)",
+  "period": "2016-01-01 to 2025-12-31 (10 full years)",
+  "source": "Open-Meteo Historical Weather API (archive-api.open-meteo.com/v1/archive), model era5_seamless (ERA5-Land temperature + ERA5 precipitation, ECMWF/Copernicus C3S reanalysis)",
+  "licence": "Data CC BY 4.0. Attribution required: 'Weather data by Open-Meteo.com' linking https://open-meteo.com/ ; underlying ERA5 / ERA5-Land: Copernicus Climate Change Service (C3S). Free API is for non-commercial use only (see open-meteo.com/en/terms).",
+  "method": "Daily temperature_2m_max, temperature_2m_min, precipitation_sum (local timezone) fetched per city. For each calendar month: avg_high_c = mean of daily max; avg_low_c = mean of daily min; rain_mm = mean monthly precipitation total across the 10 years; rain_days_1mm = mean count of days with >=1.0 mm; rain_mm_min/max = driest and wettest year for that month.",
+  "caveats": [
+   "Reanalysis grid-cell values (ERA5 ~25 km for precipitation; ERA5-Land ~9-11 km for temperature), not station observations and not official WMO 1991-2020 normals.",
+   "Tropical convective rainfall and coastal/island cells (Male, Phuket, Langkawi, Singapore) can differ noticeably from station records; see validation in weather_seasons_plan.md.",
+   "10-year averages; single years vary widely (see rain_mm_min/max)."
+  ],
+  "generated": "2026-10-17",
+  "validation_summary": "See weather_seasons_plan.md section 3. Checked against MSS Singapore, JMA Tokyo, KTO Seoul/Busan, Dubai Media Office and Nepal Tourism Board figures."
+ },
+ "cities": [
+  {
+   "country": "bhutan",
+   "city": "Paro",
+   "requested": {
+    "lat": 27.4305,
+    "lon": 89.4133
+   },
+   "grid_cell": {
+    "lat": 27.400002,
+    "lon": 89.399994,
+    "elevation_m": 2273.0
+   },
+   "timezone": "Asia/Thimphu",
+   "cell_selection": "land",
+   "annual_rain_mm": 3049,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 10.8,
+     "avg_low_c": 2.9,
+     "rain_mm": 21,
+     "rain_days_1mm": 6.4,
+     "rain_mm_min": 3,
+     "rain_mm_max": 39,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 11.8,
+     "avg_low_c": 3.9,
+     "rain_mm": 47,
+     "rain_days_1mm": 11.6,
+     "rain_mm_min": 21,
+     "rain_mm_max": 82,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 14.7,
+     "avg_low_c": 6.2,
+     "rain_mm": 88,
+     "rain_days_1mm": 18.6,
+     "rain_mm_min": 65,
+     "rain_mm_max": 113,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 18.0,
+     "avg_low_c": 8.7,
+     "rain_mm": 120,
+     "rain_days_1mm": 21,
+     "rain_mm_min": 45,
+     "rain_mm_max": 176,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 19.6,
+     "avg_low_c": 11.3,
+     "rain_mm": 240,
+     "rain_days_1mm": 29,
+     "rain_mm_min": 152,
+     "rain_mm_max": 448,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 21.5,
+     "avg_low_c": 15.2,
+     "rain_mm": 594,
+     "rain_days_1mm": 29.1,
+     "rain_mm_min": 287,
+     "rain_mm_max": 939,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 21.8,
+     "avg_low_c": 16.4,
+     "rain_mm": 789,
+     "rain_days_1mm": 31,
+     "rain_mm_min": 380,
+     "rain_mm_max": 1191,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 22.2,
+     "avg_low_c": 16.1,
+     "rain_mm": 550,
+     "rain_days_1mm": 30.9,
+     "rain_mm_min": 303,
+     "rain_mm_max": 770,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 21.2,
+     "avg_low_c": 14.9,
+     "rain_mm": 417,
+     "rain_days_1mm": 29.6,
+     "rain_mm_min": 203,
+     "rain_mm_max": 727,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 19.0,
+     "avg_low_c": 11.1,
+     "rain_mm": 161,
+     "rain_days_1mm": 14.5,
+     "rain_mm_min": 36,
+     "rain_mm_max": 321,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 16.1,
+     "avg_low_c": 7.7,
+     "rain_mm": 11,
+     "rain_days_1mm": 4.3,
+     "rain_mm_min": 4,
+     "rain_mm_max": 21,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 13.5,
+     "avg_low_c": 5.6,
+     "rain_mm": 11,
+     "rain_days_1mm": 3,
+     "rain_mm_min": 1,
+     "rain_mm_max": 30,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=27.4305&longitude=89.4133&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:09:43+0530",
+   "quality": "rain unreliable: ERA5 3049 mm/yr; NCHM Climate Atlas puts central Bhutan at 1000-3000 mm and Paro is a dry valley. Use temps only.",
+   "show_rain_on_site": false
+  },
+  {
+   "country": "bhutan",
+   "city": "Thimphu",
+   "requested": {
+    "lat": 27.4728,
+    "lon": 89.639
+   },
+   "grid_cell": {
+    "lat": 27.5,
+    "lon": 89.70001,
+    "elevation_m": 2324.0
+   },
+   "timezone": "Asia/Thimphu",
+   "cell_selection": "land",
+   "annual_rain_mm": 2587,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 8.9,
+     "avg_low_c": 0.8,
+     "rain_mm": 58,
+     "rain_days_1mm": 18.5,
+     "rain_mm_min": 28,
+     "rain_mm_max": 94,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 9.9,
+     "avg_low_c": 2.1,
+     "rain_mm": 99,
+     "rain_days_1mm": 21.4,
+     "rain_mm_min": 66,
+     "rain_mm_max": 124,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 13.5,
+     "avg_low_c": 4.0,
+     "rain_mm": 169,
+     "rain_days_1mm": 27.8,
+     "rain_mm_min": 94,
+     "rain_mm_max": 216,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 17.1,
+     "avg_low_c": 6.7,
+     "rain_mm": 172,
+     "rain_days_1mm": 27.1,
+     "rain_mm_min": 128,
+     "rain_mm_max": 243,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 19.0,
+     "avg_low_c": 9.9,
+     "rain_mm": 264,
+     "rain_days_1mm": 29.7,
+     "rain_mm_min": 188,
+     "rain_mm_max": 363,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 21.1,
+     "avg_low_c": 14.0,
+     "rain_mm": 419,
+     "rain_days_1mm": 29.1,
+     "rain_mm_min": 204,
+     "rain_mm_max": 665,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 21.3,
+     "avg_low_c": 15.6,
+     "rain_mm": 495,
+     "rain_days_1mm": 30.3,
+     "rain_mm_min": 238,
+     "rain_mm_max": 776,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 21.7,
+     "avg_low_c": 15.3,
+     "rain_mm": 342,
+     "rain_days_1mm": 29.5,
+     "rain_mm_min": 132,
+     "rain_mm_max": 445,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 20.7,
+     "avg_low_c": 14.0,
+     "rain_mm": 298,
+     "rain_days_1mm": 27.6,
+     "rain_mm_min": 118,
+     "rain_mm_max": 462,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 18.0,
+     "avg_low_c": 8.9,
+     "rain_mm": 170,
+     "rain_days_1mm": 22.6,
+     "rain_mm_min": 71,
+     "rain_mm_max": 283,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 14.7,
+     "avg_low_c": 4.6,
+     "rain_mm": 51,
+     "rain_days_1mm": 15.9,
+     "rain_mm_min": 28,
+     "rain_mm_max": 73,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 11.9,
+     "avg_low_c": 2.4,
+     "rain_mm": 50,
+     "rain_days_1mm": 14.5,
+     "rain_mm_min": 28,
+     "rain_mm_max": 80,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=27.4728&longitude=89.639&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:10:00+0530",
+   "quality": "rain unreliable (mountain grid cell). Use temps only.",
+   "show_rain_on_site": false
+  },
+  {
+   "country": "indonesia",
+   "city": "Bali (Denpasar)",
+   "requested": {
+    "lat": -8.6705,
+    "lon": 115.2126
+   },
+   "grid_cell": {
+    "lat": -8.699997,
+    "lon": 115.20001,
+    "elevation_m": 20.0
+   },
+   "timezone": "Asia/Makassar",
+   "cell_selection": "land",
+   "annual_rain_mm": 2491,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 27.7,
+     "avg_low_c": 24.8,
+     "rain_mm": 369,
+     "rain_days_1mm": 28.5,
+     "rain_mm_min": 209,
+     "rain_mm_max": 571,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 27.7,
+     "avg_low_c": 24.7,
+     "rain_mm": 375,
+     "rain_days_1mm": 27.4,
+     "rain_mm_min": 275,
+     "rain_mm_max": 694,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 28.0,
+     "avg_low_c": 24.9,
+     "rain_mm": 317,
+     "rain_days_1mm": 29.4,
+     "rain_mm_min": 205,
+     "rain_mm_max": 448,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 28.1,
+     "avg_low_c": 25.1,
+     "rain_mm": 181,
+     "rain_days_1mm": 21.6,
+     "rain_mm_min": 78,
+     "rain_mm_max": 249,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 27.8,
+     "avg_low_c": 25.2,
+     "rain_mm": 115,
+     "rain_days_1mm": 18.3,
+     "rain_mm_min": 34,
+     "rain_mm_max": 354,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 27.1,
+     "avg_low_c": 24.6,
+     "rain_mm": 80,
+     "rain_days_1mm": 16.8,
+     "rain_mm_min": 28,
+     "rain_mm_max": 140,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 26.3,
+     "avg_low_c": 24.0,
+     "rain_mm": 72,
+     "rain_days_1mm": 14.7,
+     "rain_mm_min": 24,
+     "rain_mm_max": 154,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 26.3,
+     "avg_low_c": 23.6,
+     "rain_mm": 50,
+     "rain_days_1mm": 13.5,
+     "rain_mm_min": 10,
+     "rain_mm_max": 75,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 26.9,
+     "avg_low_c": 23.8,
+     "rain_mm": 90,
+     "rain_days_1mm": 15.3,
+     "rain_mm_min": 18,
+     "rain_mm_max": 263,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 27.5,
+     "avg_low_c": 24.2,
+     "rain_mm": 146,
+     "rain_days_1mm": 17.6,
+     "rain_mm_min": 10,
+     "rain_mm_max": 420,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 27.8,
+     "avg_low_c": 24.6,
+     "rain_mm": 351,
+     "rain_days_1mm": 26.2,
+     "rain_mm_min": 45,
+     "rain_mm_max": 799,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 27.7,
+     "avg_low_c": 24.8,
+     "rain_mm": 345,
+     "rain_days_1mm": 28.1,
+     "rain_mm_min": 178,
+     "rain_mm_max": 536,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-8.6705&longitude=115.2126&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:06:55+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "indonesia",
+   "city": "Jakarta",
+   "requested": {
+    "lat": -6.2088,
+    "lon": 106.8456
+   },
+   "grid_cell": {
+    "lat": -6.199997,
+    "lon": 106.80002,
+    "elevation_m": 12.0
+   },
+   "timezone": "Asia/Jakarta",
+   "cell_selection": "land",
+   "annual_rain_mm": 2044,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 29.0,
+     "avg_low_c": 24.0,
+     "rain_mm": 275,
+     "rain_days_1mm": 27.8,
+     "rain_mm_min": 180,
+     "rain_mm_max": 447,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 28.7,
+     "avg_low_c": 23.9,
+     "rain_mm": 305,
+     "rain_days_1mm": 27.4,
+     "rain_mm_min": 188,
+     "rain_mm_max": 449,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 29.5,
+     "avg_low_c": 24.0,
+     "rain_mm": 242,
+     "rain_days_1mm": 29.1,
+     "rain_mm_min": 156,
+     "rain_mm_max": 342,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.8,
+     "avg_low_c": 24.1,
+     "rain_mm": 210,
+     "rain_days_1mm": 26.1,
+     "rain_mm_min": 101,
+     "rain_mm_max": 332,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 30.1,
+     "avg_low_c": 24.3,
+     "rain_mm": 123,
+     "rain_days_1mm": 19.9,
+     "rain_mm_min": 74,
+     "rain_mm_max": 199,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 29.9,
+     "avg_low_c": 23.8,
+     "rain_mm": 99,
+     "rain_days_1mm": 16.9,
+     "rain_mm_min": 23,
+     "rain_mm_max": 202,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 30.1,
+     "avg_low_c": 23.4,
+     "rain_mm": 67,
+     "rain_days_1mm": 12.5,
+     "rain_mm_min": 8,
+     "rain_mm_max": 170,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 30.7,
+     "avg_low_c": 23.5,
+     "rain_mm": 63,
+     "rain_days_1mm": 10,
+     "rain_mm_min": 8,
+     "rain_mm_max": 175,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 31.2,
+     "avg_low_c": 23.8,
+     "rain_mm": 84,
+     "rain_days_1mm": 13.2,
+     "rain_mm_min": 4,
+     "rain_mm_max": 162,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 31.2,
+     "avg_low_c": 24.2,
+     "rain_mm": 152,
+     "rain_days_1mm": 18.9,
+     "rain_mm_min": 20,
+     "rain_mm_max": 355,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 30.2,
+     "avg_low_c": 24.3,
+     "rain_mm": 196,
+     "rain_days_1mm": 24.8,
+     "rain_mm_min": 71,
+     "rain_mm_max": 266,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 29.4,
+     "avg_low_c": 24.2,
+     "rain_mm": 228,
+     "rain_days_1mm": 25.1,
+     "rain_mm_min": 162,
+     "rain_mm_max": 329,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-6.2088&longitude=106.8456&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:07:12+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "japan",
+   "city": "Osaka",
+   "requested": {
+    "lat": 34.6937,
+    "lon": 135.5023
+   },
+   "grid_cell": {
+    "lat": 34.700005,
+    "lon": 135.5,
+    "elevation_m": 3.0
+   },
+   "timezone": "Asia/Tokyo",
+   "cell_selection": "land",
+   "annual_rain_mm": 1566,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 8.6,
+     "avg_low_c": 1.4,
+     "rain_mm": 49,
+     "rain_days_1mm": 5.7,
+     "rain_mm_min": 26,
+     "rain_mm_max": 69,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 9.6,
+     "avg_low_c": 1.4,
+     "rain_mm": 59,
+     "rain_days_1mm": 6.9,
+     "rain_mm_min": 22,
+     "rain_mm_max": 122,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 14.1,
+     "avg_low_c": 4.6,
+     "rain_mm": 104,
+     "rain_days_1mm": 10,
+     "rain_mm_min": 38,
+     "rain_mm_max": 185,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 19.0,
+     "avg_low_c": 9.4,
+     "rain_mm": 137,
+     "rain_days_1mm": 9.9,
+     "rain_mm_min": 64,
+     "rain_mm_max": 192,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 23.3,
+     "avg_low_c": 14.4,
+     "rain_mm": 165,
+     "rain_days_1mm": 10.9,
+     "rain_mm_min": 80,
+     "rain_mm_max": 238,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 26.6,
+     "avg_low_c": 19.0,
+     "rain_mm": 208,
+     "rain_days_1mm": 13.1,
+     "rain_mm_min": 106,
+     "rain_mm_max": 350,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 30.5,
+     "avg_low_c": 24.0,
+     "rain_mm": 228,
+     "rain_days_1mm": 15.2,
+     "rain_mm_min": 56,
+     "rain_mm_max": 436,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 32.2,
+     "avg_low_c": 25.1,
+     "rain_mm": 162,
+     "rain_days_1mm": 12.2,
+     "rain_mm_min": 22,
+     "rain_mm_max": 324,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 28.6,
+     "avg_low_c": 21.7,
+     "rain_mm": 171,
+     "rain_days_1mm": 13.4,
+     "rain_mm_min": 65,
+     "rain_mm_max": 366,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 22.2,
+     "avg_low_c": 15.1,
+     "rain_mm": 171,
+     "rain_days_1mm": 11.5,
+     "rain_mm_min": 63,
+     "rain_mm_max": 435,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 16.6,
+     "avg_low_c": 8.8,
+     "rain_mm": 63,
+     "rain_days_1mm": 6.1,
+     "rain_mm_min": 26,
+     "rain_mm_max": 120,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 11.0,
+     "avg_low_c": 3.6,
+     "rain_mm": 49,
+     "rain_days_1mm": 5.5,
+     "rain_mm_min": 6,
+     "rain_mm_max": 111,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.6937&longitude=135.5023&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:12:20+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "japan",
+   "city": "Tokyo",
+   "requested": {
+    "lat": 35.6762,
+    "lon": 139.6503
+   },
+   "grid_cell": {
+    "lat": 35.700005,
+    "lon": 139.70001,
+    "elevation_m": 37.0
+   },
+   "timezone": "Asia/Tokyo",
+   "cell_selection": "land",
+   "annual_rain_mm": 1419,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 8.8,
+     "avg_low_c": -0.1,
+     "rain_mm": 52,
+     "rain_days_1mm": 5.7,
+     "rain_mm_min": 15,
+     "rain_mm_max": 116,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 10.0,
+     "avg_low_c": 0.7,
+     "rain_mm": 48,
+     "rain_days_1mm": 7.2,
+     "rain_mm_min": 10,
+     "rain_mm_max": 96,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 13.9,
+     "avg_low_c": 4.7,
+     "rain_mm": 127,
+     "rain_days_1mm": 11.4,
+     "rain_mm_min": 91,
+     "rain_mm_max": 165,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 18.0,
+     "avg_low_c": 9.6,
+     "rain_mm": 122,
+     "rain_days_1mm": 11.5,
+     "rain_mm_min": 67,
+     "rain_mm_max": 189,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 22.2,
+     "avg_low_c": 14.4,
+     "rain_mm": 128,
+     "rain_days_1mm": 11.5,
+     "rain_mm_min": 72,
+     "rain_mm_max": 210,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 25.4,
+     "avg_low_c": 18.7,
+     "rain_mm": 173,
+     "rain_days_1mm": 13,
+     "rain_mm_min": 81,
+     "rain_mm_max": 322,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 29.2,
+     "avg_low_c": 23.1,
+     "rain_mm": 164,
+     "rain_days_1mm": 13.1,
+     "rain_mm_min": 30,
+     "rain_mm_max": 291,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 30.7,
+     "avg_low_c": 24.5,
+     "rain_mm": 116,
+     "rain_days_1mm": 11.6,
+     "rain_mm_min": 19,
+     "rain_mm_max": 265,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 26.9,
+     "avg_low_c": 21.2,
+     "rain_mm": 161,
+     "rain_days_1mm": 14.7,
+     "rain_mm_min": 73,
+     "rain_mm_max": 277,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 21.0,
+     "avg_low_c": 14.6,
+     "rain_mm": 194,
+     "rain_days_1mm": 13.6,
+     "rain_mm_min": 67,
+     "rain_mm_max": 478,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 16.0,
+     "avg_low_c": 8.4,
+     "rain_mm": 82,
+     "rain_days_1mm": 9.4,
+     "rain_mm_min": 24,
+     "rain_mm_max": 148,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 11.1,
+     "avg_low_c": 2.6,
+     "rain_mm": 52,
+     "rain_days_1mm": 6.8,
+     "rain_mm_min": 5,
+     "rain_mm_max": 125,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.6762&longitude=139.6503&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:10:51+0530",
+   "official_reference": {
+    "source": "Japan Meteorological Agency, Tokyo station 47662, 1991-2020 normals",
+    "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662",
+    "avg_high_c": [
+     9.8,
+     10.9,
+     14.2,
+     19.4,
+     23.6,
+     26.1,
+     29.9,
+     31.3,
+     27.5,
+     22.0,
+     16.7,
+     12.0
+    ],
+    "avg_low_c": [
+     1.2,
+     2.1,
+     5.0,
+     9.8,
+     14.6,
+     18.5,
+     22.4,
+     23.5,
+     20.3,
+     14.8,
+     8.8,
+     3.8
+    ],
+    "rain_mm": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ]
+   },
+   "quality": "validated: highs avg 0.8 C below JMA, lows within 0.2 C on average; rain ~11% lower than JMA (1419 vs 1598 mm)",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "malaysia",
+   "city": "Kuala Lumpur",
+   "requested": {
+    "lat": 3.139,
+    "lon": 101.6869
+   },
+   "grid_cell": {
+    "lat": 3.0999985,
+    "lon": 101.70001,
+    "elevation_m": 55.0
+   },
+   "timezone": "Asia/Kuala_Lumpur",
+   "cell_selection": "land",
+   "annual_rain_mm": 2904,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 29.7,
+     "avg_low_c": 22.8,
+     "rain_mm": 191,
+     "rain_days_1mm": 21.8,
+     "rain_mm_min": 77,
+     "rain_mm_max": 336,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 30.7,
+     "avg_low_c": 22.7,
+     "rain_mm": 136,
+     "rain_days_1mm": 17.3,
+     "rain_mm_min": 44,
+     "rain_mm_max": 224,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 31.0,
+     "avg_low_c": 23.4,
+     "rain_mm": 242,
+     "rain_days_1mm": 24.7,
+     "rain_mm_min": 159,
+     "rain_mm_max": 310,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 30.7,
+     "avg_low_c": 23.8,
+     "rain_mm": 308,
+     "rain_days_1mm": 28.1,
+     "rain_mm_min": 237,
+     "rain_mm_max": 521,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 30.4,
+     "avg_low_c": 24.0,
+     "rain_mm": 290,
+     "rain_days_1mm": 27,
+     "rain_mm_min": 142,
+     "rain_mm_max": 504,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 30.2,
+     "avg_low_c": 23.6,
+     "rain_mm": 195,
+     "rain_days_1mm": 22.8,
+     "rain_mm_min": 110,
+     "rain_mm_max": 333,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 30.4,
+     "avg_low_c": 23.6,
+     "rain_mm": 159,
+     "rain_days_1mm": 22.2,
+     "rain_mm_min": 66,
+     "rain_mm_max": 317,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 30.2,
+     "avg_low_c": 23.4,
+     "rain_mm": 203,
+     "rain_days_1mm": 24.4,
+     "rain_mm_min": 86,
+     "rain_mm_max": 392,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 30.0,
+     "avg_low_c": 23.4,
+     "rain_mm": 232,
+     "rain_days_1mm": 25.1,
+     "rain_mm_min": 112,
+     "rain_mm_max": 328,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 30.1,
+     "avg_low_c": 23.4,
+     "rain_mm": 277,
+     "rain_days_1mm": 24.3,
+     "rain_mm_min": 165,
+     "rain_mm_max": 493,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 29.3,
+     "avg_low_c": 23.2,
+     "rain_mm": 400,
+     "rain_days_1mm": 28.7,
+     "rain_mm_min": 279,
+     "rain_mm_max": 516,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 29.3,
+     "avg_low_c": 22.9,
+     "rain_mm": 271,
+     "rain_days_1mm": 25.4,
+     "rain_mm_min": 152,
+     "rain_mm_max": 394,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=3.139&longitude=101.6869&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:05:10+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "malaysia",
+   "city": "Langkawi",
+   "requested": {
+    "lat": 6.35,
+    "lon": 99.8
+   },
+   "grid_cell": {
+    "lat": 6.4000015,
+    "lon": 99.80002,
+    "elevation_m": 47.0
+   },
+   "timezone": "Asia/Kuala_Lumpur",
+   "cell_selection": "land",
+   "annual_rain_mm": 2094,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 30.5,
+     "avg_low_c": 24.9,
+     "rain_mm": 59,
+     "rain_days_1mm": 11.2,
+     "rain_mm_min": 6,
+     "rain_mm_max": 168,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 32.3,
+     "avg_low_c": 25.1,
+     "rain_mm": 40,
+     "rain_days_1mm": 7.3,
+     "rain_mm_min": 1,
+     "rain_mm_max": 183,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 32.7,
+     "avg_low_c": 25.7,
+     "rain_mm": 71,
+     "rain_days_1mm": 12.8,
+     "rain_mm_min": 8,
+     "rain_mm_max": 155,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 31.5,
+     "avg_low_c": 26.0,
+     "rain_mm": 166,
+     "rain_days_1mm": 23.5,
+     "rain_mm_min": 60,
+     "rain_mm_max": 275,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 30.4,
+     "avg_low_c": 26.0,
+     "rain_mm": 244,
+     "rain_days_1mm": 26.3,
+     "rain_mm_min": 192,
+     "rain_mm_max": 308,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 30.0,
+     "avg_low_c": 25.9,
+     "rain_mm": 154,
+     "rain_days_1mm": 20.9,
+     "rain_mm_min": 95,
+     "rain_mm_max": 249,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 30.0,
+     "avg_low_c": 25.9,
+     "rain_mm": 149,
+     "rain_days_1mm": 19.1,
+     "rain_mm_min": 63,
+     "rain_mm_max": 298,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 29.7,
+     "avg_low_c": 25.5,
+     "rain_mm": 237,
+     "rain_days_1mm": 22.7,
+     "rain_mm_min": 111,
+     "rain_mm_max": 542,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 29.2,
+     "avg_low_c": 25.2,
+     "rain_mm": 244,
+     "rain_days_1mm": 24.1,
+     "rain_mm_min": 106,
+     "rain_mm_max": 360,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 29.2,
+     "avg_low_c": 25.0,
+     "rain_mm": 271,
+     "rain_days_1mm": 27.5,
+     "rain_mm_min": 176,
+     "rain_mm_max": 358,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 29.0,
+     "avg_low_c": 24.8,
+     "rain_mm": 327,
+     "rain_days_1mm": 27.3,
+     "rain_mm_min": 183,
+     "rain_mm_max": 637,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 29.3,
+     "avg_low_c": 24.7,
+     "rain_mm": 132,
+     "rain_days_1mm": 15.1,
+     "rain_mm_min": 26,
+     "rain_mm_max": 275,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=6.35&longitude=99.8&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:06:38+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "maldives",
+   "city": "Male",
+   "requested": {
+    "lat": 4.1755,
+    "lon": 73.5093
+   },
+   "grid_cell": {
+    "lat": 4.2000046,
+    "lon": 73.5,
+    "elevation_m": 8.0
+   },
+   "timezone": "Indian/Maldives",
+   "cell_selection": "nearest",
+   "annual_rain_mm": 1783,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 27.6,
+     "avg_low_c": 26.3,
+     "rain_mm": 136,
+     "rain_days_1mm": 11.7,
+     "rain_mm_min": 12,
+     "rain_mm_max": 610,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 28.0,
+     "avg_low_c": 26.7,
+     "rain_mm": 40,
+     "rain_days_1mm": 7.6,
+     "rain_mm_min": 16,
+     "rain_mm_max": 67,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 28.5,
+     "avg_low_c": 27.0,
+     "rain_mm": 86,
+     "rain_days_1mm": 9.8,
+     "rain_mm_min": 11,
+     "rain_mm_max": 213,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.0,
+     "avg_low_c": 27.2,
+     "rain_mm": 97,
+     "rain_days_1mm": 14.3,
+     "rain_mm_min": 33,
+     "rain_mm_max": 136,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 28.9,
+     "avg_low_c": 27.0,
+     "rain_mm": 251,
+     "rain_days_1mm": 23.8,
+     "rain_mm_min": 153,
+     "rain_mm_max": 396,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 28.6,
+     "avg_low_c": 27.0,
+     "rain_mm": 81,
+     "rain_days_1mm": 15.4,
+     "rain_mm_min": 19,
+     "rain_mm_max": 132,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 28.4,
+     "avg_low_c": 26.7,
+     "rain_mm": 148,
+     "rain_days_1mm": 16.9,
+     "rain_mm_min": 68,
+     "rain_mm_max": 354,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 28.2,
+     "avg_low_c": 26.7,
+     "rain_mm": 136,
+     "rain_days_1mm": 14.8,
+     "rain_mm_min": 44,
+     "rain_mm_max": 353,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 28.0,
+     "avg_low_c": 26.4,
+     "rain_mm": 165,
+     "rain_days_1mm": 17.3,
+     "rain_mm_min": 51,
+     "rain_mm_max": 219,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 27.9,
+     "avg_low_c": 26.3,
+     "rain_mm": 190,
+     "rain_days_1mm": 20.4,
+     "rain_mm_min": 79,
+     "rain_mm_max": 269,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 27.7,
+     "avg_low_c": 26.1,
+     "rain_mm": 254,
+     "rain_days_1mm": 20.6,
+     "rain_mm_min": 142,
+     "rain_mm_max": 367,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 27.7,
+     "avg_low_c": 26.2,
+     "rain_mm": 199,
+     "rain_days_1mm": 18.1,
+     "rain_mm_min": 83,
+     "rain_mm_max": 419,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=4.1755&longitude=73.5093&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=nearest",
+   "fetched": "2026-10-17T09:09:26+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "nepal",
+   "city": "Kathmandu",
+   "requested": {
+    "lat": 27.7172,
+    "lon": 85.324
+   },
+   "grid_cell": {
+    "lat": 27.700005,
+    "lon": 85.30002,
+    "elevation_m": 1301.0
+   },
+   "timezone": "Asia/Kathmandu",
+   "cell_selection": "land",
+   "annual_rain_mm": 3063,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 16.0,
+     "avg_low_c": 7.3,
+     "rain_mm": 40,
+     "rain_days_1mm": 6.8,
+     "rain_mm_min": 2,
+     "rain_mm_max": 160,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 18.2,
+     "avg_low_c": 8.9,
+     "rain_mm": 46,
+     "rain_days_1mm": 7.3,
+     "rain_mm_min": 9,
+     "rain_mm_max": 140,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 21.7,
+     "avg_low_c": 11.7,
+     "rain_mm": 61,
+     "rain_days_1mm": 11.9,
+     "rain_mm_min": 21,
+     "rain_mm_max": 123,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 25.1,
+     "avg_low_c": 14.5,
+     "rain_mm": 87,
+     "rain_days_1mm": 12.8,
+     "rain_mm_min": 6,
+     "rain_mm_max": 169,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 25.1,
+     "avg_low_c": 17.0,
+     "rain_mm": 247,
+     "rain_days_1mm": 25,
+     "rain_mm_min": 68,
+     "rain_mm_max": 466,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 26.0,
+     "avg_low_c": 19.9,
+     "rain_mm": 485,
+     "rain_days_1mm": 28.6,
+     "rain_mm_min": 264,
+     "rain_mm_max": 785,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 25.6,
+     "avg_low_c": 20.9,
+     "rain_mm": 831,
+     "rain_days_1mm": 31,
+     "rain_mm_min": 438,
+     "rain_mm_max": 1214,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 25.7,
+     "avg_low_c": 20.7,
+     "rain_mm": 650,
+     "rain_days_1mm": 30.9,
+     "rain_mm_min": 362,
+     "rain_mm_max": 1211,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 25.3,
+     "avg_low_c": 19.9,
+     "rain_mm": 438,
+     "rain_days_1mm": 29.1,
+     "rain_mm_min": 213,
+     "rain_mm_max": 717,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 23.4,
+     "avg_low_c": 16.5,
+     "rain_mm": 142,
+     "rain_days_1mm": 14.4,
+     "rain_mm_min": 14,
+     "rain_mm_max": 383,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 20.4,
+     "avg_low_c": 12.6,
+     "rain_mm": 18,
+     "rain_days_1mm": 5.4,
+     "rain_mm_min": 4,
+     "rain_mm_max": 47,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 17.7,
+     "avg_low_c": 9.4,
+     "rain_mm": 18,
+     "rain_days_1mm": 3.5,
+     "rain_mm_min": 0,
+     "rain_mm_max": 57,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=27.7172&longitude=85.324&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:10:17+0530",
+   "official_reference": {
+    "source": "Nepal Tourism Board",
+    "url": "https://ntb.gov.np/en/plan-your-trip/about-nepal/climate",
+    "summary": "May-Jul: max 28.1 C, min 19.5 C, rain 312 mm; Dec-Feb: max 19.3 C, min 3.0 C, rain 15.4 mm"
+   },
+   "quality": "rain unreliable: about 1.7x NTB summer figure; winter lows ~5 C warmer than NTB. Show NTB/DHM figures for rain.",
+   "show_rain_on_site": false
+  },
+  {
+   "country": "nepal",
+   "city": "Pokhara",
+   "requested": {
+    "lat": 28.2096,
+    "lon": 83.9856
+   },
+   "grid_cell": {
+    "lat": 28.200005,
+    "lon": 84.0,
+    "elevation_m": 850.0
+   },
+   "timezone": "Asia/Kathmandu",
+   "cell_selection": "land",
+   "annual_rain_mm": 5490,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 15.8,
+     "avg_low_c": 6.6,
+     "rain_mm": 138,
+     "rain_days_1mm": 16.3,
+     "rain_mm_min": 30,
+     "rain_mm_max": 250,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 17.8,
+     "avg_low_c": 8.2,
+     "rain_mm": 192,
+     "rain_days_1mm": 19.7,
+     "rain_mm_min": 106,
+     "rain_mm_max": 269,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 21.6,
+     "avg_low_c": 9.4,
+     "rain_mm": 195,
+     "rain_days_1mm": 20.1,
+     "rain_mm_min": 105,
+     "rain_mm_max": 471,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 25.1,
+     "avg_low_c": 12.2,
+     "rain_mm": 193,
+     "rain_days_1mm": 16.1,
+     "rain_mm_min": 12,
+     "rain_mm_max": 356,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 25.3,
+     "avg_low_c": 16.6,
+     "rain_mm": 410,
+     "rain_days_1mm": 26.1,
+     "rain_mm_min": 180,
+     "rain_mm_max": 741,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 26.1,
+     "avg_low_c": 20.7,
+     "rain_mm": 875,
+     "rain_days_1mm": 28.6,
+     "rain_mm_min": 668,
+     "rain_mm_max": 1165,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 25.8,
+     "avg_low_c": 22.3,
+     "rain_mm": 1231,
+     "rain_days_1mm": 30.5,
+     "rain_mm_min": 686,
+     "rain_mm_max": 1727,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 25.8,
+     "avg_low_c": 22.2,
+     "rain_mm": 991,
+     "rain_days_1mm": 29.6,
+     "rain_mm_min": 430,
+     "rain_mm_max": 1535,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 25.4,
+     "avg_low_c": 21.1,
+     "rain_mm": 805,
+     "rain_days_1mm": 27.6,
+     "rain_mm_min": 230,
+     "rain_mm_max": 1318,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 23.7,
+     "avg_low_c": 16.4,
+     "rain_mm": 251,
+     "rain_days_1mm": 18.4,
+     "rain_mm_min": 57,
+     "rain_mm_max": 381,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 20.5,
+     "avg_low_c": 12.4,
+     "rain_mm": 122,
+     "rain_days_1mm": 15.2,
+     "rain_mm_min": 18,
+     "rain_mm_max": 236,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 17.5,
+     "avg_low_c": 9.6,
+     "rain_mm": 87,
+     "rain_days_1mm": 11.5,
+     "rain_mm_min": 5,
+     "rain_mm_max": 143,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=28.2096&longitude=83.9856&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:10:33+0530",
+   "official_reference": {
+    "source": "Nepal Tourism Board",
+    "url": "https://ntb.gov.np/en/plan-your-trip/about-nepal/climate",
+    "summary": "Annual rain 3,345 mm. May-Jul: max 29.7, min 21.3 C, rain 829.7 mm; Dec-Feb: max 20.3, min 7.7 C, rain 26.3 mm"
+   },
+   "quality": "rain unreliable: 5490 vs NTB 3345 mm/yr. Use temps only.",
+   "show_rain_on_site": false
+  },
+  {
+   "country": "singapore",
+   "city": "Singapore",
+   "requested": {
+    "lat": 1.3521,
+    "lon": 103.8198
+   },
+   "grid_cell": {
+    "lat": 1.4000015,
+    "lon": 103.80002,
+    "elevation_m": 46.0
+   },
+   "timezone": "Asia/Singapore",
+   "cell_selection": "land",
+   "annual_rain_mm": 2795,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 28.2,
+     "avg_low_c": 24.4,
+     "rain_mm": 264,
+     "rain_days_1mm": 23.5,
+     "rain_mm_min": 117,
+     "rain_mm_max": 403,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 28.9,
+     "avg_low_c": 24.6,
+     "rain_mm": 112,
+     "rain_days_1mm": 17.2,
+     "rain_mm_min": 14,
+     "rain_mm_max": 200,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 29.4,
+     "avg_low_c": 25.0,
+     "rain_mm": 228,
+     "rain_days_1mm": 23.7,
+     "rain_mm_min": 124,
+     "rain_mm_max": 377,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.4,
+     "avg_low_c": 25.2,
+     "rain_mm": 270,
+     "rain_days_1mm": 27.4,
+     "rain_mm_min": 204,
+     "rain_mm_max": 355,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 29.3,
+     "avg_low_c": 25.7,
+     "rain_mm": 249,
+     "rain_days_1mm": 28.9,
+     "rain_mm_min": 178,
+     "rain_mm_max": 364,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 28.9,
+     "avg_low_c": 25.6,
+     "rain_mm": 209,
+     "rain_days_1mm": 26.2,
+     "rain_mm_min": 126,
+     "rain_mm_max": 304,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 28.8,
+     "avg_low_c": 25.7,
+     "rain_mm": 147,
+     "rain_days_1mm": 22.9,
+     "rain_mm_min": 90,
+     "rain_mm_max": 250,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 28.6,
+     "avg_low_c": 25.5,
+     "rain_mm": 195,
+     "rain_days_1mm": 25.2,
+     "rain_mm_min": 70,
+     "rain_mm_max": 297,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 28.7,
+     "avg_low_c": 25.3,
+     "rain_mm": 194,
+     "rain_days_1mm": 25.1,
+     "rain_mm_min": 137,
+     "rain_mm_max": 302,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 28.9,
+     "avg_low_c": 25.1,
+     "rain_mm": 269,
+     "rain_days_1mm": 26.1,
+     "rain_mm_min": 137,
+     "rain_mm_max": 398,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 28.6,
+     "avg_low_c": 24.8,
+     "rain_mm": 376,
+     "rain_days_1mm": 28.2,
+     "rain_mm_min": 243,
+     "rain_mm_max": 582,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 28.4,
+     "avg_low_c": 24.6,
+     "rain_mm": 282,
+     "rain_days_1mm": 26.8,
+     "rain_mm_min": 168,
+     "rain_mm_max": 446,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=1.3521&longitude=103.8198&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:03:10+0530",
+   "official_reference": {
+    "source": "Meteorological Service Singapore, Changi Climate Station 1991-2020",
+    "url": "https://www.weather.gov.sg/climate-climate-of-singapore/",
+    "avg_high_c": [
+     30.6,
+     31.5,
+     32.2,
+     32.4,
+     32.3,
+     31.9,
+     31.4,
+     31.4,
+     31.6,
+     31.8,
+     31.2,
+     30.5
+    ],
+    "avg_low_c": [
+     24.3,
+     24.6,
+     24.9,
+     25.3,
+     25.7,
+     25.7,
+     25.4,
+     25.3,
+     25.2,
+     25.0,
+     24.6,
+     24.3
+    ],
+    "rain_mm": [
+     221.6,
+     105.1,
+     151.7,
+     164.3,
+     164.3,
+     135.3,
+     146.6,
+     146.9,
+     124.9,
+     168.3,
+     252.3,
+     331.9
+    ]
+   },
+   "quality": "biased: highs 2-3 C lower than MSS station; rain ~32% higher (2795 vs 2113 mm). Prefer the MSS reference values.",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "south_korea",
+   "city": "Busan",
+   "requested": {
+    "lat": 35.1796,
+    "lon": 129.0756
+   },
+   "grid_cell": {
+    "lat": 35.200005,
+    "lon": 129.1,
+    "elevation_m": 26.0
+   },
+   "timezone": "Asia/Seoul",
+   "cell_selection": "land",
+   "annual_rain_mm": 1367,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 7.0,
+     "avg_low_c": 0.5,
+     "rain_mm": 34,
+     "rain_days_1mm": 3.5,
+     "rain_mm_min": 2,
+     "rain_mm_max": 109,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 8.7,
+     "avg_low_c": 1.6,
+     "rain_mm": 49,
+     "rain_days_1mm": 4.9,
+     "rain_mm_min": 3,
+     "rain_mm_max": 150,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 13.1,
+     "avg_low_c": 5.9,
+     "rain_mm": 86,
+     "rain_days_1mm": 7.5,
+     "rain_mm_min": 32,
+     "rain_mm_max": 158,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 17.1,
+     "avg_low_c": 10.0,
+     "rain_mm": 110,
+     "rain_days_1mm": 7.3,
+     "rain_mm_min": 64,
+     "rain_mm_max": 221,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 20.8,
+     "avg_low_c": 14.2,
+     "rain_mm": 112,
+     "rain_days_1mm": 8.5,
+     "rain_mm_min": 11,
+     "rain_mm_max": 242,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 24.2,
+     "avg_low_c": 18.9,
+     "rain_mm": 163,
+     "rain_days_1mm": 10.4,
+     "rain_mm_min": 52,
+     "rain_mm_max": 260,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 27.5,
+     "avg_low_c": 23.4,
+     "rain_mm": 212,
+     "rain_days_1mm": 13.7,
+     "rain_mm_min": 95,
+     "rain_mm_max": 476,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 29.1,
+     "avg_low_c": 24.9,
+     "rain_mm": 186,
+     "rain_days_1mm": 14.3,
+     "rain_mm_min": 96,
+     "rain_mm_max": 313,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 25.4,
+     "avg_low_c": 21.3,
+     "rain_mm": 237,
+     "rain_days_1mm": 12.8,
+     "rain_mm_min": 121,
+     "rain_mm_max": 439,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 20.6,
+     "avg_low_c": 15.3,
+     "rain_mm": 106,
+     "rain_days_1mm": 6.6,
+     "rain_mm_min": 3,
+     "rain_mm_max": 275,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 15.2,
+     "avg_low_c": 8.5,
+     "rain_mm": 44,
+     "rain_days_1mm": 3.7,
+     "rain_mm_min": 1,
+     "rain_mm_max": 122,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 8.5,
+     "avg_low_c": 2.0,
+     "rain_mm": 28,
+     "rain_days_1mm": 3.2,
+     "rain_mm_min": 1,
+     "rain_mm_max": 91,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.1796&longitude=129.0756&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:12:54+0530",
+   "official_reference": {
+    "source": "VisitKorea (KTO) Climate & Seasons table (period not stated)",
+    "url": "https://english.visitkorea.or.kr/svc/contents/infoBscView.do?vcontsId=140636",
+    "avg_high_c": [
+     8.2,
+     10.2,
+     13.8,
+     18.2,
+     22,
+     24.6,
+     27.5,
+     29.5,
+     26.4,
+     22.5,
+     16.6,
+     10.4
+    ],
+    "avg_low_c": [
+     -0.1,
+     1.5,
+     5.3,
+     10.1,
+     14.6,
+     18.3,
+     22.1,
+     23.7,
+     19.8,
+     14.5,
+     8.3,
+     2
+    ]
+   },
+   "quality": "validated: highs avg 1.1 C below, lows 0.5 C above KTO table",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "south_korea",
+   "city": "Jeju",
+   "requested": {
+    "lat": 33.4996,
+    "lon": 126.5312
+   },
+   "grid_cell": {
+    "lat": 33.5,
+    "lon": 126.5,
+    "elevation_m": 63.0
+   },
+   "timezone": "Asia/Seoul",
+   "cell_selection": "land",
+   "annual_rain_mm": 1595,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 8.5,
+     "avg_low_c": 4.9,
+     "rain_mm": 56,
+     "rain_days_1mm": 8.4,
+     "rain_mm_min": 27,
+     "rain_mm_max": 91,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 9.3,
+     "avg_low_c": 5.0,
+     "rain_mm": 68,
+     "rain_days_1mm": 8.2,
+     "rain_mm_min": 21,
+     "rain_mm_max": 178,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 13.3,
+     "avg_low_c": 8.3,
+     "rain_mm": 95,
+     "rain_days_1mm": 9.7,
+     "rain_mm_min": 52,
+     "rain_mm_max": 135,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 16.9,
+     "avg_low_c": 11.9,
+     "rain_mm": 116,
+     "rain_days_1mm": 8.5,
+     "rain_mm_min": 61,
+     "rain_mm_max": 223,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 20.4,
+     "avg_low_c": 15.7,
+     "rain_mm": 135,
+     "rain_days_1mm": 9.7,
+     "rain_mm_min": 17,
+     "rain_mm_max": 266,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 23.9,
+     "avg_low_c": 20.0,
+     "rain_mm": 198,
+     "rain_days_1mm": 12.7,
+     "rain_mm_min": 127,
+     "rain_mm_max": 321,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 28.2,
+     "avg_low_c": 25.0,
+     "rain_mm": 226,
+     "rain_days_1mm": 17.4,
+     "rain_mm_min": 60,
+     "rain_mm_max": 401,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 29.6,
+     "avg_low_c": 26.4,
+     "rain_mm": 198,
+     "rain_days_1mm": 17.3,
+     "rain_mm_min": 54,
+     "rain_mm_max": 382,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 26.2,
+     "avg_low_c": 23.3,
+     "rain_mm": 268,
+     "rain_days_1mm": 16.7,
+     "rain_mm_min": 152,
+     "rain_mm_max": 470,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 21.2,
+     "avg_low_c": 18.0,
+     "rain_mm": 115,
+     "rain_days_1mm": 8.3,
+     "rain_mm_min": 12,
+     "rain_mm_max": 352,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 16.3,
+     "avg_low_c": 12.2,
+     "rain_mm": 77,
+     "rain_days_1mm": 7.2,
+     "rain_mm_min": 22,
+     "rain_mm_max": 315,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 10.6,
+     "avg_low_c": 6.7,
+     "rain_mm": 43,
+     "rain_days_1mm": 7.6,
+     "rain_mm_min": 11,
+     "rain_mm_max": 82,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=33.4996&longitude=126.5312&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:13:10+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "south_korea",
+   "city": "Seoul",
+   "requested": {
+    "lat": 37.5665,
+    "lon": 126.978
+   },
+   "grid_cell": {
+    "lat": 37.6,
+    "lon": 127.0,
+    "elevation_m": 34.0
+   },
+   "timezone": "Asia/Seoul",
+   "cell_selection": "land",
+   "annual_rain_mm": 1187,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 2.3,
+     "avg_low_c": -6.2,
+     "rain_mm": 19,
+     "rain_days_1mm": 3.2,
+     "rain_mm_min": 0,
+     "rain_mm_max": 72,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 4.9,
+     "avg_low_c": -4.6,
+     "rain_mm": 23,
+     "rain_days_1mm": 4,
+     "rain_mm_min": 2,
+     "rain_mm_max": 61,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 11.7,
+     "avg_low_c": 0.4,
+     "rain_mm": 41,
+     "rain_days_1mm": 5.8,
+     "rain_mm_min": 6,
+     "rain_mm_max": 87,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 17.5,
+     "avg_low_c": 6.2,
+     "rain_mm": 63,
+     "rain_days_1mm": 6.5,
+     "rain_mm_min": 26,
+     "rain_mm_max": 96,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 22.4,
+     "avg_low_c": 11.5,
+     "rain_mm": 105,
+     "rain_days_1mm": 8.2,
+     "rain_mm_min": 9,
+     "rain_mm_max": 207,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 27.0,
+     "avg_low_c": 17.5,
+     "rain_mm": 116,
+     "rain_days_1mm": 9,
+     "rain_mm_min": 39,
+     "rain_mm_max": 251,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 29.1,
+     "avg_low_c": 22.3,
+     "rain_mm": 282,
+     "rain_days_1mm": 16.4,
+     "rain_mm_min": 130,
+     "rain_mm_max": 480,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 29.5,
+     "avg_low_c": 22.9,
+     "rain_mm": 243,
+     "rain_days_1mm": 14.6,
+     "rain_mm_min": 62,
+     "rain_mm_max": 546,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 25.6,
+     "avg_low_c": 17.6,
+     "rain_mm": 148,
+     "rain_days_1mm": 9.5,
+     "rain_mm_min": 49,
+     "rain_mm_max": 290,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 18.9,
+     "avg_low_c": 9.7,
+     "rain_mm": 76,
+     "rain_days_1mm": 7.2,
+     "rain_mm_min": 5,
+     "rain_mm_max": 161,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 11.5,
+     "avg_low_c": 2.0,
+     "rain_mm": 45,
+     "rain_days_1mm": 5.3,
+     "rain_mm_min": 13,
+     "rain_mm_max": 92,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 3.4,
+     "avg_low_c": -4.9,
+     "rain_mm": 26,
+     "rain_days_1mm": 5,
+     "rain_mm_min": 4,
+     "rain_mm_max": 78,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.5665&longitude=126.978&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:12:37+0530",
+   "official_reference": {
+    "source": "VisitKorea (KTO) Climate & Seasons table (period not stated)",
+    "url": "https://english.visitkorea.or.kr/svc/contents/infoBscView.do?vcontsId=140636",
+    "avg_high_c": [
+     2.1,
+     5.1,
+     11,
+     17.9,
+     23.6,
+     27.6,
+     29,
+     30,
+     26.2,
+     20.2,
+     11.9,
+     4.2
+    ],
+    "avg_low_c": [
+     -5.5,
+     -3.2,
+     1.9,
+     8,
+     13.5,
+     18.7,
+     22.3,
+     22.9,
+     17.7,
+     10.6,
+     3.5,
+     -3.4
+    ]
+   },
+   "quality": "validated: highs avg 0.4 C and lows avg 1.1 C below KTO table",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "sri_lanka",
+   "city": "Colombo",
+   "requested": {
+    "lat": 6.9271,
+    "lon": 79.8612
+   },
+   "grid_cell": {
+    "lat": 6.9000015,
+    "lon": 79.899994,
+    "elevation_m": 9.0
+   },
+   "timezone": "Asia/Colombo",
+   "cell_selection": "land",
+   "annual_rain_mm": 2577,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 30.7,
+     "avg_low_c": 23.2,
+     "rain_mm": 85,
+     "rain_days_1mm": 9.5,
+     "rain_mm_min": 8,
+     "rain_mm_max": 270,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 32.1,
+     "avg_low_c": 23.9,
+     "rain_mm": 48,
+     "rain_days_1mm": 7.5,
+     "rain_mm_min": 7,
+     "rain_mm_max": 123,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 31.9,
+     "avg_low_c": 24.7,
+     "rain_mm": 90,
+     "rain_days_1mm": 15.8,
+     "rain_mm_min": 31,
+     "rain_mm_max": 246,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 31.4,
+     "avg_low_c": 25.3,
+     "rain_mm": 161,
+     "rain_days_1mm": 25,
+     "rain_mm_min": 91,
+     "rain_mm_max": 238,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 29.9,
+     "avg_low_c": 25.6,
+     "rain_mm": 359,
+     "rain_days_1mm": 29.6,
+     "rain_mm_min": 88,
+     "rain_mm_max": 771,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 29.2,
+     "avg_low_c": 25.4,
+     "rain_mm": 253,
+     "rain_days_1mm": 29.2,
+     "rain_mm_min": 202,
+     "rain_mm_max": 356,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 29.0,
+     "avg_low_c": 25.2,
+     "rain_mm": 196,
+     "rain_days_1mm": 27.5,
+     "rain_mm_min": 136,
+     "rain_mm_max": 266,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 28.8,
+     "avg_low_c": 24.9,
+     "rain_mm": 227,
+     "rain_days_1mm": 27.8,
+     "rain_mm_min": 120,
+     "rain_mm_max": 460,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 28.8,
+     "avg_low_c": 24.7,
+     "rain_mm": 238,
+     "rain_days_1mm": 28,
+     "rain_mm_min": 115,
+     "rain_mm_max": 434,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 28.9,
+     "avg_low_c": 24.3,
+     "rain_mm": 374,
+     "rain_days_1mm": 29.1,
+     "rain_mm_min": 117,
+     "rain_mm_max": 580,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 29.1,
+     "avg_low_c": 23.9,
+     "rain_mm": 400,
+     "rain_days_1mm": 24.8,
+     "rain_mm_min": 236,
+     "rain_mm_max": 631,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 29.6,
+     "avg_low_c": 23.4,
+     "rain_mm": 146,
+     "rain_days_1mm": 16.2,
+     "rain_mm_min": 44,
+     "rain_mm_max": 343,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=6.9271&longitude=79.8612&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:07:29+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "sri_lanka",
+   "city": "Kandy",
+   "requested": {
+    "lat": 7.2906,
+    "lon": 80.6337
+   },
+   "grid_cell": {
+    "lat": 7.300003,
+    "lon": 80.600006,
+    "elevation_m": 499.0
+   },
+   "timezone": "Asia/Colombo",
+   "cell_selection": "land",
+   "annual_rain_mm": 1867,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 26.1,
+     "avg_low_c": 19.2,
+     "rain_mm": 124,
+     "rain_days_1mm": 15.1,
+     "rain_mm_min": 27,
+     "rain_mm_max": 343,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 27.5,
+     "avg_low_c": 19.7,
+     "rain_mm": 75,
+     "rain_days_1mm": 12.4,
+     "rain_mm_min": 36,
+     "rain_mm_max": 214,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 29.4,
+     "avg_low_c": 20.7,
+     "rain_mm": 82,
+     "rain_days_1mm": 13.1,
+     "rain_mm_min": 26,
+     "rain_mm_max": 160,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.6,
+     "avg_low_c": 21.7,
+     "rain_mm": 152,
+     "rain_days_1mm": 17.1,
+     "rain_mm_min": 51,
+     "rain_mm_max": 300,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 27.8,
+     "avg_low_c": 22.1,
+     "rain_mm": 216,
+     "rain_days_1mm": 21.6,
+     "rain_mm_min": 56,
+     "rain_mm_max": 461,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 27.1,
+     "avg_low_c": 21.9,
+     "rain_mm": 57,
+     "rain_days_1mm": 15.8,
+     "rain_mm_min": 41,
+     "rain_mm_max": 75,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 27.1,
+     "avg_low_c": 21.5,
+     "rain_mm": 101,
+     "rain_days_1mm": 19.3,
+     "rain_mm_min": 53,
+     "rain_mm_max": 187,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 27.0,
+     "avg_low_c": 21.2,
+     "rain_mm": 98,
+     "rain_days_1mm": 18.8,
+     "rain_mm_min": 44,
+     "rain_mm_max": 193,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 27.0,
+     "avg_low_c": 21.1,
+     "rain_mm": 117,
+     "rain_days_1mm": 18.1,
+     "rain_mm_min": 26,
+     "rain_mm_max": 176,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 26.8,
+     "avg_low_c": 20.9,
+     "rain_mm": 303,
+     "rain_days_1mm": 24,
+     "rain_mm_min": 53,
+     "rain_mm_max": 635,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 26.2,
+     "avg_low_c": 20.5,
+     "rain_mm": 381,
+     "rain_days_1mm": 24.9,
+     "rain_mm_min": 144,
+     "rain_mm_max": 673,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 25.9,
+     "avg_low_c": 19.9,
+     "rain_mm": 161,
+     "rain_days_1mm": 20.1,
+     "rain_mm_min": 57,
+     "rain_mm_max": 357,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=7.2906&longitude=80.6337&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:07:46+0530",
+   "quality": "unvalidated (hill town; treat rain with caution)",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "sri_lanka",
+   "city": "Trincomalee",
+   "requested": {
+    "lat": 8.5874,
+    "lon": 81.2152
+   },
+   "grid_cell": {
+    "lat": 8.599998,
+    "lon": 81.20001,
+    "elevation_m": 9.0
+   },
+   "timezone": "Asia/Colombo",
+   "cell_selection": "land",
+   "annual_rain_mm": 1394,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 27.3,
+     "avg_low_c": 24.4,
+     "rain_mm": 148,
+     "rain_days_1mm": 14.9,
+     "rain_mm_min": 20,
+     "rain_mm_max": 411,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 28.1,
+     "avg_low_c": 24.8,
+     "rain_mm": 69,
+     "rain_days_1mm": 10.4,
+     "rain_mm_min": 27,
+     "rain_mm_max": 163,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 30.0,
+     "avg_low_c": 25.5,
+     "rain_mm": 43,
+     "rain_days_1mm": 9.8,
+     "rain_mm_min": 4,
+     "rain_mm_max": 81,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 32.0,
+     "avg_low_c": 26.5,
+     "rain_mm": 49,
+     "rain_days_1mm": 10.3,
+     "rain_mm_min": 8,
+     "rain_mm_max": 114,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 32.7,
+     "avg_low_c": 26.8,
+     "rain_mm": 85,
+     "rain_days_1mm": 10.7,
+     "rain_mm_min": 8,
+     "rain_mm_max": 222,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 33.7,
+     "avg_low_c": 26.8,
+     "rain_mm": 15,
+     "rain_days_1mm": 2.8,
+     "rain_mm_min": 3,
+     "rain_mm_max": 55,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 33.6,
+     "avg_low_c": 26.6,
+     "rain_mm": 36,
+     "rain_days_1mm": 7,
+     "rain_mm_min": 6,
+     "rain_mm_max": 82,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 33.1,
+     "avg_low_c": 26.2,
+     "rain_mm": 48,
+     "rain_days_1mm": 8.6,
+     "rain_mm_min": 11,
+     "rain_mm_max": 106,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 32.9,
+     "avg_low_c": 26.0,
+     "rain_mm": 47,
+     "rain_days_1mm": 9.2,
+     "rain_mm_min": 10,
+     "rain_mm_max": 101,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 30.8,
+     "avg_low_c": 25.4,
+     "rain_mm": 207,
+     "rain_days_1mm": 19.7,
+     "rain_mm_min": 39,
+     "rain_mm_max": 347,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 28.3,
+     "avg_low_c": 24.7,
+     "rain_mm": 404,
+     "rain_days_1mm": 24.3,
+     "rain_mm_min": 214,
+     "rain_mm_max": 726,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 27.6,
+     "avg_low_c": 24.5,
+     "rain_mm": 243,
+     "rain_days_1mm": 21.2,
+     "rain_mm_min": 83,
+     "rain_mm_max": 544,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=8.5874&longitude=81.2152&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:09:08+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "thailand",
+   "city": "Bangkok",
+   "requested": {
+    "lat": 13.7563,
+    "lon": 100.5018
+   },
+   "grid_cell": {
+    "lat": 13.800003,
+    "lon": 100.5,
+    "elevation_m": 4.0
+   },
+   "timezone": "Asia/Bangkok",
+   "cell_selection": "land",
+   "annual_rain_mm": 1244,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 30.9,
+     "avg_low_c": 21.8,
+     "rain_mm": 21,
+     "rain_days_1mm": 3.4,
+     "rain_mm_min": 0,
+     "rain_mm_max": 93,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 32.1,
+     "avg_low_c": 23.2,
+     "rain_mm": 23,
+     "rain_days_1mm": 4.4,
+     "rain_mm_min": 2,
+     "rain_mm_max": 77,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 33.7,
+     "avg_low_c": 25.6,
+     "rain_mm": 38,
+     "rain_days_1mm": 5.5,
+     "rain_mm_min": 8,
+     "rain_mm_max": 80,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 34.7,
+     "avg_low_c": 26.8,
+     "rain_mm": 70,
+     "rain_days_1mm": 9.1,
+     "rain_mm_min": 2,
+     "rain_mm_max": 227,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 33.6,
+     "avg_low_c": 26.8,
+     "rain_mm": 143,
+     "rain_days_1mm": 18.4,
+     "rain_mm_min": 73,
+     "rain_mm_max": 263,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 32.5,
+     "avg_low_c": 26.2,
+     "rain_mm": 109,
+     "rain_days_1mm": 20.6,
+     "rain_mm_min": 72,
+     "rain_mm_max": 166,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 31.6,
+     "avg_low_c": 25.8,
+     "rain_mm": 156,
+     "rain_days_1mm": 24.5,
+     "rain_mm_min": 92,
+     "rain_mm_max": 198,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 31.9,
+     "avg_low_c": 25.8,
+     "rain_mm": 139,
+     "rain_days_1mm": 22.4,
+     "rain_mm_min": 76,
+     "rain_mm_max": 204,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 31.2,
+     "avg_low_c": 25.3,
+     "rain_mm": 254,
+     "rain_days_1mm": 25.6,
+     "rain_mm_min": 163,
+     "rain_mm_max": 320,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 30.8,
+     "avg_low_c": 24.5,
+     "rain_mm": 205,
+     "rain_days_1mm": 20.5,
+     "rain_mm_min": 100,
+     "rain_mm_max": 341,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 30.8,
+     "avg_low_c": 23.4,
+     "rain_mm": 69,
+     "rain_days_1mm": 9.9,
+     "rain_mm_min": 15,
+     "rain_mm_max": 134,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 30.5,
+     "avg_low_c": 21.9,
+     "rain_mm": 17,
+     "rain_days_1mm": 2.4,
+     "rain_mm_min": 1,
+     "rain_mm_max": 46,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=13.7563&longitude=100.5018&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:02:19+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "thailand",
+   "city": "Chiang Mai",
+   "requested": {
+    "lat": 18.7883,
+    "lon": 98.9853
+   },
+   "grid_cell": {
+    "lat": 18.800003,
+    "lon": 99.0,
+    "elevation_m": 313.0
+   },
+   "timezone": "Asia/Bangkok",
+   "cell_selection": "land",
+   "annual_rain_mm": 1125,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 27.9,
+     "avg_low_c": 16.5,
+     "rain_mm": 8,
+     "rain_days_1mm": 1.8,
+     "rain_mm_min": 0,
+     "rain_mm_max": 23,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 31.1,
+     "avg_low_c": 18.5,
+     "rain_mm": 4,
+     "rain_days_1mm": 1,
+     "rain_mm_min": 0,
+     "rain_mm_max": 11,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 34.8,
+     "avg_low_c": 22.2,
+     "rain_mm": 6,
+     "rain_days_1mm": 1.2,
+     "rain_mm_min": 0,
+     "rain_mm_max": 32,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 35.9,
+     "avg_low_c": 24.4,
+     "rain_mm": 28,
+     "rain_days_1mm": 4.3,
+     "rain_mm_min": 0,
+     "rain_mm_max": 67,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 34.1,
+     "avg_low_c": 25.1,
+     "rain_mm": 94,
+     "rain_days_1mm": 11.5,
+     "rain_mm_min": 12,
+     "rain_mm_max": 197,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 31.2,
+     "avg_low_c": 24.4,
+     "rain_mm": 118,
+     "rain_days_1mm": 16.9,
+     "rain_mm_min": 34,
+     "rain_mm_max": 237,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 30.5,
+     "avg_low_c": 24.1,
+     "rain_mm": 193,
+     "rain_days_1mm": 21.7,
+     "rain_mm_min": 88,
+     "rain_mm_max": 298,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 29.6,
+     "avg_low_c": 23.7,
+     "rain_mm": 244,
+     "rain_days_1mm": 24.6,
+     "rain_mm_min": 135,
+     "rain_mm_max": 404,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 29.8,
+     "avg_low_c": 23.4,
+     "rain_mm": 232,
+     "rain_days_1mm": 22.6,
+     "rain_mm_min": 125,
+     "rain_mm_max": 365,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 29.3,
+     "avg_low_c": 22.2,
+     "rain_mm": 157,
+     "rain_days_1mm": 17.5,
+     "rain_mm_min": 84,
+     "rain_mm_max": 277,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 28.5,
+     "avg_low_c": 19.5,
+     "rain_mm": 33,
+     "rain_days_1mm": 6.1,
+     "rain_mm_min": 8,
+     "rain_mm_max": 122,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 27.5,
+     "avg_low_c": 16.8,
+     "rain_mm": 8,
+     "rain_days_1mm": 1.1,
+     "rain_mm_min": 0,
+     "rain_mm_max": 44,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=18.7883&longitude=98.9853&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:02:53+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "thailand",
+   "city": "Phuket",
+   "requested": {
+    "lat": 7.8804,
+    "lon": 98.3923
+   },
+   "grid_cell": {
+    "lat": 7.9000015,
+    "lon": 98.399994,
+    "elevation_m": 6.0
+   },
+   "timezone": "Asia/Bangkok",
+   "cell_selection": "land",
+   "annual_rain_mm": 2312,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 28.8,
+     "avg_low_c": 25.8,
+     "rain_mm": 75,
+     "rain_days_1mm": 7.9,
+     "rain_mm_min": 5,
+     "rain_mm_max": 391,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 29.4,
+     "avg_low_c": 26.3,
+     "rain_mm": 32,
+     "rain_days_1mm": 5.7,
+     "rain_mm_min": 3,
+     "rain_mm_max": 121,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 29.9,
+     "avg_low_c": 27.0,
+     "rain_mm": 38,
+     "rain_days_1mm": 7.6,
+     "rain_mm_min": 2,
+     "rain_mm_max": 97,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.9,
+     "avg_low_c": 27.1,
+     "rain_mm": 124,
+     "rain_days_1mm": 17.7,
+     "rain_mm_min": 17,
+     "rain_mm_max": 265,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 29.5,
+     "avg_low_c": 27.0,
+     "rain_mm": 280,
+     "rain_days_1mm": 25.4,
+     "rain_mm_min": 126,
+     "rain_mm_max": 438,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 29.1,
+     "avg_low_c": 26.9,
+     "rain_mm": 248,
+     "rain_days_1mm": 21.9,
+     "rain_mm_min": 192,
+     "rain_mm_max": 280,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 28.9,
+     "avg_low_c": 26.9,
+     "rain_mm": 252,
+     "rain_days_1mm": 21.7,
+     "rain_mm_min": 154,
+     "rain_mm_max": 315,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 28.6,
+     "avg_low_c": 26.6,
+     "rain_mm": 268,
+     "rain_days_1mm": 22.9,
+     "rain_mm_min": 143,
+     "rain_mm_max": 349,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 28.3,
+     "avg_low_c": 26.2,
+     "rain_mm": 340,
+     "rain_days_1mm": 24.6,
+     "rain_mm_min": 160,
+     "rain_mm_max": 500,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 28.2,
+     "avg_low_c": 25.8,
+     "rain_mm": 322,
+     "rain_days_1mm": 26.4,
+     "rain_mm_min": 160,
+     "rain_mm_max": 661,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 28.2,
+     "avg_low_c": 25.8,
+     "rain_mm": 235,
+     "rain_days_1mm": 22.1,
+     "rain_mm_min": 127,
+     "rain_mm_max": 342,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 28.4,
+     "avg_low_c": 25.8,
+     "rain_mm": 98,
+     "rain_days_1mm": 12.3,
+     "rain_mm_min": 13,
+     "rain_mm_max": 235,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=7.8804&longitude=98.3923&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:02:36+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "uae",
+   "city": "Abu Dhabi",
+   "requested": {
+    "lat": 24.4539,
+    "lon": 54.3773
+   },
+   "grid_cell": {
+    "lat": 24.5,
+    "lon": 54.40001,
+    "elevation_m": 5.0
+   },
+   "timezone": "Asia/Dubai",
+   "cell_selection": "land",
+   "annual_rain_mm": 50,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 23.8,
+     "avg_low_c": 16.0,
+     "rain_mm": 11,
+     "rain_days_1mm": 1.7,
+     "rain_mm_min": 0,
+     "rain_mm_max": 55,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 24.8,
+     "avg_low_c": 16.5,
+     "rain_mm": 4,
+     "rain_days_1mm": 0.8,
+     "rain_mm_min": 0,
+     "rain_mm_max": 18,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 28.3,
+     "avg_low_c": 18.8,
+     "rain_mm": 13,
+     "rain_days_1mm": 1.2,
+     "rain_mm_min": 0,
+     "rain_mm_max": 65,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 32.4,
+     "avg_low_c": 21.9,
+     "rain_mm": 11,
+     "rain_days_1mm": 0.6,
+     "rain_mm_min": 0,
+     "rain_mm_max": 92,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 36.3,
+     "avg_low_c": 25.6,
+     "rain_mm": 1,
+     "rain_days_1mm": 0.2,
+     "rain_mm_min": 0,
+     "rain_mm_max": 9,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 38.7,
+     "avg_low_c": 28.3,
+     "rain_mm": 0,
+     "rain_days_1mm": 0,
+     "rain_mm_min": 0,
+     "rain_mm_max": 0,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 40.0,
+     "avg_low_c": 30.6,
+     "rain_mm": 1,
+     "rain_days_1mm": 0.3,
+     "rain_mm_min": 0,
+     "rain_mm_max": 6,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 40.5,
+     "avg_low_c": 30.5,
+     "rain_mm": 1,
+     "rain_days_1mm": 0.3,
+     "rain_mm_min": 0,
+     "rain_mm_max": 2,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 38.6,
+     "avg_low_c": 28.4,
+     "rain_mm": 0,
+     "rain_days_1mm": 0,
+     "rain_mm_min": 0,
+     "rain_mm_max": 1,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 34.9,
+     "avg_low_c": 25.5,
+     "rain_mm": 2,
+     "rain_days_1mm": 0.5,
+     "rain_mm_min": 0,
+     "rain_mm_max": 6,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 30.3,
+     "avg_low_c": 21.8,
+     "rain_mm": 2,
+     "rain_days_1mm": 0.5,
+     "rain_mm_min": 0,
+     "rain_mm_max": 12,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 26.1,
+     "avg_low_c": 18.3,
+     "rain_mm": 4,
+     "rain_days_1mm": 0.7,
+     "rain_mm_min": 0,
+     "rain_mm_max": 22,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=24.4539&longitude=54.3773&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:03:44+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "uae",
+   "city": "Dubai",
+   "requested": {
+    "lat": 25.2048,
+    "lon": 55.2708
+   },
+   "grid_cell": {
+    "lat": 25.200005,
+    "lon": 55.300003,
+    "elevation_m": 6.0
+   },
+   "timezone": "Asia/Dubai",
+   "cell_selection": "land",
+   "annual_rain_mm": 71,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 24.8,
+     "avg_low_c": 14.8,
+     "rain_mm": 13,
+     "rain_days_1mm": 1.6,
+     "rain_mm_min": 0,
+     "rain_mm_max": 68,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 26.1,
+     "avg_low_c": 15.7,
+     "rain_mm": 7,
+     "rain_days_1mm": 1.3,
+     "rain_mm_min": 0,
+     "rain_mm_max": 27,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 29.5,
+     "avg_low_c": 18.0,
+     "rain_mm": 21,
+     "rain_days_1mm": 1.8,
+     "rain_mm_min": 0,
+     "rain_mm_max": 115,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 34.1,
+     "avg_low_c": 21.2,
+     "rain_mm": 16,
+     "rain_days_1mm": 0.9,
+     "rain_mm_min": 0,
+     "rain_mm_max": 141,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 38.3,
+     "avg_low_c": 24.6,
+     "rain_mm": 2,
+     "rain_days_1mm": 0.6,
+     "rain_mm_min": 0,
+     "rain_mm_max": 10,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 41.1,
+     "avg_low_c": 27.5,
+     "rain_mm": 0,
+     "rain_days_1mm": 0.1,
+     "rain_mm_min": 0,
+     "rain_mm_max": 1,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 42.0,
+     "avg_low_c": 30.1,
+     "rain_mm": 1,
+     "rain_days_1mm": 0.2,
+     "rain_mm_min": 0,
+     "rain_mm_max": 10,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 42.1,
+     "avg_low_c": 29.6,
+     "rain_mm": 1,
+     "rain_days_1mm": 0.4,
+     "rain_mm_min": 0,
+     "rain_mm_max": 3,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 40.2,
+     "avg_low_c": 27.3,
+     "rain_mm": 0,
+     "rain_days_1mm": 0,
+     "rain_mm_min": 0,
+     "rain_mm_max": 0,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 36.3,
+     "avg_low_c": 24.0,
+     "rain_mm": 2,
+     "rain_days_1mm": 0.6,
+     "rain_mm_min": 0,
+     "rain_mm_max": 7,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 31.3,
+     "avg_low_c": 20.1,
+     "rain_mm": 2,
+     "rain_days_1mm": 0.2,
+     "rain_mm_min": 0,
+     "rain_mm_max": 15,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 27.0,
+     "avg_low_c": 16.7,
+     "rain_mm": 6,
+     "rain_days_1mm": 0.8,
+     "rain_mm_min": 0,
+     "rain_mm_max": 23,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=25.2048&longitude=55.2708&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:03:27+0530",
+   "official_reference": {
+    "source": "Government of Dubai Media Office (summary only)",
+    "url": "https://www.mediaoffice.ae/en/general-information/geographic-location-climate",
+    "summary": "Summer avg high ~41.8 C, low ~29.7 C; winter avg high 23 C, low 14 C; annual rain 87.3 mm (Jan 15, Feb 31, Mar 18.9 mm)"
+   },
+   "quality": "plausible: matches Dubai Media Office summary (summer ~42 C, annual rain 71 vs 87 mm)",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "vietnam",
+   "city": "Da Nang",
+   "requested": {
+    "lat": 16.0544,
+    "lon": 108.2022
+   },
+   "grid_cell": {
+    "lat": 16.0,
+    "lon": 108.20001,
+    "elevation_m": 6.0
+   },
+   "timezone": "Asia/Ho_Chi_Minh",
+   "cell_selection": "land",
+   "annual_rain_mm": 2669,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 23.7,
+     "avg_low_c": 20.2,
+     "rain_mm": 182,
+     "rain_days_1mm": 19.6,
+     "rain_mm_min": 105,
+     "rain_mm_max": 283,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 24.5,
+     "avg_low_c": 20.2,
+     "rain_mm": 103,
+     "rain_days_1mm": 14,
+     "rain_mm_min": 10,
+     "rain_mm_max": 193,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 27.4,
+     "avg_low_c": 22.3,
+     "rain_mm": 83,
+     "rain_days_1mm": 9.7,
+     "rain_mm_min": 16,
+     "rain_mm_max": 192,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 30.2,
+     "avg_low_c": 24.5,
+     "rain_mm": 79,
+     "rain_days_1mm": 7.7,
+     "rain_mm_min": 1,
+     "rain_mm_max": 359,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 31.9,
+     "avg_low_c": 26.3,
+     "rain_mm": 109,
+     "rain_days_1mm": 16.1,
+     "rain_mm_min": 23,
+     "rain_mm_max": 225,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 33.2,
+     "avg_low_c": 27.3,
+     "rain_mm": 103,
+     "rain_days_1mm": 15.1,
+     "rain_mm_min": 26,
+     "rain_mm_max": 310,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 32.6,
+     "avg_low_c": 27.0,
+     "rain_mm": 126,
+     "rain_days_1mm": 18.2,
+     "rain_mm_min": 53,
+     "rain_mm_max": 285,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 32.8,
+     "avg_low_c": 27.1,
+     "rain_mm": 151,
+     "rain_days_1mm": 18.5,
+     "rain_mm_min": 52,
+     "rain_mm_max": 232,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 30.6,
+     "avg_low_c": 25.8,
+     "rain_mm": 292,
+     "rain_days_1mm": 24.1,
+     "rain_mm_min": 116,
+     "rain_mm_max": 574,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 28.0,
+     "avg_low_c": 24.5,
+     "rain_mm": 547,
+     "rain_days_1mm": 25.9,
+     "rain_mm_min": 202,
+     "rain_mm_max": 1115,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 26.3,
+     "avg_low_c": 23.2,
+     "rain_mm": 496,
+     "rain_days_1mm": 23.2,
+     "rain_mm_min": 177,
+     "rain_mm_max": 887,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 23.9,
+     "avg_low_c": 21.2,
+     "rain_mm": 398,
+     "rain_days_1mm": 25.7,
+     "rain_mm_min": 82,
+     "rain_mm_max": 775,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=16.0544&longitude=108.2022&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:04:18+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "vietnam",
+   "city": "Hanoi",
+   "requested": {
+    "lat": 21.0278,
+    "lon": 105.8342
+   },
+   "grid_cell": {
+    "lat": 21.0,
+    "lon": 105.80002,
+    "elevation_m": 18.0
+   },
+   "timezone": "Asia/Bangkok",
+   "cell_selection": "land",
+   "annual_rain_mm": 1851,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 20.4,
+     "avg_low_c": 14.0,
+     "rain_mm": 58,
+     "rain_days_1mm": 9.9,
+     "rain_mm_min": 9,
+     "rain_mm_max": 138,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 21.6,
+     "avg_low_c": 14.9,
+     "rain_mm": 42,
+     "rain_days_1mm": 8.3,
+     "rain_mm_min": 6,
+     "rain_mm_max": 119,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 25.5,
+     "avg_low_c": 18.6,
+     "rain_mm": 59,
+     "rain_days_1mm": 9.7,
+     "rain_mm_min": 23,
+     "rain_mm_max": 141,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.1,
+     "avg_low_c": 21.6,
+     "rain_mm": 108,
+     "rain_days_1mm": 11.3,
+     "rain_mm_min": 26,
+     "rain_mm_max": 171,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 31.3,
+     "avg_low_c": 24.5,
+     "rain_mm": 220,
+     "rain_days_1mm": 17,
+     "rain_mm_min": 141,
+     "rain_mm_max": 348,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 33.2,
+     "avg_low_c": 26.5,
+     "rain_mm": 212,
+     "rain_days_1mm": 17.5,
+     "rain_mm_min": 101,
+     "rain_mm_max": 337,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 32.7,
+     "avg_low_c": 26.2,
+     "rain_mm": 249,
+     "rain_days_1mm": 20.3,
+     "rain_mm_min": 117,
+     "rain_mm_max": 435,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 31.8,
+     "avg_low_c": 25.7,
+     "rain_mm": 359,
+     "rain_days_1mm": 23.7,
+     "rain_mm_min": 166,
+     "rain_mm_max": 480,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 30.7,
+     "avg_low_c": 24.6,
+     "rain_mm": 275,
+     "rain_days_1mm": 20.5,
+     "rain_mm_min": 140,
+     "rain_mm_max": 657,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 27.9,
+     "avg_low_c": 21.6,
+     "rain_mm": 193,
+     "rain_days_1mm": 13.3,
+     "rain_mm_min": 56,
+     "rain_mm_max": 444,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 25.3,
+     "avg_low_c": 18.3,
+     "rain_mm": 47,
+     "rain_days_1mm": 6.8,
+     "rain_mm_min": 12,
+     "rain_mm_max": 86,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 21.1,
+     "avg_low_c": 14.2,
+     "rain_mm": 29,
+     "rain_days_1mm": 5.8,
+     "rain_mm_min": 9,
+     "rain_mm_max": 95,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=21.0278&longitude=105.8342&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:04:01+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "vietnam",
+   "city": "Ho Chi Minh City",
+   "requested": {
+    "lat": 10.8231,
+    "lon": 106.6297
+   },
+   "grid_cell": {
+    "lat": 10.800003,
+    "lon": 106.600006,
+    "elevation_m": 6.0
+   },
+   "timezone": "Asia/Ho_Chi_Minh",
+   "cell_selection": "land",
+   "annual_rain_mm": 1885,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 31.3,
+     "avg_low_c": 22.8,
+     "rain_mm": 37,
+     "rain_days_1mm": 4.7,
+     "rain_mm_min": 1,
+     "rain_mm_max": 132,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 32.6,
+     "avg_low_c": 23.2,
+     "rain_mm": 15,
+     "rain_days_1mm": 2.7,
+     "rain_mm_min": 1,
+     "rain_mm_max": 49,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 33.8,
+     "avg_low_c": 24.5,
+     "rain_mm": 19,
+     "rain_days_1mm": 3.3,
+     "rain_mm_min": 0,
+     "rain_mm_max": 98,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 34.1,
+     "avg_low_c": 25.6,
+     "rain_mm": 61,
+     "rain_days_1mm": 10.7,
+     "rain_mm_min": 6,
+     "rain_mm_max": 144,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 33.0,
+     "avg_low_c": 25.9,
+     "rain_mm": 197,
+     "rain_days_1mm": 23.6,
+     "rain_mm_min": 93,
+     "rain_mm_max": 296,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 31.5,
+     "avg_low_c": 25.0,
+     "rain_mm": 226,
+     "rain_days_1mm": 25.6,
+     "rain_mm_min": 124,
+     "rain_mm_max": 290,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 30.8,
+     "avg_low_c": 24.8,
+     "rain_mm": 272,
+     "rain_days_1mm": 28.6,
+     "rain_mm_min": 203,
+     "rain_mm_max": 366,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 31.0,
+     "avg_low_c": 24.7,
+     "rain_mm": 257,
+     "rain_days_1mm": 28.3,
+     "rain_mm_min": 178,
+     "rain_mm_max": 355,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 30.7,
+     "avg_low_c": 24.4,
+     "rain_mm": 296,
+     "rain_days_1mm": 28.6,
+     "rain_mm_min": 222,
+     "rain_mm_max": 373,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 30.3,
+     "avg_low_c": 24.1,
+     "rain_mm": 274,
+     "rain_days_1mm": 27.7,
+     "rain_mm_min": 125,
+     "rain_mm_max": 412,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 30.3,
+     "avg_low_c": 23.7,
+     "rain_mm": 154,
+     "rain_days_1mm": 19.8,
+     "rain_mm_min": 74,
+     "rain_mm_max": 253,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 30.2,
+     "avg_low_c": 22.9,
+     "rain_mm": 77,
+     "rain_days_1mm": 11.1,
+     "rain_mm_min": 0,
+     "rain_mm_max": 162,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=10.8231&longitude=106.6297&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:04:35+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  },
+  {
+   "country": "vietnam",
+   "city": "Phu Quoc",
+   "requested": {
+    "lat": 10.2899,
+    "lon": 103.984
+   },
+   "grid_cell": {
+    "lat": 10.300003,
+    "lon": 104.0,
+    "elevation_m": 42.0
+   },
+   "timezone": "Asia/Ho_Chi_Minh",
+   "cell_selection": "land",
+   "annual_rain_mm": 2615,
+   "months": [
+    {
+     "month": 1,
+     "name": "Jan",
+     "avg_high_c": 28.2,
+     "avg_low_c": 25.1,
+     "rain_mm": 38,
+     "rain_days_1mm": 9.3,
+     "rain_mm_min": 5,
+     "rain_mm_max": 84,
+     "years": 10
+    },
+    {
+     "month": 2,
+     "name": "Feb",
+     "avg_high_c": 28.5,
+     "avg_low_c": 25.4,
+     "rain_mm": 38,
+     "rain_days_1mm": 9.7,
+     "rain_mm_min": 13,
+     "rain_mm_max": 96,
+     "years": 10
+    },
+    {
+     "month": 3,
+     "name": "Mar",
+     "avg_high_c": 29.0,
+     "avg_low_c": 26.3,
+     "rain_mm": 51,
+     "rain_days_1mm": 14.5,
+     "rain_mm_min": 20,
+     "rain_mm_max": 125,
+     "years": 10
+    },
+    {
+     "month": 4,
+     "name": "Apr",
+     "avg_high_c": 29.8,
+     "avg_low_c": 27.1,
+     "rain_mm": 107,
+     "rain_days_1mm": 18.5,
+     "rain_mm_min": 14,
+     "rain_mm_max": 222,
+     "years": 10
+    },
+    {
+     "month": 5,
+     "name": "May",
+     "avg_high_c": 29.6,
+     "avg_low_c": 27.0,
+     "rain_mm": 315,
+     "rain_days_1mm": 28,
+     "rain_mm_min": 138,
+     "rain_mm_max": 474,
+     "years": 10
+    },
+    {
+     "month": 6,
+     "name": "Jun",
+     "avg_high_c": 28.8,
+     "avg_low_c": 26.6,
+     "rain_mm": 310,
+     "rain_days_1mm": 24.8,
+     "rain_mm_min": 223,
+     "rain_mm_max": 410,
+     "years": 10
+    },
+    {
+     "month": 7,
+     "name": "Jul",
+     "avg_high_c": 28.3,
+     "avg_low_c": 26.2,
+     "rain_mm": 428,
+     "rain_days_1mm": 28.1,
+     "rain_mm_min": 235,
+     "rain_mm_max": 665,
+     "years": 10
+    },
+    {
+     "month": 8,
+     "name": "Aug",
+     "avg_high_c": 28.1,
+     "avg_low_c": 26.1,
+     "rain_mm": 375,
+     "rain_days_1mm": 27.3,
+     "rain_mm_min": 282,
+     "rain_mm_max": 565,
+     "years": 10
+    },
+    {
+     "month": 9,
+     "name": "Sep",
+     "avg_high_c": 27.9,
+     "avg_low_c": 25.8,
+     "rain_mm": 412,
+     "rain_days_1mm": 26.4,
+     "rain_mm_min": 341,
+     "rain_mm_max": 531,
+     "years": 10
+    },
+    {
+     "month": 10,
+     "name": "Oct",
+     "avg_high_c": 28.2,
+     "avg_low_c": 25.6,
+     "rain_mm": 344,
+     "rain_days_1mm": 27.5,
+     "rain_mm_min": 165,
+     "rain_mm_max": 606,
+     "years": 10
+    },
+    {
+     "month": 11,
+     "name": "Nov",
+     "avg_high_c": 28.6,
+     "avg_low_c": 25.8,
+     "rain_mm": 138,
+     "rain_days_1mm": 18.5,
+     "rain_mm_min": 70,
+     "rain_mm_max": 253,
+     "years": 10
+    },
+    {
+     "month": 12,
+     "name": "Dec",
+     "avg_high_c": 28.4,
+     "avg_low_c": 25.4,
+     "rain_mm": 59,
+     "rain_days_1mm": 9.6,
+     "rain_mm_min": 10,
+     "rain_mm_max": 100,
+     "years": 10
+    }
+   ],
+   "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=10.2899&longitude=103.984&start_date=2016-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=auto&models=era5_seamless&cell_selection=land",
+   "fetched": "2026-10-17T09:04:53+0530",
+   "quality": "unvalidated: no official station table checked; the Singapore check suggests tropical coastal highs may read 1-3 C low",
+   "show_rain_on_site": true
+  }
+ ]
+}
