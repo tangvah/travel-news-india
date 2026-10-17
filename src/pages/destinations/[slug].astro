@@ -1,23 +1,30 @@
 ---
 import Base from '../../layouts/Base.astro'; import List from '../../components/List.astro'; import Flag from '../../components/Flag.astro';
-import { allNews } from '../../lib'; import { DESTINATIONS } from '../../site.config.mjs';
+import { allNews, u } from '../../lib';
+import WhenToGo from '../../components/WhenToGo.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { DEST_TO_SEASON, seasonCountry, answer } from '../../seasons'; import { DESTINATIONS } from '../../site.config.mjs';
 export function getStaticPaths() { return DESTINATIONS.map((d) => ({ params: { slug: d.slug }, props: { d } })); }
 const { d } = Astro.props;
 const items = (await allNews()).filter((e) => e.data.destinations.includes(d.slug));
+const sid = DEST_TO_SEASON[d.slug]; const sc = sid && seasonCountry(sid);
+const desc = sc ? `${d.name} travel news for Indian travellers and agents. ${answer(sc, d.name).best}` : `Latest travel and trade news on ${d.name} for Indian travellers and travel agents.`;
 ---
-<Base title={`${d.name} travel news`} description={`Latest travel and trade news on ${d.name} for Indian travellers and travel agents.`}>
+<Base title={`${d.name} travel news`} description={desc.length > 300 ? desc.slice(0, 297) + '…' : desc}>
 <section class="hero" style={`--hero:${d.hero}`}><div class="wrap">
+  <div class="crumbs-hero"><Breadcrumbs items={[{ name: 'Destinations', href: u('/destinations/') }, { name: d.name, href: u(`/destinations/${d.slug}/`) }]} /></div>
   <p class="eyebrow">Destination</p>
   <h1><Flag code={d.flag} size={48} />{d.name}</h1>
   <p>Visa, flight and trade news on {d.name} for Indian travellers and the Indian travel trade.</p>
 </div></section>
 <div class="wrap">
+  {sid && <WhenToGo seasonId={sid} name={d.name} />}
+  <section class="section" aria-labelledby="l-h"><div class="section-head"><h2 id="l-h">Latest on {d.name}</h2></div>
+    <List items={items} empty={`No ${d.name} stories yet.`} /></section>
   <section class="section ph" aria-labelledby="facts-h">
     <h2 id="facts-h" style="font-size:1.2rem">Quick facts <span class="soon">Coming soon</span></h2>
     <p class="meta" style="margin:0">Not yet verified. The Travel News Desk will fill these in from official sources.</p>
-    <ul class="facts"><li><b>Visa for Indian passports</b>Coming soon</li><li><b>Currency</b>Coming soon</li><li><b>Best time to visit</b>Coming soon</li></ul>
+    <ul class="facts"><li><b>Visa for Indian passports</b>Coming soon</li><li><b>Currency</b>Coming soon</li></ul>
   </section>
-  <section class="section" aria-labelledby="l-h"><div class="section-head"><h2 id="l-h">Latest on {d.name}</h2></div>
-    <List items={items} empty={`No ${d.name} stories yet.`} /></section>
 </div>
 </Base>

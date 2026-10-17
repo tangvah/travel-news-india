@@ -5,7 +5,7 @@ summary: "Indians are not eligible for K-ETA and need a sticker visa for South K
 author: "Travel News Desk"
 category: visas-policy
 destinations: [south-korea]
-tags: [visa, policy, k-eta, jeju, group-visa]
+tags: [visa, policy, k-eta, jeju, group-visa, south-korea]
 draft: false
 verified: true
 sources:

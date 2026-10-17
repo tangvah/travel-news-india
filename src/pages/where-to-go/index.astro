@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SeasonStrip from '../../components/SeasonStrip.astro';
+import WeatherCredit from '../../components/WeatherCredit.astro';
+import { u } from '../../lib';
+import { MONTHS, monthSlug, nextYear, regionsIn, peaksIn, COUNTRIES, destForSeason } from '../../seasons';
+const months = MONTHS.map((m, i) => ({ m, i, best: regionsIn(i, 'best').map((x) => x.c.country), peaks: peaksIn(i) }));
+---
+<Base title="Where to go: best countries to visit from India, month by month" description="Month-by-month guide to the best countries to visit from India: weather ratings by region from met services and tourism boards, India peak dates, visa and flight links.">
+<div class="wrap section wtm">
+  <Breadcrumbs items={[{ name: 'Where to go', href: u('/where-to-go/') }]} />
+  <h1>Where to go, month by month</h1>
+  <p class="standfirst">The best countries to visit from India in each month, with weather ratings by region from national met services and tourism boards.</p>
+  <ul class="wtm-months">{months.map(({ m, i, best, peaks }) => (
+    <li><a href={u(`/where-to-go/${monthSlug(i)}/`)}><b>{m} {nextYear(i)}</b><span>{best.length ? `Best: ${best.join(', ')}` : 'No destination rated best'}</span>{peaks.length > 0 && <span class="wtm-mpk">{peaks.map((p) => <span class={`pk pk-${p.key}`}>{p.short}</span>)}</span>}</a></li>))}</ul>
+  <h2 class="wtm-yh">The year at a glance</h2>
+  {COUNTRIES.map((c, i) => { const d = destForSeason(c.id); return (
+    <div class="wtm-year"><h3>{d ? <a href={u(`/destinations/${d}/#when-to-go`)}>{c.country}</a> : c.country}</h3><SeasonStrip country={c} id={`yr-${c.id}`} caption={`${c.country}: best, okay and avoid months`} legend={i === COUNTRIES.length - 1} /></div>); })}
+  <WeatherCredit sources={[...new Set(COUNTRIES.flatMap((c) => c.sources))]} />
+</div>
+</Base>

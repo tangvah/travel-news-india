@@ -1,0 +1,21 @@
+---
+// 12-month best/okay/avoid table. Every cell carries a text label + icon; colour and pattern are extras.
+import { u } from '../lib';
+import { MONTHS, MON, RATING_LABEL, RATING_ICON, monthSlug, peaksIn } from '../seasons';
+const { country, id, caption, highlight = -1, legend = true } = Astro.props;
+---
+<div class="ss-wrap" role="region" aria-labelledby={`${id}-cap`} tabindex="0">
+<table class="ss"><colgroup><col class="ss-rc" /><col span="12" /></colgroup>
+  <caption id={`${id}-cap`}>{caption ?? `${country.country}: month-by-month travel weather`}</caption>
+  <thead>
+    <tr><th scope="col" class="ss-rh">Region</th>{MON.map((m, i) => <th scope="col" class:list={[{ 'ss-hl': i === highlight }]}><a href={u(`/where-to-go/${monthSlug(i)}/`)}><abbr title={MONTHS[i]}>{m}</abbr></a></th>)}</tr>
+    <tr class="ss-peaks"><th scope="row" class="ss-rh">India peak</th>{MON.map((_, i) => { const p = peaksIn(i); return <td>{p.map((x) => <span class={`pk pk-${x.key}`} title={x.label}>{x.short}</span>)}</td>; })}</tr>
+  </thead>
+  <tbody>
+    {country.regions.map((r) => (
+      <tr><th scope="row" class="ss-rh">{r.name}</th>{r.months.map((m, i) => <td class:list={[`ss-c sr-${m}`, { 'ss-hl': i === highlight }]} title={`${r.name}, ${MONTHS[i]}: ${RATING_LABEL[m]}`}><span aria-hidden="true">{RATING_ICON[m]}</span> {RATING_LABEL[m]}</td>)}</tr>))}
+  </tbody>
+</table>
+</div>
+<p class="ss-hint meta" aria-hidden="true">Swipe the table sideways to see all 12 months →</p>
+{legend && <p class="ss-legend meta"><span class="ss-key sr-best"><span aria-hidden="true">✓</span> Best</span> most reliable weather · <span class="ss-key sr-okay"><span aria-hidden="true">~</span> Okay</span> visitable, with trade-offs · <span class="ss-key sr-avoid"><span aria-hidden="true">✕</span> Avoid</span> monsoon, storms, heat or disruption (often cheaper). The split between best and okay is <strong>editorial guidance</strong> based on the met-service and tourism-board sources below.</p>}

@@ -94,7 +94,7 @@ document.addEventListener('astro:page-load',sortable);
   <div class="masthead">
     <div class="wrap">
       <div class="mast-row">
-        <a class="brand brand-v2" href={u("/")} aria-label={`${SITE.name}, home`}><Logo size={46} /><span class="bt"><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></span></a>
+        <a class="brand brand-v2" href={u("/")}><Logo size={46} /><span class="bt"><b>India Outbound <span>Travel</span> News<span class="sr-only"> (home)</span></b><small>{today} · {SITE.tagline}</small></span></a>
         <TrackerTabs path={path} />
         <div class="mast-tools">
           <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -105,7 +105,7 @@ document.addEventListener('astro:page-load',sortable);
               <div class="menu-home"><a href={u("/")} aria-current={cur(u('/'))}><span aria-hidden="true">⌂</span> Home</a></div>
               <div><strong class="eyebrow">Trackers</strong><ul>{TOOLS.map((t) => <li><a href={u(t.href)} aria-current={cur(u(t.href))}>{t.name}</a></li>)}</ul></div>
               <div><strong class="eyebrow">Sections</strong><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
-              <div><strong class="eyebrow">Destinations</strong><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}><Flag code={d.flag} size={22} />{d.name}</a></li>)}</ul></div>
+              <div><strong class="eyebrow">Destinations</strong><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}><Flag code={d.flag} size={22} />{d.name}</a></li>)}<li><a href={u("/where-to-go/")}><span aria-hidden="true">☼</span> When to go</a></li></ul></div>
               <div><strong class="eyebrow">Site</strong><ul><li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li></ul></div>
             </nav>
           </details>
@@ -122,10 +122,10 @@ document.addEventListener('astro:page-load',sortable);
       {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
     </nav>
     <details class="nav-dd">
-      <summary class:list={[{ on: path.includes('/destinations/') }]}>Destinations <span class="caret" aria-hidden="true"></span></summary>
+      <summary class:list={[{ on: path.includes('/destinations/') || path.includes('/where-to-go/') }]}>Destinations <span class="caret" aria-hidden="true"></span></summary>
       <nav class="dd-panel" aria-label="Destinations">
         <ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)} aria-current={cur(u(`/destinations/${d.slug}/`))}><Flag code={d.flag} size={21} />{d.name}</a></li>)}</ul>
-        <a class="dd-all" href={u("/destinations/")}>All destinations</a>
+        <div class="dd-foot"><a class="dd-all" href={u("/destinations/")}>All destinations</a><a class="dd-all" href={u("/where-to-go/")} aria-current={cur(u('/where-to-go/'))}>When to go, by month</a></div>
       </nav>
     </details>
     <TrackerTabs path={path} variant="bar" />
@@ -138,7 +138,7 @@ document.addEventListener('astro:page-load',sortable);
       <div><p class="brand" style="margin:0"><b style="font-size:1.3rem">India Outbound <span>Travel</span> News</b></p><p class="meta">{SITE.tagline}.</p></div>
       <div><h2>Sections</h2><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
       <div><h2>Destinations</h2><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}>{d.name}</a></li>)}</ul></div>
-      <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/newsletter/")}>Newsletter</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
+      <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/where-to-go/")}>When to go, by month</a></li><li><a href={u("/newsletter/")}>Newsletter</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
     </div>
     <p class="legal"><a class="to-top" href="#top"><span aria-hidden="true">↑</span> Back to top</a>© {new Date().getFullYear()} {SITE.name}. Fonts: Sora &amp; Inter Tight (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
   </div>
