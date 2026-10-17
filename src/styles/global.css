@@ -318,3 +318,34 @@ html.js .theme-toggle{display:inline-flex}
 .tc-links b{color:var(--accent)}
 .vt[id],.ro[id]{scroll-margin-top:var(--s5)}
 .vt:target,.ro:target{outline:3px solid var(--accent);outline-offset:2px}
+/* Tracker tabs: distinctive pills in the masthead, + segmented switch on tracker pages */
+.ttabs{display:flex;gap:8px;align-items:center}
+.ttabs-header{margin-left:auto;padding-left:var(--s3);border-left:1px solid var(--line)}
+.ttab{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:6px 14px 6px 12px;border:1.5px solid var(--accent);border-radius:999px;color:var(--accent);background:transparent;text-decoration:none;font:700 .9rem/1.1 var(--font-sans);white-space:nowrap;transition:background .15s,color .15s}
+.ttab svg{flex:none}
+.ttab:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.ttab[aria-current=page]{background:var(--accent);color:var(--accent-ink)}
+.ttab-live{display:inline-flex;align-items:center;gap:4px;font-size:.68rem;font-weight:700;letter-spacing:.02em;padding:2px 6px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.ttab[aria-current=page] .ttab-live{background:color-mix(in srgb,var(--accent-ink) 22%,transparent)}
+.ttab .dot{width:6px;height:6px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 2px color-mix(in srgb,#16a34a 30%,transparent)}
+[data-theme=dark] .ttab .dot{background:#4ade80}
+@media (prefers-reduced-motion:no-preference){.ttab .dot{animation:ttpulse 2.4s ease-in-out infinite}}
+@keyframes ttpulse{50%{opacity:.45}}
+.ttabs-switch{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;margin:0 0 var(--s5);max-width:520px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.ttabs-switch .ttab{justify-content:center;border-color:transparent}
+.ttabs-switch .ttab-live{display:none}
+@media (max-width:860px){
+  .mast-row{flex-wrap:wrap;row-gap:10px}
+  .ttabs-header{order:3;flex-basis:100%;margin:0;padding:0;border:0;display:grid;grid-template-columns:1fr 1fr}
+  .ttabs-header .ttab{justify-content:center;padding:6px 10px}
+  .ttab-l{display:none}
+}
+@media (max-width:360px){.ttab-live time{display:none}}
+.ttabs-header .ttab-n{display:none}
+.ttabs-switch .ttab-l{display:none}
+@media (max-width:860px){
+  .ttabs-header .ttab-n{display:inline}.ttabs-header .ttab-l{display:none}
+  .mast-row>.brand{flex:1 1 0;min-width:0}
+  .mast-tools{flex:none}
+}
+@media (max-width:480px){.menu summary{font-size:0;gap:0}.menu summary span{font-size:1.1rem}}

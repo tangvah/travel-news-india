@@ -8,6 +8,7 @@ import interTightLatin from '@fontsource-variable/inter-tight/files/inter-tight-
 import { ClientRouter } from 'astro:transitions';
 import Flag from '../components/Flag.astro';
 import Logo from '../components/Logo.astro';
+import TrackerTabs from '../components/TrackerTabs.astro';
 import { SITE, DESTINATIONS, CATEGORIES, TOOLS } from '../site.config.mjs';
 import { allNews } from '../lib';
 const { title, description = SITE.tagline, type = 'website', image, ogImage, jsonld, noindex = false } = Astro.props;
@@ -77,6 +78,7 @@ document.addEventListener('click',function(e){
     <div class="wrap">
       <div class="mast-row">
         <a class="brand brand-v2" href={u("/")}><Logo size={46} /><span class="bt"><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></span></a>
+        <TrackerTabs path={path} />
         <div class="mast-tools">
           <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
             <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>
@@ -93,7 +95,6 @@ document.addEventListener('click',function(e){
       </div>
       <nav class="nav-primary" aria-label="Sections">
         <a href={u("/")} aria-current={cur(u('/'))}>Latest</a>
-        {TOOLS.map((t) => <a class="tool" href={u(t.href)} aria-current={cur(u(t.href))}>{t.name}</a>)}
         {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
       </nav>
       <nav class="nav-dest" aria-label="Destinations">

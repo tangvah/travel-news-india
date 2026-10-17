@@ -1,0 +1,24 @@
+---
+import { u } from '../lib';
+import { visaUpdated, routesUpdated } from '../trackers';
+const { path = '', variant = 'header' } = Astro.props;
+const norm = (p: string) => p.replace(/\/?$/, '/');
+const short = (s: string | null) => (s ? new Date(s + 'T00:00:00+05:30').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' }) : '');
+const tabs = [
+  { href: u('/visa-tracker/'), name: 'Visa', long: 'Visa tracker', upd: visaUpdated, icon: 'passport' },
+  { href: u('/routes/'), name: 'Flights', long: 'Flight routes', upd: routesUpdated, icon: 'plane' },
+];
+---
+<nav class:list={['ttabs', `ttabs-${variant}`]} aria-label={variant === 'header' ? 'Trackers' : 'Switch tracker'}>
+  {tabs.map((t) => {
+    const on = norm(path) === norm(t.href);
+    return (
+    <a class="ttab" href={t.href} aria-current={on ? 'page' : undefined}>
+      {t.icon === 'passport'
+        ? <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M9 16.5h6"/></svg>
+        : <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V8.5l-8 5v2l8-2.5V18l-2.5 1.5V21L11.5 20l4 1v-1.5L13 18v-5z" transform="translate(.5 0)"/></svg>}
+      <span class="ttab-t"><span class="ttab-n">{t.name}</span><span class="ttab-l">{t.long}</span></span>
+      <span class="ttab-live"><span class="dot" aria-hidden="true"></span><span class="sr-only">Updated </span><time datetime={t.upd}>{short(t.upd)}</time></span>
+    </a>);
+  })}
+</nav>
