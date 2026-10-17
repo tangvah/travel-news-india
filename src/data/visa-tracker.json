@@ -301,5 +301,42 @@
     "verified": true,
     "notes": "Visa-free status and 'No limit' from India's MEA visa-free table ('Nepal | No limit'); ID documents from the Embassy of India, Kathmandu. Nepal's Department of Immigration pages (information-for-indian-nationals-11, arrival-departure-information-1, tia arrival-information) returned the site's 404 page via fetch and timed out via curl, so Nepal-side wording was not read today. The Embassy of Nepal, New Delhi homepage loaded but has no visa/ID text for Indians.",
     "last_checked": "2026-10-17"
+  },
+  {
+    "id": "south-korea",
+    "destination": "South Korea",
+    "passport_type": "ordinary",
+    "purpose": "tourism",
+    "rule_type": "visa_required",
+    "max_stay": "Up to 90 days (C-3-9 tourist visa; single-entry visa valid 90 days from issue per KVAC). Jeju only: up to 30 days visa-free on direct arrival",
+    "fee": {
+      "amount": 3600,
+      "currency": "INR",
+      "applies_to": "Single entry up to 90 days, from 1 Aug 2026 (Rs 5,400 single entry over 90 days; Rs 8,100 multiple entry). KVAC service charge Rs 1,600 plus optional courier Rs 550 extra. USD 15 group visa fee waived for Indian group tourists to 31 Dec 2026"
+    },
+    "effective_date": null,
+    "key_conditions": [
+      "India is not eligible for K-ETA; a visa (sticker) from a Korean mission is required",
+      "Fill in the e-form on the Korea Visa Portal (visa.go.kr), print and sign it, and submit it with documents via KVAC (VFS) or the relevant consulate",
+      "C-3-9 checklist (Mumbai consulate, w.e.f. 24 Aug 2026): passport valid 6+ months with 2 blank pages, 3.5 x 4.5 cm photo, Aadhaar (and PAN if applicable), covering letter, day-by-day itinerary, refundable hotel booking and e-ticket, 2 years' ITRs, 6 months' bank statements with bank seal, employment certificate with company seal or business registration/GST",
+      "Processing: Mumbai consulate says visas are 'generally issued within 10 days'; KVAC lists New Delhi 15 and Kolkata 17 working days minimum (indicative); first-time tourist applicants not eligible for express service (Mumbai)",
+      "Jeju visa-free (B-2, up to 30 days) only on direct arrival by flight or ferry without entering mainland Korea; India is not among the 23 excluded nationalities"
+    ],
+    "quote": "India is not eligible for K-ETA. All Indian nationals must obtain a visa through the Korean diplomatic mission.",
+    "sources": [
+      "https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=759211",
+      "https://overseas.mofa.go.kr/in-en/brd/m_20446/view.do?page=1&seq=748829",
+      "https://www.visaforkorea-id.com/",
+      "https://www.visaforkorea-id.com/visa-type.html",
+      "https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?page=1&seq=717617",
+      "https://overseas.mofa.go.kr/in-chennai-en/brd/m_2785/view.do?seq=750165",
+      "https://www.visa.go.kr/openPage.do?MENU_ID=10204",
+      "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=1591587",
+      "https://overseas.mofa.go.kr/sg-en/brd/m_2435/view.do?page=1&seq=761394",
+      "https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=759205"
+    ],
+    "verified": true,
+    "notes": "Fees read from the Embassy in New Delhi's notice image (signed by the Visa Consul, 13 July 2026; posted 10 Jul 2026): 'The revised fees for Korean Visa are as mentioned below with effect from 01 Aug. 2026.' The 'Group Visa' line has no amount. KVAC India (Embassy's 'official partner') shows the same figures. The older KVAC C-3-9 checklist PDF (Nov 2024) still shows Rs 3,200 / 7,200 and a Rs 1,380 service charge, so it is out of date. The group fee waiver comes from VISITKOREA (KTO), 7 Jul 2026, citing the Ministry of Justice; not seen on an Embassy page. The Jeju exclusion list (23 countries, including Bangladesh, Nepal, Pakistan and Sri Lanka but not India) comes from the Korean Embassy in Singapore (2 Jan 2026); the Mumbai consulate's Jeju notice gives India-specific routing examples but no exclusion list. Not found on a Jeju provincial government or immigration.go.kr page today. The New Delhi KVAC is at Shivaji Stadium Metro Station, Mezzanine Level, Baba Kharak Singh Marg, Connaught Place, New Delhi 110001 (KVAC site); its reported opening on 15 Sep 2026 (news, VFS LinkedIn) is unverified on an official page.",
+    "last_checked": "2026-10-17"
   }
 ]

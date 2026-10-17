@@ -765,5 +765,75 @@
     "verified": true,
     "notes": "Foreign carrier resuming service to India (UAE). Status set to operating because the announced start date (16 Oct 2026) has passed; the first flight itself was not independently confirmed. Flight numbers/schedule not in the release.",
     "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-icn",
+    "origin": {
+      "city": "Delhi",
+      "iata": "DEL"
+    },
+    "destination": {
+      "city": "Seoul (Incheon)",
+      "iata": "ICN"
+    },
+    "airline": "Air India",
+    "frequency": "6 weekly (up from 5 weekly)",
+    "aircraft": "not stated",
+    "start_date": "2026-03-29",
+    "status": "operating",
+    "announcement_date": "2026-02-16",
+    "quote": "Starting 29 March, Delhi-Seoul (Incheon) frequency increases from 5x weekly to 6x weekly",
+    "sources": [
+      {
+        "name": "Air India press release: Air India upgrades product and customer experience on more international routes this summer (16 Feb 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-upgrades-product-and-customer-experience-on-more-international-routes-this-summer.html"
+      },
+      {
+        "name": "Air India press note PDF (16 Feb 2026)",
+        "url": "https://www.airindia.com/content/dam/air-india/newsroom/press-releases/pdf/Press-Note-Air-India-Product-Deployment-Updates-NSS26-16Feb26.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "Frequency increase on an existing route, not a new route; added for South Korea coverage. The release covers Northern Summer Schedule 2026. No Air India release on the winter 2026 (from 25 Oct) Delhi–Seoul frequency was found, so the 6 weekly figure is confirmed only from 29 Mar 2026. Air India's Delhi–Seoul booking page says '1 daily flight' with '*daily frequency varies' and lists AI 312 departing 00:05. AeroRoutes (lead) reports a 787-8 and an effective date of 1 Apr 2026. KTO New Delhi's static page still shows 4 weekly, which is out of date. Status set to operating because the start date has passed; operations were not independently confirmed.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "korean-air-del-icn",
+    "origin": {
+      "city": "Delhi",
+      "iata": "DEL"
+    },
+    "destination": {
+      "city": "Seoul (Incheon)",
+      "iata": "ICN"
+    },
+    "airline": "Korean Air",
+    "frequency": "daily (up from 5 weekly) per trade press; KE498 DEL 19:50–ICN 06:05+1, KE497 ICN 12:45–DEL 18:20 (unverified)",
+    "aircraft": "Boeing 787 (per trade press; unverified)",
+    "start_date": "2026-10-27",
+    "status": "announced",
+    "announcement_date": "unverified (Korean trade press 7 Jul 2026; Indian trade press 25–26 Aug 2026)",
+    "quote": "UNVERIFIED – per Travel Trade Journal, Travel Daily Media and The Guru; no Korean Air release found",
+    "sources": [
+      {
+        "name": "Travel Trade Journal, 25 Aug 2026 (lead)",
+        "url": "https://traveltradejournal.com/korean-air-to-increase-delhi-seoul-flights-to-daily-from-october-27/"
+      },
+      {
+        "name": "Travel Daily Media, 26 Aug 2026 (lead; says adapted from official press releases)",
+        "url": "https://www.traveldailymedia.com/korean-air-increases-delhi-seoul-flights-to-daily/"
+      },
+      {
+        "name": "The Guru (Korean), 7 Jul 2026 (lead)",
+        "url": "https://www.theguru.co.kr/news/article.html?no=104031"
+      },
+      {
+        "name": "Korean Air: Delhi to Seoul fares page (official site, not a release)",
+        "url": "https://www.koreanair.com/flights/en/flights-from-delhi-to-seoul"
+      }
+    ],
+    "verified": false,
+    "notes": "Frequency increase on an existing route. No Korean Air press release found: news.koreanair.com searches for Delhi/India/winter schedule return nothing for 2026, and koreanair.com newsroom/notice pages return 403 to curl and 500 to fetch. Supporting but not conclusive: on 17 Oct, Korean Air's Delhi–Seoul fares calendar shows fares for every date from 27 Oct onward but 'Find Offers' (no fare) on some earlier dates (17, 20, 21, 24 Oct), consistent with 5 weekly before and daily after. Trade press says the winter schedule runs to 25 Mar 2027. KTO New Delhi's static page lists Korean Air Delhi–Incheon as 'Daily' (19:30–05:50+1) but is undated and partly out of date.",
+    "last_checked": "2026-10-17"
   }
 ]

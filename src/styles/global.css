@@ -128,7 +128,7 @@ html.js .theme-toggle{display:inline-flex}
 .side-list a{color:var(--ink);text-decoration:none;font:600 1.05rem/1.35 var(--font-serif)}.side-list a:hover{text-decoration:underline}
 
 /* ===== Destination cards ===== */
-.dest-grid{display:grid;gap:var(--s3);grid-template-columns:repeat(2,1fr)}@media(min-width:640px){.dest-grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:1100px){.dest-grid{grid-template-columns:repeat(8,1fr)}}
+.dest-grid{display:grid;gap:var(--s3);grid-template-columns:repeat(2,1fr)}@media(min-width:640px){.dest-grid{grid-template-columns:repeat(4,1fr)}}@media(min-width:1100px){.dest-grid{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}}
 .dest-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:var(--s4);min-height:130px;padding:var(--s4);border-radius:var(--r2);color:#fff;text-decoration:none;background:var(--hero);overflow:hidden}
 .dest-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.45))}
 .dest-card>*{position:relative}
@@ -502,3 +502,5 @@ th[aria-sort=descending] .sort-ic::after{content:"▼";opacity:1;color:var(--acc
 @media (min-width:1024px){.crumbs li:last-child span{max-width:60ch}}
 .menu-panel .menu-home a{font-weight:700;border-bottom:1px solid var(--line);padding-bottom:4px}
 .menu-panel a[aria-current=page]{color:var(--accent);font-weight:700}
+.rs-operating{background:var(--ok-bg);color:var(--ok)}
+.rt tbody tr:last-child th{border-bottom:0}
