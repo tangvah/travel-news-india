@@ -33,6 +33,9 @@ export const TOOLS = [
 // Preview mode: SHOW_DRAFTS=1 includes draft: true articles (badged + noindex).
 export const SHOW_DRAFTS = process.env.SHOW_DRAFTS === '1';
 
+// GoatCounter site code (subdomain). Leave empty until you have an account; empty emits no script (safe to merge early).
+export const GOATCOUNTER_CODE = 'athem';
+
 // Newsletter sign-up. No email provider is connected, so the form shows "Coming soon" and collects nothing.
 // To go live later with a free provider, set `provider` and `action` (the form's POST URL from the provider's
 // embed code), e.g. Buttondown: action 'https://buttondown.com/api/emails/embed-subscribe/<username>', emailField 'email'.

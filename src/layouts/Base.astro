@@ -9,12 +9,12 @@ import { ClientRouter } from 'astro:transitions';
 import Flag from '../components/Flag.astro';
 import Logo from '../components/Logo.astro';
 import TrackerTabs from '../components/TrackerTabs.astro';
-import { SITE, DESTINATIONS, CATEGORIES, TOOLS } from '../site.config.mjs';
+import { SITE, DESTINATIONS, CATEGORIES, TOOLS, SHOW_DRAFTS, GOATCOUNTER_CODE } from '../site.config.mjs';
 import { allNews } from '../lib';
 const { title, description = SITE.tagline, type = 'website', image, ogImage, jsonld, noindex = false } = Astro.props;
 const og = ogImage ?? new URL(u(image || '/og-default.png'), Astro.site).href;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name}: ${SITE.tagline}`;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site);
 const path = Astro.url.pathname;
 const norm = (p: string) => p.replace(/\/?$/, '/');
 const cur = (href: string) => (norm(path) === norm(href) ? 'page' : undefined);
@@ -62,6 +62,9 @@ document.addEventListener('click',function(e){
 <meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={description} />
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 <ClientRouter />
+{GOATCOUNTER_CODE && !SHOW_DRAFTS && (
+<script is:inline data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`} async src="//gc.zgo.at/count.js"></script>
+)}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
