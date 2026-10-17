@@ -5,7 +5,7 @@ import Base from '../../layouts/Base.astro'; import Flag from '../../components/
 import { u } from '../../lib';
 import { routesUpdated, monthYear, dayLong } from '../../trackers';
 import { SITE } from '../../site.config.mjs';
-import { routes, statusLabel, show, day, slugify, place } from '../../routes-data';
+import { routes, statusLabel, show, day, slugify, place, established, establishedChecked, freq, NP } from '../../routes-data';
 const uniq = (a: string[]) => [...new Set(a)].sort();
 const countries = uniq(routes.map((r) => r.country));
 const airlines = uniq(routes.map((r) => r.airline));
@@ -15,15 +15,24 @@ const label = (k: string, v: string) => (k === 's' ? statusLabel(v) : v);
 // No-JS filters: radio groups + :has(). Each group hides rows that don't match; groups combine (AND).
 const css = F.flatMap(([k, , vals]) => vals.map((v) => `.rtk:has(input[name=f${k}][value="${slugify(v)}"]:checked) .ro:not([data-${k}="${slugify(v)}"]){display:none}`)).join('')
 ;
+// Established routes: same no-JS pattern with <select>s (country, origin city); groups (mobile) hide when they have no matching row.
+const eCountries = uniq(established.map((r) => r.country));
+const eOrigins = uniq(established.map((r) => r.origin_city));
+const EF = [['c', 'Country', eCountries], ['o', 'From (city)', eOrigins]] as const;
+const ecss = EF.flatMap(([k, , vals]) => vals.map((v) => `.rtk:has(select[name=e${k}] option[value="${slugify(v)}"]:checked) .er:not([data-${k}="${slugify(v)}"]),.rtk:has(select[name=e${k}] option[value="${slugify(v)}"]:checked) .erg:not(:has(.er[data-${k}="${slugify(v)}"])){display:none}`)).join('');
+const groups = eCountries.map((c) => ({ country: c, flag: established.find((r) => r.country === c)?.flag ?? null, rows: established.filter((r) => r.country === c) }));
+const plural = (n: number, w: string) => `${n} ${w}${n === 1 ? '' : 's'}`;
 const title = `New flights from India: latest international routes (${monthYear(routesUpdated)})`;
-const description = `${routes.length} new and announced international flights from India: start dates, frequency, aircraft and official airline sources. Last updated ${dayLong(routesUpdated)}.`;
+const description = `${routes.length} new and announced international flights from India (start dates, frequency, sources) plus ${established.length} established routes to ${eCountries.length} countries. Updated ${dayLong(routesUpdated)}.`;
 const pageUrl = new URL(u('/routes/'), SITE.url).href;
 const jsonld = { '@context': 'https://schema.org', '@graph': [
-  { '@type': 'Dataset', name: 'New international flight routes from India', description, url: pageUrl, dateModified: routesUpdated, inLanguage: 'en-IN',
+  { '@type': 'Dataset', name: 'International flight routes from India: new, announced and established', description, url: pageUrl, dateModified: routesUpdated, inLanguage: 'en-IN',
     creator: { '@type': 'Organization', name: SITE.name }, isAccessibleForFree: true,
     distribution: [{ '@type': 'DataDownload', encodingFormat: 'text/csv', contentUrl: new URL(u('/routes.csv'), SITE.url).href }] },
   { '@type': 'ItemList', name: 'New routes from India', numberOfItems: routes.length,
     itemListElement: routes.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: `${place(r.origin)} to ${place(r.destination)}, ${r.airline}`, url: `${pageUrl}#${r.id}` })) },
+  { '@type': 'ItemList', name: 'Established routes from India (currently operating)', numberOfItems: established.length,
+    itemListElement: established.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: `${place(r.origin)} to ${place(r.destination)}, ${r.airline}`, url: `${pageUrl}#${r.id}` })) },
 ] };
 const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
 ---
@@ -33,8 +42,10 @@ const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
   <TrackerTabs path={Astro.url.pathname} variant="switch" />
   <h1>Flight routes tracker</h1>
   <p class="standfirst">New and announced international routes from India, for travel agents. Every row is checked against an official airline source.</p>
+  <p class="rt-counts"><a href="#new-routes"><strong>{routes.length} new &amp; announced {routes.length === 1 ? 'route' : 'routes'}</strong></a> · <a href="#established">{plural(established.length, 'established route')} currently operating</a></p>
   <p class="meta">Maintained by the Travel News Desk. Sorted by start date, soonest first. <strong>Last updated <time datetime={routesUpdated}>{dayLong(routesUpdated)}</time></strong>. Always confirm schedules with the airline before ticketing.</p>
-  <p><a class="btn" href={u('/routes.csv')} download="india-routes-tracker.csv">Download CSV<span class="sr-only"> of all routes</span></a></p>
+  <p><a class="btn" href={u('/routes.csv')} download="india-routes-tracker.csv">Download CSV<span class="sr-only"> of all routes, new and established</span></a></p>
+  <h2 id="new-routes" class="rt-h">New &amp; announced routes</h2>
   <form class="rt-filters" aria-label="Filter routes" onsubmit="return false">
     {F.map(([k, name, vals]) => (
       <fieldset class="seg"><legend>{name}</legend>
@@ -78,9 +89,46 @@ const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
       <p class="meta">Checked {day(r.last_checked)}{art(r.related_article) && <> · <a href={art(r.related_article)!}>Read the story<span class="sr-only"> about {r.origin.city} to {r.destination.city}</span></a></>}</p>
     </li>))}</ul>
   <p class="meta">Only rows verified against an official source are shown. Missing details read “Not stated”. Spotted a change? The Desk updates this tracker from airline releases.</p>
+
+  <section class="ert" aria-labelledby="established">
+    <h2 id="established" class="rt-h">Established routes (currently operating)</h2>
+    <p>{plural(established.length, 'route')} from {eOrigins.length} Indian cities to {eCountries.length} countries that airlines operate today, for reference when quoting. Routes listed above as new are not repeated here.</p>
+    <p class="meta ert-note"><strong>Schedules may change with the winter schedule from 25 Oct 2026.</strong> Last checked <time datetime={establishedChecked}>{dayLong(establishedChecked)}</time>. Frequency reads “{NP}” where the airline does not publish a per-route figure.</p>
+    <form class="rt-filters ert-filters" aria-label="Filter established routes" onsubmit="return false">
+      {EF.map(([k, name, vals]) => (
+        <label class="ert-sel"><span>{name}</span><select name={`e${k}`}><option value="all" selected>All</option>{vals.map((v) => <option value={slugify(v)}>{v}</option>)}</select></label>))}
+    </form>
+    <div class="table-wrap rt-desk" role="region" aria-label="Established routes table" tabindex="0"><table class="rt ert-t" data-sortable>
+      <caption class="sr-only">Established routes from India, grouped by destination country then origin city. Column headers sort the table.</caption>
+      <thead><tr><th scope="col">From</th><th scope="col">To</th><th scope="col" data-sort-default="ascending">Country</th><th scope="col">Airline</th><th scope="col">Frequency</th><th scope="col" data-nosort>Source</th></tr></thead>
+      <tbody>{established.map((r) => (
+        <tr class="er" id={`row-${r.id}`} data-c={slugify(r.country)} data-o={slugify(r.origin_city)}>
+          <th scope="row" data-sort={r.origin_city.toLowerCase()}>{place(r.origin)}</th>
+          <td data-sort={r.destination_city.toLowerCase()}>{place(r.destination)}</td>
+          <td data-sort={`${r.country} ${r.origin_city} ${r.destination_city}`.toLowerCase()}><span class="rt-route">{r.flag && <Flag code={r.flag} size={18} />}{r.country}</span></td>
+          <td>{r.airline}</td>
+          <td data-sort={r.frequency ? r.frequency.toLowerCase() : ''}>{r.frequency ? r.frequency : <span class="meta">{NP}</span>}</td>
+          <td>{r.sources.map((s, i) => <>{i > 0 && <br />}<a href={s.url} rel="noopener">{s.name}</a></>)}</td>
+        </tr>))}</tbody>
+    </table><p class="sr-only sort-status" role="status" aria-live="polite"></p></div>
+
+    <div class="ert-groups">{groups.map((g) => (
+      <details class="erg" data-c={slugify(g.country)}>
+        <summary><span class="rt-route">{g.flag && <Flag code={g.flag} size={20} />}{g.country}</span><span class="meta erg-n">{plural(g.rows.length, 'route')}</span></summary>
+        <ul class="ert-list" role="list">{g.rows.map((r) => (
+          <li class="er" id={r.id} data-c={slugify(r.country)} data-o={slugify(r.origin_city)}>
+            <strong>{place(r.origin)} → {place(r.destination)}</strong>
+            <span>{r.airline} · {freq(r.frequency)}</span>
+            <span class="meta">Source: {r.sources.map((s, i) => <>{i > 0 && ' · '}<a href={s.url} rel="noopener">{s.name}</a></>)}</span>
+          </li>))}</ul>
+      </details>))}</div>
+    <p class="meta">Only routes verified against an official source are shown. Always confirm schedules with the airline before ticketing.</p>
+  </section>
 </div>
-<style set:html={css}></style>
+<style set:html={css + ecss}></style>
 <script is:inline>
-(function(){function go(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var c=document.getElementById(h);if(c&&!c.offsetParent){var r=document.getElementById('row-'+h);if(r)r.scrollIntoView()}}go();document.addEventListener('astro:page-load',go);})();
+(function(){function go(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var c=document.getElementById(h);if(!c)return;var d=c.closest('details');if(d&&getComputedStyle(d).display!=='none'){d.open=true;c.scrollIntoView();return}if(!c.offsetParent){var r=document.getElementById('row-'+h);if(r)r.scrollIntoView()}}go();document.addEventListener('astro:page-load',go);
+/* Established filters: open the matching country groups (mobile) when a filter is chosen. */
+document.addEventListener('change',function(e){var s=e.target;if(!s.closest||!s.closest('.ert-filters'))return;var on=[].some.call(document.querySelectorAll('.ert-filters select'),function(x){return x.value!=='all'});document.querySelectorAll('.erg').forEach(function(d){d.open=on;var n=[].filter.call(d.querySelectorAll('li.er'),function(li){return getComputedStyle(li).display!=='none'}).length,c=d.querySelector('.erg-n');if(c)c.textContent=n+(n===1?' route':' routes')})});})();
 </script>
 </Base>

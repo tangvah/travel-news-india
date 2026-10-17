@@ -1,0 +1,2734 @@
+[
+  {
+    "id": "emirates-amd-dxb",
+    "category": "established",
+    "origin_city": "Ahmedabad",
+    "origin_iata": "AMD",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-blr-dxb",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-maa-dxb",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-del-dxb",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-hyd-dxb",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-cok-dxb",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-ccu-dxb",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-bom-dxb",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "emirates-trv-dxb",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Emirates",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Emirates – Emirates and India (Our Global Presence page)",
+        "url": "https://www.emirates.com/english/about-us/our-communities/our-global-presence/emirates-and-india/"
+      }
+    ],
+    "verified": true,
+    "notes": "Emirates' India page names this city among its nine Indian destinations (167 weekly flights in total across India). Per-route frequency is not published on that page, so it is left null. Emirates serves India only from its Dubai hub.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-ixe-dxb",
+    "category": "established",
+    "origin_city": "Mangaluru",
+    "origin_iata": "IXE",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-trz-dxb",
+    "category": "established",
+    "origin_city": "Tiruchirappalli",
+    "origin_iata": "TRZ",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-ccj-dxb",
+    "category": "established",
+    "origin_city": "Kozhikode",
+    "origin_iata": "CCJ",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-cnn-dxb",
+    "category": "established",
+    "origin_city": "Kannur",
+    "origin_iata": "CNN",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-cok-dxb",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-trv-dxb",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-blr-dxb",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-hyd-dxb",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-lko-dxb",
+    "category": "established",
+    "origin_city": "Lucknow",
+    "origin_iata": "LKO",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-stv-dxb",
+    "category": "established",
+    "origin_city": "Surat",
+    "origin_iata": "STV",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-atq-dxb",
+    "category": "established",
+    "origin_city": "Amritsar",
+    "origin_iata": "ATQ",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Dubai (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-dubai"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Dubai network page lists this origin as a non-stop service. The page also lists Goa as non-stop but doesn't say which Goa airport (GOI or GOX), so Goa is left out. Marketing page, not a timetable; no frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-bom-dxb",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Mumbai to Dubai flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/mumbai-to-dubai-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page says there are four direct (non-stop) Mumbai–Dubai flights. These evergreen route-marketing pages may lag schedule changes, so the frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-del-dxb",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Delhi to Dubai flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/delhi-to-dubai-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page says there are two non-stop Delhi–Dubai flights. These evergreen route-marketing pages may lag schedule changes, so the frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "etihad-bom-auh",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Etihad Airways",
+    "frequency": "4 daily (EY200/202/204/206; schedule from 1 May 2026)",
+    "sources": [
+      {
+        "name": "Etihad press release – premium cabins on Mumbai and New Delhi flights (17 Apr 2026)",
+        "url": "https://www.etihad.com/en-au/news/etihad-elevates-premium-cabins-on-flights-to-mumbai-and-new-delhi"
+      }
+    ],
+    "verified": true,
+    "notes": "Etihad says Abu Dhabi–Mumbai operates four times daily (two A321LR plus two wide-body). The release is dated 17 Apr 2026; the schedule runs from 1 May 2026.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "etihad-del-auh",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Etihad Airways",
+    "frequency": "4 daily (EY212/214/216/218; schedule from 1 May 2026)",
+    "sources": [
+      {
+        "name": "Etihad press release – premium cabins on Mumbai and New Delhi flights (17 Apr 2026)",
+        "url": "https://www.etihad.com/en-au/news/etihad-elevates-premium-cabins-on-flights-to-mumbai-and-new-delhi"
+      }
+    ],
+    "verified": true,
+    "notes": "Etihad says Abu Dhabi–New Delhi operates four times daily. The release is dated 17 Apr 2026; the schedule runs from 1 May 2026.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "etihad-ccu-auh",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Etihad Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Etihad press release – premium cabins on Mumbai and New Delhi flights (17 Apr 2026)",
+        "url": "https://www.etihad.com/en-au/news/etihad-elevates-premium-cabins-on-flights-to-mumbai-and-new-delhi"
+      }
+    ],
+    "verified": true,
+    "notes": "The Apr 2026 Etihad release says the A321LR 'already operates all flights to Kolkata'. Frequency is not stated.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "etihad-blr-auh",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Etihad Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Etihad press release – two decades of connecting India (19 Sep 2024)",
+        "url": "https://www.etihad.com/en-ae/news/incredible-india-etihad-airways-celebrates-two-decades-of-connecting-india-to-abu-dhabi-and-beyond"
+      },
+      {
+        "name": "Etihad press release – premium cabins on Mumbai and New Delhi flights (17 Apr 2026)",
+        "url": "https://www.etihad.com/en-au/news/etihad-elevates-premium-cabins-on-flights-to-mumbai-and-new-delhi"
+      }
+    ],
+    "verified": false,
+    "notes": "Bengaluru is named in Etihad's Sep 2024 release (11 Indian gateways). Etihad's Apr 2026 release still says 11 gateways but doesn't list them, so no 2026 official source names Bengaluru. Unverified as current.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "etihad-hyd-auh",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Etihad Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Etihad press release – two decades of connecting India (19 Sep 2024)",
+        "url": "https://www.etihad.com/en-ae/news/incredible-india-etihad-airways-celebrates-two-decades-of-connecting-india-to-abu-dhabi-and-beyond"
+      },
+      {
+        "name": "Etihad press release – premium cabins on Mumbai and New Delhi flights (17 Apr 2026)",
+        "url": "https://www.etihad.com/en-au/news/etihad-elevates-premium-cabins-on-flights-to-mumbai-and-new-delhi"
+      }
+    ],
+    "verified": false,
+    "notes": "Hyderabad is named in Etihad's Sep 2024 release (11 Indian gateways). Etihad's Apr 2026 release still says 11 gateways but doesn't list them, so no 2026 official source names Hyderabad. Unverified as current.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "akasa-bom-auh",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Akasa Air",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Akasa Air press release – daily Abu Dhabi flights from Ahmedabad and Bengaluru (28 Nov 2024)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-strengthens-presence-in-abu-dhabi-introduces-daily-flights-from-ahmedabad-and-bengaluru"
+      },
+      {
+        "name": "Akasa Air press release – Hanoi as seventh international destination (2026)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-vietnam-adds-hanoi-as-the-seventh-international-destination"
+      }
+    ],
+    "verified": true,
+    "notes": "Akasa's Nov 2024 release refers to its daily Mumbai–Abu Dhabi service (launched July 2024). Its 2026 Hanoi release still lists Abu Dhabi in the network. The 2024 frequency was not reconfirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "akasa-blr-auh",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Akasa Air",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Akasa Air press release – daily Abu Dhabi flights from Ahmedabad and Bengaluru (28 Nov 2024)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-strengthens-presence-in-abu-dhabi-introduces-daily-flights-from-ahmedabad-and-bengaluru"
+      },
+      {
+        "name": "Akasa Air press release – Hanoi as seventh international destination (2026)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-vietnam-adds-hanoi-as-the-seventh-international-destination"
+      }
+    ],
+    "verified": true,
+    "notes": "Daily direct flight (QP 578) launched 1 Mar 2025 per Akasa's Nov 2024 release. The 2026 release still lists Abu Dhabi. Launch frequency not reconfirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "akasa-amd-auh",
+    "category": "established",
+    "origin_city": "Ahmedabad",
+    "origin_iata": "AMD",
+    "destination_city": "Abu Dhabi",
+    "destination_iata": "AUH",
+    "country": "UAE",
+    "airline": "Akasa Air",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Akasa Air press release – daily Abu Dhabi flights from Ahmedabad and Bengaluru (28 Nov 2024)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-strengthens-presence-in-abu-dhabi-introduces-daily-flights-from-ahmedabad-and-bengaluru"
+      },
+      {
+        "name": "Akasa Air press release – Hanoi as seventh international destination (2026)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-vietnam-adds-hanoi-as-the-seventh-international-destination"
+      }
+    ],
+    "verified": true,
+    "notes": "Daily direct flight launched 1 Mar 2025 per Akasa's Nov 2024 release. The 2026 release still lists Abu Dhabi. Launch frequency not reconfirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-arabia-bom-shj",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Sharjah",
+    "destination_iata": "SHJ",
+    "country": "UAE",
+    "airline": "Air Arabia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air Arabia – Flights from Sharjah to India (fare listing page)",
+        "url": "https://flights.airarabia.com/en/flights-from-sharjah-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Air Arabia's own site lists Sharjah–Mumbai fares, but a fare listing doesn't state non-stop. No official route map or timetable was confirmed. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-arabia-hyd-shj",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Sharjah",
+    "destination_iata": "SHJ",
+    "country": "UAE",
+    "airline": "Air Arabia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air Arabia – Flights from Sharjah to India (fare listing page)",
+        "url": "https://flights.airarabia.com/en/flights-from-sharjah-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Air Arabia's own site lists Sharjah–Hyderabad fares, but a fare listing doesn't state non-stop. No official route map or timetable was confirmed. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-arabia-trv-shj",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Sharjah",
+    "destination_iata": "SHJ",
+    "country": "UAE",
+    "airline": "Air Arabia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air Arabia – Flights from Sharjah to India (fare listing page)",
+        "url": "https://flights.airarabia.com/en/flights-from-sharjah-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Air Arabia's own site lists Sharjah–Thiruvananthapuram fares, but a fare listing doesn't state non-stop. No official route map or timetable was confirmed. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "flydubai-bom-dxb",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "flydubai",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "flydubai – Flights to India (fare listing page)",
+        "url": "https://www.flydubai.com/en-ae/flights-to-india/"
+      }
+    ],
+    "verified": false,
+    "notes": "flydubai's India page lists Dubai–Mumbai fares, but a fare listing doesn't state non-stop (its route map is an image and wasn't parsed). Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "flydubai-del-dxb",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "flydubai",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "flydubai – Flights to India (fare listing page)",
+        "url": "https://www.flydubai.com/en-ae/flights-to-india/"
+      }
+    ],
+    "verified": false,
+    "notes": "flydubai's India page lists Dubai–Delhi fares, but a fare listing doesn't state non-stop (its route map is an image and wasn't parsed). Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "flydubai-hyd-dxb",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "flydubai",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "flydubai – Flights to India (fare listing page)",
+        "url": "https://www.flydubai.com/en-ae/flights-to-india/"
+      }
+    ],
+    "verified": false,
+    "notes": "flydubai's India page lists Dubai–Hyderabad fares, but a fare listing doesn't state non-stop (its route map is an image and wasn't parsed). Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "flydubai-cok-dxb",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "flydubai",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "flydubai – Flights to India (fare listing page)",
+        "url": "https://www.flydubai.com/en-ae/flights-to-india/"
+      }
+    ],
+    "verified": false,
+    "notes": "flydubai's India page lists Dubai–Kochi fares, but a fare listing doesn't state non-stop (its route map is an image and wasn't parsed). Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "flydubai-ccu-dxb",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Dubai",
+    "destination_iata": "DXB",
+    "country": "UAE",
+    "airline": "flydubai",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "flydubai – Flights to India (fare listing page)",
+        "url": "https://www.flydubai.com/en-ae/flights-to-india/"
+      }
+    ],
+    "verified": false,
+    "notes": "flydubai's India page lists Dubai–Kolkata fares, but a fare listing doesn't state non-stop (its route map is an image and wasn't parsed). Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-bkk",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      },
+      {
+        "name": "Air India – Delhi to Bangkok flights (route page)",
+        "url": "https://www.airindia.com/en-in/book-flights/delhi-to-bangkok-flights"
+      }
+    ],
+    "verified": true,
+    "notes": "In its 13 May 2026 release, Air India listed Delhi–Bangkok at 28x weekly, reduced to 21x weekly from July through August 2026. The current winter frequency isn't confirmed (its route page gives conflicting direct-flight counts), so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-bom-bkk",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's 13 May 2026 release cut Mumbai–Bangkok from 13x to 7x weekly from July through August 2026. The current frequency isn't confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-del-bkk",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Delhi to Bangkok flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/delhi-to-bangkok-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: one direct flight, described as departing daily (timings subject to change). Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-bom-bkk",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Mumbai to Bangkok flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/mumbai-to-bangkok-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page confirms a direct Mumbai–Bangkok flight. Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-ccu-bkk",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Kolkata to Bangkok flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/kolkata-to-bangkok-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: one direct Kolkata–Bangkok flight. Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-del-hkt",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Phuket",
+    "destination_iata": "HKT",
+    "country": "Thailand",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Delhi to Phuket flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/delhi-to-phuket-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: one direct (non-stop) Delhi–Phuket flight. Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "aix-blr-bkk",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Air India Express",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India Express – Flights to Bangkok (network page)",
+        "url": "https://www.airindiaexpress.com/en-in/book-flights/flights-to-bangkok"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India Express's Bangkok page says Bengaluru is its non-stop Bangkok origin (IX 882); its other listed cities connect. Other AIX Bangkok routes (Kochi, Indore, Visakhapatnam and others) are winter-schedule additions tracked in routes_tracker.json.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "akasa-bom-hkt",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Phuket",
+    "destination_iata": "HKT",
+    "country": "Thailand",
+    "airline": "Akasa Air",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Akasa Air press release – Phuket launch (12 Aug 2025)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-southeast-asia-adds-phuket-as-6th-international-and-29th-overall-destination-to-its-fast-expanding-network"
+      },
+      {
+        "name": "Akasa Air press release – Hanoi as seventh international destination (2026)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-vietnam-adds-hanoi-as-the-seventh-international-destination"
+      }
+    ],
+    "verified": true,
+    "notes": "Daily direct flight launched 20 Sep 2025 per Akasa's release. The 2026 Hanoi release still lists Phuket. Launch frequency not reconfirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "akasa-blr-hkt",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Phuket",
+    "destination_iata": "HKT",
+    "country": "Thailand",
+    "airline": "Akasa Air",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Akasa Air – Our network page",
+        "url": "https://www.akasaair.com/fly-with-akasa/our-network"
+      },
+      {
+        "name": "Akasa Air press release – Hanoi as seventh international destination (2026)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-vietnam-adds-hanoi-as-the-seventh-international-destination"
+      }
+    ],
+    "verified": false,
+    "notes": "Akasa's network page links a Bengaluru–Phuket route, but no Akasa page opened in this pass states it is non-stop. Lead only.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airways-del-bkk",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Thai Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Thai Airways – India booking page (fare listings)",
+        "url": "https://www.thaiairways.com/flights/en-in/"
+      }
+    ],
+    "verified": false,
+    "notes": "Thai Airways' India booking page lists Delhi–Bangkok fares, but the same widget also lists connecting itineraries, so non-stop isn't confirmed. Thai's India route pages were under maintenance or returned no schedule text, and its winter-schedule India frequencies were found only in non-official press. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airways-bom-bkk",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Thai Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Thai Airways – India booking page (fare listings)",
+        "url": "https://www.thaiairways.com/flights/en-in/"
+      }
+    ],
+    "verified": false,
+    "notes": "Thai Airways' India booking page lists Mumbai–Bangkok fares, but the same widget also lists connecting itineraries, so non-stop isn't confirmed. Thai's India route pages were under maintenance or returned no schedule text, and its winter-schedule India frequencies were found only in non-official press. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airways-blr-bkk",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Thai Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Thai Airways – India booking page (fare listings)",
+        "url": "https://www.thaiairways.com/flights/en-in/"
+      }
+    ],
+    "verified": false,
+    "notes": "Thai Airways' India booking page lists Bengaluru–Bangkok fares, but the same widget also lists connecting itineraries, so non-stop isn't confirmed. Thai's India route pages were under maintenance or returned no schedule text, and its winter-schedule India frequencies were found only in non-official press. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airways-hyd-bkk",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Thai Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Thai Airways – India booking page (fare listings)",
+        "url": "https://www.thaiairways.com/flights/en-in/"
+      }
+    ],
+    "verified": false,
+    "notes": "Thai Airways' India booking page lists Hyderabad–Bangkok fares, but the same widget also lists connecting itineraries, so non-stop isn't confirmed. Thai's India route pages were under maintenance or returned no schedule text, and its winter-schedule India frequencies were found only in non-official press. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airways-maa-bkk",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Thai Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Thai Airways – India booking page (fare listings)",
+        "url": "https://www.thaiairways.com/flights/en-in/"
+      }
+    ],
+    "verified": false,
+    "notes": "Thai Airways' India booking page lists Chennai–Bangkok fares, but the same widget also lists connecting itineraries, so non-stop isn't confirmed. Thai's India route pages were under maintenance or returned no schedule text, and its winter-schedule India frequencies were found only in non-official press. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airways-ccu-bkk",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Bangkok (Suvarnabhumi)",
+    "destination_iata": "BKK",
+    "country": "Thailand",
+    "airline": "Thai Airways",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Thai Airways – India booking page (fare listings)",
+        "url": "https://www.thaiairways.com/flights/en-in/"
+      }
+    ],
+    "verified": false,
+    "notes": "Thai Airways' India booking page lists Kolkata–Bangkok fares, but the same widget also lists connecting itineraries, so non-stop isn't confirmed. Thai's India route pages were under maintenance or returned no schedule text, and its winter-schedule India frequencies were found only in non-official press. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-bom-sin",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-del-sin",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-blr-sin",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-maa-sin",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-hyd-sin",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-cok-sin",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-ccu-sin",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "singapore-airlines-amd-sin",
+    "category": "established",
+    "origin_city": "Ahmedabad",
+    "origin_iata": "AMD",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Singapore Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Singapore Airlines – Flights from Singapore to India (destination page)",
+        "url": "https://www.singaporeair.com/sg/en/plan-travel/destinations/flights-from-singapore-to-india/"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Singapore Airlines' destination page says it flies direct to this city, with non-stop durations listed. The joint SIA–Air India release (7 Oct 2026) puts the combined total at 126 weekly flights across 8 Indian cities, without a per-airline split, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-sin",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's May 2026 release cut Delhi–Singapore from 24x to 14x weekly through August 2026. The current frequency isn't confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-bom-sin",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      },
+      {
+        "name": "Singapore Airlines newsroom – joint release with Air India (7 Oct 2026)",
+        "url": "https://www.singaporeair.com/en_UK/sg/corporate/newsroom/press-release/2026/oct-to-dec-2026/Sia_AirIndia/"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's May 2026 release cut Mumbai–Singapore from 14x to 7x weekly through August 2026. The current frequency isn't confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-maa-sin",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": false,
+    "notes": "Air India's May 2026 release said Chennai–Singapore was temporarily suspended through August 2026. Whether it has resumed isn't confirmed.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-del-sin",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Delhi to Singapore flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/delhi-to-singapore-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page says there is a direct Delhi–Singapore IndiGo flight (about 5h 40m). Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-blr-sin",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Bengaluru to Singapore flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/bengaluru-to-singapore-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: one direct Bengaluru–Singapore flight, described as daily. Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-maa-sin",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Chennai to Singapore flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/chennai-to-singapore-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: two direct Chennai–Singapore flights. Evergreen marketing page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "scoot-trz-sin",
+    "category": "established",
+    "origin_city": "Tiruchirappalli",
+    "origin_iata": "TRZ",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Scoot",
+    "frequency": "12 weekly, rising to 14 weekly from December 2026",
+    "sources": [
+      {
+        "name": "Scoot media release – Guiyang launch and year-end capacity (20 Aug 2026, PDF)",
+        "url": "https://cdn.flyscoot.com/prod/docs/default-source/doc-pr/20260820_media-release_scoot-expands-china-network-with-new-guiyang-flights-and-boosts-year-end-capacity-across-asia-pacific.pdf?Status=Master&sfvrsn=bc31a9e5_1"
+      },
+      {
+        "name": "Scoot – Singapore to India flights (fare listing page)",
+        "url": "https://www.flyscoot.com/flights/en/flights-from-singapore-to-india"
+      }
+    ],
+    "verified": true,
+    "notes": "Scoot's 20 Aug 2026 media release lists Tiruchirappalli rising from 12 to 14 weekly flights from December 2026.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "scoot-maa-sin",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Scoot",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Scoot – Singapore to India flights (fare listing page)",
+        "url": "https://www.flyscoot.com/flights/en/flights-from-singapore-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Scoot's own site lists Singapore–Chennai fares, but no official page opened in this pass states non-stop. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "scoot-cjb-sin",
+    "category": "established",
+    "origin_city": "Coimbatore",
+    "origin_iata": "CJB",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Scoot",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Scoot – Singapore to India flights (fare listing page)",
+        "url": "https://www.flyscoot.com/flights/en/flights-from-singapore-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Scoot's own site lists Singapore–Coimbatore fares, but no official page opened in this pass states non-stop. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "scoot-trv-sin",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Scoot",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Scoot – Singapore to India flights (fare listing page)",
+        "url": "https://www.flyscoot.com/flights/en/flights-from-singapore-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Scoot's own site lists Singapore–Thiruvananthapuram fares, but no official page opened in this pass states non-stop. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "scoot-atq-sin",
+    "category": "established",
+    "origin_city": "Amritsar",
+    "origin_iata": "ATQ",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Scoot",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Scoot – Singapore to India flights (fare listing page)",
+        "url": "https://www.flyscoot.com/flights/en/flights-from-singapore-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Scoot's own site lists Singapore–Amritsar fares, but no official page opened in this pass states non-stop. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "scoot-vtz-sin",
+    "category": "established",
+    "origin_city": "Visakhapatnam",
+    "origin_iata": "VTZ",
+    "destination_city": "Singapore",
+    "destination_iata": "SIN",
+    "country": "Singapore",
+    "airline": "Scoot",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Scoot – Singapore to India flights (fare listing page)",
+        "url": "https://www.flyscoot.com/flights/en/flights-from-singapore-to-india"
+      }
+    ],
+    "verified": false,
+    "notes": "Scoot's own site lists Singapore–Visakhapatnam fares, but no official page opened in this pass states non-stop. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-kul",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's May 2026 release cut Delhi–Kuala Lumpur from 10x to 5x weekly through August 2026. The current frequency isn't confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-blr-kul",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Bengaluru to Kuala Lumpur flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/bengaluru-to-kuala-lumpur-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page says both direct and connecting Bengaluru–Kuala Lumpur flights are offered and calls the non-stop the shortest option. Evergreen page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-del-kul",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Bengaluru to Kuala Lumpur flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/bengaluru-to-kuala-lumpur-flights.html"
+      }
+    ],
+    "verified": false,
+    "notes": "The KUL section of IndiGo's Bengaluru–Kuala Lumpur page says IndiGo 'operates non-stop flights' at KUL and offers Kuala Lumpur–Delhi and Kuala Lumpur–Chennai flights, but it doesn't say those specific flights are non-stop. Lead only.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-maa-kul",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Bengaluru to Kuala Lumpur flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/bengaluru-to-kuala-lumpur-flights.html"
+      }
+    ],
+    "verified": false,
+    "notes": "The KUL section of IndiGo's Bengaluru–Kuala Lumpur page says IndiGo 'operates non-stop flights' at KUL and offers Kuala Lumpur–Delhi and Kuala Lumpur–Chennai flights, but it doesn't say those specific flights are non-stop. Lead only.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-trv-kul",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Thiruvananthapuram is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-maa-kul",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Chennai is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-trz-kul",
+    "category": "established",
+    "origin_city": "Tiruchirappalli",
+    "origin_iata": "TRZ",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Tiruchirappalli is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-cok-kul",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Kochi is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-hyd-kul",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Hyderabad is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-blr-kul",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Bengaluru is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-ccu-kul",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Kuala Lumpur",
+    "destination_iata": "KUL",
+    "country": "Malaysia",
+    "airline": "AirAsia",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "AirAsia Newsroom – Malaysia–India connectivity (27 Feb 2024)",
+        "url": "https://newsroom.airasia.com/news/airasia-contributes-to-strengthening-of-malaysia-india-relations-with-extensive-connectivity-between-both-countries"
+      }
+    ],
+    "verified": false,
+    "notes": "Kolkata is named in AirAsia's Feb 2024 newsroom release as a direct Kuala Lumpur route (AK). It wasn't reconfirmed as current in this pass. Unverified.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-sgn",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Ho Chi Minh City",
+    "destination_iata": "SGN",
+    "country": "Vietnam",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      },
+      {
+        "name": "Air India press release – new routes to Vietnam and Japan (5 Mar 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-expands-Asia-footprint-with-new-routes-to-Vietnam-and-Japan.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India says it flies daily to Ho Chi Minh City (Mar 2026). Its May 2026 release cut this to 4x weekly for July–August 2026 only. Current frequency not confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-han",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Hanoi",
+    "destination_iata": "HAN",
+    "country": "Vietnam",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – new routes to Vietnam and Japan (5 Mar 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-expands-Asia-footprint-with-new-routes-to-Vietnam-and-Japan.html"
+      },
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Non-stop launched 1 May 2026 at 5 weekly (AI2390/2391), cut to 4 weekly for July–August 2026. Current frequency not confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "vietnam-airlines-del-han",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Hanoi",
+    "destination_iata": "HAN",
+    "country": "Vietnam",
+    "airline": "Vietnam Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Vietnam Airlines – Flights from Hanoi to India",
+        "url": "https://www.vietnamairlines.com/en-vn/flights-from-hanoi-to-india"
+      },
+      {
+        "name": "Vietnam Airlines staff portal – Hanoi–Ahmedabad notice (13 Oct 2026, Vietnamese)",
+        "url": "https://spirit.vietnamairlines.com/bay-cao-khat-vong-cong-hien/kham-pha-quyen-loi/super-low-budget-cung-vietnam-airlines-kham-pha-thanh-pho-di-san-ahmedabad.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Vietnam Airlines' own page says direct flights operate between Hanoi and Delhi. Its 13 Oct 2026 notice says the airline flies 7 India routes, 25 round trips a week, linking Hanoi and Ho Chi Minh City with Delhi, Mumbai, Bengaluru, Hyderabad and Ahmedabad. No per-route frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "vietnam-airlines-bom-han",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Hanoi",
+    "destination_iata": "HAN",
+    "country": "Vietnam",
+    "airline": "Vietnam Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Vietnam Airlines – Flights from Hanoi to India",
+        "url": "https://www.vietnamairlines.com/en-vn/flights-from-hanoi-to-india"
+      },
+      {
+        "name": "Vietnam Airlines staff portal – Hanoi–Ahmedabad notice (13 Oct 2026, Vietnamese)",
+        "url": "https://spirit.vietnamairlines.com/bay-cao-khat-vong-cong-hien/kham-pha-quyen-loi/super-low-budget-cung-vietnam-airlines-kham-pha-thanh-pho-di-san-ahmedabad.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Vietnam Airlines' own page says direct flights operate between Hanoi and Mumbai. Its 13 Oct 2026 notice says the airline flies 7 India routes, 25 round trips a week, linking Hanoi and Ho Chi Minh City with Delhi, Mumbai, Bengaluru, Hyderabad and Ahmedabad. No per-route frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "vietnam-airlines-del-sgn",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Ho Chi Minh City",
+    "destination_iata": "SGN",
+    "country": "Vietnam",
+    "airline": "Vietnam Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Vietnam Airlines – Flights from Ho Chi Minh City to India",
+        "url": "https://www.vietnamairlines.com/en-vn/flights-from-ho-chi-minh-city-to-india"
+      },
+      {
+        "name": "Vietnam Airlines staff portal – Hanoi–Ahmedabad notice (13 Oct 2026, Vietnamese)",
+        "url": "https://spirit.vietnamairlines.com/bay-cao-khat-vong-cong-hien/kham-pha-quyen-loi/super-low-budget-cung-vietnam-airlines-kham-pha-thanh-pho-di-san-ahmedabad.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Vietnam Airlines' own page says direct flights operate between Ho Chi Minh City and Delhi. Its 13 Oct 2026 notice says the airline flies 7 India routes, 25 round trips a week, linking Hanoi and Ho Chi Minh City with Delhi, Mumbai, Bengaluru, Hyderabad and Ahmedabad. No per-route frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "vietnam-airlines-bom-sgn",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Ho Chi Minh City",
+    "destination_iata": "SGN",
+    "country": "Vietnam",
+    "airline": "Vietnam Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Vietnam Airlines – Flights from Ho Chi Minh City to India",
+        "url": "https://www.vietnamairlines.com/en-vn/flights-from-ho-chi-minh-city-to-india"
+      },
+      {
+        "name": "Vietnam Airlines staff portal – Hanoi–Ahmedabad notice (13 Oct 2026, Vietnamese)",
+        "url": "https://spirit.vietnamairlines.com/bay-cao-khat-vong-cong-hien/kham-pha-quyen-loi/super-low-budget-cung-vietnam-airlines-kham-pha-thanh-pho-di-san-ahmedabad.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Vietnam Airlines' own page says direct flights operate between Ho Chi Minh City and Mumbai. Its 13 Oct 2026 notice says the airline flies 7 India routes, 25 round trips a week, linking Hanoi and Ho Chi Minh City with Delhi, Mumbai, Bengaluru, Hyderabad and Ahmedabad. No per-route frequency is given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "akasa-bom-han",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Hanoi",
+    "destination_iata": "HAN",
+    "country": "Vietnam",
+    "airline": "Akasa Air",
+    "frequency": "4 weekly (from 4 Sep 2026)",
+    "sources": [
+      {
+        "name": "Akasa Air press release – Hanoi as seventh international destination (2026)",
+        "url": "https://www.akasaair.com/news-room/akasa-press-releases/akasa-air-forays-into-vietnam-adds-hanoi-as-the-seventh-international-destination"
+      }
+    ],
+    "verified": true,
+    "notes": "Started 4 Sep 2026, so it is recent but operating. Listed as established because it pre-dates the routes tracker's window.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-dps",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Denpasar (Bali)",
+    "destination_iata": "DPS",
+    "country": "Indonesia",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "2LNR – Delhi to Denpasar route page (third-party lead)",
+        "url": "https://2lnr.com/routes/del-dps"
+      }
+    ],
+    "verified": false,
+    "notes": "Lead only: a third-party schedule site shows Air India AI 2147 flying non-stop Delhi–Denpasar. Not confirmed on any official Air India page in this pass.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-blr-dps",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Denpasar (Bali)",
+    "destination_iata": "DPS",
+    "country": "Indonesia",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "2LNR – Bangalore to Denpasar route page (third-party lead)",
+        "url": "https://2lnr.com/routes/blr-dps"
+      }
+    ],
+    "verified": false,
+    "notes": "Lead only: a third-party schedule site shows 6E 1605 Bengaluru–Denpasar about 7x weekly. IndiGo's own Bengaluru–Denpasar route page returned 404.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-maa-cmb",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-bom-cmb",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-del-cmb",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-hyd-cmb",
+    "category": "established",
+    "origin_city": "Hyderabad",
+    "origin_iata": "HYD",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-blr-cmb",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-cok-cmb",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-trv-cmb",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-ixm-cmb",
+    "category": "established",
+    "origin_city": "Madurai",
+    "origin_iata": "IXM",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "srilankan-trz-cmb",
+    "category": "established",
+    "origin_city": "Tiruchirappalli",
+    "origin_iata": "TRZ",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "SriLankan Airlines",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "SriLankan Airlines news – Bringing India Closer to Sri Lanka (2026)",
+        "url": "https://www.srilankan.com/EN_UK/Corporate/news-details/622"
+      }
+    ],
+    "verified": true,
+    "notes": "SriLankan's 2026 release lists this city in its current India network (about 90 weekly flights across 9 Indian cities, with Ahmedabad to follow). Per-route frequency isn't given.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-cmb",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's May 2026 release cut Delhi–Colombo from 14x to 12x weekly through August 2026. Current frequency not confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-bom-cmb",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's May 2026 release cut Mumbai–Colombo from 7x to 4x weekly through August 2026. Current frequency not confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-maa-cmb",
+    "category": "established",
+    "origin_city": "Chennai",
+    "origin_iata": "MAA",
+    "destination_city": "Colombo",
+    "destination_iata": "CMB",
+    "country": "Sri Lanka",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Chennai to Colombo flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/chennai-to-colombo-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: three non-stop Chennai–Colombo flights. Evergreen page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-hnd",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Tokyo (Haneda)",
+    "destination_iata": "HND",
+    "country": "Japan",
+    "airline": "Air India",
+    "frequency": "7 weekly (per Air India release, Mar 2026)",
+    "sources": [
+      {
+        "name": "Air India press release – new routes to Vietnam and Japan (5 Mar 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-expands-Asia-footprint-with-new-routes-to-Vietnam-and-Japan.html"
+      },
+      {
+        "name": "Air India press release – NSS26 product and frequency updates (16 Feb 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-upgrades-product-and-customer-experience-on-more-international-routes-this-summer.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India raised Delhi–Haneda from 4x to 7x weekly, flown with the B787-9 from 14 Feb 2026. Not listed among the May 2026 cuts.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-bom-hnd",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Tokyo (Haneda)",
+    "destination_iata": "HND",
+    "country": "Japan",
+    "airline": "Air India",
+    "frequency": "4 weekly (AI356 Mon/Wed/Fri/Sun; from 15 Jun 2026)",
+    "sources": [
+      {
+        "name": "Air India press release – new routes to Vietnam and Japan (5 Mar 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-expands-Asia-footprint-with-new-routes-to-Vietnam-and-Japan.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Non-stop since 15 Jun 2026 on the B787-8. Not listed among the May 2026 cuts.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "jal-del-hnd",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Tokyo (Haneda)",
+    "destination_iata": "HND",
+    "country": "Japan",
+    "airline": "Japan Airlines",
+    "frequency": "daily (JL039/JL030; summer 2026 schedule)",
+    "sources": [
+      {
+        "name": "JAL – Southeast and South Asia flight information, 29 Mar–24 Oct 2026",
+        "url": "https://www.jal.co.jp/jp/en/info/2026/inter/asia/"
+      }
+    ],
+    "verified": true,
+    "notes": "JAL's flight information page covers the 29 Mar–24 Oct 2026 schedule. The winter 2026/27 schedule was not checked.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "jal-del-nrt",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Tokyo (Narita)",
+    "destination_iata": "NRT",
+    "country": "Japan",
+    "airline": "Japan Airlines",
+    "frequency": "daily (JL749/JL740; summer 2026 schedule)",
+    "sources": [
+      {
+        "name": "JAL – Southeast and South Asia flight information, 29 Mar–24 Oct 2026",
+        "url": "https://www.jal.co.jp/jp/en/info/2026/inter/asia/"
+      }
+    ],
+    "verified": true,
+    "notes": "JAL's flight information page covers the 29 Mar–24 Oct 2026 schedule. The winter schedule was not checked.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "jal-blr-nrt",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Tokyo (Narita)",
+    "destination_iata": "NRT",
+    "country": "Japan",
+    "airline": "Japan Airlines",
+    "frequency": "daily from 18/19 Aug 2026 (JL753/JL754; summer 2026 schedule)",
+    "sources": [
+      {
+        "name": "JAL – Southeast and South Asia flight information, 29 Mar–24 Oct 2026",
+        "url": "https://www.jal.co.jp/jp/en/info/2026/inter/asia/"
+      }
+    ],
+    "verified": true,
+    "notes": "JAL page: Mon/Thu/Sat until mid-August, then daily from 18 Aug (Narita→Bengaluru) and 19 Aug (Bengaluru→Narita), within the summer 2026 schedule.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "ana-del-hnd",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Tokyo (Haneda)",
+    "destination_iata": "HND",
+    "country": "Japan",
+    "airline": "ANA",
+    "frequency": "daily (NH837/NH838; also daily in winter 2026/27)",
+    "sources": [
+      {
+        "name": "ANA – International route information (W26 and S26 schedules)",
+        "url": "https://www.ana.co.jp/en/in/plan-book/routes/international-route-information/"
+      }
+    ],
+    "verified": true,
+    "notes": "ANA lists NH837/NH838 as daily in both the summer 2026 schedule and the 25 Oct 2026–27 Mar 2027 schedule.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "ana-bom-nrt",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Tokyo (Narita)",
+    "destination_iata": "NRT",
+    "country": "Japan",
+    "airline": "ANA",
+    "frequency": "daily (NH829/NH830; winter 2026/27)",
+    "sources": [
+      {
+        "name": "ANA – International route information (W26 and S26 schedules)",
+        "url": "https://www.ana.co.jp/en/in/plan-book/routes/international-route-information/"
+      }
+    ],
+    "verified": true,
+    "notes": "ANA lists NH829/NH830 as daily (Tue/Fri/Sun only between 18 Jul and 30 Aug 2026) and daily again in winter 2026/27. ANA's Narita–Chennai route stays suspended through 27 Mar 2027.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-icn",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Seoul (Incheon)",
+    "destination_iata": "ICN",
+    "country": "South Korea",
+    "airline": "Air India",
+    "frequency": "6 weekly (from 29 Mar 2026, NSS26)",
+    "sources": [
+      {
+        "name": "Air India press release – NSS26 product and frequency updates (16 Feb 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-upgrades-product-and-customer-experience-on-more-international-routes-this-summer.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Frequency raised from 5x to 6x weekly from 29 Mar 2026 (NSS26). Not listed among the May 2026 cuts. Also listed in routes_tracker.json as an operating frequency change.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "korean-air-del-icn",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Seoul (Incheon)",
+    "destination_iata": "ICN",
+    "country": "South Korea",
+    "airline": "Korean Air",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Korean Air – Delhi to Seoul flights (fare page)",
+        "url": "https://www.koreanair.com/flights/en/flights-from-delhi-to-seoul"
+      }
+    ],
+    "verified": false,
+    "notes": "Korean Air's own page shows Delhi–Incheon fares but doesn't state non-stop or frequency. Trade press reports a move to daily from 27 Oct 2026, which is tracked in routes_tracker.json as unverified. Unverified here.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-bom-mle",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Malé",
+    "destination_iata": "MLE",
+    "country": "Maldives",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Mumbai to Malé flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/mumbai-to-male-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: one direct (non-stop) Mumbai–Malé flight. Evergreen page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "maldivian-trv-mle",
+    "category": "established",
+    "origin_city": "Thiruvananthapuram",
+    "origin_iata": "TRV",
+    "destination_city": "Malé",
+    "destination_iata": "MLE",
+    "country": "Maldives",
+    "airline": "Maldivian",
+    "frequency": "5 weekly (effective 19 Dec 2025, per Maldivian release)",
+    "sources": [
+      {
+        "name": "Maldivian – Destinations page",
+        "url": "https://maldivian.aero/destinations/"
+      },
+      {
+        "name": "Maldivian media release – fifth weekly frequency to Trivandrum and Cochin (24 Nov 2025)",
+        "url": "https://maldivian.aero/media/2025/11/24/maldivian-expands-connectivity-with-fifth-weekly-frequency-to-trivandrum-and-cochin.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Maldivian's current destinations page lists Thiruvananthapuram. Frequency is taken from its Nov 2025 release.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "maldivian-cok-mle",
+    "category": "established",
+    "origin_city": "Kochi",
+    "origin_iata": "COK",
+    "destination_city": "Malé",
+    "destination_iata": "MLE",
+    "country": "Maldives",
+    "airline": "Maldivian",
+    "frequency": "5 weekly (effective 19 Dec 2025, per Maldivian release)",
+    "sources": [
+      {
+        "name": "Maldivian – Destinations page",
+        "url": "https://maldivian.aero/destinations/"
+      },
+      {
+        "name": "Maldivian media release – fifth weekly frequency to Trivandrum and Cochin (24 Nov 2025)",
+        "url": "https://maldivian.aero/media/2025/11/24/maldivian-expands-connectivity-with-fifth-weekly-frequency-to-trivandrum-and-cochin.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Maldivian's current destinations page lists Kochi. Frequency is taken from its Nov 2025 release.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-mle",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Malé",
+    "destination_iata": "MLE",
+    "country": "Maldives",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": false,
+    "notes": "Air India's May 2026 release said Delhi–Malé was temporarily suspended through August 2026. Whether it has resumed isn't confirmed.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-india-del-ktm",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Kathmandu",
+    "destination_iata": "KTM",
+    "country": "Nepal",
+    "airline": "Air India",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Air India press release – international network rationalisation through August 2026 (13 May 2026)",
+        "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-rationalises-international-route-network-through-August-2026.html"
+      }
+    ],
+    "verified": true,
+    "notes": "Air India's May 2026 release cut Delhi–Kathmandu from 42x weekly to 28x (June) and then 21x (July–August). Current frequency not confirmed, so it is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "indigo-del-ktm",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Kathmandu",
+    "destination_iata": "KTM",
+    "country": "Nepal",
+    "airline": "IndiGo",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "IndiGo – Delhi to Kathmandu flights (route page)",
+        "url": "https://www.goindigo.in/international-flights/delhi-to-kathmandu-flights.html"
+      }
+    ],
+    "verified": true,
+    "notes": "IndiGo route page: two direct Delhi–Kathmandu flights, described as daily. Evergreen page; frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "nepal-airlines-del-ktm",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Kathmandu",
+    "destination_iata": "KTM",
+    "country": "Nepal",
+    "airline": "Nepal Airlines",
+    "frequency": "10 weekly (RA217/218 daily + RA205/206 Tue/Thu/Sat; S26 schedule to 24 Oct 2026)",
+    "sources": [
+      {
+        "name": "Nepal Airlines – International schedule (S26, effective 1–24 Oct 2026)",
+        "url": "https://www.nepalairlines.com.np/schedule/international"
+      }
+    ],
+    "verified": true,
+    "notes": "From Nepal Airlines' S26 international schedule, effective 1–24 Oct 2026. The winter schedule was not checked.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "nepal-airlines-bom-ktm",
+    "category": "established",
+    "origin_city": "Mumbai",
+    "origin_iata": "BOM",
+    "destination_city": "Kathmandu",
+    "destination_iata": "KTM",
+    "country": "Nepal",
+    "airline": "Nepal Airlines",
+    "frequency": "2 weekly (RA201/202 Wed/Sun; S26 schedule to 24 Oct 2026)",
+    "sources": [
+      {
+        "name": "Nepal Airlines – International schedule (S26, effective 1–24 Oct 2026)",
+        "url": "https://www.nepalairlines.com.np/schedule/international"
+      }
+    ],
+    "verified": true,
+    "notes": "From Nepal Airlines' S26 international schedule, effective 1–24 Oct 2026.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "nepal-airlines-blr-ktm",
+    "category": "established",
+    "origin_city": "Bengaluru",
+    "origin_iata": "BLR",
+    "destination_city": "Kathmandu",
+    "destination_iata": "KTM",
+    "country": "Nepal",
+    "airline": "Nepal Airlines",
+    "frequency": "2 weekly (RA225/226 Tue/Thu; S26 schedule to 24 Oct 2026)",
+    "sources": [
+      {
+        "name": "Nepal Airlines – International schedule (S26, effective 1–24 Oct 2026)",
+        "url": "https://www.nepalairlines.com.np/schedule/international"
+      }
+    ],
+    "verified": true,
+    "notes": "From Nepal Airlines' S26 international schedule, effective 1–24 Oct 2026.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "buddha-air-vns-ktm",
+    "category": "established",
+    "origin_city": "Varanasi",
+    "origin_iata": "VNS",
+    "destination_city": "Kathmandu",
+    "destination_iata": "KTM",
+    "country": "Nepal",
+    "airline": "Buddha Air",
+    "frequency": "3 weekly (Mon/Wed/Fri)",
+    "sources": [
+      {
+        "name": "Buddha Air – Kathmandu to Varanasi route page",
+        "url": "https://www.buddhaair.com/flight-routes/flights-from-kathmandu-to-varanasi"
+      }
+    ],
+    "verified": true,
+    "notes": "Buddha Air's route page says it operates 3 direct flights a week between Kathmandu and Varanasi.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "drukair-del-pbh",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Paro",
+    "destination_iata": "PBH",
+    "country": "Bhutan",
+    "airline": "Drukair",
+    "frequency": "daily (KB200/201; October 2026 schedule)",
+    "sources": [
+      {
+        "name": "Drukair – Schedule for October 2026 (PDF)",
+        "url": "https://drukair.com.bt/wp-content/uploads/2026/08/SCHEDULE-OCTOBER-2026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "KB200/201 appears every day in Drukair's October 2026 schedule.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "drukair-ccu-pbh",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Paro",
+    "destination_iata": "PBH",
+    "country": "Bhutan",
+    "airline": "Drukair",
+    "frequency": "2 weekly (KB210/211; October 2026 schedule)",
+    "sources": [
+      {
+        "name": "Drukair – Schedule for October 2026 (PDF)",
+        "url": "https://drukair.com.bt/wp-content/uploads/2026/08/SCHEDULE-OCTOBER-2026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "KB210/211 Paro–Kolkata appears twice a week in Drukair's October 2026 schedule.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "drukair-ccu-glu",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Gelephu",
+    "destination_iata": "GLU",
+    "country": "Bhutan",
+    "airline": "Drukair",
+    "frequency": "2 weekly (October 2026 schedule)",
+    "sources": [
+      {
+        "name": "Drukair – Schedule for October 2026 (PDF)",
+        "url": "https://drukair.com.bt/wp-content/uploads/2026/08/SCHEDULE-OCTOBER-2026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "Drukair's October 2026 schedule shows Gelephu–Kolkata–Gelephu rotations twice a week (flight numbers not legible in the PDF text).",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "drukair-gau-pbh",
+    "category": "established",
+    "origin_city": "Guwahati",
+    "origin_iata": "GAU",
+    "destination_city": "Paro",
+    "destination_iata": "PBH",
+    "country": "Bhutan",
+    "airline": "Drukair",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Drukair – Schedule for October 2026 (PDF)",
+        "url": "https://drukair.com.bt/wp-content/uploads/2026/08/SCHEDULE-OCTOBER-2026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "Drukair's October 2026 schedule shows several Guwahati–Paro sectors a week, some as part of Bangkok/Singapore multi-stop rotations. No single weekly count is published, so frequency is left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "drukair-ixb-pbh",
+    "category": "established",
+    "origin_city": "Bagdogra",
+    "origin_iata": "IXB",
+    "destination_city": "Paro",
+    "destination_iata": "PBH",
+    "country": "Bhutan",
+    "airline": "Drukair",
+    "frequency": null,
+    "sources": [
+      {
+        "name": "Drukair – Schedule for October 2026 (PDF)",
+        "url": "https://drukair.com.bt/wp-content/uploads/2026/08/SCHEDULE-OCTOBER-2026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "Drukair's October 2026 schedule shows Bagdogra–Paro sectors (part of the Bangkok–Bagdogra–Paro rotations). Frequency left null.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "bhutan-airlines-del-pbh",
+    "category": "established",
+    "origin_city": "Delhi",
+    "origin_iata": "DEL",
+    "destination_city": "Paro",
+    "destination_iata": "PBH",
+    "country": "Bhutan",
+    "airline": "Bhutan Airlines",
+    "frequency": "daily (B3773/B3774; 15 Sep–14 Nov 2026)",
+    "sources": [
+      {
+        "name": "Bhutan Airlines – Flight schedule 2026 (PDF)",
+        "url": "https://www.bhutanairlines.bt/assets/bhutan-airlines-images/pdf/Schedule%202026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "B3773 Paro–Delhi and B3774 Delhi–Paro operate daily in Bhutan Airlines' 15 Sep–14 Nov 2026 schedule.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "bhutan-airlines-ccu-pbh",
+    "category": "established",
+    "origin_city": "Kolkata",
+    "origin_iata": "CCU",
+    "destination_city": "Paro",
+    "destination_iata": "PBH",
+    "country": "Bhutan",
+    "airline": "Bhutan Airlines",
+    "frequency": "daily (B3700/B3701; 15 Sep–14 Nov 2026)",
+    "sources": [
+      {
+        "name": "Bhutan Airlines – Flight schedule 2026 (PDF)",
+        "url": "https://www.bhutanairlines.bt/assets/bhutan-airlines-images/pdf/Schedule%202026.pdf"
+      }
+    ],
+    "verified": true,
+    "notes": "Kolkata–Paro sector of B3701 and Paro–Kolkata sector of B3700 operate daily in the 15 Sep–14 Nov 2026 schedule (part of Bangkok–Kolkata–Paro rotations).",
+    "last_checked": "2026-10-17"
+  }
+]

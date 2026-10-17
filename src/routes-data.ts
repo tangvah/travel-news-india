@@ -1,6 +1,7 @@
 // Adapter for the Travel News Desk's routes file (src/data/routes_tracker.json).
 // The JSON is copied from the Desk unchanged; this file only reads and presents it.
 import data from './data/routes_tracker.json';
+import estData from './data/established_routes.json';
 import { DESTINATIONS } from './site.config.mjs';
 
 type Src = { name: string; url: string };
@@ -50,3 +51,29 @@ export const routes = (data as Raw[])
 
 export const day = (s?: string | null) => (s ? new Date(s + 'T00:00:00+05:30').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' }) : NS);
 export const place = (p: { city: string; iata?: string | null }) => (p.iata ? `${p.city} (${p.iata})` : p.city);
+
+// ---- Established (currently operating) routes: src/data/established_routes.json, copied from the Desk unchanged. ----
+type RawEst = {
+  id: string; category: string; origin_city: string; origin_iata?: string | null; destination_city: string; destination_iata?: string | null;
+  country: string; airline: string; frequency?: string | null; sources: Src[]; verified: boolean; notes?: string | null; last_checked?: string | null;
+};
+/** Desk country labels -> the names used elsewhere on the site (presentation only). */
+const COUNTRY_NAME: Record<string, string> = { UAE: 'United Arab Emirates' };
+const FLAG_EXTRA: Record<string, string> = { Maldives: 'mv', Bhutan: 'bt', Nepal: 'np', Japan: 'jp', 'South Korea': 'kr', 'Sri Lanka': 'lk', Malaysia: 'my', Vietnam: 'vn' };
+export const NP = 'Not published';
+/** Established frequency: null/empty reads "Not published" (the airline doesn't publish a per-route figure). */
+export const freq = (v: unknown) => (show(v) === NS ? NP : String(v));
+const newIds = new Set((data as Raw[]).map((r) => r.id));
+/** Verified established routes, minus any id the new-routes tracker already covers (the tracker entry wins). */
+export const established = (estData as RawEst[])
+  .filter((r) => r.verified === true && Array.isArray(r.sources) && r.sources.length > 0 && !newIds.has(r.id))
+  .map((r) => {
+    const country = COUNTRY_NAME[r.country] ?? r.country;
+    return {
+      ...r, country,
+      origin: { city: r.origin_city, iata: r.origin_iata ?? null }, destination: { city: r.destination_city, iata: r.destination_iata ?? null },
+      flag: FLAG_BY_COUNTRY[country] ?? FLAG_EXTRA[country] ?? DESTINATIONS.find((d) => d.name === country)?.flag ?? null,
+    };
+  })
+  .sort((a, b) => a.country.localeCompare(b.country) || a.origin_city.localeCompare(b.origin_city) || a.destination_city.localeCompare(b.destination_city) || a.airline.localeCompare(b.airline));
+export const establishedChecked = established.map((r) => r.last_checked).filter(Boolean).map(String).sort().at(-1) ?? null;
