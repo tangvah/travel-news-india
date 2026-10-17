@@ -21,8 +21,8 @@
       "https://tdac.immigration.go.th"
     ],
     "verified": true,
-    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date.",
-    "last_checked": "2026-10-16"
+    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date. Watch item (checked 17 Oct 2026): Thailand's proposed tourism entry fee for foreign visitors is NOT in force. Thailand's Government Public Relations Department (17 Aug 2026, https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/532128) describes a proposed flat 450 baht fee, starting for air arrivals 180 days after publication in the Royal Gazette. Thai media in Oct 2026 report it still awaits Cabinet approval; no Royal Gazette notice found. Unconfirmed; not a current entry condition.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "singapore",
@@ -198,21 +198,27 @@
     "purpose": "tourism",
     "rule_type": "visa_required_e_visa_available",
     "max_stay": "Up to 90 days (single-entry short-term tourism eVISA)",
-    "fee": null,
+    "fee": {
+      "amount": 500,
+      "currency": "INR",
+      "applies_to": "Visa fee for Indian nationals, single or multiple entry, for applications from 1 Jul 2026 to 31 Mar 2027 (Consulate-General of Japan in Mumbai; cash only; VFS Global service fee extra). Other nationals pay Rs 8,650 single / Rs 17,350 multiple in the same period"
+    },
     "effective_date": null,
     "key_conditions": [
       "India is not on Japan's 74-country visa-exemption list",
       "eVISA for residents of India via accredited agency; ordinary passports only",
       "Show the 'Visa issuance notice' on a mobile device at the airport (PDF or screenshot not accepted)",
-      "Possible in-person interview"
+      "Possible in-person interview",
+      "Consulate-General in Mumbai accepts applications only via VFS Global from 20 Apr 2026 (no direct applications); processing generally at least 5 working days"
     ],
     "quote": "Hong Kong, India, Indonesia, Macau, Mongolia, the Republic of Korea, Singapore and United Arab Emirates All foreign nationals/people residing in [these places] ... except those who are exempt from short-term visa",
     "sources": [
       "https://www.mofa.go.jp/j_info/visit/visa/short/Novisa.html",
-      "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html"
+      "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html",
+      "https://www.mumbai.in.emb-japan.go.jp/itpr_en/visa_information.html"
     ],
     "verified": true,
-    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. The fee is not recorded: the Embassy of Japan in India page (in.emb-japan.go.jp) returned 403 to our tools. A search snippet showed 'Single or Multiple visa: 500 INR' for Indian nationals from 1 July 2026, which is unverified and not used here.",
-    "last_checked": "2026-10-16"
+    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. Fee verified 17 Oct 2026 on the Consulate-General of Japan in Mumbai visa page (loaded via WebFetch; curl gets 403): Indian nationals pay Rs 500 for single or multiple entry for applications 1 Jul 2026 – 31 Mar 2027, unchanged from Apr–Jun 2026, while Japan's fees for other nationals rose sharply from 1 Jul 2026 (reported in Indian media, e.g. Outlook Traveller). The Embassy in New Delhi page (in.emb-japan.go.jp) still returns 403, so the New Delhi jurisdiction fee is assumed but not separately confirmed. Whether the same Rs 500 applies to the eVISA route was not stated on the page.",
+    "last_checked": "2026-10-17"
   }
 ]

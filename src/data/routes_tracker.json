@@ -24,7 +24,7 @@
     ],
     "verified": true,
     "notes": "New route. Covered in article-02. Quote paraphrases the release; it is not verbatim.",
-    "last_checked": "2026-10-16"
+    "last_checked": "2026-10-17"
   },
   {
     "id": "indigo-gau-bkk",
@@ -54,8 +54,8 @@
       }
     ],
     "verified": true,
-    "notes": "Inaugural flight 27 Oct 2026, then regular Wed/Sat schedule from 31 Oct. Subject to regulatory approval. Covered in article-03.",
-    "last_checked": "2026-10-16"
+    "notes": "Inaugural flight 27 Oct 2026, then regular Wed/Sat schedule from 31 Oct. Subject to regulatory approval. Covered in article-03. Rechecked 17 Oct: still listed on IndiGo's press index (7 Sep 2026).",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "indigo-gay-bkk",
@@ -82,7 +82,7 @@
     ],
     "verified": true,
     "notes": "Confirmed via IndiGo's official press index entry; the individual release page was not opened. Covered in article-03. Announced about 53 days before last_checked.",
-    "last_checked": "2026-10-16"
+    "last_checked": "2026-10-17"
   },
   {
     "id": "indigo-bom-han",
@@ -108,8 +108,8 @@
       }
     ],
     "verified": true,
-    "notes": "Flight numbers 6E1637/1638 appear only in secondary reports (unverified). Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately).",
-    "last_checked": "2026-10-16"
+    "notes": "Flight numbers 6E1637/1638 appear only in secondary reports (unverified). Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately). Rechecked 17 Oct: index entry unchanged.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "indigo-bom-dar",
@@ -136,7 +136,7 @@
     ],
     "verified": true,
     "notes": "Other notable route (Tanzania).",
-    "last_checked": "2026-10-16"
+    "last_checked": "2026-10-17"
   },
   {
     "id": "air-india-bom-yyz",
@@ -163,7 +163,7 @@
     ],
     "verified": true,
     "notes": "Other notable route. Seasonal; ends 26 Mar 2027. Air India says it is the only carrier on the route this winter. Announced 76 days before last_checked.",
-    "last_checked": "2026-10-16"
+    "last_checked": "2026-10-17"
   },
   {
     "id": "aix-vtz-bkk",
@@ -190,11 +190,15 @@
       {
         "name": "AeroRoutes – Air India Express NW26 International Network Additions (lead, not official)",
         "url": "https://www.aeroroutes.com/eng/260914-ixnw26int"
+      },
+      {
+        "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
+        "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
       }
     ],
     "verified": false,
-    "notes": "No official Air India Express release was found; its media centre page returned no content.",
-    "last_checked": "2026-10-16"
+    "notes": "No official Air India Express release was found; its media centre page returned no content. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "aix-cok-bkk",
@@ -211,7 +215,7 @@
     "aircraft": "Boeing 737-800 (per AeroRoutes)",
     "start_date": "2026-10-25",
     "status": "announced",
-    "announcement_date": "early Oct 2026 (winter schedule statement; exact date unverified)",
+    "announcement_date": "2026-10-07 (date of AIX winter-schedule statement per trade press; unverified)",
     "quote": "UNVERIFIED – per AeroRoutes",
     "sources": [
       {
@@ -225,11 +229,15 @@
       {
         "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
         "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      },
+      {
+        "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
+        "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
       }
     ],
     "verified": false,
-    "notes": "News or schedule-data sources only.",
-    "last_checked": "2026-10-16"
+    "notes": "News or schedule-data sources only. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "aix-idr-bkk",
@@ -246,7 +254,7 @@
     "aircraft": "not stated",
     "start_date": "unverified",
     "status": "announced",
-    "announcement_date": "early Oct 2026 (unverified)",
+    "announcement_date": "2026-10-07 (date of AIX winter-schedule statement per trade press; unverified)",
     "quote": "UNVERIFIED – trade reports of the winter schedule",
     "sources": [
       {
@@ -260,11 +268,15 @@
       {
         "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
         "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      },
+      {
+        "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
+        "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
       }
     ],
     "verified": false,
-    "notes": "Start date not confirmed.",
-    "last_checked": "2026-10-16"
+    "notes": "Start date not confirmed. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "aix-hyd-hkt",
@@ -281,7 +293,7 @@
     "aircraft": "not stated",
     "start_date": "unverified",
     "status": "announced",
-    "announcement_date": "early Oct 2026 (unverified)",
+    "announcement_date": "2026-10-07 (date of AIX winter-schedule statement per trade press; unverified)",
     "quote": "UNVERIFIED – trade reports mention new Phuket service",
     "sources": [
       {
@@ -295,11 +307,15 @@
       {
         "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
         "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      },
+      {
+        "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
+        "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
       }
     ],
     "verified": false,
-    "notes": "Start date not confirmed.",
-    "last_checked": "2026-10-16"
+    "notes": "Start date not confirmed. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Caution: AIX previously launched HYD–HKT on 31 Jan 2025 (news/LinkedIn leads), so this may be a resumption rather than a new route.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "aix-maa-sin",
@@ -316,7 +332,7 @@
     "aircraft": "not stated",
     "start_date": "unverified",
     "status": "announced",
-    "announcement_date": "early Oct 2026 (unverified)",
+    "announcement_date": "2026-10-07 (date of AIX winter-schedule statement per trade press; unverified)",
     "quote": "UNVERIFIED – trade reports mention new Singapore service",
     "sources": [
       {
@@ -330,11 +346,19 @@
       {
         "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
         "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      },
+      {
+        "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
+        "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
+      },
+      {
+        "name": "AeroRoutes – Air India transfers Chennai–Singapore to Air India Express in NW26 (lead, not official)",
+        "url": "https://www.aeroroutes.com/eng/260907-aiixnw26sin"
       }
     ],
     "verified": false,
-    "notes": "Reported as a resumption.",
-    "last_checked": "2026-10-16"
+    "notes": "Reported as a resumption. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. AeroRoutes (7 Sep 2026) reports AIX takes over the route from Air India mainline from 25 Oct 2026, twice daily on 737 MAX 8 (IX628/630 out, IX627/629 back); unverified.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "aix-blr-ktm",
@@ -351,7 +375,7 @@
     "aircraft": "not stated",
     "start_date": "unverified",
     "status": "announced",
-    "announcement_date": "early Oct 2026 (unverified)",
+    "announcement_date": "2026-10-07 (date of AIX winter-schedule statement per trade press; unverified)",
     "quote": "UNVERIFIED – trade reports mention Kathmandu service",
     "sources": [
       {
@@ -365,11 +389,15 @@
       {
         "name": "travelbiz.biz – Air India Express Winter Schedule 2026 (lead)",
         "url": "https://travelbiz.biz/air-india-express-winter-schedule-2026-flights/"
+      },
+      {
+        "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
+        "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
       }
     ],
     "verified": false,
-    "notes": "Other notable route (Nepal).",
-    "last_checked": "2026-10-16"
+    "notes": "Other notable route (Nepal). Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "indigo-del-dps",
@@ -390,17 +418,25 @@
     "quote": "UNVERIFIED – schedule filings reported by AeroRoutes",
     "sources": [
       {
+        "name": "Kantor Imigrasi Ngurah Rai (Indonesian immigration office, official): inaugural IndiGo Delhi–Denpasar–Delhi flight, 24 Oct 2025",
+        "url": "https://ngurahrai.imigrasi.go.id/peresmian-penerbangan-perdana-indigo-airlines-rute-delhi-denpasar-delhi-perkuat-konektivitas-internasional/"
+      },
+      {
         "name": "AeroRoutes 24JUL26 (lead)",
         "url": "https://www.aeroroutes.com/eng/260724-6enw26dps"
       },
       {
         "name": "AeroRoutes 09AUG26 (lead)",
         "url": "https://www.aeroroutes.com/eng/260811-6enw26dps"
+      },
+      {
+        "name": "AeroRoutes 14JUN26 (lead)",
+        "url": "https://www.aeroroutes.com/eng/260614-6enw26dps"
       }
     ],
     "verified": false,
-    "notes": "Filings changed several times. A BOM–DPS A321XLR service from the same date was also reported. No IndiGo release found; recheck before publishing.",
-    "last_checked": "2026-10-16"
+    "notes": "Filings changed several times. A BOM–DPS A321XLR service from the same date was also reported. No IndiGo release found; recheck before publishing. Correction 17 Oct: IndiGo already serves Delhi–Denpasar. Indonesia's Ngurah Rai immigration office (official) recorded the inaugural Delhi–Denpasar–Delhi flight on 24 Oct 2025. What is still pending is the reported switch to a nonstop A321XLR (AeroRoutes 14 Jun 2026: from 25 Oct 2026, replacing A320neo via Bhubaneswar; later filings point to 1 Jan 2027). No IndiGo release found on its press index on 17 Oct, so the change remains unverified.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "thai-vietjet-hkt-bom",
@@ -426,8 +462,8 @@
       }
     ],
     "verified": false,
-    "notes": "Foreign carrier resuming service to India.",
-    "last_checked": "2026-10-16"
+    "notes": "Foreign carrier resuming service to India. Rechecked 17 Oct: still only AeroRoutes and aggregator leads; no Thai VietJet release found.",
+    "last_checked": "2026-10-17"
   },
   {
     "id": "akasa-ccj-ruh",
@@ -453,7 +489,281 @@
       }
     ],
     "verified": false,
-    "notes": "Akasa's press page did not show this release when fetched.",
-    "last_checked": "2026-10-16"
+    "notes": "Akasa's press page did not show this release when fetched. Rechecked 17 Oct: Akasa's press-release page still shows no release for this route.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "vietnam-airlines-han-amd",
+    "origin": {
+      "city": "Hanoi",
+      "iata": "HAN"
+    },
+    "destination": {
+      "city": "Ahmedabad",
+      "iata": "AMD"
+    },
+    "airline": "Vietnam Airlines",
+    "frequency": "4 weekly round trips",
+    "aircraft": "Airbus A321",
+    "start_date": "2026-11-03",
+    "status": "announced",
+    "announcement_date": "2026-10-13 (date of official Vietnam Airlines portal post; main press release not located)",
+    "quote": "Paraphrase: from 3 Nov 2026 Vietnam Airlines will operate direct Hanoi–Ahmedabad flights four times a week with Airbus A321s; Ahmedabad becomes its fifth Indian destination (7 Vietnam–India routes, 25 weekly round trips).",
+    "sources": [
+      {
+        "name": "Vietnam Airlines (official 'Spirit' staff portal, spirit.vietnamairlines.com): Hanoi–Ahmedabad route notice, 13 Oct 2026 (Vietnamese)",
+        "url": "https://spirit.vietnamairlines.com/bay-cao-khat-vong-cong-hien/kham-pha-quyen-loi/super-low-budget-cung-vietnam-airlines-kham-pha-thanh-pho-di-san-ahmedabad.html"
+      }
+    ],
+    "verified": true,
+    "notes": "New route; foreign carrier to India. Verified on Vietnam Airlines' own staff-communications portal (Vietnamese). Operating days (Tue/Thu/Sat/Sun) and times (HAN 17:35–AMD 21:30; AMD 22:45–HAN 04:35+1) appear only in Vietnamese state media (HTV/VOV), not in the official post; treat as unverified. Covered in article-04.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-kul-amd",
+    "origin": {
+      "city": "Kuala Lumpur",
+      "iata": "KUL"
+    },
+    "destination": {
+      "city": "Ahmedabad",
+      "iata": "AMD"
+    },
+    "airline": "AirAsia",
+    "frequency": "4 weekly (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-10-25",
+    "status": "on sale",
+    "announcement_date": "2026-10-05",
+    "quote": "Travel period Ahmedabad: 25 Oct 2026 – 31 Aug 2027; Frequency: 4 x weekly",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: AirAsia celebrates return of Ahmedabad and Amritsar flights with a special sale (5 Oct 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-celebrates-return-of-ahmedabad-and-amritsar-flights-with-a-special-sale"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption ('long-awaited return'). Launch sale from RM669 all-in one way, booking 5–11 Oct 2026 (closed). Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "airasia-kul-atq",
+    "origin": {
+      "city": "Kuala Lumpur",
+      "iata": "KUL"
+    },
+    "destination": {
+      "city": "Amritsar",
+      "iata": "ATQ"
+    },
+    "airline": "AirAsia",
+    "frequency": "4 weekly (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-12-02",
+    "status": "on sale",
+    "announcement_date": "2026-10-05",
+    "quote": "Travel period Amritsar: 2 Dec 2026 – 31 Aug 2027; Frequency: 4 x weekly",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: AirAsia celebrates return of Ahmedabad and Amritsar flights with a special sale (5 Oct 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-celebrates-return-of-ahmedabad-and-amritsar-flights-with-a-special-sale"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption. Same release as airasia-kul-amd. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airasia-dmk-gay",
+    "origin": {
+      "city": "Bangkok (Don Mueang)",
+      "iata": "DMK"
+    },
+    "destination": {
+      "city": "Gaya",
+      "iata": "GAY"
+    },
+    "airline": "Thai AirAsia",
+    "frequency": "not stated (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-10-25",
+    "status": "announced",
+    "announcement_date": "2026-09-22",
+    "quote": "Don Mueang – Gaya, India: Commences 25 October 2026",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: Thai AirAsia / Thai AirAsia X high-season expansion (22 Sep 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-gears-up-for-high-season-with-major-international-expansion"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airasia-dmk-amd",
+    "origin": {
+      "city": "Bangkok (Don Mueang)",
+      "iata": "DMK"
+    },
+    "destination": {
+      "city": "Ahmedabad",
+      "iata": "AMD"
+    },
+    "airline": "Thai AirAsia",
+    "frequency": "not stated (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-11-06",
+    "status": "announced",
+    "announcement_date": "2026-09-22",
+    "quote": "Don Mueang – Ahmedabad, India: Commences 6 November 2026",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: Thai AirAsia / Thai AirAsia X high-season expansion (22 Sep 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-gears-up-for-high-season-with-major-international-expansion"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airasia-dmk-gau",
+    "origin": {
+      "city": "Bangkok (Don Mueang)",
+      "iata": "DMK"
+    },
+    "destination": {
+      "city": "Guwahati",
+      "iata": "GAU"
+    },
+    "airline": "Thai AirAsia",
+    "frequency": "not stated (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-11-16",
+    "status": "announced",
+    "announcement_date": "2026-09-22",
+    "quote": "Don Mueang – Guwahati, India: Commences 16 November 2026",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: Thai AirAsia / Thai AirAsia X high-season expansion (22 Sep 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-gears-up-for-high-season-with-major-international-expansion"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airasia-dmk-hyd",
+    "origin": {
+      "city": "Bangkok (Don Mueang)",
+      "iata": "DMK"
+    },
+    "destination": {
+      "city": "Hyderabad",
+      "iata": "HYD"
+    },
+    "airline": "Thai AirAsia",
+    "frequency": "not stated (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-11-16",
+    "status": "announced",
+    "announcement_date": "2026-09-22",
+    "quote": "Don Mueang – Hyderabad, India: Commences 16 November 2026",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: Thai AirAsia / Thai AirAsia X high-season expansion (22 Sep 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-gears-up-for-high-season-with-major-international-expansion"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airasia-dmk-lko",
+    "origin": {
+      "city": "Bangkok (Don Mueang)",
+      "iata": "DMK"
+    },
+    "destination": {
+      "city": "Lucknow",
+      "iata": "LKO"
+    },
+    "airline": "Thai AirAsia",
+    "frequency": "not stated (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-11-16",
+    "status": "announced",
+    "announcement_date": "2026-09-22",
+    "quote": "Don Mueang – Lucknow, India: Commences 16 November 2026",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: Thai AirAsia / Thai AirAsia X high-season expansion (22 Sep 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-gears-up-for-high-season-with-major-international-expansion"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "thai-airasia-dmk-jai",
+    "origin": {
+      "city": "Bangkok (Don Mueang)",
+      "iata": "DMK"
+    },
+    "destination": {
+      "city": "Jaipur",
+      "iata": "JAI"
+    },
+    "airline": "Thai AirAsia",
+    "frequency": "not stated (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-11-17",
+    "status": "announced",
+    "announcement_date": "2026-09-22",
+    "quote": "Don Mueang – Jaipur, India: Commences 17 November 2026",
+    "sources": [
+      {
+        "name": "AirAsia Newsroom: Thai AirAsia / Thai AirAsia X high-season expansion (22 Sep 2026)",
+        "url": "https://newsroom.airasia.com/news/airasia-gears-up-for-high-season-with-major-international-expansion"
+      }
+    ],
+    "verified": true,
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
+    "last_checked": "2026-10-17"
+  },
+  {
+    "id": "air-arabia-rkt-ccj",
+    "origin": {
+      "city": "Ras Al Khaimah",
+      "iata": "RKT"
+    },
+    "destination": {
+      "city": "Kozhikode",
+      "iata": "CCJ"
+    },
+    "airline": "Air Arabia",
+    "frequency": "daily (resumption)",
+    "aircraft": "not stated",
+    "start_date": "2026-10-16",
+    "status": "operating",
+    "announcement_date": "2026-10-06",
+    "quote": "\"We are pleased to resume our direct service between Ras Al Khaimah and Kozhikode\" – Adel Al Ali, Group CEO",
+    "sources": [
+      {
+        "name": "Air Arabia press office: resumption of daily Ras Al Khaimah–Kozhikode service (6 Oct 2026)",
+        "url": "https://press.airarabia.com/air-arabia-resumes-daily-nonstop-service-between-ras-al-khaimah-and-kozhikode/"
+      },
+      {
+        "name": "WAM (UAE state news agency) report (6 Oct 2026)",
+        "url": "https://www.wam.ae/en/article/c2lumgv-air-arabia-resumes-daily-nonstop-service-between"
+      }
+    ],
+    "verified": true,
+    "notes": "Foreign carrier resuming service to India (UAE). Status set to operating because the announced start date (16 Oct 2026) has passed; the first flight itself was not independently confirmed. Flight numbers/schedule not in the release.",
+    "last_checked": "2026-10-17"
   }
 ]
