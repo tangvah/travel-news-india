@@ -6,13 +6,20 @@ import { allNews, fmt, readingTime, cat, dest, isVerified } from '../../lib';
 import { SITE } from '../../site.config.mjs';
 import TrackerCallout from '../../components/TrackerCallout.astro';
 import Share from '../../components/Share.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { VISA_MAP, visaRows } from '../../trackers';
 export async function getStaticPaths() { const all = await allNews(); return all.map((e) => ({ params: { id: e.id }, props: { e, all } })); }
 const { e, all } = Astro.props; const d = e.data; const { Content } = await render(e);
 const c = cat(d.category);
 const url = new URL(Astro.url.pathname.replace(/\/?$/, '/'), Astro.site).href;
 const verified = isVerified(d);
 const mins = readingTime(e.body);
-const related = all.filter((x) => x.id !== e.id && (x.data.category === d.category || x.data.destinations.some((s) => d.destinations.includes(s)))).slice(0, 3);
+// Related: same destination first, then same category; newest first within each group.
+const score = (x) => (x.data.destinations.some((s) => d.destinations.includes(s)) ? 2 : 0) + (x.data.category === d.category ? 1 : 0);
+const relAll = all.filter((x) => x.id !== e.id && score(x) > 0).sort((a, b) => score(b) - score(a) || +b.data.date - +a.data.date);
+const related = relAll.slice(0, 3);
+// Destination-specific links into the visa tracker (only rows that exist and are verified).
+const visaLinks = d.destinations.map((s) => { const id = Object.keys(VISA_MAP).find((k) => VISA_MAP[k][1] === s); const row = id && visaRows.find((r) => r.id === id); return row ? { id, name: dest(s).name } : null; }).filter(Boolean).slice(0, 3);
 const ogImage = new URL(u(`/og/${e.id}.png`), Astro.site).href;
 const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, description: d.summary,
   datePublished: d.date.toISOString(), dateModified: d.date.toISOString(), author: { '@type': 'Person', name: d.author }, mainEntityOfPage: url,
@@ -24,6 +31,7 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headl
 <div class="progress" aria-hidden="true"></div>
 <article>
   <header class="article-head"><div class="wrap">
+    <Breadcrumbs items={[{ name: c.name, href: u(`/category/${c.slug}/`) }, { name: d.title, href: u(`/news/${e.id}/`) }]} />
     {d.draft && <p class="ph"><span class="badge-draft">DRAFT</span> Preview only. Not published, and hidden from search engines (noindex).</p>}
     <div class="chips"><a class={`chip ${c.color}`} href={u(`/category/${c.slug}/`)}>{c.name}</a>
       {d.destinations.map((s) => <a class="chip dest" href={u(`/destinations/${s}/`)}><Flag code={dest(s).flag} size={16} />{dest(s).name}</a>)}
@@ -33,19 +41,42 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headl
     <div class="byline"><span>By <strong>{d.author}</strong></span><time datetime={d.date.toISOString()}>{fmt(d.date)}</time><span>{mins} min read</span></div>
   </div></header>
   {d.image && <img src={u(d.image)} alt="" />}
+  <div class="wrap article-grid">
+  <div class="article-main">
   <div class="article-body"><Share url={url} title={d.title} /><div class="prose"><Content /></div></div>
   {d.sources.length > 0 && (
   <aside class="box" aria-labelledby="src-h"><div>
     <h2 id="src-h" class="eyebrow" style="font-family:var(--font-sans)">Source box{verified ? ': official sources' : ''}</h2>
     <ul>{d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.name}</a></li>)}</ul>
   </div></aside>)}
-  <TrackerCallout />
+  <div class="callout-m"><TrackerCallout /></div>
   <aside class="box share-card" aria-labelledby="share-h"><div>
     <h2 id="share-h">Found this useful? Share it with your clients and colleagues</h2>
     <Share url={url} title={d.title} variant="card" />
     {d.tags.length > 0 && <p class="meta" style="margin:16px 0 0">Tags: {d.tags.join(', ')}</p>}
   </div></aside>
+  </div>
+  <aside class="article-side" aria-label="More on this story">
+    {relAll.length > 0 && (
+    <section class="side-box" aria-labelledby="srel-h">
+      <h2 id="srel-h" class="rail-h">Related stories</h2>
+      <ul class="side-rel">{relAll.slice(0, 5).map((x) => <li><a href={u(`/news/${x.id}/`)}>{x.data.title}</a><span class="meta">{cat(x.data.category).name} · <time datetime={x.data.date.toISOString()}>{fmt(x.data.date)}</time></span></li>)}</ul>
+    </section>)}
+    <section class="side-box" aria-labelledby="strk-h">
+      <h2 id="strk-h" class="rail-h">Trackers</h2>
+      <ul class="side-trk">
+        {visaLinks.map((v) => <li><a href={u(`/visa-tracker/#${v.id}`)}><b>{v.name}</b><span>Visa rules for Indians</span></a></li>)}
+        <li><a href={u('/visa-tracker/')}><b>Visa tracker</b><span>All destinations</span></a></li>
+        <li><a href={u('/routes/')}><b>Flight routes</b><span>New routes from India</span></a></li>
+      </ul>
+    </section>
+    <section class="side-box side-share" aria-labelledby="sshare-h">
+      <h2 id="sshare-h" class="rail-h">Share</h2>
+      <Share url={url} title={d.title} variant="icons" />
+    </section>
+  </aside>
+  </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </article>
-{related.length > 0 && <section class="wrap section" aria-labelledby="rel-h"><div class="section-head"><h2 id="rel-h">Related</h2></div><List items={related} /></section>}
+{related.length > 0 && <section class="wrap section rel-bottom" aria-labelledby="rel-h"><div class="section-head"><h2 id="rel-h">Related</h2></div><List items={related} /></section>}
 </Base>

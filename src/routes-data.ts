@@ -20,7 +20,7 @@ export const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-'
 // Destination airport (IATA) -> country, for the country filter. Presentation lookup only.
 // Add an entry when the Desk adds a route to a new airport; unknown airports show "Not stated".
 const AIRPORT_COUNTRY: Record<string, string> = {
-  BKK: 'Thailand', DMK: 'Thailand', HKT: 'Thailand', CNX: 'Thailand', KIX: 'Japan', NRT: 'Japan', HND: 'Japan',
+  BKK: 'Thailand', DMK: 'Thailand', HKT: 'Thailand', CNX: 'Thailand', KIX: 'Japan', NRT: 'Japan', HND: 'Japan', ICN: 'South Korea', GMP: 'South Korea',
   SIN: 'Singapore', DXB: 'United Arab Emirates', AUH: 'United Arab Emirates', HAN: 'Vietnam', SGN: 'Vietnam', DAD: 'Vietnam',
   DPS: 'Indonesia', CGK: 'Indonesia', KUL: 'Malaysia', CMB: 'Sri Lanka', DAR: 'Tanzania', YYZ: 'Canada', YVR: 'Canada',
   LHR: 'United Kingdom', CDG: 'France', FRA: 'Germany', JFK: 'United States', SFO: 'United States', SYD: 'Australia', MEL: 'Australia',

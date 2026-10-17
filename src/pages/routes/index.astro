@@ -1,5 +1,6 @@
 ---
 import TrackerTabs from '../../components/TrackerTabs.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Base from '../../layouts/Base.astro'; import Flag from '../../components/Flag.astro';
 import { u } from '../../lib';
 import { routesUpdated, monthYear, dayLong } from '../../trackers';
@@ -28,6 +29,7 @@ const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
 ---
 <Base title={title} description={description} jsonld={jsonld}>
 <div class="wrap section rtk">
+  <Breadcrumbs items={[{ name: 'Flight routes', href: u('/routes/') }]} />
   <TrackerTabs path={Astro.url.pathname} variant="switch" />
   <h1>Flight routes tracker</h1>
   <p class="standfirst">New and announced international routes from India, for travel agents. Every row is checked against an official airline source.</p>
@@ -41,23 +43,23 @@ const art = (id?: string | null) => (id ? u(`/news/${id}/`) : null);
       </fieldset>))}
   </form>
 
-  <div class="table-wrap rt-desk" role="region" aria-label="Routes table" tabindex="0"><table class="rt">
-    <caption class="sr-only">Announced and launched routes from India, soonest start date first</caption>
-    <thead><tr><th scope="col">Route</th><th scope="col">Airline</th><th scope="col">Starts</th><th scope="col">Frequency</th><th scope="col">Aircraft</th><th scope="col">Status</th><th scope="col">Booking open</th><th scope="col">Announced</th><th scope="col">Source</th><th scope="col">Story</th></tr></thead>
+  <div class="table-wrap rt-desk" role="region" aria-label="Routes table" tabindex="0"><table class="rt" data-sortable>
+    <caption class="sr-only">Announced and launched routes from India, soonest start date first. Column headers sort the table.</caption>
+    <thead><tr><th scope="col">Route</th><th scope="col">Airline</th><th scope="col" data-sort-default="ascending">Starts</th><th scope="col">Frequency</th><th scope="col">Aircraft</th><th scope="col">Status</th><th scope="col">Booking open</th><th scope="col">Announced</th><th scope="col" data-nosort>Source</th><th scope="col" data-nosort>Story</th></tr></thead>
     <tbody>{routes.map((r) => (
       <tr class="ro" id={`row-${r.id}`} data-c={slugify(r.country)} data-a={slugify(r.airline)} data-s={slugify(r.status)}>
-        <th scope="row"><span class="rt-route">{r.flag && <Flag code={r.flag} size={18} />}{place(r.origin)} → {place(r.destination)}</span><small class="meta">{r.country}{r.quote && <> · {r.quote}</>}</small></th>
+        <th scope="row" data-sort={place(r.origin).toLowerCase() + " " + place(r.destination).toLowerCase()}><span class="rt-route">{r.flag && <Flag code={r.flag} size={18} />}{place(r.origin)} → {place(r.destination)}</span><small class="meta">{r.country}{r.quote && <> · {r.quote}</>}</small></th>
         <td>{r.airline}</td>
-        <td><time datetime={r.start_date}>{day(r.start_date)}</time></td>
-        <td>{show(r.frequency)}</td>
-        <td>{show(r.aircraft)}</td>
+        <td data-sort={r.start_date ?? ""}><time datetime={r.start_date}>{day(r.start_date)}</time></td>
+        <td data-sort={show(r.frequency) === "Not stated" ? "" : show(r.frequency).toLowerCase()}>{show(r.frequency)}</td>
+        <td data-sort={show(r.aircraft) === "Not stated" ? "" : show(r.aircraft).toLowerCase()}>{show(r.aircraft)}</td>
         <td><span class={`st rs-${slugify(r.status)}`}>{statusLabel(r.status)}</span></td>
-        <td>{r.booking}</td>
-        <td>{day(r.announcement_date)}</td>
+        <td data-sort={r.booking === "Yes" ? "0" : ""}>{r.booking}</td>
+        <td data-sort={r.announcement_date ?? ""}>{day(r.announcement_date)}</td>
         <td>{r.sources.map((s, i) => <>{i > 0 && <br />}<a href={s.url} rel="noopener">{s.name}</a></>)}<small class="meta">Checked {day(r.last_checked)}</small></td>
         <td>{art(r.related_article) ? <a href={art(r.related_article)!}>Read<span class="sr-only"> about {r.origin.city} to {r.destination.city}</span></a> : 'Not stated'}</td>
       </tr>))}</tbody>
-  </table></div>
+  </table><p class="sr-only sort-status" role="status" aria-live="polite"></p></div>
 
   <ul class="rt-cards" role="list">{routes.map((r) => (
     <li class="ro vt" id={r.id} data-c={slugify(r.country)} data-a={slugify(r.airline)} data-s={slugify(r.status)}>

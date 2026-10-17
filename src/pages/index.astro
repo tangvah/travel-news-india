@@ -14,26 +14,34 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'WebSite', name: SIT
 <div class="wrap">
   <h1 class="sr-only">{SITE.name}: latest news</h1>
   {feat ? (
-  <div class="lead">
+  <div class="home-top">
     <article class="feature" style={`--hero:${fdest ? fdest.hero : 'linear-gradient(135deg,#0d0d10,#3b3fc4)'}`}>
       <div>
         <div class="chips">{feat.data.draft && <span class="badge-draft">DRAFT</span>}<a class={`chip ${fc.color}`} href={u(`/category/${fc.slug}/`)}>{fc.name}</a>
           {feat.data.destinations.map((s) => <a class="chip dest" href={u(`/destinations/${s}/`)}><Flag code={dest(s).flag} size={16} />{dest(s).name}</a>)}</div>
-        <h2><a href={u(`/news/${feat.id}/`)}>{feat.data.title}</a></h2>
+        <h2 transition:name={`t-${feat.id}`}><a href={u(`/news/${feat.id}/`)}>{feat.data.title}</a></h2>
         <p>{feat.data.summary}</p>
         <div class="meta"><time datetime={feat.data.date.toISOString()}>{fmt(feat.data.date)}</time> · {feat.data.author} · {readingTime(feat.body)} min read{isVerified(feat.data) && ' · ✓ Verified: official source'}</div>
       </div>
     </article>
-    <aside class="side-list" aria-labelledby="top-h">
-      <h2 id="top-h" class="eyebrow" style="font-family:var(--font-sans)">Most recent</h2>
-      {rest.length ? <ol>{rest.slice(0, 5).map((e) => <li><div><a href={u(`/news/${e.id}/`)}>{e.data.title}</a><div class="meta">{cat(e.data.category).name} · {fmt(e.data.date)}</div></div></li>)}</ol> : <p class="meta">More stories soon.</p>}
-    </aside>
+    <div class="home-rail">
+      <section class="side-list" aria-labelledby="top-h">
+        <h2 id="top-h" class="rail-h">Latest</h2>
+        {rest.length ? <ol>{rest.slice(0, 5).map((e) => <li><div><a href={u(`/news/${e.id}/`)}>{e.data.title}</a><div class="meta">{cat(e.data.category).name} · <time datetime={e.data.date.toISOString()}>{fmt(e.data.date)}</time></div></div></li>)}</ol> : <p class="meta">More stories soon.</p>}
+      </section>
+      <nav class="side-sections" aria-labelledby="sec-h">
+        <h2 id="sec-h" class="rail-h">Sections</h2>
+        <ul>{CATEGORIES.map((c) => { const n = items.filter((e) => e.data.category === c.slug).length; return (
+          <li><a class={`bar-${c.color}`} href={u(`/category/${c.slug}/`)}><span>{c.name}</span><small>{n} {n === 1 ? 'story' : 'stories'}</small></a></li>); })}</ul>
+      </nav>
+    </div>
   </div>) : <p class="ph" style="margin-top:32px">No published articles yet.</p>}
 
+  {rest.length > 0 && (
   <section class="section" aria-labelledby="latest-h">
-    <div class="section-head"><h2 id="latest-h">Latest news</h2><a href={u("/rss.xml")}>RSS</a></div>
-    <List items={items} morph />
-  </section>
+    <div class="section-head"><h2 id="latest-h">More news</h2><a href={u("/rss.xml")}>RSS</a></div>
+    <div class="home-grid"><List items={rest} morph /></div>
+  </section>)}
 
   <section class="section" aria-labelledby="dest-h">
     <div class="section-head"><h2 id="dest-h">Destinations</h2><a href={u("/destinations/")}>All destinations</a></div>

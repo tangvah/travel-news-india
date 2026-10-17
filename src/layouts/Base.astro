@@ -36,9 +36,23 @@ document.addEventListener('click',function(e){
  if(t){var next=document.documentElement.dataset.theme==='dark'?'light':'dark';var apply=function(){document.documentElement.dataset.theme=next};var r=t.getBoundingClientRect();var de=document.documentElement;de.style.setProperty('--vx',(r.left+r.width/2)+'px');de.style.setProperty('--vy',(r.top+r.height/2)+'px');if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){de.classList.add('theme-vt');document.startViewTransition(apply).finished.finally(function(){de.classList.remove('theme-vt')})}else apply();try{localStorage.setItem('theme',next)}catch(_){};t.setAttribute('aria-pressed',String(next==='dark'));return}
  var c=e.target.closest&&e.target.closest('[data-copy]');
  if(c&&navigator.clipboard){navigator.clipboard.writeText(c.dataset.copy).then(function(){var o=document.getElementById('toast');if(o){o.textContent='Copied';o.classList.add('show');clearTimeout(window.__tt);window.__tt=setTimeout(function(){o.classList.remove('show');o.textContent=''},2200)}});return}
+ document.querySelectorAll('details.nav-dd[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')});
  var w=e.target.closest&&e.target.closest('[data-webshare]');
  if(w&&navigator.share){navigator.share({title:w.dataset.title,url:w.dataset.webshare}).catch(function(){})}
-});})();
+});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var d=document.querySelector('details.nav-dd[open]');if(d){d.removeAttribute('open');var s=d.querySelector('summary');if(s)s.focus()}});
+/* Sortable tables (progressive enhancement): table[data-sortable] gets real <button>s in its column headers. */
+function sortable(){document.querySelectorAll('table[data-sortable]:not([data-sort-ready])').forEach(function(t){t.dataset.sortReady='1';var ths=t.tHead.rows[0].cells,tb=t.tBodies[0];
+ var key=function(r,i){var c=r.cells[i];if(!c)return'';var v=c.getAttribute('data-sort');return v==null?c.textContent.trim().toLowerCase():v};
+ Array.prototype.forEach.call(ths,function(th,i){if(th.hasAttribute('data-nosort'))return;var b=document.createElement('button');b.type='button';b.className='sort-btn';while(th.firstChild)b.appendChild(th.firstChild);var ic=document.createElement('span');ic.className='sort-ic';ic.setAttribute('aria-hidden','true');b.appendChild(ic);th.appendChild(b);
+  if(th.dataset.sortDefault)th.setAttribute('aria-sort',th.dataset.sortDefault);
+  b.addEventListener('click',function(){var dir=th.getAttribute('aria-sort')==='ascending'?'descending':'ascending';Array.prototype.forEach.call(ths,function(h){h.removeAttribute('aria-sort')});th.setAttribute('aria-sort',dir);
+   var rows=Array.prototype.slice.call(tb.rows),num=rows.every(function(r){var k=key(r,i);return k===''||!isNaN(parseFloat(k))&&isFinite(k)});
+   rows.sort(function(a,b2){var x=key(a,i),y=key(b2,i);if(x===''&&y!=='')return 1;if(y===''&&x!=='')return -1;var c=num?parseFloat(x)-parseFloat(y):x.localeCompare(y,'en',{numeric:true});return dir==='ascending'?c:-c});
+   rows.forEach(function(r){tb.appendChild(r)});var st=t.parentNode.querySelector('.sort-status');if(st)st.textContent='Sorted by '+b.textContent.trim()+', '+dir;});});});}
+if(document.readyState!=='loading')sortable();else document.addEventListener('DOMContentLoaded',sortable);
+document.addEventListener('astro:page-load',sortable);
+})();
 </script>
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
@@ -63,10 +77,10 @@ document.addEventListener('click',function(e){
 {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
 <ClientRouter />
 {GOATCOUNTER_CODE && !SHOW_DRAFTS && (
-<script is:inline data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`} async src="//gc.zgo.at/count.js"></script>
+<script is:inline data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`} async src="https://gc.zgo.at/count.js"></script>
 )}
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">Skip to content</a>
 <header>
   {latest.length > 0 && (
@@ -80,7 +94,7 @@ document.addEventListener('click',function(e){
   <div class="masthead">
     <div class="wrap">
       <div class="mast-row">
-        <a class="brand brand-v2" href={u("/")}><Logo size={46} /><span class="bt"><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></span></a>
+        <a class="brand brand-v2" href={u("/")} aria-label={`${SITE.name}, home`}><Logo size={46} /><span class="bt"><b>India Outbound <span>Travel</span> News</b><small>{today} · {SITE.tagline}</small></span></a>
         <TrackerTabs path={path} />
         <div class="mast-tools">
           <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
@@ -88,6 +102,7 @@ document.addEventListener('click',function(e){
           <details class="menu">
             <summary class="btn" aria-label="Menu"><span aria-hidden="true">☰</span> Menu</summary>
             <nav class="menu-panel" aria-label="Mobile menu">
+              <div class="menu-home"><a href={u("/")} aria-current={cur(u('/'))}><span aria-hidden="true">⌂</span> Home</a></div>
               <div><strong class="eyebrow">Trackers</strong><ul>{TOOLS.map((t) => <li><a href={u(t.href)} aria-current={cur(u(t.href))}>{t.name}</a></li>)}</ul></div>
               <div><strong class="eyebrow">Sections</strong><ul>{CATEGORIES.map((c) => <li><a href={u(`/category/${c.slug}/`)}>{c.name}</a></li>)}</ul></div>
               <div><strong class="eyebrow">Destinations</strong><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}><Flag code={d.flag} size={22} />{d.name}</a></li>)}</ul></div>
@@ -96,16 +111,26 @@ document.addEventListener('click',function(e){
           </details>
         </div>
       </div>
-      <nav class="nav-primary" aria-label="Sections">
-        <a href={u("/")} aria-current={cur(u('/'))}>Latest</a>
-        {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
-      </nav>
-      <nav class="nav-dest" aria-label="Destinations">
-        {DESTINATIONS.map((d) => <a href={u(`/destinations/${d.slug}/`)} aria-current={cur(u(`/destinations/${d.slug}/`))}><Flag code={d.flag} size={21} />{d.name}</a>)}
-      </nav>
     </div>
   </div>
 </header>
+<div class="navbar" id="site-nav">
+  <div class="wrap navbar-in">
+    <a class="nb-mark" href={u("/")} tabindex="-1" aria-hidden="true"><Logo size={30} /></a>
+    <nav class="nav-primary" aria-label="Sections">
+      <a href={u("/")} aria-current={cur(u('/'))}>Home</a>
+      {CATEGORIES.map((c) => <a href={u(`/category/${c.slug}/`)} aria-current={cur(u(`/category/${c.slug}/`))}>{c.name}</a>)}
+    </nav>
+    <details class="nav-dd">
+      <summary class:list={[{ on: path.includes('/destinations/') }]}>Destinations <span class="caret" aria-hidden="true"></span></summary>
+      <nav class="dd-panel" aria-label="Destinations">
+        <ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)} aria-current={cur(u(`/destinations/${d.slug}/`))}><Flag code={d.flag} size={21} />{d.name}</a></li>)}</ul>
+        <a class="dd-all" href={u("/destinations/")}>All destinations</a>
+      </nav>
+    </details>
+    <TrackerTabs path={path} variant="bar" />
+  </div>
+</div>
 <main id="main" tabindex="-1"><slot /></main>
 <footer class="site-foot">
   <div class="wrap">
@@ -115,7 +140,7 @@ document.addEventListener('click',function(e){
       <div><h2>Destinations</h2><ul>{DESTINATIONS.map((d) => <li><a href={u(`/destinations/${d.slug}/`)}>{d.name}</a></li>)}</ul></div>
       <div><h2>More</h2><ul>{TOOLS.map((t) => <li><a href={u(t.href)}>{t.name}</a></li>)}<li><a href={u("/about/")}>About</a></li><li><a href={u("/contact/")}>Contact</a></li><li><a href={u("/newsletter/")}>Newsletter</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
     </div>
-    <p class="legal">© {new Date().getFullYear()} {SITE.name}. Fonts: Sora &amp; Inter Tight (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
+    <p class="legal"><a class="to-top" href="#top"><span aria-hidden="true">↑</span> Back to top</a>© {new Date().getFullYear()} {SITE.name}. Fonts: Sora &amp; Inter Tight (SIL OFL). <a href={u("/about/#credits")}>Credits</a></p>
   </div>
 </footer>
 </body></html>
