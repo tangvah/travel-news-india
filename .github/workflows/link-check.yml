@@ -1,0 +1,110 @@
+# Weekly broken-link check of the built site. Deterministic (lychee), no secrets beyond GITHUB_TOKEN.
+# Can change: only the single open issue labelled `broken-links` (opened/updated on failure, closed when clean).
+name: Link check
+on:
+  schedule:
+    - cron: '30 21 * * 6' # 21:30 UTC Saturday = 03:00 IST Sunday
+  workflow_dispatch:
+  pull_request:
+    # Report-only dry run when the checker itself changes (never touches issues).
+    paths:
+      - lychee.toml
+      - .github/workflows/link-check.yml
+permissions: {}
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    outputs:
+      exit_code: ${{ steps.lychee.outputs.exit_code }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          TZ: Asia/Kolkata
+      # The site is served under /travel-news-india/, so mirror that layout locally:
+      # root-relative links (/travel-news-india/...) resolve via --root-dir, and absolute
+      # https://tangvah.github.io/travel-news-india/... URLs are remapped to the same files.
+      - name: Stage dist under the base path
+        run: |
+          rm -rf _linkcheck
+          mkdir -p _linkcheck
+          cp -r dist _linkcheck/travel-news-india
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --config lychee.toml
+            --root-dir '${{ github.workspace }}/_linkcheck'
+            --remap '^https://tangvah\.github\.io/travel-news-india/ file://${{ github.workspace }}/_linkcheck/travel-news-india/'
+            '_linkcheck/**/*.html' '_linkcheck/**/*.xml'
+          format: markdown
+          output: lychee/out.md
+          fail: false
+          jobSummary: true
+      - name: Fail on lychee runtime errors (not broken links)
+        # 0 = clean, 2 = broken links found; anything else is a config/runtime problem.
+        if: steps.lychee.outputs.exit_code != '0' && steps.lychee.outputs.exit_code != '2'
+        run: |
+          echo "::error::lychee exited with ${{ steps.lychee.outputs.exit_code }}"
+          exit 1
+      - uses: actions/upload-artifact@v7
+        with:
+          name: lychee-report
+          path: lychee/out.md
+          retention-days: 14
+
+  report:
+    # Issue bookkeeping runs in a separate job that never executes repository code.
+    needs: check
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      LABEL: broken-links
+      EXIT_CODE: ${{ needs.check.outputs.exit_code }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: lychee-report
+          path: lychee
+      - name: Open, update or close the broken-links issue
+        run: |
+          set -euo pipefail
+          gh label create "$LABEL" --color d73a4a --description "Found by the weekly link check" 2>/dev/null || true
+          num=$(gh issue list --label "$LABEL" --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ "$EXIT_CODE" = "2" ]; then
+            {
+              echo "The weekly link check found broken links in the built site ([run]($RUN_URL), $(TZ=Asia/Kolkata date '+%d %b %Y %H:%M IST'))."
+              echo "This issue is updated on every failing run and closed automatically once the check is clean."
+              echo
+              head -c 60000 lychee/out.md
+            } > body.md
+            if [ -n "$num" ]; then
+              gh issue edit "$num" --body-file body.md
+              echo "Updated #$num"
+            else
+              gh issue create --title "Broken links found by the weekly link check" --label "$LABEL" --body-file body.md
+            fi
+          elif [ -n "$num" ]; then
+            gh issue close "$num" --comment "Link check is clean again ([run]($RUN_URL)). Closing automatically."
+            echo "Closed #$num"
+          else
+            echo "No broken links and no open issue."
+          fi

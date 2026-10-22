@@ -1,0 +1,47 @@
+# lychee link-checker config, used by .github/workflows/link-check.yml.
+# The site is served under /travel-news-india/, so the workflow copies dist/ into
+# _linkcheck/travel-news-india/ and passes --root-dir and a --remap for the absolute
+# https://tangvah.github.io/travel-news-india/ URLs (canonical, og:url, sitemap) so
+# internal links are checked against the built files, not the live site.
+
+max_concurrency = 8
+host_concurrency = 2
+host_request_interval = "500ms"
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+max_redirects = 10
+# 429 = rate limited; 403/999 = bot walls on otherwise-live pages (airline, gov and social sites).
+accept = ["100..=103", "200..=299", "403", "429", "999"]
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+no_progress = true
+include_mail = false
+# Several Indian/Asian government sites serve incomplete TLS chains. We only check reachability
+# (no data is sent), so accept them rather than reporting them every week.
+insecure = true
+exclude_private = true
+exclude_link_local = true
+exclude_loopback = true
+cache = true
+max_cache_age = "1d"
+cache_exclude_status = ["429", "500..=599"]
+
+exclude = [
+  # Share intents: valid by construction, and the targets block bots.
+  '^https://x\.com/intent/',
+  '^https://www\.facebook\.com/sharer/',
+  '^https://www\.linkedin\.com/sharing/',
+  '^https://wa\.me/',
+  '^https://t\.me/share/',
+  # Analytics endpoints and JSON-LD vocabulary, not navigable links.
+  '^https://[a-z0-9-]+\.goatcounter\.com/',
+  '^https://gc\.zgo\.at/',
+  '^https?://schema\.org',
+  # Akamai bot walls reset non-browser clients (HTTP/2 protocol error) even for live pages.
+  # Check these by hand when editing the articles that cite them.
+  '^https://www\.airindia\.com/',
+  '^https://www\.goindigo\.in/',
+  '^https://www\.etihad\.com/',
+  # Preconnect-only hosts.
+  '^https://fonts\.(googleapis|gstatic)\.com',
+]

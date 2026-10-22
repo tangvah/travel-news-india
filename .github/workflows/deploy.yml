@@ -2,6 +2,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Daily rebuild of main as-is so date-based labels and month pages refresh.
+    - cron: '35 18 * * *' # 18:35 UTC = 00:05 IST
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -23,12 +26,15 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # Build-time "today" (header date, footer year) in IST, matching the daily 00:05 IST rebuild.
+          TZ: Asia/Kolkata
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
   deploy:
-    # PRs only build (as a check); deploys happen from main.
-    if: github.event_name != 'pull_request'
+    # PRs only build (as a check); deploys happen from main only (push, daily schedule, or manual run on main).
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-24.04
     environment:

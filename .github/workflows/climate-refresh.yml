@@ -1,0 +1,50 @@
+# Monthly re-fetch of the Open-Meteo climate averages (scripts/refresh-climate.py).
+# Deterministic: fixed cities, fixed 2016-2025 period, fixed ERA5 model; no API key.
+# Can change: only a pull request from branch bot/climate-refresh (never merged automatically).
+name: Climate data refresh
+on:
+  schedule:
+    - cron: '30 22 1 * *' # 22:30 UTC on the 1st = 04:00 IST on the 2nd of each month
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: climate-refresh
+  cancel-in-progress: false # never cut a half-finished fetch/PR update short
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write # push the bot/climate-refresh branch
+      pull-requests: write # open/update the PR
+    steps:
+      - uses: actions/checkout@v7
+      - name: Fetch Open-Meteo data and rebuild climate_normals.json
+        id: refresh
+        run: python3 scripts/refresh-climate.py
+      # The PR below is opened with GITHUB_TOKEN, which does not trigger other workflows,
+      # so check here that the site still builds with the new data.
+      - if: steps.refresh.outputs.changed == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - if: steps.refresh.outputs.changed == 'true'
+        run: npm ci && npm run build
+      - if: steps.refresh.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: bot/climate-refresh
+          delete-branch: true
+          add-paths: src/data/climate_normals.json
+          commit-message: 'Climate data: refresh Open-Meteo 2016-2025 averages'
+          title: 'Climate data: Open-Meteo refresh (review before merging)'
+          labels: climate-data
+          body: |
+            The monthly climate refresh found that Open-Meteo / ERA5 values for 2016-2025 changed, so `src/data/climate_normals.json` was rebuilt by `scripts/refresh-climate.py` ([run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})). The site build passed with the new data in that run.
+
+            **Review before merging; this PR is never merged automatically.** Check the diff for unexpected jumps, and check that `best_seasons.json` ratings and the `quality` / `show_rain_on_site` notes still hold.
+
+            **Data terms:** Open-Meteo data is licensed **CC BY 4.0** (attribution "Weather data by Open-Meteo.com", https://open-meteo.com/; underlying ERA5/ERA5-Land: Copernicus Climate Change Service). The free Open-Meteo API is for **non-commercial use only** (https://open-meteo.com/en/terms). If the site becomes commercial, switch to a paid Open-Meteo plan or another source.
+
+            Note: PRs opened by GITHUB_TOKEN do not start other workflows. To run the normal PR build check, close and reopen this PR or push a commit to it.
