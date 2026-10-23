@@ -107,7 +107,7 @@
     ],
     "verified": true,
     "notes": "The government portal says e-visas are issued 'to citizens of all countries and territories', so India is covered. There is no India-specific page. evisa.gov.vn itself timed out today.",
-    "last_checked": "2026-10-16"
+    "last_checked": "2026-10-23"
   },
   {
     "id": "indonesia",
@@ -201,7 +201,7 @@
     "fee": {
       "amount": 500,
       "currency": "INR",
-      "applies_to": "Visa fee for Indian nationals, single or multiple entry, for applications from 1 Jul 2026 to 31 Mar 2027 (Consulate-General of Japan in Mumbai; cash only; VFS Global service fee extra). Other nationals pay Rs 8,650 single / Rs 17,350 multiple in the same period"
+      "applies_to": "Visa fee for Indian nationals, single or multiple entry, for applications from 1 Jul 2026 to 31 Mar 2027 (Embassy of Japan in India, New Delhi, and Consulates-General in Mumbai and Chennai; VFS Global service fee extra). Other nationals pay Rs 8,650 single / Rs 17,350 multiple in the same period"
     },
     "effective_date": null,
     "key_conditions": [
@@ -215,11 +215,13 @@
     "sources": [
       "https://www.mofa.go.jp/j_info/visit/visa/short/Novisa.html",
       "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html",
-      "https://www.mumbai.in.emb-japan.go.jp/itpr_en/visa_information.html"
+      "https://www.mumbai.in.emb-japan.go.jp/itpr_en/visa_information.html",
+      "https://www.in.emb-japan.go.jp/itpr_en/visa.html",
+      "https://www.chennai.in.emb-japan.go.jp/itpr_en/japanese_visa_for_indian.html"
     ],
     "verified": true,
-    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. Fee verified 17 Oct 2026 on the Consulate-General of Japan in Mumbai visa page (loaded via WebFetch; curl gets 403): Indian nationals pay Rs 500 for single or multiple entry for applications 1 Jul 2026 – 31 Mar 2027, unchanged from Apr–Jun 2026, while Japan's fees for other nationals rose sharply from 1 Jul 2026 (reported in Indian media, e.g. Outlook Traveller). The Embassy in New Delhi page (in.emb-japan.go.jp) still returns 403, so the New Delhi jurisdiction fee is assumed but not separately confirmed. Whether the same Rs 500 applies to the eVISA route was not stated on the page.",
-    "last_checked": "2026-10-17"
+    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. Fee rechecked 23 Oct 2026: the Embassy of Japan in India (New Delhi) visa page states 'VISA fee (from 1 July 2026) For Indian Nationals Single or Multiple visa: 500 INR', with VFS service fee extra and transit visa abolished; other nationals pay Rs 8,650 single / Rs 17,350 multiple or double. The Consulate-General in Chennai lists Rs 500 single and multiple for Indian nationals for 1 Jul 2026 – 31 Mar 2027, matching the Mumbai consulate (verified 17 Oct 2026). The New Delhi fee is now confirmed directly. The pages do not say whether the same Rs 500 applies to the eVISA route.",
+    "last_checked": "2026-10-23"
   },
   {
     "id": "maldives",
