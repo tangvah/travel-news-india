@@ -95,7 +95,7 @@
       "iata": "HAN"
     },
     "airline": "IndiGo",
-    "frequency": "daily",
+    "frequency": "daily (6E1637 BOM 04:15-HAN 10:00; 6E1638 HAN 19:05-BOM 23:05)",
     "aircraft": "not stated",
     "start_date": "2026-10-25",
     "status": "announced",
@@ -108,8 +108,8 @@
       }
     ],
     "verified": true,
-    "notes": "Flight numbers 6E1637/1638 appear only in secondary reports (unverified). Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately). Rechecked 17 Oct: index entry unchanged. Rechecked 22 Oct: release/index unchanged; covered in article-10.",
-    "last_checked": "2026-10-22"
+    "notes": "Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately). Rechecked 17 Oct: index entry unchanged. Rechecked 22 Oct: release/index unchanged; covered in article-10. Rechecked 23 Oct: release page lists flight numbers 6E1637/1638 and timings; IndiGoStretch offered; subject to regulatory approvals.",
+    "last_checked": "2026-10-23"
   },
   {
     "id": "indigo-bom-dar",
@@ -835,5 +835,40 @@
     "verified": false,
     "notes": "Frequency increase on an existing route. No Korean Air press release found: news.koreanair.com searches for Delhi/India/winter schedule return nothing for 2026, and koreanair.com newsroom/notice pages return 403 to curl and 500 to fetch. Supporting but not conclusive: on 17 Oct, Korean Air's Delhi–Seoul fares calendar shows fares for every date from 27 Oct onward but 'Find Offers' (no fare) on some earlier dates (17, 20, 21, 24 Oct), consistent with 5 weekly before and daily after. Trade press says the winter schedule runs to 25 Mar 2027. KTO New Delhi's static page lists Korean Air Delhi–Incheon as 'Daily' (19:30–05:50+1) but is undated and partly out of date.",
     "last_checked": "2026-10-17"
+  },
+  {
+    "id": "swiss-blr-zrh",
+    "origin": {
+      "city": "Bengaluru",
+      "iata": "BLR"
+    },
+    "destination": {
+      "city": "Zurich",
+      "iata": "ZRH"
+    },
+    "airline": "SWISS",
+    "frequency": "5 weekly (LX140 ZRH-BLR Tue/Thu/Fri/Sat/Sun; LX141 BLR-ZRH Mon/Wed/Fri/Sat/Sun)",
+    "aircraft": "not stated",
+    "start_date": "2026-10-27",
+    "status": "on sale",
+    "announcement_date": "2026-05-19",
+    "quote": "SWISS India route page: \"Fly direct to Switzerland and beyond with SWISS starting 28 October 2026.\"",
+    "sources": [
+      {
+        "name": "SWISS newsroom release (May 2026)",
+        "url": "https://newsroom.swiss.com/en/swiss-to-offer-its-first-ever-service-to-bengaluru-india/"
+      },
+      {
+        "name": "Lufthansa Group newsroom (19 May 2026)",
+        "url": "https://newsroom.lufthansagroup.com/en/swiss-expands-india-network-with-new-nonstop-bengaluruzurich-service/"
+      },
+      {
+        "name": "SWISS India route page",
+        "url": "https://www.swiss.com/in/en/local-page/blrzrhwintersch2026"
+      }
+    ],
+    "verified": true,
+    "notes": "Watch list (Europe). First LX140 leaves Zurich Tue 27 Oct and arrives Bengaluru 28 Oct 02:55; start_date is the first Zurich departure. Tickets on sale since 19 May. Covered in article-12.",
+    "last_checked": "2026-10-23"
   }
 ]
