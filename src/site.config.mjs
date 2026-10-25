@@ -18,6 +18,7 @@ export const DESTINATIONS = [
   { slug: 'sri-lanka', name: 'Sri Lanka', flag: 'lk', hero: 'linear-gradient(135deg,#4a1210 0%,#8d2b1e 50%,#e2a33a 100%)' },
   { slug: 'japan', name: 'Japan', flag: 'jp', hero: 'linear-gradient(135deg,#2a1a3a 0%,#8a2d4f 55%,#f3a3b5 100%)' },
   { slug: 'south-korea', name: 'South Korea', flag: 'kr', hero: 'linear-gradient(135deg,#0b1f4d 0%,#1f4fa3 50%,#c8323b 100%)' },
+  { slug: 'saudi-arabia', name: 'Saudi Arabia', flag: 'sa', hero: 'linear-gradient(135deg,#0b3d24 0%,#006c35 55%,#c9b26b 100%)' },
 ];
 // colour = text/accent colour token name defined in Base.astro (AA on its tint in both themes)
 export const CATEGORIES = [
