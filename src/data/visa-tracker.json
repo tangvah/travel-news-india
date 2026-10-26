@@ -21,8 +21,8 @@
       "https://tdac.immigration.go.th"
     ],
     "verified": true,
-    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date. Watch item (checked 17 Oct 2026): Thailand's proposed tourism entry fee for foreign visitors is NOT in force. Thailand's Government Public Relations Department (17 Aug 2026, https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/532128) describes a proposed flat 450 baht fee, starting for air arrivals 180 days after publication in the Royal Gazette. Thai media in Oct 2026 report it still awaits Cabinet approval; no Royal Gazette notice found. Unconfirmed; not a current entry condition.",
-    "last_checked": "2026-10-17"
+    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date. Watch item (checked 17 Oct 2026): Thailand's proposed tourism entry fee for foreign visitors is NOT in force. Thailand's Government Public Relations Department (17 Aug 2026, https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/532128) describes a proposed flat 450 baht fee, starting for air arrivals 180 days after publication in the Royal Gazette. Thai media in Oct 2026 report it still awaits Cabinet approval; no Royal Gazette notice found. Unconfirmed; not a current entry condition. Rechecked 26 Oct (Monday): Thai Embassy New Delhi revision page unchanged (effective 15 Sep 2026).",
+    "last_checked": "2026-10-26"
   },
   {
     "id": "singapore",
@@ -49,8 +49,8 @@
       "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements/visa-detail-page/india"
     ],
     "verified": true,
-    "notes": "ICA states 'A S$30 non-refundable processing fee is payable online'. Fees when applying through an authorised agent in India were not checked.",
-    "last_checked": "2026-10-16"
+    "notes": "ICA states 'A S$30 non-refundable processing fee is payable online'. Fees when applying through an authorised agent in India were not checked. Rechecked 26 Oct (Monday): ICA India page still says a visa is required.",
+    "last_checked": "2026-10-26"
   },
   {
     "id": "uae",
@@ -78,8 +78,8 @@
       "https://u.ae/en/information-and-services/visa-and-emirates-id/types-of-visas/tourist-visa"
     ],
     "verified": true,
-    "notes": "Verified 16 Oct 2026 against ICP (English), GDRFA Dubai, and u.ae. ICP English requires a residence permit from the listed countries (India was already eligible; the 25 June 2026 update added more nationalities and residence countries). An older ICP Arabic release also mentioned US/UK/EU tourist visas; the live English page does not, so this entry follows the English residence-permit wording. GDRFA Dubai still lists US green card or UK/EU residence and shows fee 253 with no currency. Standard tourist-visa path for Indians without qualifying residence is confirmed on u.ae (airlines, agents, hotels).",
-    "last_checked": "2026-10-16"
+    "notes": "Verified 16 Oct 2026 against ICP (English), GDRFA Dubai, and u.ae. ICP English requires a residence permit from the listed countries (India was already eligible; the 25 June 2026 update added more nationalities and residence countries). An older ICP Arabic release also mentioned US/UK/EU tourist visas; the live English page does not, so this entry follows the English residence-permit wording. GDRFA Dubai still lists US green card or UK/EU residence and shows fee 253 with no currency. Standard tourist-visa path for Indians without qualifying residence is confirmed on u.ae (airlines, agents, hotels). Rechecked 26 Oct (Monday): ICP release unchanged (14-day or 60-day stays).",
+    "last_checked": "2026-10-26"
   },
   {
     "id": "vietnam",
@@ -106,7 +106,7 @@
       "https://en.baochinhphu.vn/understanding-viet-nams-e-visa-111250218154519057.htm"
     ],
     "verified": true,
-    "notes": "The government portal says e-visas are issued 'to citizens of all countries and territories', so India is covered. There is no India-specific page. evisa.gov.vn itself timed out today.",
+    "notes": "The government portal says e-visas are issued 'to citizens of all countries and territories', so India is covered. There is no India-specific page. evisa.gov.vn itself timed out today. Rechecked 26 Oct (Monday): e-visa portal page loads as a script-only shell; not reconfirmed this week.",
     "last_checked": "2026-10-23"
   },
   {
@@ -134,8 +134,8 @@
       "https://imigrasi.go.id/wna/daftar-visa-indonesia/B1"
     ],
     "verified": true,
-    "notes": "The extension and passport-validity details come from the Indonesian-language B1 page ('maksimal 30 hari', 'maksimal 60 hari', 'Rp 500.000').",
-    "last_checked": "2026-10-16"
+    "notes": "The extension and passport-validity details come from the Indonesian-language B1 page ('maksimal 30 hari', 'maksimal 60 hari', 'Rp 500.000'). Rechecked 26 Oct (Monday): e-VoA page unchanged (30 days, IDR 500,000; India listed).",
+    "last_checked": "2026-10-26"
   },
   {
     "id": "malaysia",
@@ -160,7 +160,7 @@
       "https://imigresen-online.imi.gov.my/mdac/main"
     ],
     "verified": true,
-    "notes": "The effective date of 1 Dec 2023 comes from the MYVISA terms page. The exemption expires 31 Dec 2026; watch for an extension.",
+    "notes": "The effective date of 1 Dec 2023 comes from the MYVISA terms page. The exemption expires 31 Dec 2026; watch for an extension. Rechecked 26 Oct (Monday): kln.gov.my timed out and the imi.gov.my country page does not show India's entry in text; no change found, but the 31 Dec 2026 waiver end date could not be reconfirmed. Watch for an extension announcement.",
     "last_checked": "2026-10-16"
   },
   {
@@ -188,8 +188,8 @@
       "https://www.immigration.gov.lk/pages_e.php?id=60"
     ],
     "verified": true,
-    "notes": "India is item 13 on the list of 40 countries. The 'LKR 0' currency is our own label; the page just says 'free-of-charge'.",
-    "last_checked": "2026-10-16"
+    "notes": "India is item 13 on the list of 40 countries. The 'LKR 0' currency is our own label; the page just says 'free-of-charge'. Rechecked 26 Oct (Monday): ETA portal still shows free ETA for India, 30 days, double entry.",
+    "last_checked": "2026-10-26"
   },
   {
     "id": "japan",
@@ -220,7 +220,7 @@
       "https://www.chennai.in.emb-japan.go.jp/itpr_en/japanese_visa_for_indian.html"
     ],
     "verified": true,
-    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. Fee rechecked 23 Oct 2026: the Embassy of Japan in India (New Delhi) visa page states 'VISA fee (from 1 July 2026) For Indian Nationals Single or Multiple visa: 500 INR', with VFS service fee extra and transit visa abolished; other nationals pay Rs 8,650 single / Rs 17,350 multiple or double. The Consulate-General in Chennai lists Rs 500 single and multiple for Indian nationals for 1 Jul 2026 – 31 Mar 2027, matching the Mumbai consulate (verified 17 Oct 2026). The New Delhi fee is now confirmed directly. The pages do not say whether the same Rs 500 applies to the eVISA route.",
+    "notes": "'Visa required' is inferred from India's absence from the MOFA exemption list. Fee rechecked 23 Oct 2026: the Embassy of Japan in India (New Delhi) visa page states 'VISA fee (from 1 July 2026) For Indian Nationals Single or Multiple visa: 500 INR', with VFS service fee extra and transit visa abolished; other nationals pay Rs 8,650 single / Rs 17,350 multiple or double. The Consulate-General in Chennai lists Rs 500 single and multiple for Indian nationals for 1 Jul 2026 – 31 Mar 2027, matching the Mumbai consulate (verified 17 Oct 2026). The New Delhi fee is now confirmed directly. The pages do not say whether the same Rs 500 applies to the eVISA route. Rechecked 26 Oct (Monday): Embassy page returned 403 to the box; not reconfirmed.",
     "last_checked": "2026-10-23"
   },
   {
@@ -246,8 +246,8 @@
       "https://www.mea.gov.in/VFFIN.htm"
     ],
     "verified": true,
-    "notes": "Rule and conditions confirmed on Maldives Immigration (page 'updated: 10/09/2026'). The page does not state a maximum stay or a visa fee; only the IMUGA declaration is stated as 'free of charge'. Stay of 90 days is from India's MEA table ('Maldives | 90 Days'), not confirmed by Maldives Immigration; a Maldives mission FAQ reportedly says 'up to 30-day visa for free' but returned a Cloudflare block/403 and could not be read. imuga.immigration.gov.mv loaded (HTTP 200) but its content is JavaScript-rendered. Fee left null: not stated.",
-    "last_checked": "2026-10-17"
+    "notes": "Rule and conditions confirmed on Maldives Immigration (page 'updated: 10/09/2026'). The page does not state a maximum stay or a visa fee; only the IMUGA declaration is stated as 'free of charge'. Stay of 90 days is from India's MEA table ('Maldives | 90 Days'), not confirmed by Maldives Immigration; a Maldives mission FAQ reportedly says 'up to 30-day visa for free' but returned a Cloudflare block/403 and could not be read. imuga.immigration.gov.mv loaded (HTTP 200) but its content is JavaScript-rendered. Fee left null: not stated. Rechecked 26 Oct (Monday): Immigration tourist-visa page unchanged (visa on arrival; IMUGA declaration).",
+    "last_checked": "2026-10-26"
   },
   {
     "id": "bhutan",
@@ -338,7 +338,7 @@
       "https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=759205"
     ],
     "verified": true,
-    "notes": "Fees read from the Embassy in New Delhi's notice image (signed by the Visa Consul, 13 July 2026; posted 10 Jul 2026): 'The revised fees for Korean Visa are as mentioned below with effect from 01 Aug. 2026.' The 'Group Visa' line has no amount. KVAC India (Embassy's 'official partner') shows the same figures. The older KVAC C-3-9 checklist PDF (Nov 2024) still shows Rs 3,200 / 7,200 and a Rs 1,380 service charge, so it is out of date. The group fee waiver comes from VISITKOREA (KTO), 7 Jul 2026, citing the Ministry of Justice; not seen on an Embassy page. The Jeju exclusion list (23 countries, including Bangladesh, Nepal, Pakistan and Sri Lanka but not India) comes from the Korean Embassy in Singapore (2 Jan 2026); the Mumbai consulate's Jeju notice gives India-specific routing examples but no exclusion list. Not found on a Jeju provincial government or immigration.go.kr page today. The New Delhi KVAC is at Shivaji Stadium Metro Station, Mezzanine Level, Baba Kharak Singh Marg, Connaught Place, New Delhi 110001 (KVAC site); its reported opening on 15 Sep 2026 (news, VFS LinkedIn) is unverified on an official page.",
-    "last_checked": "2026-10-17"
+    "notes": "Fees read from the Embassy in New Delhi's notice image (signed by the Visa Consul, 13 July 2026; posted 10 Jul 2026): 'The revised fees for Korean Visa are as mentioned below with effect from 01 Aug. 2026.' The 'Group Visa' line has no amount. KVAC India (Embassy's 'official partner') shows the same figures. The older KVAC C-3-9 checklist PDF (Nov 2024) still shows Rs 3,200 / 7,200 and a Rs 1,380 service charge, so it is out of date. The group fee waiver comes from VISITKOREA (KTO), 7 Jul 2026, citing the Ministry of Justice; not seen on an Embassy page. The Jeju exclusion list (23 countries, including Bangladesh, Nepal, Pakistan and Sri Lanka but not India) comes from the Korean Embassy in Singapore (2 Jan 2026); the Mumbai consulate's Jeju notice gives India-specific routing examples but no exclusion list. Not found on a Jeju provincial government or immigration.go.kr page today. The New Delhi KVAC is at Shivaji Stadium Metro Station, Mezzanine Level, Baba Kharak Singh Marg, Connaught Place, New Delhi 110001 (KVAC site); its reported opening on 15 Sep 2026 (news, VFS LinkedIn) is unverified on an official page. Rechecked 26 Oct (Monday): Embassy fee notice (from 1 Aug 2026) unchanged.",
+    "last_checked": "2026-10-26"
   }
 ]
