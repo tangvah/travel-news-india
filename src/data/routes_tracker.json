@@ -23,8 +23,8 @@
       }
     ],
     "verified": true,
-    "notes": "New route. Covered in article-02. Quote paraphrases the release; it is not verbatim.",
-    "last_checked": "2026-10-27"
+    "notes": "New route. Covered in article-02. Quote paraphrases the release; it is not verbatim. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "indigo-gau-bkk",
@@ -40,7 +40,7 @@
     "frequency": "2 weekly (Wed/Sat from 31 Oct); 6E1085/6E1086",
     "aircraft": "not stated",
     "start_date": "2026-10-27",
-    "status": "announced",
+    "status": "operating",
     "announcement_date": "2026-09-07",
     "quote": "Release describes direct Guwahati–Bangkok connectivity, subject to regulatory approval.",
     "sources": [
@@ -51,11 +51,15 @@
       {
         "name": "IndiGo press releases index",
         "url": "https://www.goindigo.in/press-releases.html"
+      },
+      {
+        "name": "Guwahati International Airport on X: inauguration of IndiGo Guwahati–Bangkok service (27 Oct 2026)",
+        "url": "https://x.com/GuwahatiAirport/status/2115063712583475710"
       }
     ],
     "verified": true,
-    "notes": "Inaugural flight 27 Oct 2026, then regular Wed/Sat schedule from 31 Oct. Subject to regulatory approval. Covered in article-03. Rechecked 17 Oct: still listed on IndiGo's press index (7 Sep 2026). Rechecked 22 Oct: release/index unchanged; covered in article-10. Rechecked 24 Oct: press index unchanged, no postponement notice; listed in article-15 roundup. Rechecked 25 Oct: IndiGo press index unchanged (latest 8 Oct), no postponement notice. Rechecked 26 Oct: no IndiGo postponement notice in its X posts since 24 Oct. Inaugural due 27 Oct. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Inaugural flight 27 Oct 2026, then regular Wed/Sat schedule from 31 Oct. Subject to regulatory approval. Covered in article-03. Rechecked 17 Oct: still listed on IndiGo's press index (7 Sep 2026). Rechecked 22 Oct: release/index unchanged; covered in article-10. Rechecked 24 Oct: press index unchanged, no postponement notice; listed in article-15 roundup. Rechecked 25 Oct: IndiGo press index unchanged (latest 8 Oct), no postponement notice. Rechecked 26 Oct: no IndiGo postponement notice in its X posts since 24 Oct. Inaugural due 27 Oct. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): Guwahati International Airport's official X account posted on 27 Oct that IndiGo's non-stop Guwahati–Bangkok service started that day (lamp lighting, boarding pass handover), operating every Wednesday and Saturday (https://x.com/GuwahatiAirport/status/2115039279567220745). Status set to operating. Covered in article-27.",
+    "last_checked": "2026-10-28"
   },
   {
     "id": "indigo-gay-bkk",
@@ -116,8 +120,8 @@
       }
     ],
     "verified": true,
-    "notes": "Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately). Rechecked 17 Oct: index entry unchanged. Rechecked 22 Oct: release/index unchanged; covered in article-10. Rechecked 23 Oct: release page lists flight numbers 6E1637/1638 and timings; IndiGoStretch offered; subject to regulatory approvals. Rechecked 24 Oct: press index unchanged, no postponement notice; listed in article-15 roundup. Rechecked 25 Oct (05:15 IST): IndiGo press index has no inaugural or postponement release; no IndiGo X post on the launch yet. Status left as announced until IndiGo confirms the first flight operated. Rechecked 26 Oct (05:10 IST): IndiGo's original X posts since 24 Oct contain only Saudi Arabia advisories, with no inaugural or postponement notice for Mumbai-Hanoi; goindigo.in press index did not load from the box. Status left as announced. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Akasa Air has flown BOM–HAN 4 weekly since 4 Sep 2026 (announced 15 Apr 2026; outside the window, not listed separately). Rechecked 17 Oct: index entry unchanged. Rechecked 22 Oct: release/index unchanged; covered in article-10. Rechecked 23 Oct: release page lists flight numbers 6E1637/1638 and timings; IndiGoStretch offered; subject to regulatory approvals. Rechecked 24 Oct: press index unchanged, no postponement notice; listed in article-15 roundup. Rechecked 25 Oct (05:15 IST): IndiGo press index has no inaugural or postponement release; no IndiGo X post on the launch yet. Status left as announced until IndiGo confirms the first flight operated. Rechecked 26 Oct (05:10 IST): IndiGo's original X posts since 24 Oct contain only Saudi Arabia advisories, with no inaugural or postponement notice for Mumbai-Hanoi; goindigo.in press index did not load from the box. Status left as announced. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "indigo-bom-dar",
@@ -143,8 +147,8 @@
       }
     ],
     "verified": true,
-    "notes": "Other notable route (Tanzania).",
-    "last_checked": "2026-10-27"
+    "notes": "Other notable route (Tanzania). Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "air-india-bom-yyz",
@@ -160,18 +164,22 @@
     "frequency": "3 weekly (AI193/AI192 Wed/Fri/Sun), seasonal",
     "aircraft": "Boeing 777-300ER (upgraded cabins)",
     "start_date": "2026-10-25",
-    "status": "on sale",
+    "status": "operating",
     "announcement_date": "2026-08-01",
     "quote": "Seasonal 3x weekly non-stop service from 25 October 2026 to 26 March 2027; flights bookable through travel agents.",
     "sources": [
       {
         "name": "Air India press release",
         "url": "https://www.airindia.com/in/en/newsroom/press-release/Air-India-expands-service-to-Canada-for-winter-season-with-new-Mumbai-Toronto-flights-begins-operating-brand-new-B787-9-on-Delhi-Toronto-flights.html"
+      },
+      {
+        "name": "Toronto Pearson on X: Air India Toronto–Mumbai service officially open (26 Oct 2026, UTC)",
+        "url": "https://x.com/TorontoPearson/status/2114803581803266281"
       }
     ],
     "verified": true,
-    "notes": "Other notable route. Seasonal; ends 26 Mar 2027. Air India says it is the only carrier on the route this winter. Announced 76 days before last_checked. Rechecked 25 Oct (05:15 IST): Air India newsroom (latest items 21-23 Oct) and @airindia X posts since 20 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 26 Oct (05:10 IST): Air India's original X posts since 24 Oct cover only the Saudi Arabia advisory; no inaugural or postponement notice. Status unchanged. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Other notable route. Seasonal; ends 26 Mar 2027. Air India says it is the only carrier on the route this winter. Announced 76 days before last_checked. Rechecked 25 Oct (05:15 IST): Air India newsroom (latest items 21-23 Oct) and @airindia X posts since 20 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 26 Oct (05:10 IST): Air India's original X posts since 24 Oct cover only the Saudi Arabia advisory; no inaugural or postponement notice. Status unchanged. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): Toronto Pearson's official X account posted (26 Oct UTC) that Air India's non-stop Toronto–Mumbai service is officially open and was celebrated at Pearson; Boeing 777-300ER, Air India's second route from Toronto. Status set to operating. No Air India press release on the launch yet. Covered in article-28.",
+    "last_checked": "2026-10-28"
   },
   {
     "id": "aix-vtz-bkk",
@@ -187,7 +195,7 @@
     "frequency": "2 weekly (IX904 Tue/Fri)",
     "aircraft": "Boeing 737 MAX 8",
     "start_date": "2026-10-27",
-    "status": "announced",
+    "status": "operating",
     "announcement_date": "2026-09-09 (news report date)",
     "quote": "UNVERIFIED – per The Hindu and AeroRoutes",
     "sources": [
@@ -202,11 +210,15 @@
       {
         "name": "TTR Weekly – reproduction of Air India Express Winter Schedule 2026 statement dated 7 Oct 2026 (lead, not official)",
         "url": "https://www.ttrweekly.com/site/2026/10/air-india-express-boosts-winter-schedule-flights/"
+      },
+      {
+        "name": "Vizag Airport on X: launch of Air India Express Visakhapatnam–Bangkok service (27 Oct 2026)",
+        "url": "https://x.com/asrvizagairport/status/2114996555119771694"
       }
     ],
     "verified": false,
-    "notes": "No official Air India Express release was found; its media centre page returned no content. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Rechecked 25 Oct: quick check only; no Air India Express official post or release on Visakhapatnam-Bangkok. Still unverified. Rechecked 26 Oct: no Air India Express post on Visakhapatnam-Bangkok (due 27 Oct). Still unverified. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "No official Air India Express release was found; its media centre page returned no content. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Rechecked 25 Oct: quick check only; no Air India Express official post or release on Visakhapatnam-Bangkok. Still unverified. Rechecked 26 Oct: no Air India Express post on Visakhapatnam-Bangkok (due 27 Oct). Still unverified. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): Vizag Airport's official X account posted on 27 Oct that it celebrated the launch of Air India Express's non-stop Visakhapatnam–Bangkok service with the first passengers; Air India Express thanked Civil Aviation Minister Ram Mohan Naidu for welcoming the launch (https://x.com/AirIndiaX/status/2115055906245501426). Status set to operating; first flight now confirmed by the airport and airline. Frequency and aircraft still come from leads only. Note: Air India Express and Air India advisories say Tropical Cyclone Arnab may affect Visakhapatnam flights on 27-28 Oct. Covered in article-27.",
+    "last_checked": "2026-10-28"
   },
   {
     "id": "aix-cok-bkk",
@@ -244,8 +256,8 @@
       }
     ],
     "verified": false,
-    "notes": "News or schedule-data sources only. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Rechecked 25 Oct: quick check only. @AirIndiaX X posts since 20 Oct mention nothing about Kochi-Bangkok; per trade-press timings the first departure is late evening 25 Oct, so it cannot have operated at the time of checking. Still unverified. Rechecked 26 Oct: @AirIndiaX original posts since 24 Oct cover only the Saudi advisory; nothing on Kochi-Bangkok. Still unverified. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "News or schedule-data sources only. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Rechecked 25 Oct: quick check only. @AirIndiaX X posts since 20 Oct mention nothing about Kochi-Bangkok; per trade-press timings the first departure is late evening 25 Oct, so it cannot have operated at the time of checking. Still unverified. Rechecked 26 Oct: @AirIndiaX original posts since 24 Oct cover only the Saudi advisory; nothing on Kochi-Bangkok. Still unverified. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "aix-idr-bkk",
@@ -283,8 +295,8 @@
       }
     ],
     "verified": false,
-    "notes": "Start date not confirmed. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates.",
-    "last_checked": "2026-10-27"
+    "notes": "Start date not confirmed. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "aix-hyd-hkt",
@@ -322,8 +334,8 @@
       }
     ],
     "verified": false,
-    "notes": "Start date not confirmed. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Caution: AIX previously launched HYD–HKT on 31 Jan 2025 (news/LinkedIn leads), so this may be a resumption rather than a new route.",
-    "last_checked": "2026-10-27"
+    "notes": "Start date not confirmed. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Caution: AIX previously launched HYD–HKT on 31 Jan 2025 (news/LinkedIn leads), so this may be a resumption rather than a new route. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "aix-maa-sin",
@@ -365,8 +377,8 @@
       }
     ],
     "verified": false,
-    "notes": "Reported as a resumption. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. AeroRoutes (7 Sep 2026) reports AIX takes over the route from Air India mainline from 25 Oct 2026, twice daily on 737 MAX 8 (IX628/630 out, IX627/629 back); unverified.",
-    "last_checked": "2026-10-27"
+    "notes": "Reported as a resumption. Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. AeroRoutes (7 Sep 2026) reports AIX takes over the route from Air India mainline from 25 Oct 2026, twice daily on 737 MAX 8 (IX628/630 out, IX627/629 back); unverified. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "aix-blr-ktm",
@@ -404,8 +416,8 @@
       }
     ],
     "verified": false,
-    "notes": "Other notable route (Nepal). Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates.",
-    "last_checked": "2026-10-27"
+    "notes": "Other notable route (Nepal). Rechecked 17 Oct: airindiaexpress.com still has no reachable press/media page (all tried paths redirect to page-not-found), so still unverified. The route appears in the 7 Oct 2026 winter-schedule list as reproduced by trade press; that statement says the schedule is effective 25 Oct 2026 and rolls out in phases, without per-route start dates. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "indigo-del-dps",
@@ -443,8 +455,8 @@
       }
     ],
     "verified": false,
-    "notes": "Filings changed several times. A BOM–DPS A321XLR service from the same date was also reported. No IndiGo release found; recheck before publishing. Correction 17 Oct: IndiGo already serves Delhi–Denpasar. Indonesia's Ngurah Rai immigration office (official) recorded the inaugural Delhi–Denpasar–Delhi flight on 24 Oct 2025. What is still pending is the reported switch to a nonstop A321XLR (AeroRoutes 14 Jun 2026: from 25 Oct 2026, replacing A320neo via Bhubaneswar; later filings point to 1 Jan 2027). No IndiGo release found on its press index on 17 Oct, so the change remains unverified.",
-    "last_checked": "2026-10-27"
+    "notes": "Filings changed several times. A BOM–DPS A321XLR service from the same date was also reported. No IndiGo release found; recheck before publishing. Correction 17 Oct: IndiGo already serves Delhi–Denpasar. Indonesia's Ngurah Rai immigration office (official) recorded the inaugural Delhi–Denpasar–Delhi flight on 24 Oct 2025. What is still pending is the reported switch to a nonstop A321XLR (AeroRoutes 14 Jun 2026: from 25 Oct 2026, replacing A320neo via Bhubaneswar; later filings point to 1 Jan 2027). No IndiGo release found on its press index on 17 Oct, so the change remains unverified. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-vietjet-hkt-bom",
@@ -470,8 +482,8 @@
       }
     ],
     "verified": false,
-    "notes": "Foreign carrier resuming service to India. Rechecked 17 Oct: still only AeroRoutes and aggregator leads; no Thai VietJet release found. Rechecked 25 Oct: no Thai Vietjet release or TAT News item on Phuket-Mumbai found (TAT feed latest 23 Oct). Still unverified. Rechecked 26 Oct: TAT News feed (latest 23 Oct) has no Phuket-Mumbai item. Still unverified. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Foreign carrier resuming service to India. Rechecked 17 Oct: still only AeroRoutes and aggregator leads; no Thai VietJet release found. Rechecked 25 Oct: no Thai Vietjet release or TAT News item on Phuket-Mumbai found (TAT feed latest 23 Oct). Still unverified. Rechecked 26 Oct: TAT News feed (latest 23 Oct) has no Phuket-Mumbai item. Still unverified. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "akasa-ccj-ruh",
@@ -497,8 +509,8 @@
       }
     ],
     "verified": false,
-    "notes": "Akasa's press page did not show this release when fetched. Rechecked 17 Oct: Akasa's press-release page still shows no release for this route. Rechecked 25 Oct: Akasa Air's official X travel update of 23 Oct 2026 (21:00 IST) says all its flights to and from Riyadh are suspended until and including 30 Nov 2026 (Jeddah until 10 Nov) because of the security situation in Saudi Arabia (https://x.com/AkasaAir/status/2113656951360139468). The 25 Oct start therefore cannot go ahead as planned; earliest possible start is now 1 Dec 2026 unless Akasa says otherwise. Akasa's press page timed out on 25 Oct. Still no official route announcement. Covered in article-17. Rechecked 26 Oct: no change; Akasa Riyadh suspension to 30 Nov stands per its 23 Oct X update. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Akasa's press page did not show this release when fetched. Rechecked 17 Oct: Akasa's press-release page still shows no release for this route. Rechecked 25 Oct: Akasa Air's official X travel update of 23 Oct 2026 (21:00 IST) says all its flights to and from Riyadh are suspended until and including 30 Nov 2026 (Jeddah until 10 Nov) because of the security situation in Saudi Arabia (https://x.com/AkasaAir/status/2113656951360139468). The 25 Oct start therefore cannot go ahead as planned; earliest possible start is now 1 Dec 2026 unless Akasa says otherwise. Akasa's press page timed out on 25 Oct. Still no official route announcement. Covered in article-17. Rechecked 26 Oct: no change; Akasa Riyadh suspension to 30 Nov stands per its 23 Oct X update. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct: no Akasa update since its 23 Oct suspension notice (Riyadh to 30 Nov). IndiGo extended its own Saudi cancellations to 14 Nov on 28 Oct (https://x.com/IndiGo6E/status/2115450322315513856). Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "vietnam-airlines-han-amd",
@@ -524,8 +536,8 @@
       }
     ],
     "verified": true,
-    "notes": "New route; foreign carrier to India. Verified on Vietnam Airlines' own staff-communications portal (Vietnamese). Operating days (Tue/Thu/Sat/Sun) and times (HAN 17:35–AMD 21:30; AMD 22:45–HAN 04:35+1) appear only in Vietnamese state media (HTV/VOV), not in the official post; treat as unverified. Covered in article-04.",
-    "last_checked": "2026-10-27"
+    "notes": "New route; foreign carrier to India. Verified on Vietnam Airlines' own staff-communications portal (Vietnamese). Operating days (Tue/Thu/Sat/Sun) and times (HAN 17:35–AMD 21:30; AMD 22:45–HAN 04:35+1) appear only in Vietnamese state media (HTV/VOV), not in the official post; treat as unverified. Covered in article-04. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "airasia-kul-amd",
@@ -551,8 +563,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption ('long-awaited return'). Launch sale from RM669 all-in one way, booking 5–11 Oct 2026 (closed). Covered in article-07. Rechecked 25 Oct (05:15 IST): AirAsia newsroom shows no inaugural or postponement item beyond the 5 Oct return-sale release. Status unchanged until AirAsia confirms the first flight. Rechecked 26 Oct: AirAsia newsroom's latest items (19-23 Oct) include nothing on Ahmedabad. Status unchanged. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption ('long-awaited return'). Launch sale from RM669 all-in one way, booking 5–11 Oct 2026 (closed). Covered in article-07. Rechecked 25 Oct (05:15 IST): AirAsia newsroom shows no inaugural or postponement item beyond the 5 Oct return-sale release. Status unchanged until AirAsia confirms the first flight. Rechecked 26 Oct: AirAsia newsroom's latest items (19-23 Oct) include nothing on Ahmedabad. Status unchanged. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "airasia-kul-atq",
@@ -578,8 +590,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption. Same release as airasia-kul-amd. Covered in article-07.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption. Same release as airasia-kul-amd. Covered in article-07. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-airasia-dmk-gay",
@@ -605,8 +617,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 25 Oct: AirAsia newsroom shows no inaugural or postponement item for Gaya. Status unchanged. Rechecked 26 Oct: AirAsia newsroom has no Gaya item. Status unchanged. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 25 Oct: AirAsia newsroom shows no inaugural or postponement item for Gaya. Status unchanged. Rechecked 26 Oct: AirAsia newsroom has no Gaya item. Status unchanged. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-airasia-dmk-amd",
@@ -632,8 +644,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-airasia-dmk-gau",
@@ -659,8 +671,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-airasia-dmk-hyd",
@@ -686,8 +698,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-airasia-dmk-lko",
@@ -713,8 +725,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "thai-airasia-dmk-jai",
@@ -740,8 +752,8 @@
       }
     ],
     "verified": true,
-    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07.",
-    "last_checked": "2026-10-27"
+    "notes": "Resumption of a route Thai AirAsia suspended in Q3 2026 (lower demand, fuel costs), per the release. Frequency and aircraft not stated. Covered in article-07. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "air-arabia-rkt-ccj",
@@ -841,8 +853,8 @@
       }
     ],
     "verified": false,
-    "notes": "Frequency increase on an existing route. No Korean Air press release found: news.koreanair.com searches for Delhi/India/winter schedule return nothing for 2026, and koreanair.com newsroom/notice pages return 403 to curl and 500 to fetch. Supporting but not conclusive: on 17 Oct, Korean Air's Delhi–Seoul fares calendar shows fares for every date from 27 Oct onward but 'Find Offers' (no fare) on some earlier dates (17, 20, 21, 24 Oct), consistent with 5 weekly before and daily after. Trade press says the winter schedule runs to 25 Mar 2027. KTO New Delhi's static page lists Korean Air Delhi–Incheon as 'Daily' (19:30–05:50+1) but is undated and partly out of date. Rechecked 25 Oct: Korean Air newsroom returned a server error; @KoreanAir_KE X posts since 20 Oct do not mention Delhi. Still unverified. Rechecked 26 Oct: @KoreanAir_KE original posts since 24 Oct do not mention Delhi. Still unverified; due 27 Oct. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Frequency increase on an existing route. No Korean Air press release found: news.koreanair.com searches for Delhi/India/winter schedule return nothing for 2026, and koreanair.com newsroom/notice pages return 403 to curl and 500 to fetch. Supporting but not conclusive: on 17 Oct, Korean Air's Delhi–Seoul fares calendar shows fares for every date from 27 Oct onward but 'Find Offers' (no fare) on some earlier dates (17, 20, 21, 24 Oct), consistent with 5 weekly before and daily after. Trade press says the winter schedule runs to 25 Mar 2027. KTO New Delhi's static page lists Korean Air Delhi–Incheon as 'Daily' (19:30–05:50+1) but is undated and partly out of date. Rechecked 25 Oct: Korean Air newsroom returned a server error; @KoreanAir_KE X posts since 20 Oct do not mention Delhi. Still unverified. Rechecked 26 Oct: @KoreanAir_KE original posts since 24 Oct do not mention Delhi. Still unverified; due 27 Oct. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): IndiGo press index (latest 25 Oct), Air India newsroom (latest 27 Oct), TAT feed (latest 27 Oct) and airline/airport X posts since 25 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 29 Oct (05:15 IST): TAT feed (latest 28 Oct), Air India newsroom and official airline X posts since 27 Oct show no inaugural or postponement notice. Status unchanged.",
+    "last_checked": "2026-10-29"
   },
   {
     "id": "swiss-blr-zrh",
@@ -858,7 +870,7 @@
     "frequency": "5 weekly (LX140 ZRH-BLR Tue/Thu/Fri/Sat/Sun; LX141 BLR-ZRH Mon/Wed/Fri/Sat/Sun)",
     "aircraft": "not stated",
     "start_date": "2026-10-27",
-    "status": "on sale",
+    "status": "operating",
     "announcement_date": "2026-05-19",
     "quote": "SWISS India route page: \"Fly direct to Switzerland and beyond with SWISS starting 28 October 2026.\"",
     "sources": [
@@ -873,10 +885,14 @@
       {
         "name": "SWISS India route page",
         "url": "https://www.swiss.com/in/en/local-page/blrzrhwintersch2026"
+      },
+      {
+        "name": "SWISS on X: LX140 takes off for Bengaluru for the first time (27 Oct 2026)",
+        "url": "https://x.com/FlySWISS/status/2115094589144993955"
       }
     ],
     "verified": true,
-    "notes": "Watch list (Europe). First LX140 leaves Zurich Tue 27 Oct and arrives Bengaluru 28 Oct 02:55; start_date is the first Zurich departure. Tickets on sale since 19 May. Covered in article-12. Rechecked 25 Oct: SWISS X post of 20 Oct says the first flight to Bengaluru takes off on 27 Oct; SWISS release of 20 Oct (https://newsroom.swiss.com/en/swiss-to-launch-toulouse-service-and-expand-flights-across-europe-and-asia/) confirms Bengaluru stays in the summer 2027 schedule (X post: five times a week). No postponement. Covered in article-19. Rechecked 26 Oct: SWISS X posts since 24 Oct show no postponement (only a Middle East operations note about Dubai). First flight due 27 Oct. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged.",
-    "last_checked": "2026-10-27"
+    "notes": "Watch list (Europe). First LX140 leaves Zurich Tue 27 Oct and arrives Bengaluru 28 Oct 02:55; start_date is the first Zurich departure. Tickets on sale since 19 May. Covered in article-12. Rechecked 25 Oct: SWISS X post of 20 Oct says the first flight to Bengaluru takes off on 27 Oct; SWISS release of 20 Oct (https://newsroom.swiss.com/en/swiss-to-launch-toulouse-service-and-expand-flights-across-europe-and-asia/) confirms Bengaluru stays in the summer 2027 schedule (X post: five times a week). No postponement. Covered in article-19. Rechecked 26 Oct: SWISS X posts since 24 Oct show no postponement (only a Middle East operations note about Dubai). First flight due 27 Oct. Rechecked 27 Oct (05:20 IST): IndiGo press index, AirAsia newsroom, TAT feed (latest 26 Oct) and the airline's official X posts since 24 Oct show no inaugural or postponement notice. Status unchanged. Rechecked 28 Oct (05:15 IST): SWISS posted on X on 27 Oct that LX140 took off for Bengaluru for the first time that afternoon, its third Indian destination, with CEO Jens Fehlinger cutting the ribbon at Zurich. Status set to operating. Covered in article-28.",
+    "last_checked": "2026-10-28"
   }
 ]
