@@ -21,8 +21,8 @@
       "https://tdac.immigration.go.th"
     ],
     "verified": true,
-    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date. Watch item (checked 17 Oct 2026): Thailand's proposed tourism entry fee for foreign visitors is NOT in force. Thailand's Government Public Relations Department (17 Aug 2026, https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/532128) describes a proposed flat 450 baht fee, starting for air arrivals 180 days after publication in the Royal Gazette. Thai media in Oct 2026 report it still awaits Cabinet approval; no Royal Gazette notice found. Unconfirmed; not a current entry condition. Rechecked 26 Oct (Monday): Thai Embassy New Delhi revision page unchanged (effective 15 Sep 2026). Rechecked 2 Nov (Monday): Thai Embassy New Delhi revision page unchanged (30-day exemption for Indians effective 15 Sep 2026). No Royal Gazette notice on the entry fee seen; still not in force.",
-    "last_checked": "2026-11-02"
+    "notes": "The TDAC timing comes from India's MEA page (https://www.mea.gov.in/VFFIN.htm). The MEA page still lists 60 days for Thailand, which is out of date. Watch item (checked 17 Oct 2026): Thailand's proposed tourism entry fee for foreign visitors is NOT in force. Thailand's Government Public Relations Department (17 Aug 2026, https://thailand.prd.go.th/en/content/category/detail/id/2078/iid/532128) describes a proposed flat 450 baht fee, starting for air arrivals 180 days after publication in the Royal Gazette. Thai media in Oct 2026 report it still awaits Cabinet approval; no Royal Gazette notice found. Unconfirmed; not a current entry condition. Rechecked 26 Oct (Monday): Thai Embassy New Delhi revision page unchanged (effective 15 Sep 2026). Rechecked 2 Nov (Monday): Thai Embassy New Delhi revision page unchanged (30-day exemption for Indians effective 15 Sep 2026). No Royal Gazette notice on the entry fee seen; still not in force. Rechecked 9 Nov (Monday): Thai Embassy New Delhi revision page still headed 'Effective from 15 September 2026'; no change seen.",
+    "last_checked": "2026-11-09"
   },
   {
     "id": "singapore",
@@ -160,8 +160,8 @@
       "https://imigresen-online.imi.gov.my/mdac/main"
     ],
     "verified": true,
-    "notes": "The effective date of 1 Dec 2023 comes from the MYVISA terms page. The exemption expires 31 Dec 2026; watch for an extension. Rechecked 26 Oct (Monday): kln.gov.my timed out and the imi.gov.my country page does not show India's entry in text; no change found, but the 31 Dec 2026 waiver end date could not be reconfirmed. Watch for an extension announcement. Rechecked 2 Nov (Monday): MYVISA terms page (last updated 6 Oct 2026) still says 'Effective from 1 December 2023 until 31 December 2026, only Indian nationals are exempted from the visa requirement for social visit purposes (Single Entry Visa – SEV)'. End date reconfirmed; no extension announced. kln.gov.my timed out.",
-    "last_checked": "2026-11-02"
+    "notes": "The effective date of 1 Dec 2023 comes from the MYVISA terms page. The exemption expires 31 Dec 2026; watch for an extension. Rechecked 26 Oct (Monday): kln.gov.my timed out and the imi.gov.my country page does not show India's entry in text; no change found, but the 31 Dec 2026 waiver end date could not be reconfirmed. Watch for an extension announcement. Rechecked 2 Nov (Monday): MYVISA terms page (last updated 6 Oct 2026) still says 'Effective from 1 December 2023 until 31 December 2026, only Indian nationals are exempted from the visa requirement for social visit purposes (Single Entry Visa – SEV)'. End date reconfirmed; no extension announced. kln.gov.my timed out. Rechecked 9 Nov (Monday): Immigration Department country list (imi.gov.my) still says 'India citizen: visa exempts until 31st December 2026'. No extension announced; end date unchanged.",
+    "last_checked": "2026-11-09"
   },
   {
     "id": "sri-lanka",
@@ -188,8 +188,8 @@
       "https://www.immigration.gov.lk/pages_e.php?id=60"
     ],
     "verified": true,
-    "notes": "India is item 13 on the list of 40 countries. The 'LKR 0' currency is our own label; the page just says 'free-of-charge'. Rechecked 26 Oct (Monday): ETA portal still shows free ETA for India, 30 days, double entry. Rechecked 2 Nov (Monday): ETA portal alert unchanged (free ETA for India, 30 days, double entry; paid extension beyond 30 days).",
-    "last_checked": "2026-11-02"
+    "notes": "India is item 13 on the list of 40 countries. The 'LKR 0' currency is our own label; the page just says 'free-of-charge'. Rechecked 26 Oct (Monday): ETA portal still shows free ETA for India, 30 days, double entry. Rechecked 2 Nov (Monday): ETA portal alert unchanged (free ETA for India, 30 days, double entry; paid extension beyond 30 days). Rechecked 9 Nov (Monday): ETA portal (eta.gov.lk/slvisa) alert still states a free visa regime for India (and other listed countries); no change seen.",
+    "last_checked": "2026-11-09"
   },
   {
     "id": "japan",
