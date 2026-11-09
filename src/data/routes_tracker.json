@@ -930,8 +930,8 @@
       "iata": "AMD"
     },
     "airline": "Sun PhuQuoc Airways",
-    "frequency": "5 weekly (Mon/Wed/Thu/Fri/Sun); 9G315 PQC 19:35-AMD 23:30, 9G314 AMD 01:00-PQC 07:15 (per VOV); daily from early Feb 2027 (per VOV)",
-    "aircraft": "Airbus A321neo (per VOV)",
+    "frequency": "5 weekly (Mon/Wed/Thu/Fri/Sun); about 5 hours 25 minutes",
+    "aircraft": "not stated",
     "start_date": "2026-12-02",
     "status": "on sale",
     "announcement_date": "2026-10-16",
@@ -940,10 +940,14 @@
       {
         "name": "Sun PhuQuoc Airways: Direct flights Phu Quoc to Ahmedabad offer page",
         "url": "https://www.sunphuquocairways.com/gl/en/explore/offers/direct-flights-phu-quoc-ahmedabad-20-percent-off"
+      },
+      {
+        "name": "Sun PhuQuoc Airways LinkedIn post, 16 Oct 2026",
+        "url": "https://www.linkedin.com/posts/sun-phuquoc-airways_sungroup-sunphuquocairways-activity-7516770181285646336-AoK_"
       }
     ],
     "verified": true,
-    "notes": "New route, first Sun PhuQuoc Airways service to India. Airline offer page confirms 2 Dec 2026 start, 5 weekly, sales open 16 Oct. Flight numbers, times, A321neo and Feb 2027 daily step-up come from VOV (state media) citing Sun Group, not the airline page. Covered in article-67. Added 9 Nov 2026.",
+    "notes": "New route, first Sun PhuQuoc Airways service to India. Airline offer page confirms 2 Dec 2026 start, five weekly (Mon/Wed/Thu/Fri/Sun), sales open 16 Oct, and a flight time of about 5 hours 25 minutes. Covered in article-67. Added 9 Nov 2026.",
     "last_checked": "2026-11-09"
   }
 ]
