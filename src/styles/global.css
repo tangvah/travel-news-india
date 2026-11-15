@@ -154,6 +154,9 @@ html.js .theme-toggle{display:inline-flex}
 .article-head{border-bottom:1px solid var(--line);background:var(--surface)}
 .article-head .wrap{max-width:calc(var(--readw) + 2*var(--s4));padding-top:var(--s6);padding-bottom:var(--s5)}
 .article-head h1{font-size:clamp(2rem,1.3rem + 3vw,3.1rem);margin:var(--s4) 0}
+.article-photo{margin:0}
+.article-photo img{display:block;width:100%;max-width:1200px;height:auto;margin:0 auto}
+.article-photo figcaption{max-width:var(--readw);margin:8px auto 0;padding:0 var(--s4) var(--s4);color:var(--muted);font-size:.9rem}
 .standfirst{font:400 1.25rem/1.5 var(--font-serif);color:var(--muted);margin:0 0 var(--s4)}
 .byline{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;color:var(--muted);font-size:.9rem}
 .prose{max-width:var(--readw);margin:var(--s6) auto;padding:0 var(--s4);font-size:1.12rem;line-height:1.75}
