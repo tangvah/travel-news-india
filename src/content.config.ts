@@ -13,6 +13,10 @@ const news = defineCollection({
     destinations: z.array(dest).default([]),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    imageCredit: z.string().optional(),
+    imageWidth: z.number().int().positive().optional(),
+    imageHeight: z.number().int().positive().optional(),
     draft: z.boolean().default(false),
     // Optional provenance. Badge "Verified: official source" shows only if verified: true AND sources has >=1 entry.
     sources: z.array(z.object({ name: z.string(), url: z.string().url() })).default([]),

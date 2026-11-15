@@ -27,7 +27,7 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headl
   articleSection: c.name, keywords: d.tags.join(', '), image: [d.image ? new URL(u(d.image), Astro.site).href : ogImage],
   ...(d.sources.length ? { citation: d.sources.map((s) => ({ '@type': 'CreativeWork', name: s.name, url: s.url })) } : {}) };
 ---
-<Base title={d.title} description={d.summary} type="article" image={d.image} ogImage={d.image ? undefined : ogImage} jsonld={jsonld} noindex={d.draft && process.env.DRAFTS_INDEXABLE !== '1'}>
+<Base title={d.title} description={d.summary} type="article" image={d.image} ogImage={d.image ? undefined : ogImage} ogImageWidth={d.image && d.imageWidth ? d.imageWidth : 1200} ogImageHeight={d.image && d.imageHeight ? d.imageHeight : 630} jsonld={jsonld} noindex={d.draft && process.env.DRAFTS_INDEXABLE !== '1'}>
 <div class="progress" aria-hidden="true"></div>
 <article>
   <header class="article-head"><div class="wrap">
@@ -40,7 +40,10 @@ const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headl
     <p class="standfirst">{d.summary}</p>
     <div class="byline"><span>By <strong>{d.author}</strong></span><time datetime={d.date.toISOString()}>{fmt(d.date)}</time><span>{mins} min read</span></div>
   </div></header>
-  {d.image && <img src={u(d.image)} alt="" />}
+  {d.image && <figure class="article-photo">
+    <img src={u(d.image)} alt={d.imageAlt ?? ""} width={d.imageWidth} height={d.imageHeight} loading="lazy" decoding="async" />
+    {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
+  </figure>}
   <div class="wrap article-grid">
   <div class="article-main">
   <div class="article-body"><Share url={url} title={d.title} /><div class="prose"><Content /></div></div>
